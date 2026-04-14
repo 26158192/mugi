@@ -128,6 +128,10 @@
     ></script>
     <script
       defer
+      src="https://cdn-eu.anidb.net/js/libs/jquery.wysibb.min.js?v=2022-12-03T23-47-26"
+    ></script>
+    <script
+      defer
       src="https://cdn-eu.anidb.net/js/libs/jqueryui.position.min.js?v=2022-12-03T23-47-26"
     ></script>
     <script
@@ -142,10 +146,7 @@
       defer
       src="https://cdn-eu.anidb.net/js/legacy/legacy.min.js?v=2022-12-03T23-47-26"
     ></script>
-    <script
-      defer
-      src="https://cdn-eu.anidb.net/js/WordSuggest.min.js?v=2022-12-03T23-47-26"
-    ></script>
+ 
     <script
       defer
       src="https://cdn-eu.anidb.net/js/global.min.js?v=2022-12-03T23-47-26"
@@ -487,7 +488,7 @@
         <h3>Note <span class="req-optional">(optional)</span></h3>
         <div class="g_boxwrap">
           <textarea class="req-input req-textarea" name="note" rows="4"
-            id="req-note" data-nowysibb="1"
+            id="req-note"
             placeholder="Season, episode, ya koi aur detail..."></textarea>
         </div>
 
@@ -1003,31 +1004,6 @@ title="Watch on UrduSUB"
  <!-- ... Request -js-side filter ... -->
 
   <script src="request.js"></script>
-  
-<script>
-// Prevent wysibb from hijacking the request textarea & fix keyboard issue
-(function() {
-  function blockWysibb() {
-    var ta = document.getElementById('req-note');
-    if (!ta) return;
-    // If wysibb already wrapped it, unwrap
-    var parent = ta.parentNode;
-    if (parent && parent.classList && parent.classList.contains('wysibb')) {
-      parent.parentNode.insertBefore(ta, parent);
-      parent.parentNode.removeChild(parent);
-      ta.style.display = '';
-    }
-    // Prevent future init
-    if (window.$ && $.fn && $.fn.wysibb) {
-      $.fn.wysibb = function() { return this; };
-    }
-  }
-  // Run immediately and after DOM ready
-  document.addEventListener('DOMContentLoaded', blockWysibb);
-  setTimeout(blockWysibb, 500);
-  setTimeout(blockWysibb, 1500);
-})();
-</script>
-
-</body>
+  </body>
 </html>
+
