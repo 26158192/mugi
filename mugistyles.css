@@ -13136,10 +13136,6 @@ span.diff,
 #layout-main div.creq_all span.type.del,
 #layout-main td.reviewed.no a,
 #menu-account li.alert a span::after,
-#menu-account li.alert a span::before {
-    color: #b32947
-}
-
 #layout-main .g_bubble.graph div.bar div.colored {
     background-color: green
 }
@@ -14411,8 +14407,7 @@ button:not(.fancybox-close-small)::before,
 #layout-main div.edit_actions>span>*::before,
 #layout-main div.msg_all div.buttons li a::before,
 #layout-main ul.g_list li a::before,
-#layout-main ul.g_list li span.nolink::before,
-#layout-tabs ul li a::before {
+#layout-main ul.g_list li span.nolink::before {
     padding-right: 6px
 }
 
@@ -14632,11 +14627,6 @@ button.prev::before,
 #layout-main ul.g_list li.prev a::before,
 #layout-main ul.g_list li.prev span.nolink::before {
     content: "";
-    font-weight: 900
-}
-
-#layout-tabs ul li a::before {
-    content: "";
     font-weight: 900
 }
 
@@ -16889,209 +16879,8 @@ table,
     margin-top: -133px
 }
 
-#layout-menu li.sub-menu ul li a::before {
-    text-align: center;
-    display: inline-block;
-    width: 14px;
-    content: " ";
-    font-weight: 900;
-    font-size: 1.2rem
-}
-
-#layout-menu li.sub-menu ul li a::before {
-    vertical-align: middle
-}
-
 #layout-menu li.sub-menu ul li a span {
     vertical-align: text-top
-}
-
-#layout-menu li.sub-menu ul li.search a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.random a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.calendar a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.latest a::before,
-#layout-menu li.sub-menu ul li.modlatest a::before,
-#layout-menu li.sub-menu ul li.schedule a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.user a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.character a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.creator a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.song a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.collection a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.anime a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.club a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.tags a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.group a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.myimport a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.myexport a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.massupdate a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.applet a::before,
-#layout-menu li.sub-menu ul li.ed2kdump a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.mysignatures a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.mywishlist a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.admin a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.creqs a::before,
-#layout-menu li.sub-menu ul li.mycreqs a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.myplace a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.userinfo a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.mymessages a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.myvotes a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.myreviews a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.mynotifies a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.myfavourites a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.mylist a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.myentries a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.myreports a::before,
-#layout-menu li.sub-menu ul li.reports a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.myhints a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.forum a::before,
-#layout-menu li.sub-menu ul li.irc a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.help a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.report a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.software a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.staff a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.donate a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.alert a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.user-profile a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.user-logout a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.user-login a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.user-signup a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.credits a::before,
-#layout-menu li.sub-menu ul li.policies a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.main a::before {
-    content: "";
-    display: none
 }
 
 #layout-menu li.sub-menu li.alert>span {
@@ -17136,10 +16925,6 @@ h4 span.nolink a,
 span.link,
 th a,
 #layout-main a.filter,
-#layout-menu li.sub-menu ul li a::before {
-    color: #0c4e86
-}
-
 .g_section>form>h2,
 .g_section>h2,
 input[type=date]:focus,
@@ -17362,12 +17147,7 @@ th a,
     background-color: #800
 }
 
-#layout-menu li.sub-menu ul li.alert a::before,
 #menu-account li.alert a span::after,
-#menu-account li.alert a span::before {
-    color: #b32947 !important
-}
-
 #layout-main div.format-buttons .f_button {
     background-color: #bbb
 }
