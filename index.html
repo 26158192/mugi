@@ -3,26 +3,19 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>MugiSub - Anime with Subtitles</title>
+    <title>UrduSUB</title>
     <meta
-      property="og:description"Home
+      property="og:description"
       name="description"
-      content="Looking for information about Anime starting in Summer 2024? AniDB is the right place for you. AniDB is a not-for-profit anime database providing you ..."
+      content="Looking for high-quality Urdu subtitles for your favorite Movies, Tv shows and Anime? UrduSUB is the perfect destination for anime fans who want to enjoy their favorite videos in Urdu. We provide accurate and well-timed Urdu subtitles for a wide range of anime, movies & tv ensuring an immersive viewing experience..."
     />
     <meta name="robots" content="index, follow" />
-    <link rel="stylesheet" href="styles.css"
-      type="text/css" 
+    <link
+      rel="stylesheet"
+      href="https://cdn-eu.anidb.net/css/anidbstyle3/anidbstyle3.css?v=2024-08-09T12-06-12"
+      type="text/css"
       title="Style"
     />
-        <!--mine-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="mugistyles.css"
-      type="text/css" 
-      title="Style"/>
-    <link rel="stylesheet" href="/request.css">
-
-    <!--mine-->
-
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -53,11 +46,9 @@
       rel="shortcut icon"
       href="https://cdn-eu.anidb.net/css/assets/images/touch/favicon.ico?v=2024-08-09T12-06-12"
     />
-    <link
-      property="og:url"
-      rel="canonical"
-      href="https://anidb.net/anime/season/2024/summer/?do=calendar&amp;h=1&amp;view=smallgrid"
-    />
+    <!--Social Media Sharing - UrduSUB-->
+    <link property="og:url" rel="canonical" href="https://urdusub.com/" />
+
     <link
       rel="search"
       type="application/opensearchdescription+xml"
@@ -80,7 +71,7 @@
       name="anidb-url"
       content=""
       id="anidb-url"
-      data-anidb-url="https://anidb.net/perl-bin/animedb.pl?show=calendar&amp;do=calendar&amp;h=1&amp;last.anime.month=19&amp;last.anime.year=2024&amp;view=smallgrid"
+      data-anidb-url="https://anidb.net/perl-bin/animedb.pl?show=main"
     />
     <meta name="apple-mobile-web-app-title" content="AniDB" />
     <meta name="application-name" content="AniDB" />
@@ -93,7 +84,7 @@
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@anidbstatus" />
     <meta name="twitter:creator" content="@anidbstatus" />
-    <meta property="og:title" content="Anime starting in Summer 2024 - AniDB" />
+    <meta property="og:title" content="AniDB" />
     <script
       defer
       src="https://cdn-eu.anidb.net/js/libs/js.cookie.min.js?v=2022-12-03T23-47-26"
@@ -154,6 +145,32 @@
       defer
       src="https://cdn-eu.anidb.net/js/global.min.js?v=2022-12-03T23-47-26"
     ></script>
+
+
+
+<!--Schema - UrduSUB-->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Movie",
+        "name": "Example Movie",
+        "description": "Urdu subtitles for the Example Movie.",
+        "author": {
+          "@type": "Person",
+          "name": "Zohai Ali Afzal"
+        },
+        "genre": "Action",
+        "inLanguage": "Urdu",
+        "url": "https://urdusubtitle.com/example-movie"
+      }
+    </script>
+
+<!-- mine -->
+<script src="/request.js"></script>
+<!-- mine -->
+
+
+
   </head>
   <body id="anidb" class="calendar">
     <!--Hint ON top-->
@@ -395,18 +412,7 @@
             </div>
           </form>
           <form class="random" action="/perl-bin/animedb.pl" method="get">
-            <fieldset>
-              <input type="hidden" name="do.random" value="1" />
-              <input type="hidden" name="show" value="anime" />
-            </fieldset>
-            <button type="submit" value="lucky" class="submit random">
-              I'm Feeling Lucky
-            </button>
-          </form>
-          <!--Advance Search-->
-          <a title="advsearch" class="advsearch" href="/search/anime"
-            ><span class="text">advanced search</span></a
-          >
+     
         </div>
       </div>
     </div>
@@ -451,70 +457,62 @@
 
 
 
-          <!--Side-Filte-Start-->
-          <div class="g_bubblewrap nowrap g_section">
-	<div class="hide right g_filter hassettings">
-		<div class="g_bubble flap hide" title="click to show the filter menu">REQ</div>
-		<div class="content">
-			<span title="Hide Filter" class="fancybox-item fancybox-close"></span>
-			<form action="/perl-bin/animedb.pl" method="get">
-					<input type="hidden" name="cleanurl" value="1"/>
-			<input type="hidden" name="orderby.name" value="0.1"/>
-			<input type="hidden" name="view" value="list"/>
-			<input type="hidden" name="show" value="animelist"/>
-				</fieldset>
-	<div class="g_section filters">
-		<h2><span>Submit a Request</span></h2>
-<ul class="g_bubblewrap">
- 
- 
+<!--Side-Filter-Start-->
+<div class="g_bubblewrap nowrap g_section">
+  <div class="hide right g_filter hassettings">
+    <div class="g_bubble flap hide" title="click to show the filter menu">REQ</div>
+    <div class="content">
+      <span title="Hide Filter" class="fancybox-item fancybox-close"></span>
 
-<!-- Request Section - Side Filter ke andar, ul.g_bubblewrap me add karo -->
+ <div class="g_section filters">
+  <h2><span>Submit a Request</span></h2>
 
-            
-              
-  <!-- Type selector -->
-   <li class="g_bubble">
-  <div class="g_section g_bubble content" id="mugi-request-section">
- 
+  <form id="request-form" action="/ajax/request/submit" method="post">
+    <input type="hidden" name="cleanurl" value="1"/>
 
-  <div class="mugi-type-grid">
-    <label class="mugi-type-btn active">
-      <input type="radio" name="req_type" value="anime" hidden checked> Anime
-    </label>
-    <label class="mugi-type-btn">
-      <input type="radio" name="req_type" value="movie" hidden> Movie
-    </label>
-    <label class="mugi-type-btn">
-      <input type="radio" name="req_type" value="tv" hidden> TV
-    </label>
-    <label class="mugi-type-btn">
-      <input type="radio" name="req_type" value="other" hidden> Other
-    </label>
-  </div>
+    <ul class="g_bubblewrap">
+      <li class="g_odd g_bubble">
 
-  <textarea id="mugi-req-text" rows="5"
-    placeholder="Anime ka naam, episode, ya koi detail likho..."></textarea>
+        <h3>Category</h3>
+        <div class="g_boxwrap">
+          <label>
+            <select name="epp" size="1" id="req-category">
+              <option value="anime" selected="selected">Anime</option>
+              <option value="movie">Movies</option>
+              <option value="tv">TV Shows</option>
+            </select>
+          </label>
+        </div>
 
-  <button id="mugi-req-submit" type="button">Request bhejo</button>
+        <h3 id="req-title-label">Title <span class="req-star">*</span></h3>
+        <div class="g_boxwrap">
+          <input class="req-input" type="text" name="title" required
+            id="req-title"
+            placeholder="e.g. Demon Slayer Season 4" />
+        </div>
 
-  <p id="mugi-req-success">Shukriya! Request mil gayi 🎌</p>
-</div>
-  
+        <h3>Link <span class="req-optional">(optional)</span></h3>
+        <div class="g_boxwrap">
+          <input class="req-input" type="url" name="link"
+            placeholder="https://myanimelist.net/..." />
+        </div>
 
-<li class="g_bubble"><h3>Pages</h3>
-  <label>
-    <select name="epp" size="1">
-      <option value="10" selected="selected">Anime</option>
-      <option value="20">Movies</option>
-      <option value="30">TV Shows</option>
-    </select> 
-  </label>
-  <label><input type="checkbox" value="1" name="uncensored"> <a href="/misc/show-this-page"><span>show this page</span></a></label>
-</li>
+        <h3>Note <span class="req-optional">(optional)</span></h3>
+        <div class="g_boxwrap">
+          <textarea class="req-input req-textarea" name="note" rows="4"
+            id="req-note"
+            placeholder="Season, episode, ya koi aur detail..."></textarea>
+        </div>
 
+        <div class="g_boxwrap">
+          <button type="submit" class="req-submit">Submit Request</button>
+          <p class="req-hint">
+            Ya phir <a href="https://t.me/MugiSUB">Telegram</a> pe message karo
+          </p>
+        </div>
 
- <li class="g_bubble">
+      </li>
+  <li class="g_odd g_bubble">
     <div class="g_boxwrap"><h3>Adult Content</h3><label class="ignore"><input type="radio" name="h" value="0" check="check"> <a href="/content/ignore"><span>ignore</span></a></label><label><input type="radio" name="h" value="1"> <a href="/content/hide-18-plus"><span>hide 18+ Content</span></a></label><label><input type="radio" name="h" value="2"> <a href="/content/only-18-plus"><span>show only 18+ Content</span></a></label></div>
   </li>
 
@@ -525,6 +523,7 @@
   <li class="g_odd g_bubble"><h3>Anime Type</h3>
     <div class="g_boxwrap"><label><input type="checkbox" value="1" name="type.movie"> <a href="/type/movie"><span>Movie</span></a></label><label><input type="checkbox" value="1" name="type.musicvideo"> <a href="/type/musicvideo"><span>Music Video</span></a></label><label><input type="checkbox" value="1" name="type.other"> <a href="/type/other"><span>Other</span></a></label><label><input type="checkbox" value="1" name="type.ova"> <a href="/type/ova"><span>OVA</span></a></label><label><input type="checkbox" value="1" name="type.tvseries"> <a href="/type/tvseries"><span>TV Series</span></a></label><label><input type="checkbox" value="1" name="type.tvspecial"> <a href="/type/tvspecial"><span>TV Special</span></a></label><label><input type="checkbox" value="1" name="type.unknown"> <a href="/type/unknown"><span>unknown</span></a></label><label><input type="checkbox" value="1" name="type.web"> <a href="/type/web"><span>Web</span></a></label></div>
   </li>
+
   
 </ul>
 </div>
@@ -550,7 +549,7 @@
                         <div class="icons actions">
     <a
 title="Watch on UrduSUB"
-      href="//anime.html"
+      href="/anime.html"
       data-anidb-rel="anidb::extern"
     >
       <!-- Add Image Instead of Icon -->
@@ -615,7 +614,7 @@ title="Watch on UrduSUB"
                   <!--Start Box-3-->
                   <div class="g_odd g_bubble box small no3" id="a15910">
                     <div class="thumb image">
-                      <a href="//anime.html"
+                      <a href="/anime.html"
                         ><picture>
                           <img
                             loading="lazy"
@@ -633,7 +632,7 @@ title="Watch on UrduSUB"
   <div class="icons actions">
     <a
 title="Watch on UrduSUB"
-      href="//anime.html"
+      href="/anime.html"
       data-anidb-rel="anidb::extern"
     >
       <!-- Add Image Instead of Icon -->
@@ -641,12 +640,12 @@ title="Watch on UrduSUB"
     </a>
                       </div>
                       <div class="wrap name">
-                        <a class="name-colored" href="//anime.html"
+                        <a class="name-colored" href="/anime.html"
                           >Westworld</a
                         >
                       </div>
                      <div class="extra">
-  <a href="//anime.html">Westworld (S1–S4)</a>
+  <a href="/anime.html">Westworld (S1–S4)</a>
 </div>
 
 <span class="key">Subtitle:</span> 
@@ -1016,7 +1015,7 @@ title="Watch on UrduSUB"
 <!--Footer-layout-end-->
  <!-- ... Request -js-side filter ... -->
 
-  <script src="request.js"></script>
+  
   </body>
 </html>
 
