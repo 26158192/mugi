@@ -56,7 +56,7 @@
     <link
       property="og:url"
       rel="canonical"
-      href="https://anidb.net/anime/season/2024/summer/?do=calendar&amp;h=1&amp;view=smallgrid"
+      href="https://anidb.net/anime/season/2024/summer/?do=landing&amp;h=1&amp;view=smallgrid"
     />
     <link
       rel="search"
@@ -80,7 +80,7 @@
       name="anidb-url"
       content=""
       id="anidb-url"
-      data-anidb-url="https://anidb.net/perl-bin/animedb.pl?show=calendar&amp;do=calendar&amp;h=1&amp;last.anime.month=19&amp;last.anime.year=2024&amp;view=smallgrid"
+      data-anidb-url="https://anidb.net/perl-bin/animedb.pl?show=landing&amp;do=landing&amp;h=1&amp;last.anime.month=19&amp;last.anime.year=2024&amp;view=smallgrid"
     />
     <meta name="apple-mobile-web-app-title" content="AniDB" />
     <meta name="application-name" content="AniDB" />
@@ -128,7 +128,7 @@
 
 
   </head>
-  <body id="anidb" class="calendar">
+  <body id="anidb" class="landing">
     <!--Hint ON top-->
     <!--
     <div id="layout-hint" class="hint">
@@ -145,15 +145,15 @@
 
 
    <!--side-navbar-start-->
-<div id="layout-nav" class="calendar_nav">
-  <ul id="layout-menu" class="calendar_menu">
+<div id="layout-nav" class="landing_nav">
+  <ul id="layout-menu" class="landing_menu">
 
     <!-- HOME -->
     <li class="sub-menu main" title="Menu">
       <span class="tab">HOME</span>
       <ul id="menu-main">
         <li class="main">
-          <a title="Main Page" href="/"><span class="text">Main</span></a>
+          <a title="Landing Page" href="/"><span class="text">Main</span></a>
         </li>
         <li class="Latest Releases">
           <a title="Latest Releases" href="/latest"><span class="text">Latest</span></a>
@@ -236,8 +236,8 @@
       <form action="/api/action" method="post">
         <div>
           <fieldset>
-            <input type="hidden" name="show" value="calendar" />
-            <input type="hidden" name="do" value="calendar" />
+            <input type="hidden" name="show" value="landing" />
+            <input type="hidden" name="do" value="landing" />
           </fieldset>
           <ul id="menu-login">
             <li id="user-login">
@@ -307,7 +307,7 @@
 
 <!--Search-bar-full-code-start-->
       <div class="menu_hr"></div>
-      <div id="layout-search" class="calendar_search">
+      <div id="layout-search" class="landing_search">
         <div
           class="search container"
           itemscope

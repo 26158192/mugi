@@ -877,7 +877,7 @@ h1+.icons {
 #anidb.internet_explorer #preferences .g_bubblewrap:not(.nogrow)>*,
 #anidb.internet_explorer .accounting_all .g_bubblewrap:not(.nogrow)>*,
 #anidb.internet_explorer .animelist_all .g_bubblewrap:not(.nogrow)>*,
-#anidb.internet_explorer .calendar_all .g_bubblewrap:not(.nogrow)>*,
+#anidb.internet_explorer .landing_all .g_bubblewrap:not(.nogrow)>*,
 #anidb.internet_explorer .g_bubblewrap:not(.nogrow)>.graph.g_bubble,
 #anidb.internet_explorer .g_progressbar.g_bubblewrap:not(.nogrow)>* {
     -ms-flex-grow: 1;
@@ -885,12 +885,12 @@ h1+.icons {
 }
 
 #anidb.internet_explorer .animelist_all .g_bubblewrap.nowrap,
-#anidb.internet_explorer .calendar_all .g_bubblewrap.nowrap {
+#anidb.internet_explorer .landing_all .g_bubblewrap.nowrap {
     display: block
 }
 
 #anidb.internet_explorer .animelist_all .g_filter,
-#anidb.internet_explorer .calendar_all .g_filter {
+#anidb.internet_explorer .landing_all .g_filter {
     float: right
 }
 
@@ -4125,7 +4125,7 @@ div.g_timeline ul.row li a {
 @media screen and (max-width: 450px) {
 
     #anidb.animelist #layout-tabs li.list,
-    #anidb.calendar #layout-tabs li.list,
+    #anidb.landing #layout-tabs li.list,
     #anidb.forum #layout-tabs li.list {
         display: none
     }
@@ -4267,34 +4267,34 @@ div.g_timeline ul.row li a {
     width: 50%
 }
 
-#layout-main div.calendar_all .g_section input.year {
+#layout-main div.landing_all .g_section input.year {
     width: 4em;
     text-align: center
 }
 
-#layout-main div.calendar_all .g_bubble.stripe {
+#layout-main div.landing_all .g_bubble.stripe {
     width: 375px;
     max-width: 550px
 }
 
-#layout-main div.calendar_all .g_section.middle div.g_section.content {
+#layout-main div.landing_all .g_section.middle div.g_section.content {
     clear: none
 }
 
-#layout-main div.calendar_all .date_selector,
-#layout-main div.calendar_all .g_list.views {
+#layout-main div.landing_all .date_selector,
+#layout-main div.landing_all .g_list.views {
     display: inline-block;
     vertical-align: top
 }
 
-#layout-main div.calendar_all .g_bubble.box:not(.small) .actions {
+#layout-main div.landing_all .g_bubble.box:not(.small) .actions {
     white-space: normal;
     max-width: 10em;
     text-align: right
 }
 
 @media screen and (max-width: 500px) {
-    #layout-main div.calendar_all .g_bubble.stripe {
+    #layout-main div.landing_all .g_bubble.stripe {
         width: 100%
     }
 }
@@ -6210,89 +6210,89 @@ div.g_timeline ul.row li a {
     }
 }
 
-#layout-main div.main_all div.calendar {
+#layout-main div.main_all div.landing {
     margin-bottom: .5em
 }
 
-#layout-main div.main_all div.calendar>h2 {
+#layout-main div.main_all div.landing>h2 {
     margin: 0 .3em
 }
 
-#layout-main div.main_all div.calendar>div.edit_actions {
+#layout-main div.main_all div.landing>div.edit_actions {
     margin-top: -2.5em
 }
 
-#layout-main div.main_all div.calendar .g_bubble.box.small {
+#layout-main div.main_all div.landing .g_bubble.box.small {
     max-width: 250px
 }
 
-#layout-main div.main_all div.calendar .g_bubble.box.no10,
-#layout-main div.main_all div.calendar .g_bubble.box.no3,
-#layout-main div.main_all div.calendar .g_bubble.box.no4,
-#layout-main div.main_all div.calendar .g_bubble.box.no5,
-#layout-main div.main_all div.calendar .g_bubble.box.no6,
-#layout-main div.main_all div.calendar .g_bubble.box.no7,
-#layout-main div.main_all div.calendar .g_bubble.box.no8,
-#layout-main div.main_all div.calendar .g_bubble.box.no9 {
+#layout-main div.main_all div.landing .g_bubble.box.no10,
+#layout-main div.main_all div.landing .g_bubble.box.no3,
+#layout-main div.main_all div.landing .g_bubble.box.no4,
+#layout-main div.main_all div.landing .g_bubble.box.no5,
+#layout-main div.main_all div.landing .g_bubble.box.no6,
+#layout-main div.main_all div.landing .g_bubble.box.no7,
+#layout-main div.main_all div.landing .g_bubble.box.no8,
+#layout-main div.main_all div.landing .g_bubble.box.no9 {
     display: none
 }
 
 @media screen and (max-width: 350px) {
-    #layout-main div.main_all div.calendar .g_bubble div.name {
+    #layout-main div.main_all div.landing .g_bubble div.name {
         height: auto
     }
 }
 
 @media screen and (max-width: 370px) {
-    #layout-main div.main_all div.calendar .g_bubble.box.small {
+    #layout-main div.main_all div.landing .g_bubble.box.small {
         padding: 0
     }
 }
 
 @media screen and (min-width: 550px) {
-    #layout-main div.main_all div.calendar .g_bubble.box.no3 {
+    #layout-main div.main_all div.landing .g_bubble.box.no3 {
         display: block
     }
 }
 
 @media screen and (min-width: 820px) {
-    #layout-main div.main_all div.calendar .g_bubble.box.no4 {
+    #layout-main div.main_all div.landing .g_bubble.box.no4 {
         display: block
     }
 }
 
 @media screen and (min-width: 1060px) {
-    #layout-main div.main_all div.calendar .g_bubble.box.no5 {
+    #layout-main div.main_all div.landing .g_bubble.box.no5 {
         display: block
     }
 }
 
 @media screen and (min-width: 1230px) {
-    #layout-main div.main_all div.calendar .g_bubble.box.no6 {
+    #layout-main div.main_all div.landing .g_bubble.box.no6 {
         display: block
     }
 }
 
 @media screen and (min-width: 1400px) {
-    #layout-main div.main_all div.calendar .g_bubble.box.no7 {
+    #layout-main div.main_all div.landing .g_bubble.box.no7 {
         display: block
     }
 }
 
 @media screen and (min-width: 1570px) {
-    #layout-main div.main_all div.calendar .g_bubble.box.no8 {
+    #layout-main div.main_all div.landing .g_bubble.box.no8 {
         display: block
     }
 }
 
 @media screen and (min-width: 1750px) {
-    #layout-main div.main_all div.calendar .g_bubble.box.no9 {
+    #layout-main div.main_all div.landing .g_bubble.box.no9 {
         display: block
     }
 }
 
 @media screen and (min-width: 1910px) {
-    #layout-main div.main_all div.calendar .g_bubble.box.no10 {
+    #layout-main div.main_all div.landing .g_bubble.box.no10 {
         display: block
     }
 }
@@ -19034,7 +19034,7 @@ table table,
 #layout-main .block .g_definitionlist table,
 #layout-main div.anime_all div.data table.relationlist tr,
 #layout-main div.anime_all div.data table.relationlist tr,
-#layout-main div.main_all div.calendar .g_bubble.box>div.top div.name,
+#layout-main div.main_all div.landing .g_bubble.box>div.top div.name,
 #layout-main div.tabbed_pane div.body div.pane ul li,
 #layout-search div.g_bubble.search {
     border: 0
@@ -19459,7 +19459,7 @@ button,
     margin-top: -3.4em
 }
 
-#layout-main div.main_all div.calendar>div.edit_actions {
+#layout-main div.main_all div.landing>div.edit_actions {
     margin-top: -2.9em
 }
 
@@ -19475,7 +19475,7 @@ button,
     line-height: 26px
 }
 
-#layout-main div.calendar_all .date_selector+.g_list {
+#layout-main div.landing_all .date_selector+.g_list {
     margin-top: -2.5em
 }
 
@@ -20030,7 +20030,7 @@ table,
     content: ""
 }
 
-#layout-menu li.sub-menu ul li.calendar a::before {
+#layout-menu li.sub-menu ul li.landing a::before {
     content: ""
 }
 
@@ -20882,7 +20882,7 @@ input[type=submit]:hover,
     color: inherit
 }
 
-#layout-main div.calendar_all .g_section.middle div.g_section.content.today .g_bubblewrap.g_bubble.container {
+#layout-main div.landing_all .g_section.middle div.g_section.content.today .g_bubblewrap.g_bubble.container {
     background-color: #919ba1
 }
 
@@ -21041,8 +21041,8 @@ button,
 input[type=button],
 input[type=submit],
 #layout-main div.addfilem.form div.dump textarea,
-#layout-main div.calendar_all .date_selector input.year,
-#layout-main div.calendar_all .date_selector select,
+#layout-main div.landing_all .date_selector input.year,
+#layout-main div.landing_all .date_selector select,
 #layout-main div.edit_actions>span>*,
 #layout-main div.forum div.quickreply textarea,
 #layout-main div.pagination span a,
