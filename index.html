@@ -1,1012 +1,558 @@
 <!DOCTYPE html>
-<html lang="en" prefix="og: http://ogp.me/ns#">
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>MugiSub - Anime with Subtitles</title>
-    <meta
-      property="og:description"Home
-      name="description"
-      content="Looking for information about Anime starting in Summer 2024? AniDB is the right place for you. AniDB is a not-for-profit anime database providing you ..."
-    />
-    <meta name="robots" content="index, follow" />
-    
-    <!--mine-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="styles.css"
-      type="text/css" 
-      title="Style"/>
-    <link rel="stylesheet" href="/request.css">
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MugiSUB — Urdu Anime Subtitles</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Nunito:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
 
-    <!--mine-->
-
-
-
-
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="https://cdn-eu.anidb.net/css/assets/images/touch/apple-touch-icon.png?v=2024-08-09T12-06-12"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="https://cdn-eu.anidb.net/css/assets/images/touch/favicon-32x32.png?v=2024-08-09T12-06-12"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="https://cdn-eu.anidb.net/css/assets/images/touch/favicon-16x16.png?v=2024-08-09T12-06-12"
-    />
-    <link
-      rel="manifest"
-      href="https://cdn-eu.anidb.net/css/assets/images/touch/site.webmanifest?v=2024-08-09T12-06-12"
-    />
-    <link
-      rel="mask-icon"
-      href="https://cdn-eu.anidb.net/css/assets/images/touch/safari-pinned-tab.svg?v=2024-08-09T12-06-12"
-      color="#e18e3c"
-    />
-    <link
-      rel="shortcut icon"
-      href="https://cdn-eu.anidb.net/css/assets/images/touch/favicon.ico?v=2024-08-09T12-06-12"
-    />
-    <link
-      property="og:url"
-      rel="canonical"
-      href="https://anidb.net/anime/season/2024/summer/?do=calendar&amp;h=1&amp;view=smallgrid"
-    />
-    <link
-      rel="search"
-      type="application/opensearchdescription+xml"
-      href="https://anidb.net/opensearch.xml"
-      title="AniDB"
-    />
-    <link
-      rel="alternate"
-      type="application/atom+xml"
-      title="AniDB Latest Files"
-      href="https://anidb.net/feeds/files.atom"
-    />
-    <link
-      rel="alternate"
-      type="application/atom+xml"
-      title="AniDB Latest News"
-      href="https://anidb.net/feeds/news.atom"
-    />
-    <meta
-      name="anidb-url"
-      content=""
-      id="anidb-url"
-      data-anidb-url="https://anidb.net/perl-bin/animedb.pl?show=calendar&amp;do=calendar&amp;h=1&amp;last.anime.month=19&amp;last.anime.year=2024&amp;view=smallgrid"
-    />
-    <meta name="apple-mobile-web-app-title" content="AniDB" />
-    <meta name="application-name" content="AniDB" />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta
-      name="msapplication-config"
-      content="https://cdn-eu.anidb.net/css/assets/images/touch/browserconfig.xml?v=2024-08-09T12-06-12"
-    />
-    <meta name="theme-color" content="#ffffff" />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@anidbstatus" />
-    <meta name="twitter:creator" content="@anidbstatus" />
-    <meta property="og:title" content="Anime starting in Summer 2024 - AniDB" />
- <script
-      defer
-      src="https://cdn-eu.anidb.net/js/libs/js.cookie.min.js?v=2022-12-03T23-47-26"
-    ></script>
-    <script
-      defer
-      src="https://cdn-eu.anidb.net/js/libs/jquery.min.js?v=2022-12-03T23-47-26"
-    ></script>
-    <script
-      defer
-      src="https://cdn-eu.anidb.net/js/libs/jquery.form.min.js?v=2022-12-03T23-47-26"
-    ></script>
-    <script
-      defer
-      src="https://cdn-eu.anidb.net/js/libs/jquery.fancybox.min.js?v=2022-12-03T23-47-26"
-    ></script>
-    <script
-      defer
-      src="https://cdn-eu.anidb.net/js/libs/jquery.sortable.min.js?v=2022-12-03T23-47-26"
-    ></script>
-    <script
-      defer
-      src="https://cdn-eu.anidb.net/js/libs/jquery.tablesorter.min.js?v=2022-12-03T23-47-26"
-    ></script>
-    <script
-      defer
-      src="https://cdn-eu.anidb.net/js/libs/jquery.toastr.min.js?v=2022-12-03T23-47-26"
-    ></script>
-    <script
-      defer
-      src="https://cdn-eu.anidb.net/js/libs/jquery.uploadfile.min.js?v=2022-12-03T23-47-26"
-    ></script>
-    <script
-      defer
-      src="https://cdn-eu.anidb.net/js/libs/jquery.wysibb.min.js?v=2022-12-03T23-47-26"
-    ></script>
-    <script
-      defer
-      src="https://cdn-eu.anidb.net/js/libs/jqueryui.position.min.js?v=2022-12-03T23-47-26"
-    ></script>
-    <script
-      defer
-      src="https://cdn-eu.anidb.net/js/libs/select2.min.js?v=2022-12-03T23-47-26"
-    ></script>
-    <script
-      defer
-      src="https://cdn-eu.anidb.net/js/libs/highcharts.min.js?v=2022-12-03T23-47-26"
-    ></script>
-    <script
-      defer
-      src="https://cdn-eu.anidb.net/js/legacy/legacy.min.js?v=2022-12-03T23-47-26"
-    ></script>
-    <script
-      defer
-      src="https://cdn-eu.anidb.net/js/WordSuggest.min.js?v=2022-12-03T23-47-26"
-    ></script>
-    <script
-      defer
-      src="https://cdn-eu.anidb.net/js/global.min.js?v=2022-12-03T23-47-26"
-    ></script>
-
-
-<!-- mine -->
-<script src="/request.js"></script>
-<!-- mine -->
-
-
-
-  </head>
-  <body id="anidb" class="calendar">
-    <!--Hint ON top-->
-    <!--
-    <div id="layout-hint" class="hint">
-      <span class="head">HINT:</span>
-      <span class="msg"
-        >Confused? Take a look at the
-        <a href="https://wiki.anidb.net">AniDB Wiki</a> or visit us on
-        <a href="https://wiki.anidb.net/w/IRC:Anidb">IRC</a>.</span
-      >
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="topbar-left">
+      <a href="index.html" class="logo">
+        <img src="https://api.dicebear.com/7.x/shapes/svg?seed=mugisub&backgroundColor=1a1a2e" class="logo-img" alt="logo" />
+        <span class="logo-text">Mugi<span class="logo-accent">SUB</span></span>
+      </a>
     </div>
-    -->
+    <nav class="topnav">
+      <a href="#" class="nav-link active">Home</a>
+      <a href="#ongoing" class="nav-link">Ongoing</a>
+      <a href="#completed" class="nav-link">Completed</a>
+      <a href="#batch" class="nav-link">Batch</a>
+      <a href="#tools" class="nav-link">Tools</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#" class="nav-link">Discord</a>
+    </nav>
+    <div class="topbar-right">
+      <input type="text" class="search-box" placeholder="Search anime..." id="searchInput" />
+      <button class="search-btn" onclick="doSearch()">🔍</button>
+    </div>
+  </div>
 
-
-
-
-   <!--side-navbar-start-->
-<div id="layout-nav" class="calendar_nav">
-  <ul id="layout-menu" class="calendar_menu">
-
-    <!-- HOME -->
-    <li class="sub-menu main" title="Menu">
-      <span class="tab">HOME</span>
-      <ul id="menu-main">
-        <li class="main">
-          <a title="Main Page" href="/"><span class="text">Main</span></a>
-        </li>
-        <li class="Latest Releases">
-          <a title="Latest Releases" href="/latest"><span class="text">Latest</span></a>
-        </li>
-        <li class="Random">
-          <a title="Random Watch" href="/random"><span class="text">Random</span></a>
-        </li>
-        <li class="Watch2gether">
-          <a title="Watch with friends" href="/Watch2gether"><span class="text">Watch2gether</span></a>
-        </li>
-      </ul>
-      <span></span>
-    </li>
-
-    <!-- Browse -->
-    <li class="sub-menu listings" title="Content">
-      <span class="tab">BROWSE</span>
-      <ul id="menu-lists">
-        <li class="anime">
-          <a title="All Anime" href="/anime"><span class="text">Anime</span></a>
-        </li>
-        <li class="movies">
-          <a title="Movies" href="/anime/movies"><span class="text">Movies</span></a>
-        </li>
-        <li class="tv">
-          <a title="Tv Show" href="/anime/movies"><span class="text">TV Shows</span></a>
-        </li>
-        <li class="ova">
-          <a title="OVA / ONA" href="/anime/ova"><span class="text">OVA / ONA</span></a>
-        </li>
-        <li class="genres">
-          <a title="Browse by Genre" href="/genres"><span class="text">Genres</span></a>
-        </li>
-      </ul>
-      <span></span>
-    </li>
-
-    <!-- RELEASES -->
-    <li class="sub-menu support" title="Releases">
-      <span class="tab">RELEASES</span>
-      <ul id="menu-support">
-     
-        <li class="ongoing">
-          <a title="Ongoing Series" href="/releases/ongoing"><span class="text">Ongoing</span></a>
-        </li>
-        <li class="completed">
-          <a title="Completed Series" href="/releases/completed"><span class="text">Completed</span></a>
-        </li>
-    
-      </ul>
-      <span></span>
-    </li>
-
-    <!-- SUPPORT -->
-    <li class="sub-menu terms" title="Support">
-      <span class="tab">SUPPORT</span>
-      <ul id="menu-terms">
-        <li class="Donate">
-          <a title="Donate to MugiSUB" href="/donation"><span class="text">Donate</span></a>
-        </li>
-        <li class="Report">
-          <a title="Report an Error" href="/report"><span class="text">Report Error</span></a>
-        </li>
-        <li class="Policies">
-          <a title="Privacy Policy" href="/policy"><span class="text">Policies</span></a>
-        </li>
-        <li class="Staff">
-          <a title="MugiSUB Team" href="/about"><span class="text">Our Team</span></a>
-        </li>
-        <li class="Contact">
-          <a title="Contact Team" href="/about"><span class="text">Contact US</span></a>
-        </li>
-      </ul>
-      <span></span>
-    </li>
-
-    <!-- DMCA / LOGIN -->
-    <li class="sub-menu login" title="Register or login">
-      <span class="tab">DMCA</span>
-      <form action="/api/action" method="post">
-        <div>
-          <fieldset>
-            <input type="hidden" name="show" value="calendar" />
-            <input type="hidden" name="do" value="calendar" />
-          </fieldset>
-          <ul id="menu-login">
-            <li id="user-login">
-  <a title="Show login page" href="/user/login"
-    ><span class="text">Login</span></a
-  >
-</li>
-<li id="user-signup">
-  <a title="Register now" href="/user/register"
-    ><span class="text">Register</span></a
-  >
-</li>
-            <li id="user-xname" class="user-xname" title="User name">
-              <span
-                ><input
-                  name="xuser"
-                  class="text"
-                  maxlength="16"
-                  type="text"
-                  value=""
-              /></span>
-            </li>
-            <li id="user-xpass" class="user-xpass" title="Password">
-              <span
-                ><input
-                  name="xpass"
-                  class="text"
-                  maxlength="64"
-                  type="password"
-              /></span>
-            </li>
-            <li id="user-xkeep" class="user-xkeep" title="Remember login data">
-              <span
-                ><label
-                  ><input
-                    name="xdoautologin"
-                    type="checkbox"
-                    check="check"
-                  />
-                  <span>stay logged-in</span></label
-                ></span
-              >
-            </li>
-            <li id="user-xauth" class="user-xauth" title="Login">
-              <span
-                ><button
-                  class="login"
-                  name="do.auth"
-                  type="submit"
-                  value="login"
-                >
-                  <span>Login</span>
-                </button></span
-              >
-            </li>
-          </ul>
-          <span></span>
-        </div>
-      </form>
-    </li>
-
-  </ul>
-<!--side-navbar-end-->
-
-
-
-
-<!--Search-bar-full-code-start-->
-      <div class="menu_hr"></div>
-      <div id="layout-search" class="calendar_search">
-        <div
-          class="search container"
-          itemscope
-          itemtype="https://schema.org/WebSite"
-        >
-          <span class="hide" itemprop="name">MugiSub</span>
-          <a
-            class="hide"
-            rel="canonical"
-            href="https://anidb.net"
-            itemprop="url"
-          ></a>
-          <form
-            action="/perl-bin/animedb.pl"
-            method="get"
-            itemprop="potentialAction"
-            itemscope
-            itemtype="https://schema.org/SearchAction"
-          >
-            <div
-              itemprop="target"
-              content="https://anidb.net/search/anime/?adb.search={adb.search}&amp;do.search=1"
-            >
-              <input
-                itemprop="query-input"
-                id="layout-searchbox"
-                accesskey="s"
-                type="text"
-                name="adb.search"
-                value=""
-                class="text"
-              />
-              <select name="show" id="layout-searchselect" size="1">
-                <option value="search"selected="selected">All</option>
-                <option value="animelist">Anime</option>
-                <option value="characterlist">Character</option>
-                <option value="clublist">Club</option>
-                <option value="collectionlist">Collections</option>
-                <option value="creatorlist">Creator</option>
-                <option value="eplist">Episodes</option>
-                <option value="grouplist">Group</option>
-                <option value="mylist">List</option>
-                <option value="songlist">Songs</option>
-                <option value="taglist">Tags</option>
-                <option value="userlist">User</option>
-              </select>
-              <button
-                type="submit"
-                name="do.search"
-                value="1"
-                class="submit search">
-              
-                Search
-              </button>
-              <fieldset>
-                <input type="hidden" name="cleanurl" value="1" />
-              </fieldset>
-            </div>
-          </form>
-          <form class="random" action="/perl-bin/animedb.pl" method="get">
-     
-        </div>
+  <!-- HERO BANNER -->
+  <div class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-badge">اردو سب ٹائٹلز</div>
+      <h1 class="hero-title">Mugi<span class="accent">SUB</span></h1>
+      <p class="hero-sub">Premium Urdu Anime Subtitles — Hand-crafted, Styled, Free</p>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">120+</span><span class="stat-lbl">Anime</span></div>
+        <div class="stat-div"></div>
+        <div class="stat"><span class="stat-num">1400+</span><span class="stat-lbl">Episodes</span></div>
+        <div class="stat-div"></div>
+        <div class="stat"><span class="stat-num">Urdu</span><span class="stat-lbl">Language</span></div>
+      </div>
+      <div class="hero-btns">
+        <a href="#ongoing" class="btn-primary">Browse Subs</a>
+        <a href="#about" class="btn-outline">About Us</a>
       </div>
     </div>
-    <!--layout-tabs-->
-   <div id="layout-content">
-	<div id="layout-tabs">
-		<ul class="main-tabs">
-			<li class="g_odd file"><span><a href="/latest/anime/release"><span class="text">Donate</span></a></span></li>
-			<li class="completed"><span><a href="/latest/anime/release/complete"><span class="text">Credits</span></a></span></li>
-			<li class="g_odd hotanime"><span><a href="/latest/anime/popular"><span class="text">Policies</span></a></span></li>
-			<li class="anime"><span><a href="/latest/anime"><span class="text">DMCA</span></a></span></li>
-        <!--HideSome Upper Tabs -->
-    <!--
-      <li class="g_odd sequel"><span><a href="/latest/anime/relation"><span class="text">related anime</span></a></span></li>
-			<li class="recs"><span><a href="/latest/anime/recommendation"><span class="text">recommendations</span></a></span></li>
-			<li class="g_odd reviews"><span><a href="/latest/anime/review"><span class="text">reviews</span></a></span></li>
-			<li class="similaranime"><span><a href="/latest/anime/similar"><span class="text">similar anime</span></a></span></li>
-			<li class="g_odd customise"><span><a href="/latest/customise"><span class="text">customise</span></a></span></li>
-      -->
-		</ul> 
-	</div>
-  
-      <!--layout-tabs-->
-	<div id="layout-main">
-<div class="g_breadcrumbs hide" itemscope itemtype="https://schema.org/BreadcrumbList">
-	<div class="node" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-		<meta itemprop="position" content="1"/>
-		<a href="https://anidb.net" itemprop="item"><span itemprop="name">Main</span></a>
-	</div>
-	<div class="node" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-		<meta itemprop="position" content="2"/>
-		<a href="https://anidb.net/anime" itemprop="item"><span itemprop="name">Anime</span></a>
-	</div>
-</div>
-<!--Search-bar-full-code-end-->
+    <div class="hero-cards">
+      <div class="hero-card hc1">
+        <img src="https://cdn.myanimelist.net/images/anime/1079/138081.jpg" alt="Solo Leveling" />
+        <div class="hc-overlay"><span>Solo Leveling S2</span></div>
+      </div>
+      <div class="hero-card hc2">
+        <img src="https://cdn.myanimelist.net/images/anime/1870/120219.jpg" alt="Berserk" />
+        <div class="hc-overlay"><span>Berserk</span></div>
+      </div>
+      <div class="hero-card hc3">
+        <img src="https://cdn.myanimelist.net/images/anime/1208/94745.jpg" alt="Attack on Titan" />
+        <div class="hc-overlay"><span>Attack on Titan</span></div>
+      </div>
+    </div>
+  </div>
 
+  <!-- FILTER PILLS -->
+  <div class="filter-bar">
+    <span class="filter-label">Filter:</span>
+    <button class="pill active" data-filter="all" onclick="filterCards(this,'all')">All</button>
+    <button class="pill" data-filter="action" onclick="filterCards(this,'action')">Action</button>
+    <button class="pill" data-filter="fantasy" onclick="filterCards(this,'fantasy')">Fantasy</button>
+    <button class="pill" data-filter="isekai" onclick="filterCards(this,'isekai')">Isekai</button>
+    <button class="pill" data-filter="romance" onclick="filterCards(this,'romance')">Romance</button>
+    <button class="pill" data-filter="horror" onclick="filterCards(this,'horror')">Horror</button>
+    <button class="pill" data-filter="movie" onclick="filterCards(this,'movie')">Movie</button>
+    <button class="pill" data-filter="completed" onclick="filterCards(this,'completed')">✅ Completed</button>
+  </div>
 
+  <!-- MAIN CONTENT -->
+  <div class="main-wrap">
 
-<!--Anime-list-upper-start-->
-<!--Anime-list-upper-end-->
-
-
-
-
-<!--Side-Filter-Start-->
-<div class="g_bubblewrap nowrap g_section">
-  <div class="hide right g_filter hassettings">
-    <div class="g_bubble flap hide" title="click to show the filter menu">REQ</div>
-    <div class="content">
-      <span title="Hide Filter" class="fancybox-item fancybox-close"></span>
-
- <div class="g_section filters">
-  <h2><span>Submit a Request</span></h2>
-
-  <form id="request-form" action="/ajax/request/submit" method="post">
-    <input type="hidden" name="cleanurl" value="1"/>
-
-    <ul class="g_bubblewrap">
-      <li class="g_odd g_bubble">
-
-        <h3>Category</h3>
-        <div class="g_boxwrap">
-          <label>
-            <select name="epp" size="1" id="req-category">
-              <option value="anime" selected="selected">Anime</option>
-              <option value="movie">Movies</option>
-              <option value="tv">TV Shows</option>
-            </select>
-          </label>
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="side-box">
+        <div class="side-title">📣 Announcements</div>
+        <ul class="side-list">
+          <li>Solo Leveling S2 Ep 9 uploaded!</li>
+          <li>Berserk 2025 batch coming soon</li>
+          <li>Site redesign launched 🎉</li>
+          <li>Discord server is live</li>
+        </ul>
+      </div>
+      <div class="side-box">
+        <div class="side-title">🔥 Trending Now</div>
+        <ul class="side-list trend-list">
+          <li><img src="https://cdn.myanimelist.net/images/anime/1079/138081.jpg" /><span>Solo Leveling S2</span></li>
+          <li><img src="https://cdn.myanimelist.net/images/anime/1870/120219.jpg" /><span>Berserk</span></li>
+          <li><img src="https://cdn.myanimelist.net/images/anime/1208/94745.jpg" /><span>Attack on Titan</span></li>
+          <li><img src="https://cdn.myanimelist.net/images/anime/1223/96541.jpg" /><span>Demon Slayer</span></li>
+          <li><img src="https://cdn.myanimelist.net/images/anime/1286/99889.jpg" /><span>Jujutsu Kaisen</span></li>
+        </ul>
+      </div>
+      <div class="side-box">
+        <div class="side-title">🏷️ Tags</div>
+        <div class="tag-cloud">
+          <span class="stag">Urdu</span><span class="stag">Action</span><span class="stag">Batch</span>
+          <span class="stag">HD</span><span class="stag">1080p</span><span class="stag">ASS</span>
+          <span class="stag">SRT</span><span class="stag">Fantasy</span><span class="stag">Isekai</span>
+          <span class="stag">Dubbed</span><span class="stag">Subbed</span><span class="stag">Movie</span>
         </div>
+      </div>
+      <div class="side-box discord-box">
+        <div class="side-title">💬 Join Discord</div>
+        <p class="discord-text">Get notified for every new subtitle drop!</p>
+        <a href="#" class="discord-btn">Join Server</a>
+      </div>
+    </aside>
 
-        <h3 id="req-title-label">Title <span class="req-star">*</span></h3>
-        <div class="g_boxwrap">
-          <input class="req-input" type="text" name="title" required
-            id="req-title"
-            placeholder="e.g. Demon Slayer Season 4" />
+    <!-- CONTENT AREA -->
+    <section class="content-area">
+
+      <!-- ONGOING SECTION -->
+      <div id="ongoing" class="section-block">
+        <div class="section-header">
+          <h2 class="section-title"><span class="dot green"></span> Ongoing Subs <span class="count-badge">8</span></h2>
+          <div class="section-filters">
+            <span class="sfil">Latest Episode ↓</span>
+          </div>
         </div>
-
-        <h3>Link <span class="req-optional">(optional)</span></h3>
-        <div class="g_boxwrap">
-          <input class="req-input" type="url" name="link"
-            placeholder="https://myanimelist.net/..." />
-        </div>
-
-        <h3>Note <span class="req-optional">(optional)</span></h3>
-        <div class="g_boxwrap">
-          <textarea class="req-input req-textarea" name="note" rows="4"
-            id="req-note"
-            placeholder="Season, episode, ya koi aur detail..."></textarea>
-        </div>
-
-        <div class="g_boxwrap">
-          <button type="submit" class="req-submit">Submit Request</button>
-          <p class="req-hint">
-            Ya phir <a href="https://t.me/MugiSUB">Telegram</a> pe message karo
-          </p>
-        </div>
-
-      </li>
-  <li class="g_odd g_bubble">
-    <div class="g_boxwrap"><h3>Adult Content</h3><label class="ignore"><input type="radio" name="h" value="0" check="check"> <a href="/content/ignore"><span>ignore</span></a></label><label><input type="radio" name="h" value="1"> <a href="/content/hide-18-plus"><span>hide 18+ Content</span></a></label><label><input type="radio" name="h" value="2"> <a href="/content/only-18-plus"><span>show only 18+ Content</span></a></label></div>
-  </li>
-
-  <li class="g_bubble">
-    <div class="g_boxwrap"><h3>Airing Status</h3><label class="ignore"><input type="radio" name="airing" value="0" check="check"> <a href="/airing/ignore"><span>ignore</span></a></label><label><input type="radio" name="airing" value="1"> <a href="/airing/still-airing"><span>still airing</span></a></label><label><input type="radio" name="airing" value="2"> <a href="/airing/finished"><span>finished</span></a></label><label><input type="radio" name="airing" value="3"> <a href="/airing/unaired"><span>unaired/unknown</span></a></label></div>
-  </li>
-
-  <li class="g_odd g_bubble"><h3>Anime Type</h3>
-    <div class="g_boxwrap"><label><input type="checkbox" value="1" name="type.movie"> <a href="/type/movie"><span>Movie</span></a></label><label><input type="checkbox" value="1" name="type.musicvideo"> <a href="/type/musicvideo"><span>Music Video</span></a></label><label><input type="checkbox" value="1" name="type.other"> <a href="/type/other"><span>Other</span></a></label><label><input type="checkbox" value="1" name="type.ova"> <a href="/type/ova"><span>OVA</span></a></label><label><input type="checkbox" value="1" name="type.tvseries"> <a href="/type/tvseries"><span>TV Series</span></a></label><label><input type="checkbox" value="1" name="type.tvspecial"> <a href="/type/tvspecial"><span>TV Special</span></a></label><label><input type="checkbox" value="1" name="type.unknown"> <a href="/type/unknown"><span>unknown</span></a></label><label><input type="checkbox" value="1" name="type.web"> <a href="/type/web"><span>Web</span></a></label></div>
-  </li>
-
-  
-</ul>
-</div>
-</form>
-</div>
-</div>
-  <!--Side-Filte-END-->
-
-               <!--Main-Content-poster-start-->      
-              <div class="container">
-              <div class="g_section content">
-                <h2><span>Latest Uploads</span></h2>
-                <div class="g_bubblewrap g_bubble container">
-                   <!--Start Box-4-->
- <div class="g_odd g_bubble box no1" id="a17146">
-                    <div class="thumb image">
-                        <a href="watch.html"><picture>
-                      <img loading="lazy" alt="Kami wa Game ni Uete Iru." src="https://media.themoviedb.org/t/p/w220_and_h330_face/b33nnKl1GSFbao4l3fZDDqsMx0F.jpg" height="200" width="400" class="g_image g_bubble small"/>
-                </picture></a></div>
-                    <div class="data">
-                        <div class="wrap name"><a class="name-colored" href="/anime/17146">Kami wa Game ni Uete Iru.</a>
-                        </div>
-                        <div class="icons actions">
-    <a
-title="Watch on UrduSUB"
-      href="watch.html"
-      data-anidb-rel="anidb::extern"
-    >
-      <!-- Add Image Instead of Icon -->
-      <img src="https://i2.imageban.ru/out/2026/04/04/3cde6f7286000b4084536612f9d0b631.png" alt="Urdusub" class="icon-image">
-    </a>
-                        </div>
-                        <div class="date">3rd March
-                        </div>
-                        <div class="general">TV Series, 13 eps
-                        </div>
-                        <div class="extra"><a href="/creator/35233">Liden Films</a>
-                        </div>
-                        <div class="votes rating"><span class="key">Rating:</span> <span data-label="Rating" class="rating low"><span class="value">2.61</span> <span class="count">(167)</span></span>
-                        </div>
-                        <div class="votes average"><span class="key">Average:</span> <span data-label="Rating" class="rating mid"><span class="value">5.08</span> <span class="count">(167)</span></span>
-                        </div>
-                        <div class="tags"><span class="g_tag"><a class="tooltip" href="/tag/2568/animetb"><span class="tagname">deity</span><span class="wrapper"><span class="g_bubble text">Some religions say that there is a supernatural being called God. Other religions say there is more than one god. A supernatural being is also sometimes called a deity. Many religions believe that a deity created everything that exists. In most religions, a god is believed to be immortal (cannot die), and to have powers to control nature far beyond the powers of humans.</span></span></a></span>, <span class="g_tag"><a class="tooltip" href="/tag/2849/animetb"><span class="tagname">fantasy</span><span class="wrapper"><span class="g_bubble text">Imaginative or fanciful work, especially one dealing with supernatural elements and themes.</span></span></a></span>, <span class="g_tag"><a class="tooltip" href="/tag/2799/animetb"><span class="tagname">novel</span><span class="wrapper"><span class="g_bubble text">A novel is a relatively long work of narrative fiction, normally written in prose form, and which is typically published as a book. Manga, comics, or visual novels do not fit this description and are not considered novels; including a small number of illustrations, however, is still permissible, which means that light novels are considered novels.</span></span></a></span>, <span class="g_tag"><a class="tooltip" href="/tag/1802/animetb"><span class="tagname">seinen</span><span class="wrapper"><span class="g_bubble text">Seinen, literally "young man", is one of the main demographic classifications applied to manga, and, by extension, to anime, especially manga-based ones. As the name implies, seinen works are marketed primarily to an audience of young men; the age range commonly understood to be the target of such works goes roughly from 17 to somewhere in the 40s.</span></span></a></span>
-                        </div>
-
-
-
-                        <div class="desc">* Based on a fantasy light novel series written by <a href="https://anidb.net/cr59015">Sazane Kei</a> and illustrated by <a href="https://anidb.net/cr66061">Tomose Toiro</a>.<br /><br />"Peaky Blinders" Season 1 mein Shelby crime family ki kahani hai, jo post-World War I Birmingham mein unfold hoti hai. Thomas Shelby (Cillian Murphy) ke intelligent aur ambtious leadership mein, Peaky Blinders crime, raajneeti aur taqat ke duniya mein kadam badhate hain. Family ki prominence ki shuruaat hoti hai jab unhe chori gayi weapons ka ek stock milta hai, jisse law enforcement aur rival gangs ka dhyan banta hai. Thomas, family ki influence ko badhane ki koshish karte huye, khud ko bewafai, wafa aur khatarnak alliances ka shikar banata hai, jisse 1920s ke England mein crime aur taqat se bhari ek kahani ka aghaz hota hai. Yeh series apne gritty atmosphere, complex characters aur criminal duniya ke andar ki chalbaazi ke liye mashhoor hai.</i>
-                        </div>
-                    </div>
-                </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                   
-                  <!--Start Box-3-->
-                  <div class="g_odd g_bubble box small no3" id="a15910">
-                    <div class="thumb image">
-                      <a href="watch.html"
-                        ><picture>
-                          <img
-                            loading="lazy"
-                            alt="Westworld"
-                            src="https://i6.imageban.ru/out/2026/04/07/bd61e30c7f4d52a7df36927ff9cdfe90.jpg"
-                            height="201"
-                            width="150"
-                            class="g_image g_bubble small"
-                          /> </picture
-                      ></a>
-                    </div>
-
-
-                    <div class="data">
-  <div class="icons actions">
-    <a
-title="Watch on UrduSUB"
-      href="watch.html"
-      data-anidb-rel="anidb::extern"
-    >
-      <!-- Add Image Instead of Icon -->
-      <img src="https://i2.imageban.ru/out/2026/04/04/3cde6f7286000b4084536612f9d0b631.png" alt="Urdusub" class="icon-image">
-    </a>
-                      </div>
-                      <div class="wrap name">
-                        <a class="name-colored" href="watch.html"
-                          >Westworld</a
-                        >
-                      </div>
-                     <div class="extra">
-  <a href="watch.html">Westworld (S1–S4)</a>
-</div>
-
-<span class="key">Subtitle:</span> 
-<span class="value">Hinglish</span>
-
-<div class="general">
-  TV Series, 36 Episodes
-</div>
-
-<div class="votes rating">
-  <span class="key">Rating:</span>
-  <span class="rating mid">
-    <span class="value">8.8</span>/10
-  </span>
-</div>
-
-
-
-<!-- Westworld Added Genres Start -->
-                         <div class="tags">
-  <span class="g_tag">
-    <a class="tooltip" href="/genre/science-fiction">
-      <span class="tagname">Science Fiction</span>
-      <span class="wrapper">
-        <span class="g_bubble text">
-          Focuses on futuristic technology, artificial intelligence, and advanced scientific concepts shaping human life.
-        </span>
-      </span>
-    </a>
-  </span>,
-  <span class="g_tag">
-    <a class="tooltip" href="/genre/drama">
-      <span class="tagname">Drama</span>
-      <span class="wrapper">
-        <span class="g_bubble text">
-          Explores deep human emotions, relationships, and moral conflicts between characters.
-        </span>
-      </span>
-    </a>
-  </span>,
-  <span class="g_tag">
-    <a class="tooltip" href="/genre/thriller">
-      <span class="tagname">Thriller</span>
-      <span class="wrapper">
-        <span class="g_bubble text">
-          Creates suspense, tension, and unexpected twists that keep viewers engaged and curious.
-        </span>
-      </span>
-    </a>
-  </span>,
-  <span class="g_tag">
-    <a class="tooltip" href="/genre/mystery">
-      <span class="tagname">Mystery</span>
-      <span class="wrapper">
-        <span class="g_bubble text">
-          Involves hidden truths, puzzles, and unanswered questions that unfold throughout the story.
-        </span>
-      </span>
-    </a>
-  </span>
-   <!-- Westworld Added Genres End -->
-</div>
- </div>
-                  </div>
-
-
-
-
-
-
-
-
-
-
-
-                  <!--Start Box-2-->
-                  <div class="g_odd g_bubble box small no2" id="a15910">
-                    <div class="thumb image">
-                      <a href="/watch.html"
-                        ><picture>
-                          <img
-                            loading="lazy"
-                            alt="Westworld"
-                            src="https://i6.imageban.ru/out/2026/04/07/bd61e30c7f4d52a7df36927ff9cdfe90.jpg"
-                            height="201"
-                            width="150"
-                            class="g_image g_bubble small"
-                          /> </picture
-                      ></a>
-                    </div>
-
-
-                    <div class="data">
-  <div class="icons actions">
-    <a
-title="Watch on UrduSUB"
-      href="/watch.html"
-      data-anidb-rel="anidb::extern"
-    >
-      <!-- Add Image Instead of Icon -->
-      <img src="https://i2.imageban.ru/out/2026/04/04/3cde6f7286000b4084536612f9d0b631.png" alt="Urdusub" class="icon-image">
-    </a>
-                      </div>
-                      <div class="wrap name">
-                        <a class="name-colored" href="/watch.html"
-                          >Westworld</a
-                        >
-                      </div>
-                     <div class="extra">
-  <a href="/watch.html">Westworld (S1–S4)</a>
-</div>
-
-<span class="key">Subtitle:</span> 
-<span class="value">Hinglish</span>
-
-<div class="general">
-  TV Series, 36 Episodes
-</div>
-
-<div class="votes rating">
-  <span class="key">Rating:</span>
-  <span class="rating mid">
-    <span class="value">8.8</span>/10
-  </span>
-</div>
-
-
-
-<!-- Westworld Added Genres Start -->
-                         <div class="tags">
-  <span class="g_tag">
-    <a class="tooltip" href="/genre/science-fiction">
-      <span class="tagname">Science Fiction</span>
-      <span class="wrapper">
-        <span class="g_bubble text">
-          Focuses on futuristic technology, artificial intelligence, and advanced scientific concepts shaping human life.
-        </span>
-      </span>
-    </a>
-  </span>,
-  <span class="g_tag">
-    <a class="tooltip" href="/genre/drama">
-      <span class="tagname">Drama</span>
-      <span class="wrapper">
-        <span class="g_bubble text">
-          Explores deep human emotions, relationships, and moral conflicts between characters.
-        </span>
-      </span>
-    </a>
-  </span>,
-  <span class="g_tag">
-    <a class="tooltip" href="/genre/thriller">
-      <span class="tagname">Thriller</span>
-      <span class="wrapper">
-        <span class="g_bubble text">
-          Creates suspense, tension, and unexpected twists that keep viewers engaged and curious.
-        </span>
-      </span>
-    </a>
-  </span>,
-  <span class="g_tag">
-    <a class="tooltip" href="/genre/mystery">
-      <span class="tagname">Mystery</span>
-      <span class="wrapper">
-        <span class="g_bubble text">
-          Involves hidden truths, puzzles, and unanswered questions that unfold throughout the story.
-        </span>
-      </span>
-    </a>
-  </span>
-   <!-- Westworld Added Genres End -->
-</div>
- </div>
-                  </div>
-
-
-
-
-
-
-
-
-
-
-                  
-
-
-
-
-
-
-
-
-
-
-
-
-                   <!--Start Box-1-->
-                  <div class="g_odd g_bubble box small no1" id="a15910">
-                    <div class="thumb image">
-                      <a href="/watch.html"
-                        ><picture>
-                          <img
-                            loading="lazy"
-                            alt="Westworld"
-                            src="https://i6.imageban.ru/out/2026/04/07/bd61e30c7f4d52a7df36927ff9cdfe90.jpg"
-                            height="201"
-                            width="150"
-                            class="g_image g_bubble small"
-                          /> </picture
-                      ></a>
-                    </div>
-
-
-                    <div class="data">
-  <div class="icons actions">
-    <a
-title="Watch on UrduSUB"
-      href="/watch.html"
-      data-anidb-rel="anidb::extern"
-    >
-      <!-- Add Image Instead of Icon -->
-      <img src="https://i2.imageban.ru/out/2026/04/04/3cde6f7286000b4084536612f9d0b631.png" alt="Urdusub" class="icon-image">
-    </a>
-                      </div>
-                      <div class="wrap name">
-                        <a class="name-colored" href="/watch.html"
-                          >Westworld</a
-                        >
-                      </div>
-                     <div class="extra">
-  <a href="/watch.html">Westworld (S1–S4)</a>
-</div>
-
-<span class="key">Subtitle:</span> 
-<span class="value">Hinglish</span>
-
-<div class="general">
-  TV Series, 36 Episodes
-</div>
-
-<div class="votes rating">
-  <span class="key">Rating:</span>
-  <span class="rating mid">
-    <span class="value">8.8</span>/10
-  </span>
-</div>
-
-
-
-<!-- Westworld Added Genres Start -->
-                         <div class="tags">
-  <span class="g_tag">
-    <a class="tooltip" href="/genre/science-fiction">
-      <span class="tagname">Science Fiction</span>
-      <span class="wrapper">
-        <span class="g_bubble text">
-          Focuses on futuristic technology, artificial intelligence, and advanced scientific concepts shaping human life.
-        </span>
-      </span>
-    </a>
-  </span>,
-  <span class="g_tag">
-    <a class="tooltip" href="/genre/drama">
-      <span class="tagname">Drama</span>
-      <span class="wrapper">
-        <span class="g_bubble text">
-          Explores deep human emotions, relationships, and moral conflicts between characters.
-        </span>
-      </span>
-    </a>
-  </span>,
-  <span class="g_tag">
-    <a class="tooltip" href="/genre/thriller">
-      <span class="tagname">Thriller</span>
-      <span class="wrapper">
-        <span class="g_bubble text">
-          Creates suspense, tension, and unexpected twists that keep viewers engaged and curious.
-        </span>
-      </span>
-    </a>
-  </span>,
-  <span class="g_tag">
-    <a class="tooltip" href="/genre/mystery">
-      <span class="tagname">Mystery</span>
-      <span class="wrapper">
-        <span class="g_bubble text">
-          Involves hidden truths, puzzles, and unanswered questions that unfold throughout the story.
-        </span>
-      </span>
-    </a>
-  </span>
-   <!-- Westworld Added Genres End -->
-</div>
-</div>
-</div>
-                  <!--main-content-poster-end-here-->
+        <div class="anime-grid" id="ongoingGrid">
+
+          <div class="anime-card" data-genre="action fantasy" data-name="solo leveling">
+            <div class="card-poster">
+              <img src="https://cdn.myanimelist.net/images/anime/1079/138081.jpg" alt="Solo Leveling S2" loading="lazy" />
+              <div class="card-badges">
+                <span class="badge new">NEW</span>
+                <span class="badge ep">Ep 09</span>
+              </div>
+              <div class="card-hover-overlay">
+                <div class="chover-title">Solo Leveling Season 2</div>
+                <div class="chover-desc">Sung Jin-Woo continues his journey as the Shadow Monarch...</div>
+                <div class="chover-btns">
+                  <button class="chbtn dl" onclick="showModal('solo-leveling-s2')">⬇ Download</button>
+                  <button class="chbtn info" onclick="alert('Info page coming soon!')">ℹ Info</button>
                 </div>
               </div>
             </div>
+            <div class="card-info">
+              <div class="card-title">Solo Leveling S2</div>
+              <div class="card-meta">
+                <span class="tag-genre">Action</span>
+                <span class="tag-genre">Fantasy</span>
+                <span class="tag-sub">ASS · SRT</span>
+              </div>
+              <div class="card-eps">9 / 13 eps · 1080p</div>
+            </div>
           </div>
 
+          <div class="anime-card" data-genre="action horror" data-name="berserk">
+            <div class="card-poster">
+              <img src="https://cdn.myanimelist.net/images/anime/1870/120219.jpg" alt="Berserk" loading="lazy" />
+              <div class="card-badges">
+                <span class="badge ep">Ep 06</span>
+              </div>
+              <div class="card-hover-overlay">
+                <div class="chover-title">Berserk (2025)</div>
+                <div class="chover-desc">The Black Swordsman Guts wages war against demons...</div>
+                <div class="chover-btns">
+                  <button class="chbtn dl" onclick="showModal('berserk-2025')">⬇ Download</button>
+                  <button class="chbtn info">ℹ Info</button>
+                </div>
+              </div>
+            </div>
+            <div class="card-info">
+              <div class="card-title">Berserk (2025)</div>
+              <div class="card-meta">
+                <span class="tag-genre">Action</span>
+                <span class="tag-genre">Horror</span>
+                <span class="tag-sub">ASS</span>
+              </div>
+              <div class="card-eps">6 / ? eps · 1080p</div>
+            </div>
+          </div>
 
+          <div class="anime-card" data-genre="isekai fantasy" data-name="mushoku tensei">
+            <div class="card-poster">
+              <img src="https://cdn.myanimelist.net/images/anime/1530/117776.jpg" alt="Mushoku Tensei" loading="lazy" />
+              <div class="card-badges">
+                <span class="badge ep">Ep 11</span>
+              </div>
+              <div class="card-hover-overlay">
+                <div class="chover-title">Mushoku Tensei S3</div>
+                <div class="chover-desc">Rudeus continues his magical journey in a new world...</div>
+                <div class="chover-btns">
+                  <button class="chbtn dl">⬇ Download</button>
+                  <button class="chbtn info">ℹ Info</button>
+                </div>
+              </div>
+            </div>
+            <div class="card-info">
+              <div class="card-title">Mushoku Tensei S3</div>
+              <div class="card-meta">
+                <span class="tag-genre">Isekai</span>
+                <span class="tag-genre">Fantasy</span>
+                <span class="tag-sub">SRT</span>
+              </div>
+              <div class="card-eps">11 / 12 eps · 1080p</div>
+            </div>
+          </div>
 
+          <div class="anime-card" data-genre="action" data-name="jujutsu kaisen">
+            <div class="card-poster">
+              <img src="https://cdn.myanimelist.net/images/anime/1286/99889.jpg" alt="JJK" loading="lazy" />
+              <div class="card-badges">
+                <span class="badge ep">Ep 14</span>
+              </div>
+              <div class="card-hover-overlay">
+                <div class="chover-title">Jujutsu Kaisen S3</div>
+                <div class="chover-desc">Yuji Itadori faces new cursed spirits with enhanced power...</div>
+                <div class="chover-btns">
+                  <button class="chbtn dl">⬇ Download</button>
+                  <button class="chbtn info">ℹ Info</button>
+                </div>
+              </div>
+            </div>
+            <div class="card-info">
+              <div class="card-title">Jujutsu Kaisen S3</div>
+              <div class="card-meta">
+                <span class="tag-genre">Action</span>
+                <span class="tag-sub">ASS · SRT</span>
+              </div>
+              <div class="card-eps">14 / 24 eps · 1080p</div>
+            </div>
+          </div>
 
+          <div class="anime-card" data-genre="romance" data-name="kaguya sama">
+            <div class="card-poster">
+              <img src="https://cdn.myanimelist.net/images/anime/1295/106551.jpg" alt="Kaguya" loading="lazy" />
+              <div class="card-badges">
+                <span class="badge ep">Ep 05</span>
+              </div>
+              <div class="card-hover-overlay">
+                <div class="chover-title">Kaguya-sama Movie</div>
+                <div class="chover-desc">The battle of wits continues in a feature-length film!</div>
+                <div class="chover-btns">
+                  <button class="chbtn dl">⬇ Download</button>
+                  <button class="chbtn info">ℹ Info</button>
+                </div>
+              </div>
+            </div>
+            <div class="card-info">
+              <div class="card-title">Kaguya-sama: Love is War</div>
+              <div class="card-meta">
+                <span class="tag-genre">Romance</span>
+                <span class="tag-sub">SRT</span>
+              </div>
+              <div class="card-eps">Special · 1080p</div>
+            </div>
+          </div>
 
-
-<!--Anime-list-down-next-prev-button-start-->
-        
-<!--Anime-list-down-next-prev-button-end-->
-
-
-      <!--g_content-->
-        <div class="g_end"></div>
-      </div>
-      <!--layout-main-->
-    </div>
-    <!--layout-content-->
-
-
-
-
-
-<!--Footer-layout-start-->
-    <div id="layout-footer">
-      <p>
-        <a href="/" property="cc:attributionName">MugiSub</a> does not host any files on its servers. All content is sourced from third-party platforms and is provided solely for viewing purposes.
-        
-      </p>
-      <p>
-        If you are the copyright owner and wish to request the removal of any content, please visit our <a
-        rel="license"
-        href="/dmca"
-        >DMCA</a
-      >. page for more information.
-        
-      </p>
-
-
-
-
-      
-      <div itemscope itemtype="https://schema.org/Organization">
-        <a class="hide" itemprop="url" href="https://mugisub.com">Home</a>
-        <img
-          loading="lazy"
-          class="hide"
-          alt="MugiSUB"
-          itemprop="logo"
-          src="https://cdn-eu.biahoz.net/css/assets/images/touch/android-chrome-512x512.png"
-        />
-        <span class="hide" itemprop="name">MugiSUB</span>
-        <div class="links">
-          <!-- Setting Icon -->
-          <a class="i_icon brand" title="Settings" href="/user/setting"><i class="fas fa-cog"></i> <span class="text">Settings</span></a>
-          <!-- User Srssion Icon -->
-          <a class="i_icon brand" title="Active Sessions" href="/user/sessions"><i class="fas fa-key"></i> <span class="text">Active Sessions</span></a>
-          <!-- Telegram Icon -->
-           <a class="i_icon brand" itemprop="sameAs" title="Follow on Telegram" href="https://t.me/mugisub"><i class="fab fa-telegram"></i> <span class="text">Telegram</span></a>
-           <!-- Patreon Icon -->
-          <a class="i_icon brand" itemprop="sameAs" title="Donate to MugiSub" href="https://www.patreon.com/mugisub"> <i class="fab fa-patreon"></i> <span class="text">Donate Us</span> </a>
-
+          <div class="anime-card" data-genre="action fantasy" data-name="re zero">
+            <div class="card-poster">
+              <img src="https://cdn.myanimelist.net/images/anime/1521/99778.jpg" alt="ReZero" loading="lazy" />
+              <div class="card-badges">
+                <span class="badge ep">Ep 03</span>
+              </div>
+              <div class="card-hover-overlay">
+                <div class="chover-title">Re:Zero Season 3</div>
+                <div class="chover-desc">Subaru returns in a new season with darker stakes...</div>
+                <div class="chover-btns">
+                  <button class="chbtn dl">⬇ Download</button>
+                  <button class="chbtn info">ℹ Info</button>
+                </div>
+              </div>
+            </div>
+            <div class="card-info">
+              <div class="card-title">Re:Zero S3</div>
+              <div class="card-meta">
+                <span class="tag-genre">Fantasy</span>
+                <span class="tag-sub">ASS</span>
+              </div>
+              <div class="card-eps">3 / 25 eps · 1080p</div>
+            </div>
+          </div>
 
         </div>
       </div>
+
+      <!-- COMPLETED SECTION -->
+      <div id="completed" class="section-block">
+        <div class="section-header">
+          <h2 class="section-title"><span class="dot blue"></span> Completed <span class="count-badge">50+</span></h2>
+        </div>
+        <div class="anime-grid" id="completedGrid">
+
+          <div class="anime-card" data-genre="action" data-name="attack on titan">
+            <div class="card-poster">
+              <img src="https://cdn.myanimelist.net/images/anime/1208/94745.jpg" alt="AoT" loading="lazy" />
+              <div class="card-badges">
+                <span class="badge done">DONE</span>
+                <span class="badge batch">BATCH</span>
+              </div>
+              <div class="card-hover-overlay">
+                <div class="chover-title">Attack on Titan: Final</div>
+                <div class="chover-desc">Complete Urdu subtitle batch — all seasons and specials!</div>
+                <div class="chover-btns">
+                  <button class="chbtn dl">⬇ Batch DL</button>
+                  <button class="chbtn info">ℹ Info</button>
+                </div>
+              </div>
+            </div>
+            <div class="card-info">
+              <div class="card-title">Attack on Titan Final</div>
+              <div class="card-meta">
+                <span class="tag-genre">Action</span>
+                <span class="tag-sub">ASS · SRT</span>
+              </div>
+              <div class="card-eps">87 / 87 eps · BATCH</div>
+            </div>
+          </div>
+
+          <div class="anime-card" data-genre="action" data-name="demon slayer">
+            <div class="card-poster">
+              <img src="https://cdn.myanimelist.net/images/anime/1223/96541.jpg" alt="Demon Slayer" loading="lazy" />
+              <div class="card-badges">
+                <span class="badge done">DONE</span>
+              </div>
+              <div class="card-hover-overlay">
+                <div class="chover-title">Demon Slayer S4</div>
+                <div class="chover-desc">Hashira Training Arc — complete Urdu subtitles!</div>
+                <div class="chover-btns">
+                  <button class="chbtn dl">⬇ Download</button>
+                  <button class="chbtn info">ℹ Info</button>
+                </div>
+              </div>
+            </div>
+            <div class="card-info">
+              <div class="card-title">Demon Slayer S4</div>
+              <div class="card-meta">
+                <span class="tag-genre">Action</span>
+                <span class="tag-sub">ASS</span>
+              </div>
+              <div class="card-eps">8 / 8 eps · 1080p</div>
+            </div>
+          </div>
+
+          <div class="anime-card" data-genre="movie action" data-name="demon slayer movie">
+            <div class="card-poster">
+              <img src="https://cdn.myanimelist.net/images/anime/1704/106947.jpg" alt="DS Movie" loading="lazy" />
+              <div class="card-badges">
+                <span class="badge done">DONE</span>
+                <span class="badge movie-tag">MOVIE</span>
+              </div>
+              <div class="card-hover-overlay">
+                <div class="chover-title">Demon Slayer: Mugen Train</div>
+                <div class="chover-desc">Urdu subtitle for the blockbuster movie!</div>
+                <div class="chover-btns">
+                  <button class="chbtn dl">⬇ Download</button>
+                  <button class="chbtn info">ℹ Info</button>
+                </div>
+              </div>
+            </div>
+            <div class="card-info">
+              <div class="card-title">DS: Mugen Train</div>
+              <div class="card-meta">
+                <span class="tag-genre">Movie</span>
+                <span class="tag-sub">SRT</span>
+              </div>
+              <div class="card-eps">Movie · 1080p</div>
+            </div>
+          </div>
+
+          <div class="anime-card" data-genre="action fantasy" data-name="frieren">
+            <div class="card-poster">
+              <img src="https://cdn.myanimelist.net/images/anime/1015/138006.jpg" alt="Frieren" loading="lazy" />
+              <div class="card-badges">
+                <span class="badge done">DONE</span>
+              </div>
+              <div class="card-hover-overlay">
+                <div class="chover-title">Frieren: Beyond Journey's End</div>
+                <div class="chover-desc">Complete 28-episode Urdu subtitle set — AOTY quality!</div>
+                <div class="chover-btns">
+                  <button class="chbtn dl">⬇ Batch DL</button>
+                  <button class="chbtn info">ℹ Info</button>
+                </div>
+              </div>
+            </div>
+            <div class="card-info">
+              <div class="card-title">Frieren: Beyond Journey's End</div>
+              <div class="card-meta">
+                <span class="tag-genre">Fantasy</span>
+                <span class="tag-sub">ASS · SRT</span>
+              </div>
+              <div class="card-eps">28 / 28 eps · BATCH</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- BATCH SECTION -->
+      <div id="batch" class="section-block">
+        <div class="section-header">
+          <h2 class="section-title"><span class="dot purple"></span> Batch Downloads <span class="count-badge">12</span></h2>
+        </div>
+        <div class="batch-list">
+          <div class="batch-row">
+            <img src="https://cdn.myanimelist.net/images/anime/1208/94745.jpg" class="batch-thumb" />
+            <div class="batch-info">
+              <div class="batch-name">Attack on Titan — Complete Series</div>
+              <div class="batch-meta">87 Episodes · ASS + SRT · Styled Urdu</div>
+            </div>
+            <div class="batch-actions">
+              <span class="batch-size">480 MB</span>
+              <a href="#" class="batch-btn">⬇ Download</a>
+            </div>
+          </div>
+          <div class="batch-row">
+            <img src="https://cdn.myanimelist.net/images/anime/1015/138006.jpg" class="batch-thumb" />
+            <div class="batch-info">
+              <div class="batch-name">Frieren: Beyond Journey's End — Full Season</div>
+              <div class="batch-meta">28 Episodes · ASS · Nastaleeq Font</div>
+            </div>
+            <div class="batch-actions">
+              <span class="batch-size">210 MB</span>
+              <a href="#" class="batch-btn">⬇ Download</a>
+            </div>
+          </div>
+          <div class="batch-row">
+            <img src="https://cdn.myanimelist.net/images/anime/1286/99889.jpg" class="batch-thumb" />
+            <div class="batch-info">
+              <div class="batch-name">Jujutsu Kaisen — Seasons 1 & 2</div>
+              <div class="batch-meta">48 Episodes · SRT · Urdu</div>
+            </div>
+            <div class="batch-actions">
+              <span class="batch-size">350 MB</span>
+              <a href="#" class="batch-btn">⬇ Download</a>
+            </div>
+          </div>
+          <div class="batch-row">
+            <img src="https://cdn.myanimelist.net/images/anime/1223/96541.jpg" class="batch-thumb" />
+            <div class="batch-info">
+              <div class="batch-name">Demon Slayer — All Seasons</div>
+              <div class="batch-meta">55 Episodes + 1 Movie · ASS · Styled</div>
+            </div>
+            <div class="batch-actions">
+              <span class="batch-size">410 MB</span>
+              <a href="#" class="batch-btn">⬇ Download</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TOOLS SECTION -->
+      <div id="tools" class="section-block">
+        <div class="section-header">
+          <h2 class="section-title"><span class="dot orange"></span> Subtitle Tools</h2>
+        </div>
+        <div class="tools-grid">
+          <a href="https://aegisub.org/" target="_blank" class="tool-card">
+            <div class="tool-icon">🎬</div>
+            <div class="tool-name">Aegisub</div>
+            <div class="tool-desc">Professional ASS/SSA subtitle editor</div>
+          </a>
+          <a href="https://www.subtitle-horse.com/" target="_blank" class="tool-card">
+            <div class="tool-icon">🐴</div>
+            <div class="tool-name">Subtitle Horse</div>
+            <div class="tool-desc">Online subtitle editor, easy to use</div>
+          </a>
+          <a href="https://ffmpeg.org/" target="_blank" class="tool-card">
+            <div class="tool-icon">⚙️</div>
+            <div class="tool-name">FFmpeg</div>
+            <div class="tool-desc">Hardsub your subtitles into video</div>
+          </a>
+          <a href="https://www.videohelp.com/software/MKVToolNix" target="_blank" class="tool-card">
+            <div class="tool-icon">📦</div>
+            <div class="tool-name">MKVToolNix</div>
+            <div class="tool-desc">Mux soft subs into MKV files</div>
+          </a>
+          <a href="https://handbrake.fr/" target="_blank" class="tool-card">
+            <div class="tool-icon">🔧</div>
+            <div class="tool-name">HandBrake</div>
+            <div class="tool-desc">Video transcoder + subtitle burn-in</div>
+          </a>
+          <a href="https://www.opensubtitles.com/en" target="_blank" class="tool-card">
+            <div class="tool-icon">📝</div>
+            <div class="tool-name">OpenSubtitles</div>
+            <div class="tool-desc">Source subtitles for translation</div>
+          </a>
+        </div>
+      </div>
+
+    </section>
+  </div>
+
+  <!-- ABOUT SECTION -->
+  <div id="about" class="about-section">
+    <div class="about-content">
+      <h2>About <span class="accent">MugiSUB</span></h2>
+      <p>MugiSUB is a dedicated Urdu anime fansub group. We hand-craft every subtitle file — translating, transliterating, and styling them with Nastaleeq fonts so Urdu speakers can enjoy anime in their language.</p>
+      <div class="about-grid">
+        <div class="about-card"><div class="ac-icon">🎌</div><div class="ac-title">Anime-First</div><div class="ac-desc">We focus on quality anime titles with engaging stories</div></div>
+        <div class="about-card"><div class="ac-icon">🔤</div><div class="ac-title">Styled Subs</div><div class="ac-desc">ASS subtitles with Jameel Noori Nastaleeq font styling</div></div>
+        <div class="about-card"><div class="ac-icon">🆓</div><div class="ac-title">Always Free</div><div class="ac-desc">All subtitles are completely free to download and use</div></div>
+        <div class="about-card"><div class="ac-icon">⚡</div><div class="ac-title">Fast Releases</div><div class="ac-desc">Episode subs within 24–48 hours of air date</div></div>
+      </div>
     </div>
-<!--Footer-layout-end-->
- <!-- ... Request -js-side filter ... -->
+  </div>
 
-  <script src="request.js"></script>
-  </body>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">Mugi<span class="accent">SUB</span></div>
+      <div class="footer-links">
+        <a href="#">Home</a>
+        <a href="#">Discord</a>
+        <a href="#">About</a>
+        <a href="#">DMCA</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="footer-copy">© 2025 MugiSUB · Urdu Anime Subtitles · mugisub.com</div>
+    </div>
+  </footer>
+
+  <!-- DOWNLOAD MODAL -->
+  <div class="modal-overlay" id="modalOverlay" onclick="closeModal()">
+    <div class="modal-box" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-poster">
+        <img id="modalImg" src="" alt="" />
+      </div>
+      <div class="modal-details">
+        <h2 id="modalTitle">Solo Leveling S2</h2>
+        <div class="modal-meta" id="modalMeta">Ep 09 · ASS + SRT · 1080p · Urdu</div>
+        <div class="modal-eps" id="episodeList">
+          <div class="ep-row"><span class="ep-num">Episode 01</span><span class="ep-size">8.2 MB</span><div class="ep-btns"><a href="#" class="ep-dl">ASS ⬇</a><a href="#" class="ep-dl srt">SRT ⬇</a></div></div>
+          <div class="ep-row"><span class="ep-num">Episode 02</span><span class="ep-size">8.4 MB</span><div class="ep-btns"><a href="#" class="ep-dl">ASS ⬇</a><a href="#" class="ep-dl srt">SRT ⬇</a></div></div>
+          <div class="ep-row"><span class="ep-num">Episode 03</span><span class="ep-size">7.9 MB</span><div class="ep-btns"><a href="#" class="ep-dl">ASS ⬇</a><a href="#" class="ep-dl srt">SRT ⬇</a></div></div>
+          <div class="ep-row"><span class="ep-num">Episode 04</span><span class="ep-size">8.1 MB</span><div class="ep-btns"><a href="#" class="ep-dl">ASS ⬇</a><a href="#" class="ep-dl srt">SRT ⬇</a></div></div>
+          <div class="ep-row"><span class="ep-num">Episode 05</span><span class="ep-size">8.6 MB</span><div class="ep-btns"><a href="#" class="ep-dl">ASS ⬇</a><a href="#" class="ep-dl srt">SRT ⬇</a></div></div>
+          <div class="ep-row"><span class="ep-num">Episode 06</span><span class="ep-size">8.0 MB</span><div class="ep-btns"><a href="#" class="ep-dl">ASS ⬇</a><a href="#" class="ep-dl srt">SRT ⬇</a></div></div>
+          <div class="ep-row"><span class="ep-num">Episode 07</span><span class="ep-size">8.3 MB</span><div class="ep-btns"><a href="#" class="ep-dl">ASS ⬇</a><a href="#" class="ep-dl srt">SRT ⬇</a></div></div>
+          <div class="ep-row"><span class="ep-num">Episode 08</span><span class="ep-size">8.7 MB</span><div class="ep-btns"><a href="#" class="ep-dl">ASS ⬇</a><a href="#" class="ep-dl srt">SRT ⬇</a></div></div>
+          <div class="ep-row"><span class="ep-num">Episode 09</span><span class="ep-size">8.5 MB</span><div class="ep-btns"><a href="#" class="ep-dl">ASS ⬇</a><a href="#" class="ep-dl srt">SRT ⬇</a></div></div>
+        </div>
+        <a href="#" class="batch-btn full-width-btn">⬇ Download Full Batch (ZIP)</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
 </html>
-
