@@ -16785,7 +16785,7 @@ th.s_reverse {
 }
 
 .fancybox-close {
-    background-image: url("https://cdn-eu.mugi.net/css/assets/images/libs/jquery.fancybox/fancybox_sprite.png");
+    background-image: url("images/fancybox_sprite.png");
     position: absolute;
     top: -18px;
     right: -18px;
@@ -19941,7 +19941,7 @@ table,
 }
 @media screen and (min-width: 1860px) {
   #layout-search {
-    background: url("logo-MugiSUB.svg") no-repeat scroll left top
+    background: url("logo-mugiSUB.svg") no-repeat scroll left top
       transparent;
   }
 }
