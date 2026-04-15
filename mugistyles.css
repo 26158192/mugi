@@ -19900,29 +19900,30 @@ table,
     border: 0
 }
 
+
 #layout-search {
   background: url("images/logo.svg") no-repeat scroll left top transparent;
 }
 @media screen and (max-width: 950px) {
-  #anidb:not(.nodropdownmenu) #layout-search {
+  #mugi:not(.nodropdownmenu) #layout-search {
     background: url("images/logo-wide.svg") no-repeat scroll left top
       transparent;
   }
-  #anidb.nodropdownmenu #layout-search {
+  #mugi.nodropdownmenu #layout-search {
     background: url("images/logo-small.svg") no-repeat scroll left top
       transparent;
   }
 }
 @media screen and (max-width: 800px) {
-  #anidb:not(.nodropdownmenu) #layout-search {
+  #mugi:not(.nodropdownmenu) #layout-search {
     background: url("images/logo.svg") no-repeat scroll center top transparent;
   }
-  #anidb.nodropdownmenu #layout-search {
+  #mugi.nodropdownmenu #layout-search {
     background: none;
   }
 }
 @media screen and (max-width: 510px) {
-  #anidb:not(.nodropdownmenu) #layout-search {
+  #mugi:not(.nodropdownmenu) #layout-search {
     background: url("images/logo-small.svg") no-repeat scroll center top
       transparent;
   }
@@ -19941,7 +19942,7 @@ table,
 }
 @media screen and (min-width: 1860px) {
   #layout-search {
-    background: url("logo-anidbSUB.svg") no-repeat scroll left top
+    background: url("logo-mugiSUB.svg") no-repeat scroll left top
       transparent;
   }
 }
@@ -21143,7 +21144,7 @@ input[type=submit],
 }
 
 #layout-footer::after {
-    content: "©anidbsub.com"
+    content: "©mugisub.com"
 }
 
 @media all and (max-width: 950px) {
@@ -21372,3 +21373,15 @@ input[type=submit],
         display: none
     }
 }
+
+
+
+
+/* custom-nave-blue-nav-icon-colors-start */
+#layout-menu i.fas {
+    color: #1e3a5f;
+}
+/* custom-nave-blue-nav-icon-colors-end */
+
+
+/*# sourceMappingURL=anidbstyle3.css.map */
