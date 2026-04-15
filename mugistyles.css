@@ -19901,21 +19901,21 @@ table,
 }
 
 #layout-search {
-  background: url("images/logo.png") no-repeat scroll left top transparent;
+  background: url("images/logo.svg") no-repeat scroll left top transparent;
 }
 @media screen and (max-width: 950px) {
   #mugi:not(.nodropdownmenu) #layout-search {
-    background: url("images/logo-wide.png") no-repeat scroll left top
+    background: url("images/logo-wide.svg") no-repeat scroll left top
       transparent;
   }
   #mugi.nodropdownmenu #layout-search {
-    background: url("images/logo-small.png") no-repeat scroll left top
+    background: url("images/logo-small.svg") no-repeat scroll left top
       transparent;
   }
 }
 @media screen and (max-width: 800px) {
   #mugi:not(.nodropdownmenu) #layout-search {
-    background: url("images/logo.png") no-repeat scroll center top transparent;
+    background: url("images/logo.svg") no-repeat scroll center top transparent;
   }
   #mugi.nodropdownmenu #layout-search {
     background: none;
@@ -19923,25 +19923,25 @@ table,
 }
 @media screen and (max-width: 510px) {
   #mugi:not(.nodropdownmenu) #layout-search {
-    background: url("images/logo-small.png") no-repeat scroll center top
+    background: url("images/logo-small.svg") no-repeat scroll center top
       transparent;
   }
 }
 @media screen and (min-width: 1235px) {
   #layout-search {
-    background: url("images/logo-wide.png") no-repeat scroll left top
+    background: url("images/logo-wide.svg") no-repeat scroll left top
       transparent;
   }
 }
 @media screen and (min-width: 1575px) {
   #layout-search {
-    background: url("images/logo-wider.png") no-repeat scroll left top
+    background: url("images/logo-wider.svg") no-repeat scroll left top
       transparent;
   }
 }
 @media screen and (min-width: 1860px) {
   #layout-search {
-    background: url("logo-MugiSUB.png") no-repeat scroll left top
+    background: url("logo-MugiSUB.svg") no-repeat scroll left top
       transparent;
   }
 }
