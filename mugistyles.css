@@ -19942,7 +19942,7 @@ table,
 }
 @media screen and (min-width: 1860px) {
   #layout-search {
-    background: url("logo-widest.svg") no-repeat scroll left top
+    background: url("images/logo-widest.svg") no-repeat scroll left top
       transparent;
   }
 }
