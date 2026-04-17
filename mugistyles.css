@@ -16966,8 +16966,356 @@ th.s_reverse {
     background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_rate_eyecancer.gif")
 }
 
+.g_bubble .seiyuu a.favourite::before,
+.g_bubble.favourite>div.data div.name>a::before,
+.i_rate_halfstar,
+.i_rate_high,
+.i_rate_low,
+.i_rate_med,
+.i_rate_star,
+.i_rate_veryhigh,
+.i_rate_verylow,
+td.name>.favourite::before,
+td.name.favourite>a::before,
+tr.favourite>td.name.anime>a::before {
+    background-repeat: repeat-x !important;
+    background-position: left !important;
+    padding: 0 !important;
+    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_rate_star_dark.png")
+}
 
+.i_rate_veryhigh {
+    width: 45px !important
+}
 
+.i_rate_high {
+    width: 37px !important
+}
+
+.i_rate_med {
+    width: 30px !important
+}
+
+.i_rate_low {
+    width: 22px !important
+}
+
+.i_rate_verylow {
+    width: 15px !important
+}
+
+.i_rate_halfstar {
+    background-position: left;
+    width: 8px
+}
+
+.i_rate_error,
+.i_rate_missing,
+.i_rate_weightless {
+    padding: 0 !important;
+    height: 15px !important
+}
+
+.i_rate_weightless {
+    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_rate_star_grey.png")
+}
+
+.i_rate_missing {
+    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_rate_star_black.png")
+}
+
+.i_rate_error {
+    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_rate_star_red.png")
+}
+
+.i_rate_unknown {
+    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_rate_unknown.gif")
+}
+
+.g_bubble .seiyuu a.favourite::before,
+.g_bubble.favourite>div.data div.name>a::before,
+td.name>.favourite::before,
+td.name.favourite>a::before,
+tr.favourite>td.name.anime>a::before {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    content: ""
+}
+
+.i_general_add,
+.i_general_added {
+    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/general_added.png");
+    height: 16px;
+    width: 16px
+}
+
+.i_general_arrow_down {
+    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/general_arrow_down.png");
+    height: 16px;
+    width: 16px
+}
+
+.i_general_arrow_up {
+    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/general_arrow_up.png");
+    height: 16px;
+    width: 16px
+}
+
+.i_general_blacklist {
+    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/general_blacklist.png");
+    height: 16px;
+    width: 16px
+}
+
+.i_general_block {
+    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/general_block.png");
+    height: 16px;
+    width: 16px
+}
+
+.i_general_convert {
+    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/general_convert.png");
+    height: 16px;
+    width: 16px
+}
+
+.i_general_delete,
+.i_general_delete_request {
+    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/general_delete.png");
+    height: 16px;
+    width: 16px
+}
+
+.i_general_edit,
+.i_general_edit_request {
+    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/general_edit.png");
+    height: 16px;
+    width: 16px
+}
+
+.i_general_history {
+    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/general_history.png");
+    height: 16px;
+    width: 16px
+}
+
+.i_general_forbidden {
+    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/general_forbidden.png");
+    height: 16px;
+    width: 16px
+}
+
+.i_general_merge {
+    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/general_merge.png");
+    height: 16px;
+    width: 16px
+}
+
+.i_general_minus {
+    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/general_minus.png");
+    height: 16px;
+    width: 16px
+}
+
+.i_general_new {
+    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/general_new.png");
+    height: 16px;
+    width: 16px
+}
+
+.i_general_plus {
+    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/general_plus.png");
+    height: 16px;
+    width: 16px
+}
+
+.i_general_settings {
+    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/general_settings.png");
+    height: 16px;
+    width: 16px
+}
+
+.i_general_static,
+.i_info {
+    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/general_static.png");
+    height: 16px;
+    width: 16px
+}
+
+.i_general_unverify {
+    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/general_unverify.png");
+    height: 16px;
+    width: 16px
+}
+
+.i_general_verify {
+    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/general_verify.png");
+    height: 16px;
+    width: 16px
+}
+
+.i_general_vote_down {
+    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/general_vote_down.png");
+    height: 16px;
+    width: 16px
+}
+
+.i_general_revert,
+.i_general_vote_revoke {
+    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/general_vote_revoke.png");
+    height: 16px;
+    width: 16px
+}
+
+.i_general_vote_up {
+    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/general_vote_up.png");
+    height: 16px;
+    width: 16px
+}
+
+.i_search_blue {
+    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/search_type_b.png");
+    height: 16px;
+    width: 16px
+}
+
+.i_search_orange {
+    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/search_type_a.png");
+    height: 16px;
+    width: 16px
+}
+
+.i_state_verified {
+    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/state_verified.png");
+    height: 16px;
+    width: 16px
+}
+
+.i_general_user_add,
+.i_user_add {
+    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/user_add.png");
+    height: 16px;
+    width: 16px
+}
+
+.i_user_delete {
+    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/user_delete.png");
+    height: 16px;
+    width: 16px
+}
+
+.i_user_feedback {
+    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/user_feedback.png");
+    height: 16px;
+    width: 16px
+}
+
+.i_user_history {
+    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/user_history.png");
+    height: 16px;
+    width: 16px
+}
+
+.i_user_info {
+    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/user_info.png");
+    height: 16px;
+    width: 16px
+}
+
+.i_user_mylist {
+    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/user_mylist.png");
+    height: 16px;
+    width: 16px
+}
+
+.i_user_mylistcmp {
+    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/user_mylistcmp.png");
+    height: 16px;
+    width: 16px
+}
+
+.i_user_page {
+    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/user_page.png");
+    height: 16px;
+    width: 16px
+}
+
+.i_user_posts {
+    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/user_posts.png");
+    height: 16px;
+    width: 16px
+}
+
+.i_user_reviews {
+    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/user_reviews.png");
+    height: 16px;
+    width: 16px
+}
+
+.i_user_send {
+    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/user_send.png");
+    height: 16px;
+    width: 16px
+}
+
+.i_user_wishlist {
+    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/user_wishlist.png");
+    height: 16px;
+    width: 16px
+}
+
+.i_user_votes {
+    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/user_votes.png");
+    height: 16px;
+    width: 16px
+}
+
+.i_events_birthday {
+    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/events_birthday.png");
+    height: 16px;
+    width: 16px
+}
+
+.i_events_event {
+    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/events_event.png");
+    height: 16px;
+    width: 16px
+}
+
+.i_events_maintenance {
+    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/events_maintenance.png");
+    height: 16px;
+    width: 16px
+}
+
+.i_stats {
+    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/general_stats.png");
+    height: 16px;
+    width: 16px
+}
+
+.i_moveable {
+    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/general_move.png");
+    width: 16px;
+    height: 16px;
+    padding-right: .5em;
+    vertical-align: bottom
+}
+
+.i_waifu_add {
+    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/general_add.png");
+    height: 16px;
+    width: 16px
+}
+
+.i_general_remove,
+.i_waifu_delete {
+    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/general_remove.png");
+    height: 16px;
+    width: 16px
+}
 
 @font-face {
     font-display: auto;
@@ -21028,3 +21376,13 @@ input[type=submit],
 
 
 
+
+
+/* ===== MUGISUB CUSTOM: Remove all nav tab icons, keep footer icons ===== */
+#layout-menu li.sub-menu ul li a::before {
+    content: none !important;
+    display: none !important;
+    width: 0 !important;
+    font-size: 0 !important;
+}
+/* ===== END MUGISUB CUSTOM ===== */
