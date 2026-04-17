@@ -21377,12 +21377,3 @@ input[type=submit],
 
 
 
-
-/* ===== MUGISUB CUSTOM: Remove all nav tab icons, keep footer icons ===== */
-#layout-menu li.sub-menu ul li a::before {
-    content: none !important;
-    display: none !important;
-    width: 0 !important;
-    font-size: 0 !important;
-}
-/* ===== END MUGISUB CUSTOM ===== */
