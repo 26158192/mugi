@@ -972,6 +972,15 @@ h1+.icons {
     width: 100%
 }
 
+.g_filter .g_boxwrap input,
+.g_filter .g_boxwrap textarea,
+.g_filter .g_boxwrap select,
+.g_filter .g_boxwrap button {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
 #layout-main div.anime_all ul.links_top,
 #layout-main div.character_all ul.links_top,
 #layout-main div.club_all ul.links_top,
@@ -1317,7 +1326,7 @@ input[size="80"] {
     width: 48em
 }
 
-textarea:not(.req-textarea) {
+textarea {
     width: 48em;
     height: 8em
 }
