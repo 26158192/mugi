@@ -33,10 +33,7 @@
 .req-textarea {
     resize: vertical;
     min-height: 75px;
-    height: auto !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
+    height: auto;
 }
 
 .req-submit {
