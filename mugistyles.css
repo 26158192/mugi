@@ -1317,7 +1317,7 @@ input[size="80"] {
     width: 48em
 }
 
-textarea {
+textarea:not(.req-textarea) {
     width: 48em;
     height: 8em
 }
@@ -20319,9 +20319,3 @@ input[type=submit],
         display: none
     }
 }
-
-
-
-
-
-
