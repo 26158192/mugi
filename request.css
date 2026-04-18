@@ -1,0 +1,144 @@
+/* request-form-styles-start */
+
+.req-star {
+    color: #e18e3c;
+}
+
+.req-optional {
+    color: #888;
+    font-weight: normal;
+    font-size: 0.85em;
+}
+
+.req-input {
+    width: 100%;
+    padding: 6px 8px;
+    background: rgb(30, 30, 30);
+    border: 1px solid #444;
+    color: #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    margin-bottom: 0.8em;
+    font-size: inherit;
+    font-family: inherit;
+    vertical-align: middle;
+}
+
+.req-input:focus {
+    outline: none;
+    border-color: #1e3a5f;
+    color: #fff;
+}
+
+.req-textarea {
+    resize: vertical;
+    min-height: 75px;
+    height: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.req-submit {
+    width: 100%;
+    padding: 6px 12px;
+    background: #34394D;
+    color: #ccc;
+    border: 1px solid #2a4a6f;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: inherit;
+    font-family: inherit;
+    margin-bottom: 0.5em;
+    vertical-align: middle;
+}
+
+.req-submit:hover {
+    background: #2a4a6f;
+    color: #fff;
+    border-color: #e18e3c;
+}
+
+.req-hint {
+    font-size: 0.85em;
+    color: #888;
+    text-align: center;
+    margin-top: 0.4em;
+}
+
+.req-hint a {
+    color: #24A1DE;
+}
+
+.req-hint a:hover {
+    color: #fff;
+}
+
+/* request-form-styles-end */
+/* ── Pure CSS Filter Toggle (no JS) ── */
+
+/* Checkbox hidden — sirf label se control hoga */
+.req-filter-checkbox {
+    display: none !important;
+}
+
+/* Default state: filter panel hidden, REQ button visible */
+.req-filter-panel {
+    display: none;
+    position: relative;
+}
+
+.req-flap {
+    display: block !important;
+    position: fixed;
+    bottom: 5em;
+    right: -1.3em;
+    padding: 0.2em;
+    width: 4em;
+    text-align: center;
+    transform: rotate(90deg);
+    cursor: pointer;
+    z-index: 999;
+    /* g_bubble styling inherit hogi, extra polish: */
+    background: #34394D;
+    color: #ccc;
+    border: 1px solid #2a4a6f;
+    border-radius: 3px;
+    font-size: 0.9em;
+    user-select: none;
+}
+
+.req-flap:hover {
+    background: #2a4a6f;
+    color: #fff;
+    border-color: #e18e3c;
+}
+
+/* Close button andar */
+.req-filter-close {
+    display: block;
+    position: absolute;
+    top: 1.75em;
+    right: -1em;
+    cursor: pointer;
+    color: #888;
+    font-size: 1em;
+    line-height: 1;
+    padding: 0.2em 0.4em;
+    z-index: 1000;
+}
+
+.req-filter-close:hover {
+    color: #fff;
+}
+
+/* Checkbox checked → panel show, REQ button hide */
+.req-filter-checkbox:checked ~ .req-filter-panel {
+    display: block;
+}
+
+.req-filter-checkbox:checked ~ .req-filter-panel .req-flap {
+    display: none !important;
+}
+
+/* ── end CSS toggle ── */
