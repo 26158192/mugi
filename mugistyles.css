@@ -16740,7 +16740,7 @@ th.s_reverse {
 }
 
 .fancybox-close {
-    background-image: url("images/fancybox_sprite.png");
+    background-image: url("img.mugi/buttons/fancybox_sprite.png");
     position: absolute;
     top: -18px;
     right: -18px;
@@ -19047,21 +19047,21 @@ table,
 
 
 #layout-search {
-  background: url("images/logo.svg") no-repeat scroll left top transparent;
+  background: url("img.mugi/logos/logo.svg") no-repeat scroll left top transparent;
 }
 @media screen and (max-width: 950px) {
   #mugi:not(.nodropdownmenu) #layout-search {
-    background: url("images/logo-wide.svg") no-repeat scroll left top
+    background: url("img.mugi/logos/logo-wide.svg") no-repeat scroll left top
       transparent;
   }
   #mugi.nodropdownmenu #layout-search {
-    background: url("images/logo-small.svg") no-repeat scroll left top
+    background: url("img.mugi/logos/logo-small.svg") no-repeat scroll left top
       transparent;
   }
 }
 @media screen and (max-width: 800px) {
   #mugi:not(.nodropdownmenu) #layout-search {
-    background: url("images/logo.svg") no-repeat scroll center top transparent;
+    background: url("img.mugi/logos/logo.svg") no-repeat scroll center top transparent;
   }
   #mugi.nodropdownmenu #layout-search {
     background: none;
@@ -19069,25 +19069,25 @@ table,
 }
 @media screen and (max-width: 510px) {
   #mugi:not(.nodropdownmenu) #layout-search {
-    background: url("images/logo-small.svg") no-repeat scroll center top
+    background: url("img.mugi/logos/logo-small.svg") no-repeat scroll center top
       transparent;
   }
 }
 @media screen and (min-width: 1235px) {
   #layout-search {
-    background: url("images/logo-wide.svg") no-repeat scroll left top
+    background: url("img.mugi/logos/logo-wide.svg") no-repeat scroll left top
       transparent;
   }
 }
 @media screen and (min-width: 1575px) {
   #layout-search {
-    background: url("images/logo-wider.svg") no-repeat scroll left top
+    background: url("img.mugi/logos/logo-wider.svg") no-repeat scroll left top
       transparent;
   }
 }
 @media screen and (min-width: 1860px) {
   #layout-search {
-    background: url("images/logo-widest.svg") no-repeat scroll left top
+    background: url("img.mugi/logos/logo-widest.svg") no-repeat scroll left top
       transparent;
   }
 }
