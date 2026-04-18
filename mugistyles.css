@@ -1,5 +1,3 @@
-
-
 blockquote,
 body,
 dd,
@@ -70,11 +68,6 @@ h5,
 h6 {
     font-size: 1rem;
     font-weight: normal
-}
-
-q::after,
-q::before {
-    content: ""
 }
 
 abbr,
@@ -1206,7 +1199,6 @@ h1+.icons {
     position: absolute;
     left: 0%;
     top: 40%;
-    content: "No Picture";
     transform: rotate(-55deg);
     font-size: 2.5rem;
     text-align: center
@@ -1247,7 +1239,6 @@ h1+.icons {
 .g_image.missing.thumbcrop::after {
     left: 0%;
     top: 37%;
-    content: "No Pic";
     transform: rotate(-50deg);
     font-size: 1.3rem;
     height: auto
@@ -2414,10 +2405,6 @@ div.pagination .g_list>*+* {
     align-self: center
 }
 
-#layout-main #chartags h3::after {
-    content: "꞉ "
-}
-
 #layout-main div.chartag-list {
     display: block;
     text-align: justify;
@@ -2808,7 +2795,6 @@ div.g_timeline ul.row li a {
     width: 0;
     position: absolute;
     left: 50%;
-    content: " ";
     pointer-events: none
 }
 
@@ -8819,7 +8805,6 @@ body.compensate-for-scrollbar {
 }
 
 .fancybox-slide::before {
-    content: "";
     display: inline-block;
     font-size: 0;
     height: 100%;
@@ -9507,7 +9492,6 @@ body.compensate-for-scrollbar {
 .fancybox-thumbs__list a::before {
     border: 6px solid #ff5268;
     bottom: 0;
-    content: "";
     left: 0;
     opacity: 0;
     position: absolute;
@@ -9697,7 +9681,6 @@ body.dragging * {
 .g_sortable .placeholder::before,
 .sortable_shuttle ol.jssortable li.placeholder::before {
     position: absolute;
-    content: "";
     width: 0;
     height: 0;
     margin-top: 2px;
@@ -12619,7 +12602,6 @@ small,
 
 #layout-main div.userlist_all table td.hidden::after {
     color: red;
-    content: " hidden"
 }
 
 #layout-main div.anime_all div.groups td.state.unknown {
@@ -12990,55 +12972,19 @@ h4,
     }
 }
 
-#layout-main div.edit_actions>span::before {
-    content: "["
-}
-
-#layout-main div.edit_actions>span::after {
-    content: "]"
-}
-
-#layout-main div.edit_actions>span+span::before {
-    content: " - ["
-}
-
 @media screen and (max-width: 800px) {
     #layout-main .g_datatable table td::before {
         content: attr(data-label)
     }
-
-    #layout-main .g_datatable table td.name.main::before,
-    #layout-main .g_datatable table td.thumb::before {
-        content: ""
-    }
-}
-
-#layout-main div.anime_all div.groups td.mylist::before {
-    content: "* "
-}
-
-#layout-main div.anime_all div.groups td.mylist::after {
-    content: " *"
-}
-
-#anidb tr.rating td.value span.myvote::before,
-#anidb tr.rating td.value span.predictedvote::before,
-#layout-main .g_bubble.stripe.review>div.data div.votes div.rating span.value::after,
-#layout-main div.anime_all .mydata tr.vote span.predictedvote+span.myvote::before {
-    content: ", "
 }
 
 #layout-main div.topic_actions div.pagination>a+span::before,
 #layout-main div.topic_actions div.pagination>span+span::before {
-    content: "•";
     margin-left: .5em;
     margin-right: .5em
 }
 
 @media screen and (max-width: 800px) {
-    #layout-main ul.topiclist li.row div.lastpost::before {
-        content: "last post"
-    }
 }
 
 #layout-main div.addcreatoranimerel_all tr.left_only,
@@ -17041,7 +16987,6 @@ tr.favourite>td.name.anime>a::before {
     height: 16px;
     display: inline-block;
     vertical-align: middle;
-    content: ""
 }
 
 .i_general_add,
@@ -17317,41 +17262,13 @@ tr.favourite>td.name.anime>a::before {
     width: 16px
 }
 
-@font-face {
-    font-display: auto;
-    font-family: "Font Awesome 5 Pro";
-    font-style: normal;
-    font-weight: 300;
-    font-display: block;
-    src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/webfonts/fa-light-300.woff2") format("woff2"), url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/webfonts/fa-light-300.ttf") format("truetype")
-}
 
-@font-face {
-    font-display: auto;
-    font-family: "Font Awesome 5 Pro";
-    font-style: normal;
-    font-weight: normal;
-    font-display: block;
-    src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/webfonts/fa-regular-400.woff2") format("woff2"), url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/webfonts/fa-regular-400.ttf") format("truetype")
-}
 
-@font-face {
-    font-display: auto;
-    font-family: "Font Awesome 5 Pro";
-    font-style: normal;
-    font-weight: 900;
-    font-display: block;
-    src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/webfonts/fa-solid-900.woff2") format("woff2"), url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/webfonts/fa-solid-900.ttf") format("truetype")
-}
 
-@font-face {
-    font-display: auto;
-    font-family: "Font Awesome 5 Pro Brands";
-    font-style: normal;
-    font-weight: normal;
-    font-display: block;
-    src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/webfonts/fa-brands-400.woff2") format("woff2"), url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/webfonts/fa-brands-400.ttf") format("truetype")
-}
+
+
+
+
 
 #layout-footer .i_icon.brand,
 #layout-main div.tabbed_pane ul.tabs .collapse,
@@ -17465,7 +17382,7 @@ tr.favourite>td.name.anime>a::before,
 #layout-main ul.g_list li span.nolink,
 #layout-tabs ul li a {
     display: inline-block;
-    font-family: "Font Awesome 5 Pro", Arial, Helvetica, sans-serif !important;
+    font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
@@ -17477,7 +17394,7 @@ tr.favourite>td.name.anime>a::before,
 }
 
 .i_icon.brand {
-    font-family: "Font Awesome 5 Pro Brands", Arial, Helvetica, sans-serif !important
+    font-family: Arial, Helvetica, sans-serif
 }
 
 .resources .i_icon {
@@ -17496,315 +17413,19 @@ button:not(.fancybox-close-small)::before,
     padding-right: 6px
 }
 
-button:not(.fancybox-close-small)::before,
-#layout-main ul.g_list li.submit a::before {
-    content: "";
-    font-weight: 900
-}
-
-.i_topic_unlock::before {
-    content: "";
-    font-weight: 900
-}
-
-.i_topic_lock::before,
-.i_topic_locked::before {
-    content: "";
-    font-weight: 900
-}
-
-.i_comment_add::before,
-.i_topic_add::before {
-    content: "";
-    font-weight: 900
-}
-
-.i_comment_revisions::before {
-    content: "";
-    font-weight: 900
-}
-
-.i_comment_move::before,
-.i_topic_move::before,
-#layout-main ul.g_list li.move a::before {
-    content: ""
-}
-
-.i_comment_edit::before,
-.i_forum_edit::before,
-button.default::before,
-button.edit::before,
-button.update::before,
-#layout-main div.edit_actions>span.modify>*::before,
-#layout-main ul.g_list li.edit a::before {
-    content: "";
-    font-weight: 900
-}
-
-.i_comment_quote::before {
-    content: "";
-    font-weight: 900
-}
-
-.i_comment_info::before,
-#layout-main ul.g_list li.help a::before,
-#layout-main ul.g_list li.info a::before {
-    content: "";
-    font-weight: 900
-}
-
-.i_comment_setactive::before {
-    content: "";
-    font-weight: 900
-}
-
-#layout-main div.creq_all .creq_buttons button.deny::before,
-#layout-main ul.g_list li.abort a::before,
-#layout-main ul.g_list li.cancel a::before {
-    content: "";
-    font-weight: 900
-}
-
-.g_button .i_general_delete::before,
-.i_comment_creq::before,
-.i_comment_delete::before,
-.i_forum_delete::before,
-.i_mylist_delete::before,
-.i_pm_delete::before,
-.i_topic_delete::before,
-.i_wishlist_delete::before,
-button.delete::before,
-button.toast-close-button::before,
-#layout-main div.msg_all div.buttons button.delete::before,
-#layout-main div.msg_all div.buttons li.delete a::before,
-#layout-main ul.g_list li.delete a::before {
-    content: "";
-    font-weight: 900
-}
-
-.i_comment_undelete::before,
-.i_topic_undelete::before {
-    content: "";
-    font-weight: 900
-}
-
-.i_comment_report::before {
-    content: "";
-    font-weight: 900
-}
-
-.i_topic_history::before,
-#layout-main ul.g_list li.history a::before {
-    content: "";
-    font-weight: 900
-}
-
-.i_topic_split::before {
-    content: ""
-}
-
-.i_topic_subscribe::before,
-.i_topic_unsubscribe::before {
-    content: "";
-    font-weight: 900
-}
-
-button.search::before,
-#layout-search .submit::before {
-    content: "";
-    font-weight: 900
-}
-
-button.random::before {
-    content: ""
-}
-
-button.login::before {
-    content: ""
-}
-
-#layout-main ul.g_list li.back a::before,
-#layout-main ul.g_list li.show a::before {
-    content: "";
-    font-weight: 900
-}
-
-.i_forum_group::before,
-button.reboot::before,
-#layout-main ul.g_list li.convert a::before,
-#layout-main ul.g_list li.reload a::before {
-    content: "";
-    font-weight: 900
-}
-
 .toast .i_general_list::before,
 #layout-main div.creq_all .links .creq_list a::before,
 #layout-main div.edit_actions>span.show>*::before,
 #layout-main ul.g_list li.latest a::before,
 #layout-main ul.g_list li.list a::before {
-    content: "";
-    font-weight: 900;
     font-size: 1.19rem;
     vertical-align: top
-}
-
-#layout-main div.creq_all .links .next_creq a::before,
-#layout-main div.creq_all .links .next_new_creq a::before {
-    content: "";
-    font-weight: 900
-}
-
-button.set_default::before,
-#layout-main div.creq_all .creq_buttons button.lock::before {
-    content: "";
-    font-weight: 900
-}
-
-#layout-main div.creq_all .creq_buttons button.unlock::before {
-    content: "";
-    font-weight: 900
-}
-
-#layout-main div.creq_all .creq_buttons button.revert::before,
-#layout-main div.creq_all .creq_buttons button.revoke::before {
-    content: "";
-    font-weight: 900
-}
-
-.g_button .i_register::before,
-#layout-main div.creq_all .creq_buttons button.assign::before {
-    content: "";
-    font-weight: 900
-}
-
-#layout-main div.creq_all .creq_messages button.reply::before {
-    content: "";
-    font-weight: 900
-}
-
-.i_comment::after,
-#layout-main div.creq_all .creq_messages button.note::before {
-    content: "";
-    font-weight: 300
-}
-
-#layout-main div.creq_all .creq_messages button.annotation::before {
-    content: "";
-    font-weight: 900
-}
-
-button.reset::before,
-#layout-main ul.g_list li.reset a::before {
-    content: "";
-    font-weight: 900
-}
-
-button.next::before,
-button.right::before,
-#layout-main ul.g_list li.next a::before,
-#layout-main ul.g_list li.next span.nolink::before {
-    content: "";
-    font-weight: 900
-}
-
-button.left::before,
-button.prev::before,
-#layout-main ul.g_list li.prev a::before,
-#layout-main ul.g_list li.prev span.nolink::before {
-    content: "";
-    font-weight: 900
-}
-
-#layout-tabs ul li a::before {
-    content: "";
-    font-weight: 900
-}
-
-.i_pm_reply::before,
-button.reply::before,
-#layout-main div.msg_all div.buttons li.new a::before,
-#layout-main div.msg_all ul.g_list li.sent a::before {
-    content: "";
-    font-weight: normal
-}
-
-button.load::before {
-    content: "";
-    font-weight: normal
-}
-
-#layout-main ul.g_list li.stats a::before {
-    content: "";
-    font-weight: 900
-}
-
-#layout-main ul.g_list li.relations a::before,
-#layout-main ul.g_list li.votes a::before {
-    content: "";
-    font-weight: 900
-}
-
-#layout-main ul.g_list li.export a::before {
-    content: ""
-}
-
-.i_forum_add::before,
-.i_review_add::before,
-button.add::before,
-#layout-main div.edit_actions>span.add>*::before,
-#layout-main ul.g_list li.add a::before {
-    content: "";
-    font-weight: 900
-}
-
-button.ratenow::before,
-button.tmpratenow::before,
-button.vote::before {
-    content: "";
-    font-weight: normal
-}
-
-#layout-main ul.g_list li.merge a::before {
-    content: "";
-    font-weight: 900
-}
-
-button.up::before {
-    content: "";
-    font-weight: 900
-}
-
-button.down::before {
-    content: "";
-    font-weight: 900
-}
-
-#layout-main ul.g_list li.users a::before {
-    content: "";
-    font-weight: 900
 }
 
 .g_button.upload a::before,
 button.upload {
     content: "";
     font-weight: 900
-}
-
-.i_general_filter::after,
-#layout-main ul.g_list li.filter a::before {
-    content: "";
-    font-weight: 900
-}
-
-.i_topic_read::before,
-button.preview::before,
-button.toggle_visible::before {
-    content: "";
-    font-weight: normal
-}
-
-.i_moveable::before {
-    content: ""
 }
 
 .i_comment,
@@ -17858,102 +17479,17 @@ button.toggle_visible::before {
     font-size: 1.33rem
 }
 
-.i_plus::after {
-    content: "";
-    font-weight: 900
-}
-
-.i_minus::after {
-    content: "";
-    font-weight: 900
-}
-
-.i_info::after {
-    content: "";
-    font-weight: 900
-}
-
 .i_help::after {
-    content: "";
-    font-weight: 900;
     cursor: help
 }
 
-.i_top::after {
-    content: "";
-    font-weight: 900
-}
-
-.i_liststate_edit::after {
-    content: "";
-    font-weight: 900
-}
-
 .i_general_list::after {
-    content: "";
-    font-weight: 900;
     font-size: 1.19rem;
     vertical-align: top
 }
 
-.i_tab_collapse::after {
-    content: "";
-    font-weight: 900
-}
-
-.i_tab_expand::after {
-    content: "";
-    font-weight: 900
-}
-
-.i_tab_default::after {
-    content: "";
-    font-weight: 900
-}
-
-.i_tab_reset::after {
-    content: "";
-    font-weight: 900
-}
-
-.i_favourites::after {
-    content: "";
-    font-weight: 900
-}
-
-.i_favourites_no::after {
-    content: ""
-}
-
-.i_view_grid::after {
-    content: "";
-    font-weight: 900
-}
-
-.i_view_smallgrid::after {
-    content: "";
-    font-weight: 900
-}
-
 .i_view_list::after {
-    content: "";
-    font-weight: 900;
     font-size: 1.27rem
-}
-
-.i_waifu_add::after,
-.i_waifu_add::before {
-    content: ""
-}
-
-.i_waifu_delete::after {
-    content: "";
-    font-weight: 900
-}
-
-.toast-info::before,
-.toast-warning::before {
-    content: ""
 }
 
 .g_bubble .seiyuu a.favourite::before,
@@ -17962,15 +17498,8 @@ td.name>.favourite::before,
 td.name.favourite>a::before,
 tr.favourite>td.name.anime>a::before {
     color: #ffd751;
-    content: "";
-    font-weight: 900;
     font-size: 1.25rem;
     vertical-align: top
-}
-
-.i_recap::after {
-    content: "";
-    font-weight: 900
 }
 
 .i_resource_twitter::after {
@@ -17981,60 +17510,11 @@ tr.favourite>td.name.anime>a::before {
     content: ""
 }
 
-.i_resource_amazon_video::after {
-    content: ""
-}
-
-.i_resource_napster::after {
-    content: ""
-}
-
-.i_resource_youtube::after {
-    content: ""
-}
-
-.i_resource_facebook::after {
-    content: ""
-}
-
-.i_resource_imdb::after {
-    content: ""
-}
-
-.i_resource_instagram::after {
-    content: ""
-}
-
-.i_resource_linkedin::after {
-    content: ""
-}
-
-.i_resource_wiki::before {
-    content: ""
-}
-
-.i_resource_official_blog::after {
-    content: ""
-}
-
-.i_resource_official_hp::after {
-    content: ""
-}
-
-.i_resource_official_stream::after {
-    content: "";
-    font-weight: 900
-}
-
 .i_general_sessions::after {
-    content: "";
-    font-weight: 900;
     cursor: pointer
 }
 
 .i_general_settings::after {
-    content: "";
-    font-weight: 900;
     cursor: pointer
 }
 
@@ -18090,39 +17570,6 @@ tr.favourite>td.name.anime>a::before {
 .i_wishlist_edit::before {
     font-size: .8rem;
     padding-top: 3px
-}
-
-.i_mylist_edit::before,
-.i_wishlist_edit::before {
-    content: "";
-    font-weight: 900
-}
-
-.i_mylist_add::before,
-.i_wishlist_add::before {
-    content: "";
-    font-weight: 900
-}
-
-.i_wishlist::after,
-.i_wishlist_add::after,
-.i_wishlist_delete::after,
-.i_wishlist_edit::after {
-    content: "";
-    font-weight: 900
-}
-
-.i_mylist_add::after,
-.i_mylist_delete::after,
-.i_mylist_edit::after,
-.i_mylist_no::after,
-.i_summary::after {
-    content: "";
-    font-weight: 300
-}
-
-.g_button .i_general_delete::after {
-    content: ""
 }
 
 #layout-main .name.group .icons {
@@ -18271,10 +17718,6 @@ button.toast-close-button .text {
     margin-top: .3em
 }
 
-.toast .i_general_list::after {
-    content: ""
-}
-
 .toast .i_general_list {
     font-size: 1rem
 }
@@ -18371,35 +17814,6 @@ button.toast-close-button .text {
     background-image: none !important
 }
 
-.i_general_vote_revote::after {
-    content: "";
-    font-weight: 900
-}
-
-.g_button .edit::before {
-    content: "";
-    font-weight: 900
-}
-
-.i_general_unverify::before {
-    content: "";
-    font-weight: 900
-}
-
-.i_general_convert::before {
-    content: ""
-}
-
-.i_general_arrow_up::after {
-    content: "";
-    font-weight: 900
-}
-
-.i_general_arrow_down::after {
-    content: "";
-    font-weight: 900
-}
-
 .i_chapters,
 .i_ep_edit,
 .i_events_birthday,
@@ -18482,226 +17896,30 @@ button.toast-close-button .text {
     font-size: 1.5rem
 }
 
-.i_group_comment::after {
-    content: ""
-}
-
-.i_general_vote::after {
-    content: ""
-}
-
-.i_general_static::after {
-    content: "";
-    font-weight: 900
-}
-
-.i_file_editmylist::after,
-.i_general_edit::after,
-.i_general_edit_request::after,
-.i_liststate_edit::after {
-    content: "";
-    font-weight: 900
-}
-
-.i_file_removemylist::after,
-.i_general_delete::after,
-.i_general_delete_request::after {
-    content: ""
-}
-
-.i_seen::after,
-.i_seen_yes.add::before,
-.i_seen_yes::after {
-    content: ""
-}
-
-.i_seen_no::after {
-    content: ""
-}
-
 .i_general_link::after {
-    content: "";
     font-size: 1.15rem;
     vertical-align: inherit
 }
 
-.i_file_details::after {
-    content: "";
-    font-weight: 900
-}
-
 .i_mylist::after {
-    content: "";
-    font-weight: 900;
     font-size: 1.19rem;
     vertical-align: top
 }
 
-.i_general_unverify::after,
-.i_general_verify::after,
-.i_state_verified::after {
-    content: "";
-    font-weight: 900
-}
-
-.i_notify::after {
-    content: "";
-    font-weight: 900
-}
-
-.i_nonotify::after {
-    content: ""
-}
-
-.i_general_blacklist::after {
-    content: "";
-    font-weight: 900
-}
-
-.i_general_history::after {
-    content: ""
-}
-
 .i_wishlist_blacklist::before {
-    content: "";
-    font-weight: 900;
     color: #ff4e4e
 }
 
-.i_wishlist_buddy::before {
-    content: "";
-    font-weight: 900
-}
-
 .i_wishlist_toget::before {
-    content: "";
-    font-weight: 900;
     color: #30ba30
 }
 
-.i_wishlist_towatch::before {
-    content: ""
-}
-
 .i_wishlist_undefined::before {
-    content: "";
-    font-weight: 900;
     margin-left: -2px
 }
 
-.i_stats::after {
-    content: "";
-    font-weight: 900
-}
-
-.i_general_revert::after,
-.i_general_vote_revoke::after {
-    content: "";
-    font-weight: 900
-}
-
-.i_general_vote_up::after {
-    content: ""
-}
-
-.i_general_vote_down::after {
-    content: ""
-}
-
-.i_general_user_add::after {
-    content: "";
-    font-weight: 900
-}
-
-.i_general_remove::after {
-    content: "";
-    font-weight: 900
-}
-
-.toast-warning::after {
-    content: ""
-}
-
-.i_general_block::after {
-    content: "";
-    font-weight: 900
-}
-
-.i_general_forbidden::after {
-    content: "";
-    font-weight: 900
-}
-
-.i_general_merge::after {
-    content: ""
-}
-
-.i_search_blue::after {
-    content: ""
-}
-
-.i_search_orange::after {
-    content: ""
-}
-
-.i_events_event::after {
-    content: ""
-}
-
-.i_events_birthday::after {
-    content: ""
-}
-
 .i_events_maintenance::after {
-    content: "";
     font-weight: bold
-}
-
-.i_tv_series::after {
-    content: "";
-    font-weight: 900
-}
-
-.i_movie::after {
-    content: "";
-    font-weight: 900
-}
-
-.i_ova::after {
-    content: "";
-    font-weight: 900
-}
-
-.i_web::after {
-    content: "";
-    font-weight: 900
-}
-
-.i_tv_special::after {
-    content: "";
-    font-weight: 900
-}
-
-.i_music_video::after {
-    content: "";
-    font-weight: 900
-}
-
-.i_other::after,
-.i_unknown::after {
-    content: "";
-    font-weight: 900
-}
-
-.i_general_vote_pending::after,
-.i_general_warning::after {
-    content: "";
-    font-weight: 900
-}
-
-.i_chapters::after {
-    content: "";
-    font-weight: 900
 }
 
 .i_general_unverify {
@@ -18730,39 +17948,6 @@ button.toast-close-button .text {
     padding-top: 3px
 }
 
-.i_ep_edit::after,
-.i_file_edit::after {
-    content: "";
-    font-weight: 900
-}
-
-.i_file_add::after,
-.i_file_addmylist::after,
-.i_general_add::after,
-.i_seen_yes.add::before {
-    content: "";
-    font-weight: 900
-}
-
-.i_wishlist_blacklist::after,
-.i_wishlist_buddy::after,
-.i_wishlist_toget::after,
-.i_wishlist_towatch::after,
-.i_wishlist_undefined::after {
-    content: "";
-    font-weight: 900
-}
-
-.i_tv_special::before {
-    font-weight: 900;
-    content: ""
-}
-
-.i_rate_unknown::after {
-    font-weight: 900;
-    content: ""
-}
-
 .i_gstate_all,
 .i_gstate_finished,
 .i_gstate_specials,
@@ -18787,62 +17972,20 @@ button.toast-close-button .text {
     height: 14px
 }
 
-.i_gstate_all::before,
-.i_gstate_finished::before,
-.i_gstate_specials::before,
-.i_gstate_stalled::before {
-    content: "";
-    font-weight: 900
-}
-
-.i_gstate_all::after {
-    content: ""
-}
-
-.i_gstate_finished::after {
-    content: ""
-}
-
 .i_gstate_stalled::after {
-    content: "";
     left: .35em
 }
 
 .i_gstate_specials::after {
-    content: "S";
     left: .45em
 }
 
-.i_gstate_complete::after {
-    content: "";
-    font-weight: 900
-}
-
-.i_gstate_dropped::after {
-    content: "";
-    font-weight: 900
-}
-
-.i_gstate_ongoing::after {
-    content: "";
-    font-weight: 900
-}
-
 .i_general_plus::after {
-    content: "";
-    font-weight: 900;
     cursor: pointer
 }
 
 .i_general_minus::after {
-    content: "";
-    font-weight: 900;
     cursor: pointer
-}
-
-.i_general_added::after {
-    content: "";
-    font-weight: 900
 }
 
 .i_general_vote_down.voted,
@@ -18884,7 +18027,6 @@ button.toast-close-button .text {
     #layout-main *:not(.g_definitionlist):not(.g_segmentlist):not(.disablerowhover)>table:not(.nohover)>tbody>tr:not(.files):not(.episodes)>td::after,
     #layout-main div.forum ul.topics li.row::after {
         background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
-        content: "";
         height: 100%;
         left: 0;
         opacity: 0;
@@ -19804,12 +18946,6 @@ h4,
     font-size: 1.1rem
 }
 
-#layout-main div.edit_actions>span+span::before,
-#layout-main div.edit_actions>span::after,
-#layout-main div.edit_actions>span::before {
-    content: ""
-}
-
 a.button,
 a.confirmButton,
 button.button,
@@ -19988,7 +19124,7 @@ table,
 
 #layout-menu li.sub-menu ul li a {
     display: inline-block;
-    font-family: "Font Awesome 5 Pro", Arial, Helvetica, sans-serif !important;
+    font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
@@ -20009,8 +19145,6 @@ table,
     text-align: center;
     display: inline-block;
     width: 14px;
-    content: " ";
-    font-weight: 900;
     font-size: 1.2rem
 }
 
@@ -20022,191 +19156,7 @@ table,
     vertical-align: text-top
 }
 
-#layout-menu li.sub-menu ul li.search a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.random a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.landing a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.latest a::before,
-#layout-menu li.sub-menu ul li.modlatest a::before,
-#layout-menu li.sub-menu ul li.schedule a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.user a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.character a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.creator a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.song a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.collection a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.anime a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.club a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.tags a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.group a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.myimport a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.myexport a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.massupdate a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.applet a::before,
-#layout-menu li.sub-menu ul li.ed2kdump a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.mysignatures a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.mywishlist a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.admin a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.creqs a::before,
-#layout-menu li.sub-menu ul li.mycreqs a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.myplace a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.userinfo a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.mymessages a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.myvotes a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.myreviews a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.mynotifies a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.myfavourites a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.mylist a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.myentries a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.myreports a::before,
-#layout-menu li.sub-menu ul li.reports a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.myhints a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.forum a::before,
-#layout-menu li.sub-menu ul li.irc a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.help a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.report a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.software a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.staff a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.donate a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.alert a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.user-profile a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.user-logout a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.user-login a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.user-signup a::before {
-    content: ""
-}
-
-#layout-menu li.sub-menu ul li.credits a::before,
-#layout-menu li.sub-menu ul li.policies a::before {
-    content: ""
-}
-
 #layout-menu li.sub-menu ul li.main a::before {
-    content: "";
     display: none
 }
 
@@ -21143,10 +20093,6 @@ input[type=submit],
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))
 }
 
-#layout-footer::after {
-    content: "©mugisub.com"
-}
-
 @media all and (max-width: 950px) {
 
     #anidb:not(.nodropdownmenu) #layout-content,
@@ -21373,6 +20319,9 @@ input[type=submit],
         display: none
     }
 }
+
+
+
 
 
 
