@@ -40,10 +40,6 @@
     var textarea = document.getElementById('req-note');
     if (!textarea) return;
 
-    // Mobile pe keyboard dismiss hone se bachao —
-    // agar textarea focused hai to cssText mat chheo
-    if (document.activeElement === textarea) return;
-
     if (typeof jQuery !== 'undefined') {
       try { jQuery(textarea).wysibb('destroy'); } catch (e) {}
       var parent = textarea.parentNode;
