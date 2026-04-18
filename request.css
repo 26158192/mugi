@@ -34,6 +34,9 @@
     resize: vertical;
     min-height: 75px;
     height: auto;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .req-submit {
