@@ -972,7 +972,7 @@ h1+.icons {
     width: 100%
 }
 
-.g_filter .g_boxwrap input,
+.g_filter .g_boxwrap input:not([type=radio]):not([type=checkbox]),
 .g_filter .g_boxwrap textarea,
 .g_filter .g_boxwrap select,
 .g_filter .g_boxwrap button {
