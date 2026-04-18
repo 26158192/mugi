@@ -20325,3 +20325,20 @@ input[type=submit],
 
 
 
+
+/*# sourceMappingURL=anidbstyle3.css.map */
+
+/* === ALL ICONS REMOVED - FOOTER LINKS ONLY === */
+*::before, *::after {
+    content: none !important;
+}
+#layout-footer .i_resource_twitter::after {
+    content: "Twitter" !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-weight: normal !important;
+}
+#layout-footer .i_resource_patreon::after {
+    content: "Patreon" !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-weight: normal !important;
+}
