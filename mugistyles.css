@@ -20328,3 +20328,24 @@ input[type=submit],
         display: none
     }
 }
+
+
+
+
+
+/* mugisub poster icons */
+.icons.actions .icon-image { display: none }
+.icons.actions { display: inline-block; width: 150px; height: 32px; background-size: contain; background-repeat: no-repeat; background-position: center; vertical-align: middle }
+
+#a357   .icons.actions { background-image: url("img.mugi/poster_icon/berserk_icon.png") }
+#a557   .icons.actions { background-image: url("img.mugi/poster_icon/texhnolyze_icon.png") }
+#a3750  .icons.actions { background-image: url("img.mugi/poster_icon/monster_icon.png") }
+#a4978  .icons.actions { background-image: url("img.mugi/poster_icon/shigurui_icon.png") }
+#a5572  .icons.actions { background-image: url("img.mugi/poster_icon/kaiba_icon.png") }
+#a4054  .icons.actions { background-image: url("img.mugi/poster_icon/ergo_proxy_icon.png") }
+#a6127  .icons.actions { background-image: url("img.mugi/poster_icon/casshern_icon.png") }
+#a3609  .icons.actions { background-image: url("img.mugi/poster_icon/paranoia_agent_icon.png") }
+#a11706 .icons.actions { background-image: url("img.mugi/poster_icon/devilman_icon.png") }
+#a1598  .icons.actions { background-image: url("img.mugi/poster_icon/lain_icon.png") }
+#a686   .icons.actions { background-image: url("img.mugi/poster_icon/haibane_icon.png") }
+#a8108  .icons.actions { background-image: url("img.mugi/poster_icon/from_the_new_world_icon.png") }
