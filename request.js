@@ -1,17 +1,27 @@
 /*
  * MugiSUB - Request Form
  * Pure Vanilla JS
+ * Telegram Bot Integration Added
  */
 
 (function () {
+
+  // ============================================================
+  //  TELEGRAM CONFIG — Yahan apni values daalen
+  // ============================================================
+  var TG_TOKEN   = '8735133783:AAEiP95_QdW0iG6O6gUDp2obc7YF5GFPx9w';   // BotFather se mila token
+  var TG_CHAT_ID = '5529862652';     // @userinfobot se mila ID
+  // ============================================================
 
   var cat        = document.getElementById('req-category');
   var titleLabel = document.getElementById('req-title-label');
   var titleInput = document.getElementById('req-title');
   var noteInput  = document.getElementById('req-note');
+  var form       = document.getElementById('request-form');
 
-  if (!cat || !titleLabel || !titleInput || !noteInput) return;
+  if (!cat || !titleLabel || !titleInput || !noteInput || !form) return;
 
+  // ── Category data (original — kuch nahi badla) ──────────────
   var data = {
     anime: {
       label:            'Anime Title',
@@ -40,5 +50,107 @@
 
   cat.addEventListener('change', update);
   update();
+  // ── Original code end ────────────────────────────────────────
+
+
+  // ── Telegram message format ──────────────────────────────────
+  function buildMessage(category, title, link, note) {
+
+    var emoji    = { anime: '🎌', movie: '🎬', tv: '📺' };
+    var catLabel = { anime: 'Anime', movie: 'Movie', tv: 'TV Show' };
+    var time     = new Date().toLocaleString('en-PK', {
+      timeZone:   'Asia/Karachi',
+      dateStyle:  'medium',
+      timeStyle:  'short'
+    });
+
+    var msg = '';
+    msg += emoji[category] + ' *New ' + catLabel[category] + ' Request*\n';
+    msg += '━━━━━━━━━━━━━━━━━━━━\n';
+    msg += '📌 *Category:* ' + catLabel[category] + '\n';
+    msg += '🎯 *Title:* ' + escMd(title) + '\n';
+
+    if (link && link.trim() !== '') {
+      msg += '🔗 *Link:* ' + escMd(link.trim()) + '\n';
+    }
+
+    if (note && note.trim() !== '') {
+      msg += '📝 *Note:*\n' + escMd(note.trim()) + '\n';
+    }
+
+    msg += '━━━━━━━━━━━━━━━━━━━━\n';
+    msg += '🕐 *Time:* ' + time + '\n';
+    msg += '📡 *Source:* MugiSUB Request Form';
+
+    return msg;
+  }
+
+  // Markdown v2 special chars escape karna
+  function escMd(text) {
+    return String(text).replace(/[_*[\]()~`>#+\-=|{}.!\\]/g, '\\$&');
+  }
+
+  // ── Telegram pe send karna ───────────────────────────────────
+  function sendToTelegram(message) {
+    var url = 'https://api.telegram.org/bot' + TG_TOKEN + '/sendMessage';
+    return fetch(url, {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        chat_id:    TG_CHAT_ID,
+        text:       message,
+        parse_mode: 'MarkdownV2'
+      })
+    });
+  }
+
+  // ── Submit handler ───────────────────────────────────────────
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    var category = cat.value;
+    var title    = titleInput.value.trim();
+    var link     = form.querySelector('input[name="link"]')
+                     ? form.querySelector('input[name="link"]').value
+                     : '';
+    var note     = noteInput.value.trim();
+    var btn      = form.querySelector('button[type="submit"]');
+
+    if (!title) {
+      titleInput.focus();
+      return;
+    }
+
+    // Button disable — double submit rokne ke liye
+    btn.disabled    = true;
+    btn.textContent = 'Sending...';
+
+    var message = buildMessage(category, title, link, note);
+
+    sendToTelegram(message)
+      .then(function (res) { return res.json(); })
+      .then(function (json) {
+        if (json.ok) {
+          // Success
+          btn.textContent = '✓ Request Sent!';
+          btn.style.background = '#2e7d4f';
+          form.reset();
+          update(); // placeholders reset
+          setTimeout(function () {
+            btn.disabled         = false;
+            btn.textContent      = 'Submit Request';
+            btn.style.background = '';
+          }, 4000);
+        } else {
+          throw new Error(json.description || 'Telegram error');
+        }
+      })
+      .catch(function (err) {
+        console.error('MugiSUB Request Error:', err);
+        btn.disabled    = false;
+        btn.textContent = 'Submit Request';
+        alert('Request send nahi ho saki. Dobara try karein.');
+      });
+  });
 
 }());
