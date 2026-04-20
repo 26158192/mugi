@@ -2258,7 +2258,7 @@ label.i_icon.brand:hover {
 }
 
 .fancybox-close {
-    background-image: url("img.mugi/buttons/fancybox_sprite.png");
+    background-image: url("img.mugis/buttons/fancybox_sprite.png");
     position: absolute;
     top: -18px;
     right: -18px;
@@ -3250,40 +3250,40 @@ table,
 }
 
 #layout-search {
-  background: url("img.mugi/logos/logo.svg") no-repeat scroll left top transparent;
+  background: url("img.mugis/logos/logo.svg") no-repeat scroll left top transparent;
 }
 @media screen and (max-width: 950px) {
   #mugi:not(.nodropdownmenu) #layout-search {
-    background: url("img.mugi/logos/logo-wide.svg") no-repeat scroll left top
+    background: url("img.mugis/logos/logo-wide.svg") no-repeat scroll left top
       transparent;
   }
 }
 @media screen and (max-width: 800px) {
   #mugi:not(.nodropdownmenu) #layout-search {
-    background: url("img.mugi/logos/logo.svg") no-repeat scroll center top transparent;
+    background: url("img.mugis/logos/logo.svg") no-repeat scroll center top transparent;
   }
 }
 @media screen and (max-width: 510px) {
   #mugi:not(.nodropdownmenu) #layout-search {
-    background: url("img.mugi/logos/logo-small.svg") no-repeat scroll center top
+    background: url("img.mugis/logos/logo-small.svg") no-repeat scroll center top
       transparent;
   }
 }
 @media screen and (min-width: 1235px) {
   #layout-search {
-    background: url("img.mugi/logos/logo-wide.svg") no-repeat scroll left top
+    background: url("img.mugis/logos/logo-wide.svg") no-repeat scroll left top
       transparent;
   }
 }
 @media screen and (min-width: 1575px) {
   #layout-search {
-    background: url("img.mugi/logos/logo-wider.svg") no-repeat scroll left top
+    background: url("img.mugis/logos/logo-wider.svg") no-repeat scroll left top
       transparent;
   }
 }
 @media screen and (min-width: 1860px) {
   #layout-search {
-    background: url("img.mugi/logos/logo-widest.svg") no-repeat scroll left top
+    background: url("img.mugis/logos/logo-widest.svg") no-repeat scroll left top
       transparent;
   }
 }
@@ -4075,18 +4075,18 @@ th a {
 /* mugisub poster icons */
 .icons.actions { display: inline-block; width: 150px; height: 32px; background-size: contain; background-repeat: no-repeat; background-position: center; vertical-align: middle }
 
-#a357   .icons.actions { background-image: url("img.mugi/poster_icon/berserk_icon.png") }
-#a557   .icons.actions { background-image: url("img.mugi/poster_icon/texhnolyze_icon.png") }
-#a3750  .icons.actions { background-image: url("img.mugi/poster_icon/monster_icon.png") }
-#a4978  .icons.actions { background-image: url("img.mugi/poster_icon/shigurui_icon.png") }
-#a5572  .icons.actions { background-image: url("img.mugi/poster_icon/kaiba_icon.png") }
-#a4054  .icons.actions { background-image: url("img.mugi/poster_icon/ergo_proxy_icon.png") }
-#a6127  .icons.actions { background-image: url("img.mugi/poster_icon/casshern_icon.png") }
-#a3609  .icons.actions { background-image: url("img.mugi/poster_icon/paranoia_agent_icon.png") }
-#a11706 .icons.actions { background-image: url("img.mugi/poster_icon/devilman_icon.png") }
-#a1598  .icons.actions { background-image: url("img.mugi/poster_icon/lain_icon.png") }
-#a686   .icons.actions { background-image: url("img.mugi/poster_icon/haibane_icon.png") }
-#a8108  .icons.actions { background-image: url("img.mugi/poster_icon/from_the_new_world_icon.png") }
+#a357   .icons.actions { background-image: url("img.mugis/poster_icon/berserk_icon.png") }
+#a557   .icons.actions { background-image: url("img.mugis/poster_icon/texhnolyze_icon.png") }
+#a3750  .icons.actions { background-image: url("img.mugis/poster_icon/monster_icon.png") }
+#a4978  .icons.actions { background-image: url("img.mugis/poster_icon/shigurui_icon.png") }
+#a5572  .icons.actions { background-image: url("img.mugis/poster_icon/kaiba_icon.png") }
+#a4054  .icons.actions { background-image: url("img.mugis/poster_icon/ergo_proxy_icon.png") }
+#a6127  .icons.actions { background-image: url("img.mugis/poster_icon/casshern_icon.png") }
+#a3609  .icons.actions { background-image: url("img.mugis/poster_icon/paranoia_agent_icon.png") }
+#a11706 .icons.actions { background-image: url("img.mugis/poster_icon/devilman_icon.png") }
+#a1598  .icons.actions { background-image: url("img.mugis/poster_icon/lain_icon.png") }
+#a686   .icons.actions { background-image: url("img.mugis/poster_icon/haibane_icon.png") }
+#a8108  .icons.actions { background-image: url("img.mugis/poster_icon/from_the_new_world_icon.png") }
 
 
 
