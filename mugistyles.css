@@ -23,12 +23,10 @@ table {
     border-spacing: 0
 }
 
-
 fieldset,
 img {
     border: 0
 }
-
 
 code,
 th,
@@ -37,11 +35,9 @@ var {
     font-weight: normal
 }
 
-
 ul {
     list-style: none
 }
-
 
 th {
     text-align: left
@@ -164,10 +160,6 @@ ul {
 #layout-main .g_bubble.box .name .icons.tooltip+a,
 #layout-main div table td.name .icons.tooltip+a {
     line-height: 16px
-}
-
-#layout-main div table td.name .icons.tooltip .i_info {
-    padding-right: .3em
 }
 
 #layout-main div.anime_all div.info div.extra div td.name a+.icons.tooltip,
@@ -689,7 +681,6 @@ td.thumb {
     width: 6.5em
 }
 
-
 td.thumb>a {
     line-height: normal;
     display: inline-block;
@@ -782,22 +773,18 @@ select {
     margin-left: 1em
 }
 
-
 #layout-main ul.g_styledlist {
     list-style-type: disc;
     width: auto !important
 }
 
-
 #layout-main .g_styledlist {
     margin-left: 2em
 }
 
-
 #layout-main ul.g_styledlist>li {
     margin-left: 0
 }
-
 
 #layout-main ul.g_styledlist>li+li {
     margin-top: .5em
@@ -1366,13 +1353,11 @@ select {
     overflow-wrap: break-word
 }
 
-
 #layout-main div.g_timedentry ul {
     list-style-type: disc;
     margin-top: .5em;
     padding-left: 4em
 }
-
 
 #layout-main div.g_timedentry ul li+br {
     display: none
@@ -1465,7 +1450,6 @@ div.g_timeline li {
     text-align: right
 }
 
-
 #layout-main div.anime_all table.stafflist td.credit,
 #layout-main div.anime_all table.stafflist td.name {
     width: 30%
@@ -1499,11 +1483,9 @@ div.g_timeline li {
     order: 1
 }
 
-
 #layout-main div.anime_all div.info div.extra div.staff td.creator {
     width: 100%
 }
-
 
 #layout-main div.anime_all div.info div.extra div.staff td.credit {
     white-space: nowrap;
@@ -1525,11 +1507,9 @@ div.g_timeline li {
     display: block
 }
 
-
 #layout-main div.anime_all div.tabbed_pane:not(.resized) .g_section.mylist_status.vote_status {
     margin: -0.5em 0
 }
-
 
 #layout-main div.anime_all div.tabbed_pane:not(.resized) .g_section.mylist_status.vote_status>div.g_bubblewrap>div.g_section {
     margin: .6em .5em
@@ -1783,7 +1763,6 @@ html {
     fill: #333
 }
 
-
 .highcharts-a11y-proxy-container-before,
 .highcharts-a11y-proxy-container-after {
     position: absolute;
@@ -1795,17 +1774,14 @@ html {
     box-shadow: none
 }
 
-
 #layout-main div.g_msg.note {
     border: 1px solid #afaf00;
     background-color: #ffffdf
 }
 
-
 #layout-main div.g_msg.note h3 {
     color: #afaf00
 }
-
 
 .g_vital a {
     color: red
@@ -1836,12 +1812,10 @@ th a {
     border: 0
 }
 
-
 #layout-main div.g_timedentry ul {
     background-color: inherit;
     border: 0
 }
-
 
 #layout-tabs ul {
     background-color: transparent
@@ -1939,7 +1913,6 @@ h1 a {
     font-size: inherit
 }
 
-
 h2,
 h4 {
     font-size: 1.2rem
@@ -2032,7 +2005,6 @@ tr.action td.value,
     text-align: center
 }
 
-
 small,
 #layout-main .name span.main {
     font-size: .95rem
@@ -2087,7 +2059,6 @@ th.sortable:not(.sorter-false),
 #layout-main .g_account ul.tabs li {
     font-size: 1.3rem
 }
-
 
 #layout-main div.g_bubble.code {
     font-size: 1rem
@@ -2183,7 +2154,6 @@ h4,
 @media screen and (max-width: 800px) {
 }
 
-
 #layout-main tr.g_fs_lame {
     background-color: #d6b8b8
 }
@@ -2199,7 +2169,6 @@ h4,
     background-color: #a7dda7
 }
 
-
 #layout-main div.anime_all div.tabbed_pane_main table tr.g_odd.mylist,
 #layout-main table.animelist tr.g_odd.mylist,
 #layout-main table.file.entities tr.g_odd.good {
@@ -2209,7 +2178,6 @@ h4,
 #layout-main div:not(.ed2kdump_all) tr.g_odd td.mylist {
     background-color: #9ad09a
 }
-
 
 .g_vital a {
     color: #b32947
@@ -2254,45 +2222,10 @@ select+.i_icon {
     display: none
 }
 
-.i_award {
-    width: 300px;
-    height: 50px;
-    padding: .2em;
-    display: inline-block
-}
-
-.i_audio {
-    display: none
-}
-
 div.icons,
 span.icons {
     float: right;
     white-space: nowrap
-}
-
-span.i_icon.rel {
-    position: absolute
-}
-
-span.i_icon.rel.i_marker {
-    width: 13px;
-    height: 20px;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_marker.png")
-}
-
-button+.i_icon {
-    padding-left: .5em
-}
-
-h1+.icons a.i_icon:hover {
-    opacity: .8
-}
-
-h2 .i_help,
-h3 .i_help,
-h4 .i_help {
-    vertical-align: baseline
 }
 
 #layout-footer .links {
@@ -2311,307 +2244,9 @@ h4 .i_help {
     }
 }
 
-.i_award_mainichi {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/awards/anidb_mainichi.gif")
-}
-
-.i_award_jmaf {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/awards/anidb_jmaf.gif")
-}
-
-.i_award_japa {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/awards/anidb_japa.gif")
-}
-
-.i_award_apsa {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/awards/anidb_apsa.gif")
-}
-
-.i_award_oscars {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/awards/anidb_oscars.gif")
-}
-
-.i_award_top10 {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/awards/anidb_top10.png")
-}
-
-.i_award_arc2000 {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/awards/anidb_arc2000award.gif")
-}
-
-.i_award_arc2001 {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/awards/anidb_arc2001award.gif")
-}
-
-.i_award_arc2002 {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/awards/anidb_arc2002award.gif")
-}
-
-.i_award_arc2003 {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/awards/anidb_arc2003award.gif")
-}
-
-.i_award_arc2004 {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/awards/anidb_arc2004award.gif")
-}
-
-.i_award_arc2005 {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/awards/anidb_arc2005award.gif")
-}
-
-.i_award_arc2006 {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/awards/anidb_arc2006award.gif")
-}
-
-.i_award_arc2007 {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/awards/anidb_arc2007award.gif")
-}
-
-.i_award_arc2008 {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/awards/anidb_arc2008award.gif")
-}
-
-.i_award_arc2009 {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/awards/anidb_arc2009award.gif")
-}
-
-.i_award_arc2010 {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/awards/anidb_arc2010award.gif")
-}
-
-.i_award_arc2011 {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/awards/anidb_arc2011award.gif")
-}
-
-.i_award_arc2012 {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/awards/anidb_arc2012award.gif")
-}
-
 #layout-footer .i_resource_patreon,
 #layout-footer .i_resource_twitter {
     display: none
-}
-
-.i_resource_allcinema {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/brands/allcinema.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_resource_amazon_video {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/brands/amazon.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_resource_anime_characters_database {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/brands/anime_characters_database.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_resource_animemorial {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/brands/animememorial.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_resource_anison {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/brands/anison.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_resource_ann {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/brands/animenewsnetwork.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_resource_baidu_baike {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/brands/baidu_baike.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_resource_bangumi {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/brands/bangumi.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_resource_bilibili {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/brands/bilibili.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_resource_crunchyroll {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/brands/crunchyroll.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_resource_douban {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/brands/douban.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_resource_facebook {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/brands/facebook.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_resource_funimation {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/brands/funimation.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_resource_generasia {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/brands/generasia.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_resource_hidive {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/brands/hidive.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_resource_lain {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/brands/lain.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_resource_linkedin {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/brands/linkedin.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_resource_mal {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/brands/myanimelist.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_resource_mangaupdate {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/brands/mangaupdates.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_resource_marumegane {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/brands/marumegane.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_resource_media_art_database {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/brands/media_art_database.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_resource_musicbrainz {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/brands/musicbrainz.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_resource_netflix {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/brands/netflix.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_resource_official_blog {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/brands/blog.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_resource_official_hp {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/brands/placeholder.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_resource_official_stream {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/brands/stream.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_resource_patreon_button {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/brands/patreon_button.png");
-    height: 35px;
-    width: 149px
-}
-
-.i_resource_pixiv {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/brands/pixiv.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_resource_qq {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/brands/qq.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_resource_syoboi {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/brands/syoboi.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_resource_tmdb {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/brands/tmdb.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_resource_tvtropes {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/brands/tvtropes.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_resource_twitter {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/brands/twitter.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_resource_vgmdb {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/brands/vgmdb.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_resource_vndb {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/brands/vndb.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_resource_wiki {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/brands/wikipedia.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_resource_youtube {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/brands/youtube.png");
-    height: 16px;
-    width: 16px
 }
 
 a.i_icon.brand:hover,
@@ -2619,1238 +2254,12 @@ label.i_icon.brand:hover {
     opacity: .7
 }
 
-.i_audio_af {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_afrikaans.png")
-}
-
-.i_sub_af {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_afrikaans.png")
-}
-
-.i_audio_al {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_albanian.png")
-}
-
-.i_sub_al {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_albanian.png")
-}
-
-.i_audio_ar {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_arabic.png")
-}
-
-.i_sub_ar {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_arabic.png")
-}
-
-.i_audio_es-PV {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_basque.png")
-}
-
-.i_sub_es-PV {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_basque.png")
-}
-
-.i_audio_bd {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_bengali.png")
-}
-
-.i_sub_bd {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_bengali.png")
-}
-
-.i_audio_bs {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_bosnian.png")
-}
-
-.i_sub_bs {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_bosnian.png")
-}
-
-.i_audio_bg {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_bulgarian.png")
-}
-
-.i_sub_bg {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_bulgarian.png")
-}
-
-.i_audio_bur {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_burmese.png")
-}
-
-.i_sub_bur {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_burmese.png")
-}
-
-.i_audio_es-CA {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_catalan.png")
-}
-
-.i_sub_es-CA {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_catalan.png")
-}
-
-.i_audio_cs {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_czech.png")
-}
-
-.i_sub_cs {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_czech.png")
-}
-
-.i_audio_da {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_danish.png")
-}
-
-.i_sub_da {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_danish.png")
-}
-
-.i_audio_de {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_german.png")
-}
-
-.i_sub_de {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_german.png")
-}
-
-.i_audio_el {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_greek.png")
-}
-
-.i_sub_el {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_greek.png")
-}
-
 .i_audio_en {
     background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_english.png")
 }
 
-.i_sub_en {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_english.png")
-}
-
-.i_audio_eo {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_esperanto.png")
-}
-
-.i_sub_eo {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_esperanto.png")
-}
-
-.i_audio_es {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_spanish.png")
-}
-
-.i_sub_es {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_spanish.png")
-}
-
-.i_audio_es-419 {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_hispanic.png")
-}
-
-.i_sub_es-419 {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_hispanic.png")
-}
-
-.i_audio_et {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_estonian.png")
-}
-
-.i_sub_et {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_estonian.png")
-}
-
-.i_audio_fa {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_persian.png")
-}
-
-.i_sub_fa {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_persian.png")
-}
-
-.i_audio_fi {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_finnish.png")
-}
-
-.i_sub_fi {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_finnish.png")
-}
-
-.i_audio_fr {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_french.png")
-}
-
-.i_sub_fr {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_french.png")
-}
-
-.i_audio_es-GA {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_galician.png")
-}
-
-.i_sub_es-GA {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_galician.png")
-}
-
-.i_audio_grc {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_greek-ancient.png")
-}
-
-.i_sub_grc {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_greek-ancient.png")
-}
-
-.i_audio_he {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_hebrew.png")
-}
-
-.i_sub_he {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_hebrew.png")
-}
-
-.i_audio_hi {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_hindi.png")
-}
-
-.i_sub_hi {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_hindi.png")
-}
-
-.i_audio_hr {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_croatian.png")
-}
-
-.i_sub_hr {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_croatian.png")
-}
-
-.i_audio_ht {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_creole.png")
-}
-
-.i_sub_ht {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_creole.png")
-}
-
-.i_audio_hu {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_hungarian.png")
-}
-
-.i_sub_hu {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_hungarian.png")
-}
-
-.i_audio_id {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_indonesian.png")
-}
-
-.i_sub_id {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_indonesian.png")
-}
-
-.i_audio_is {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_icelandic.png")
-}
-
-.i_sub_is {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_icelandic.png")
-}
-
-.i_audio_it {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_italian.png")
-}
-
-.i_sub_it {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_italian.png")
-}
-
 .i_audio_ja {
     background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_japanese.png")
-}
-
-.i_sub_ja {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_japanese.png")
-}
-
-.i_audio_x-jat {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_japanese-transcription.png")
-}
-
-.i_sub_x-jat {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_japanese-transcription.png")
-}
-
-.i_audio_jv {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_javanese.png")
-}
-
-.i_sub_jv {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_javanese.png")
-}
-
-.i_audio_ka {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_georgian.png")
-}
-
-.i_sub_ka {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_georgian.png")
-}
-
-.i_audio_ko {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_korean.png")
-}
-
-.i_sub_ko {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_korean.png")
-}
-
-.i_audio_x-kot {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_korean-transcription.png")
-}
-
-.i_sub_x-kot {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_korean-transcription.png")
-}
-
-.i_audio_la {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_latin.png")
-}
-
-.i_sub_la {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_latin.png")
-}
-
-.i_audio_lv {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_latvian.png")
-}
-
-.i_sub_lv {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_latvian.png")
-}
-
-.i_audio_lt {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_lithuanian.png")
-}
-
-.i_sub_lt {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_lithuanian.png")
-}
-
-.i_audio_mn {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_mongolian.png")
-}
-
-.i_sub_mn {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_mongolian.png")
-}
-
-.i_audio_my {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_malay.png")
-}
-
-.i_sub_my {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_malay.png")
-}
-
-.i_audio_ne {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_nepali.png")
-}
-
-.i_sub_ne {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_nepali.png")
-}
-
-.i_audio_nl {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_dutch.png")
-}
-
-.i_sub_nl {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_dutch.png")
-}
-
-.i_audio_no {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_norwegian.png")
-}
-
-.i_sub_no {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_norwegian.png")
-}
-
-.i_audio_pl {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_polish.png")
-}
-
-.i_sub_pl {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_polish.png")
-}
-
-.i_audio_pt {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_portuguese.png")
-}
-
-.i_sub_pt {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_portuguese.png")
-}
-
-.i_audio_pt-BR {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_brazilian.png")
-}
-
-.i_sub_pt-BR {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_brazilian.png")
-}
-
-.i_audio_ro {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_romanian.png")
-}
-
-.i_sub_ro {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_romanian.png")
-}
-
-.i_audio_ru {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_russian.png")
-}
-
-.i_sub_ru {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_russian.png")
-}
-
-.i_audio_si {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_sinhala.png")
-}
-
-.i_sub_si {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_sinhala.png")
-}
-
-.i_audio_sk {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_slovak.png")
-}
-
-.i_sub_sk {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_slovak.png")
-}
-
-.i_audio_sl {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_slovenian.png")
-}
-
-.i_sub_sl {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_slovenian.png")
-}
-
-.i_audio_sr {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_serbian.png")
-}
-
-.i_sub_sr {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_serbian.png")
-}
-
-.i_audio_sv {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_swedish.png")
-}
-
-.i_sub_sv {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_swedish.png")
-}
-
-.i_audio_tgl {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_tagalog.png")
-}
-
-.i_sub_tgl {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_tagalog.png")
-}
-
-.i_audio_ta {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_tamil.png")
-}
-
-.i_sub_ta {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_tamil.png")
-}
-
-.i_audio_te {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_telugu.png")
-}
-
-.i_sub_te {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_telugu.png")
-}
-
-.i_audio_tt {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_tartar.png")
-}
-
-.i_sub_tt {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_tartar.png")
-}
-
-.i_audio_th {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_thai.png")
-}
-
-.i_sub_th {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_thai.png")
-}
-
-.i_sub_x-tht {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_thai-transcription.png")
-}
-
-.i_audio_tl {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_filipino.png")
-}
-
-.i_sub_tl {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_filipino.png")
-}
-
-.i_audio_tr {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_turkish.png")
-}
-
-.i_sub_tr {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_turkish.png")
-}
-
-.i_audio_uk {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_ukrainian.png")
-}
-
-.i_sub_uk {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_ukrainian.png")
-}
-
-.i_audio_ur {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_urdu.png")
-}
-
-.i_sub_ur {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_urdu.png")
-}
-
-.i_audio_vi {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_vietnamese.png")
-}
-
-.i_sub_vi {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_vietnamese.png")
-}
-
-.i_audio_x-in {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_instrumental.png")
-}
-
-.i_sub_x-in {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_instrumental.png")
-}
-
-.i_audio_x-other {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_other.png")
-}
-
-.i_sub_x-other {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_other.png")
-}
-
-.i_audio_x-unk {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_unknown.png")
-}
-
-.i_sub_x-unk {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_unknown.png")
-}
-
-.i_audio_zh {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_chinese.png")
-}
-
-.i_sub_zh {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_chinese.png")
-}
-
-.i_audio_x-zht {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_chinese-transcription.png")
-}
-
-.i_sub_x-zht {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_chinese-transcription.png")
-}
-
-.i_audio_zh-Hans {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_chinese-simplified.png")
-}
-
-.i_sub_zh-Hans {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_chinese-simplified.png")
-}
-
-.i_audio_zh-Hant {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_chinese-traditional.png")
-}
-
-.i_sub_zh-Hant {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_chinese-traditional.png")
-}
-
-.i_audio_zh-cmn {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_chinese-mandarin.png")
-}
-
-.i_sub_zh-cmn {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_chinese-mandarin.png")
-}
-
-.i_audio_zh-nan {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_chinese-taiwanese.png")
-}
-
-.i_sub_zh-nan {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_chinese-taiwanese.png")
-}
-
-.i_audio_zh-yue {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_chinese-cantonese.png")
-}
-
-.i_sub_zh-yue {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/subtitle_chinese-cantonese.png")
-}
-
-.i_msg_normal,
-.i_topic_normal {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/phpbb/topic_normal.gif");
-    background-repeat: no-repeat
-}
-
-.i_msg_system,
-.i_topic_sticky {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/phpbb/topic_sticky.gif");
-    background-repeat: no-repeat
-}
-
-.i_msg_mod,
-.i_topic_announcement,
-.i_topic_global {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/phpbb/topic_announce.gif");
-    background-repeat: no-repeat
-}
-
-.i_topic_normal_locked {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/phpbb/topic_normal_locked.gif");
-    background-repeat: no-repeat
-}
-
-.i_topic_sticky_locked {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/phpbb/topic_sticky_locked.gif");
-    background-repeat: no-repeat
-}
-
-.i_msg_bulk,
-.i_topic_announcement_locked,
-.i_topic_global_locked {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/phpbb/topic_announce_locked.gif");
-    background-repeat: no-repeat
-}
-
-.i_msg_normal_unread,
-.i_topic_normal_unread {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/phpbb/topic_normal_unread.gif");
-    background-repeat: no-repeat
-}
-
-.i_msg_system_unread,
-.i_topic_sticky_unread {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/phpbb/topic_sticky_unread.gif");
-    background-repeat: no-repeat
-}
-
-.i_msg_mod_unread,
-.i_topic_announcement_unread,
-.i_topic_global_unread {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/phpbb/topic_announce_unread.gif");
-    background-repeat: no-repeat
-}
-
-.i_topic_normal_locked_unread {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/phpbb/topic_normal_locked_unread.gif");
-    background-repeat: no-repeat
-}
-
-.i_topic_sticky_locked_unread {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/phpbb/topic_sticky_locked_unread.gif");
-    background-repeat: no-repeat
-}
-
-.i_msg_bulk_unread,
-.i_topic_announcement_locked_unread,
-.i_topic_global_locked_unread {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/phpbb/topic_announce_locked_unread.gif");
-    background-repeat: no-repeat
-}
-
-.i_forum {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/phpbb/forum_normal.gif");
-    background-repeat: no-repeat
-}
-
-.i_forum_unread {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/phpbb/forum_normal_unread.gif");
-    background-repeat: no-repeat
-}
-
-.i_general_link {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/phpbb/topic_latest.gif");
-    background-repeat: no-repeat;
-    height: 9px;
-    width: 11px
-}
-
-.i_smiley_tehehe {
-    width: 15px;
-    height: 15px;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/smiley/smiley_tehehe.gif")
-}
-
-.i_smiley_sweating {
-    width: 17px;
-    height: 15px;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/smiley/smiley_sweating.gif")
-}
-
-.i_smiley_cool {
-    width: 15px;
-    height: 15px;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/smiley/smiley_cool.gif")
-}
-
-.i_smiley_sad {
-    width: 15px;
-    height: 15px;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/smiley/smiley_sad.gif")
-}
-
-.i_smiley_happy {
-    width: 15px;
-    height: 15px;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/smiley/smiley_happy.gif")
-}
-
-.i_smiley_surprised {
-    width: 15px;
-    height: 15px;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/smiley/smiley_surprised.gif")
-}
-
-.i_smiley_undecided {
-    width: 15px;
-    height: 15px;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/smiley/smiley_undecided.gif")
-}
-
-.i_smiley_confused {
-    width: 15px;
-    height: 15px;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/smiley/smiley_confused.gif")
-}
-
-.i_smiley_very_happy {
-    width: 15px;
-    height: 15px;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/smiley/smiley_very_happy.gif")
-}
-
-.i_smiley_razz {
-    width: 15px;
-    height: 15px;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/smiley/smiley_razz.gif")
-}
-
-.i_smiley_angel {
-    width: 42px;
-    height: 23px;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/smiley/smiley_angel.gif")
-}
-
-.i_smiley_baka {
-    width: 41px;
-    height: 46px;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/smiley/smiley_baka.gif")
-}
-
-.i_smiley_brickwall {
-    width: 25px;
-    height: 20px;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/smiley/smiley_brickwall.gif")
-}
-
-.i_smiley_crying {
-    width: 15px;
-    height: 15px;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/smiley/smiley_crying.gif")
-}
-
-.i_smiley_mad {
-    width: 15px;
-    height: 15px;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/smiley/smiley_mad.gif")
-}
-
-.i_smiley_laughing {
-    width: 15px;
-    height: 15px;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/smiley/smiley_laughing.gif")
-}
-
-.i_smiley_mymaster {
-    width: 29px;
-    height: 15px;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/smiley/smiley_mymaster.gif")
-}
-
-.i_smiley_embarassed {
-    width: 15px;
-    height: 15px;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/smiley/smiley_embarassed.gif")
-}
-
-.i_smiley_rolleyes {
-    width: 15px;
-    height: 15px;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/smiley/smiley_rolleyes.gif")
-}
-
-.i_smiley_shock {
-    width: 15px;
-    height: 15px;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/smiley/smiley_shock.gif")
-}
-
-.i_smiley_thumbup {
-    width: 23px;
-    height: 18px;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/smiley/smiley_thumbup.gif")
-}
-
-.i_smiley_twisted {
-    width: 15px;
-    height: 15px;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/smiley/smiley_twisted.gif")
-}
-
-.i_smiley_wink {
-    width: 15px;
-    height: 15px;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/smiley/smiley_wink.gif")
-}
-
-.i_smiley_zzz {
-    width: 15px;
-    height: 24px;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/smiley/smiley_zzz.gif")
-}
-
-.i_smiley_neutral {
-    width: 15px;
-    height: 15px;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/smiley/smiley_neutral.gif")
-}
-
-.i_smiley_nosebleed {
-    width: 15px;
-    height: 19px;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/smiley/smiley_nosebleed.gif")
-}
-
-.i_smiley_disgusted {
-    width: 15px;
-    height: 15px;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/smiley/smiley_disgusted.gif")
-}
-
-.i_smiley_thinking {
-    width: 15px;
-    height: 15px;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/smiley/smiley_thinking.gif")
-}
-
-.i_smiley_sweatdrop {
-    width: 17px;
-    height: 15px;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/smiley/smiley_sweatdrop.gif")
-}
-
-.i_smiley_wtf {
-    width: 17px;
-    height: 15px;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/smiley/smiley_wtf.gif")
-}
-
-.i_smiley_dead {
-    width: 16px;
-    height: 16px;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/smiley/smiley_dead.gif")
-}
-
-.i_twitch_4head {
-    width: 20px;
-    height: 30px;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/smiley/twitch_4head.png")
-}
-
-.i_twitch_biblethump {
-    width: 36px;
-    height: 30px;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/smiley/twitch_biblethump.png")
-}
-
-.i_twitch_kappa {
-    width: 25px;
-    height: 28px;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/smiley/twitch_kappa.png")
-}
-
-.i_twitch_lul {
-    width: 28px;
-    height: 28px;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/smiley/twitch_lul.png")
-}
-
-.i_twitch_pjsalt {
-    width: 36px;
-    height: 30px;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/smiley/twitch_pjsalt.png")
-}
-
-.i_twitch_pogchamp {
-    width: 23px;
-    height: 30px;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/smiley/twitch_pogchamp.png")
-}
-
-.i_twitch_residentsleeper {
-    width: 28px;
-    height: 28px;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/smiley/twitch_residentsleeper.png")
-}
-
-.i_twitch_swiftrage {
-    width: 21px;
-    height: 28px;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/smiley/twitch_swiftrage.png")
-}
-
-.i_twitch_trihard {
-    width: 28px;
-    height: 28px;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/smiley/twitch_trihard.png")
-}
-
-.i_twitch_wutface {
-    width: 28px;
-    height: 28px;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/smiley/twitch_wutface.png")
-}
-
-.i_twitch_failfish {
-    width: 22px;
-    height: 30px;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/smiley/twitch_failfish.png")
-}
-
-.i_other_doge {
-    width: 30px;
-    height: 30px;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/smiley/other_doge.png")
-}
-
-.i_file_add {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_file_add.gif")
-}
-
-.i_file_delete {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_file_delete.gif")
-}
-
-.i_file_edit {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_file_edit.gif")
-}
-
-.i_file_details {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_file_details.gif")
-}
-
-.i_file_ed2k {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_file_ed2k.gif")
-}
-
-.i_file_ed2k_corrupt {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_file_ed2k_corrupt.gif")
-}
-
-.i_new_icon {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_new_icon.gif")
-}
-
-.i_av_yes {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_av_yes.gif")
-}
-
-.i_crc_no {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_crc_no.gif")
-}
-
-.i_crc_yes {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_crc_yes.gif")
-}
-
-.i_censored {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_censored.gif")
-}
-
-.i_uncensored {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_uncensored.gif")
-}
-
-.i_vrs_1 {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/orange/anidb_vrs_1.gif")
-}
-
-.i_vrs_2 {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/orange/anidb_vrs_2.gif")
-}
-
-.i_vrs_3 {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/orange/anidb_vrs_3.gif")
-}
-
-.i_vrs_4 {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/orange/anidb_vrs_4.gif")
-}
-
-.i_vrs_5 {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/orange/anidb_vrs_5.gif")
-}
-
-.i_vrs_6 {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/orange/anidb_vrs_6.gif")
-}
-
-.i_vrs_7 {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/orange/anidb_vrs_7.gif")
-}
-
-.i_vrs_8 {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/orange/anidb_vrs_8.gif")
-}
-
-.i_vrs_9 {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/orange/anidb_vrs_9.gif")
-}
-
-.i_chapters {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_chapters.png")
-}
-
-.i_crc_unv {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_crc_unv.gif")
-}
-
-.i_video {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_video.gif")
-}
-
-.i_ftype_video {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_video.gif")
-}
-
-.i_ftype_video2 {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_video2.gif")
-}
-
-.i_ftype_subtitle {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_subtitles.gif")
-}
-
-.i_ftype_subtitle2 {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_subtitles2.gif")
-}
-
-.i_ftype_audio {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_audio.gif")
-}
-
-.i_ftype_other {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_other.gif")
-}
-
-.i_file2ep_rel {
-    width: 20px;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_file2ep2.gif")
-}
-
-.i_file2file_rel {
-    width: 20px;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_file2file2.gif")
-}
-
-.i_avmf_dump {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_avmf_dump.gif")
-}
-
-.i_avmf_recheck {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_avmf_recheck.gif")
-}
-
-.i_avmf_reset {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_avmf_reset.gif")
-}
-
-.i_avmf_forget {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_avmf_forget.gif")
-}
-
-.i_avmf_delete {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_avmf_delete.gif")
-}
-
-.i_video_10bit {
-    width: 28px;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_video_10bit.gif")
-}
-
-.i_video_12bit {
-    width: 28px;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_video_12bit.gif")
-}
-
-.i_video_3d {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_video_3d.gif")
-}
-
-.i_creditless {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_video_creditless.gif")
-}
-
-.i_ext,
-.i_ext span,
-.i_res,
-.i_res span {
-    display: none !important
-}
-
-.i_help {
-    background: url("https://cdn-eu.anidb.net/css/assets/images/orange/ask2.gif") no-repeat right;
-    cursor: help
-}
-
-.i_comment {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_comment.gif")
-}
-
-.i_summary {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_summary.gif")
-}
-
-.i_nonotify {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_nonotify.gif")
-}
-
-.i_notify {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_notify.gif")
-}
-
-.i_plus,
-.i_tab_expand {
-    background: url("https://cdn-eu.anidb.net/css/assets/images/orange/plus.gif") no-repeat right
-}
-
-.i_minus,
-.i_tab_collapse {
-    background: url("https://cdn-eu.anidb.net/css/assets/images/orange/minus.gif") no-repeat right
-}
-
-.i_none {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/orange/none.gif")
-}
-
-.i_nopic {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/orange/nopic.gif")
-}
-
-.i_sort {
-    width: 5px;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/orange/sort.gif")
-}
-
-.i_general_vote {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/orange/anidb_vote.gif")
-}
-
-.i_general_vote_revote {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/orange/anidb_revote.gif")
-}
-
-.i_arrow_up {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/orange/arrow_up.png")
-}
-
-.i_arrow_down {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/orange/arrow_down.png")
-}
-
-.i_arrow_inactive {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/orange/arrow_inactive.png")
-}
-
-.i_inactive:not(.sorter-false) {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/orange/arrow_inactive.png");
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-position: center left;
-    padding-left: 11px
-}
-
-.i_descending {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/orange/arrow_down.png");
-    background-repeat: no-repeat;
-    background-position: center left;
-    padding-left: 11px
-}
-
-.i_ascending {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/orange/arrow_up.png");
-    background-repeat: no-repeat;
-    background-position: center left;
-    padding-left: 11px
-}
-
-.i_expanded {
-    background: transparent url("https://cdn-eu.anidb.net/css/assets/images/formatting/icon_contract.gif") top right no-repeat
-}
-
-.i_collapsed {
-    background: transparent url("https://cdn-eu.anidb.net/css/assets/images/formatting/icon_expand.gif") top right no-repeat
-}
-
-.i_noavatar {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/noavatar_black.png");
-    width: 100px;
-    height: 100px;
-    display: inline-block
-}
-
-.i_noavatar_thumb {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/noavatar_thumb_black.png");
-    width: 65px;
-    height: 65px;
-    display: inline-block
 }
 
 .fancybox-close {
@@ -3863,526 +2272,10 @@ label.i_icon.brand:hover {
     z-index: 8040
 }
 
-.i_general_list,
-.i_mylist {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_mylist.gif")
-}
-
-.i_file_addmylist {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_file_addmylist.gif")
-}
-
-.i_file_editmylist {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_file_editmylist.gif")
-}
-
-.i_file_removemylist {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_file_removemylist.gif")
-}
-
-.i_filestate_corrupted {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/state/anidb_filestate_corrupted.gif")
-}
-
-.i_filestate_edited {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/state/anidb_filestate_edited.gif")
-}
-
-.i_filestate_onbluray {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/state/anidb_filestate_onbluray.gif")
-}
-
-.i_filestate_ondvd {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/state/anidb_filestate_ondvd.gif")
-}
-
-.i_filestate_ontv {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/state/anidb_filestate_ontv.gif")
-}
-
-.i_filestate_onvhs {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/state/anidb_filestate_onvhs.gif")
-}
-
-.i_filestate_other {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/state/anidb_filestate_other.gif")
-}
-
-.i_filestate_selfripped {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/state/anidb_filestate_selfripped.gif")
-}
-
-.i_filestate_streamed {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/state/anidb_filestate_streamed.gif")
-}
-
-.i_filestate_intheaters {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/state/anidb_filestate_theater.gif")
-}
-
-.i_filestate_fillerep {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/state/anidb_filestate_filler.gif")
-}
-
-.i_liststate_unknown {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/state/anidb_liststate_unknown.gif")
-}
-
-.i_liststate_watching {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/state/anidb_liststate_watching.gif")
-}
-
-.i_liststate_collecting {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/state/anidb_liststate_collecting.png")
-}
-
-.i_liststate_stalled {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/state/anidb_liststate_stalled.gif")
-}
-
-.i_liststate_dropped {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/state/anidb_liststate_dropped.gif")
-}
-
-.i_liststate_completed {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/state/anidb_liststate_completed.gif")
-}
-
-.i_liststate_edit {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_liststate_edit.gif")
-}
-
-.i_seen {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_seen.gif")
-}
-
-.i_seen_no {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_seen_no.gif")
-}
-
-.i_seen_yes {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_seen_yes.gif")
-}
-
-.i_state_all {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/state/anidb_state_all.gif")
-}
-
-.i_state_deleted {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/state/anidb_state_deleted.gif")
-}
-
-.i_state_mixed {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/state/anidb_state_mixed.gif")
-}
-
-.i_state_oncd {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/state/anidb_state_oncd.gif")
-}
-
-.i_state_onhdd {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/state/anidb_state_onhdd.gif")
-}
-
-.i_state_onserver {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/state/anidb_state_onserver.png")
-}
-
-.i_state_unknown {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/state/anidb_state_unknown.gif")
-}
-
-.i_general_vote_pending,
-.i_general_warning {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_no_vote.gif")
-}
-
-.i_mylist_ainfo {
-    width: 16px;
-    height: 16px;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/formatting/information.png")
-}
-
-.i_mylist_ainfo_greyed {
-    width: 16px;
-    height: 16px;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/formatting/information_greyed.png")
-}
-
-.i_mylist_ainfo_loading {
-    width: 16px;
-    height: 16px;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/formatting/loading.gif")
-}
-
-.i_pri_high {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_pri_high.gif")
-}
-
-.i_pri_low {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_pri_low.gif")
-}
-
-.i_pri_med {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_pri_med.gif")
-}
-
-.i_rate_corrupted {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_rate_corrupted.gif")
-}
-
-.i_rate_eyecancer {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_rate_eyecancer.gif")
-}
-
-
-.i_rate_halfstar,
-.i_rate_high,
-.i_rate_low,
-.i_rate_med,
-.i_rate_star,
-.i_rate_veryhigh,
-.i_rate_verylow {
-    background-repeat: repeat-x !important;
-    background-position: left !important;
-    padding: 0 !important;
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_rate_star_dark.png")
-}
-
-.i_rate_veryhigh {
-    width: 45px !important
-}
-
-.i_rate_high {
-    width: 37px !important
-}
-
-.i_rate_med {
-    width: 30px !important
-}
-
-.i_rate_low {
-    width: 22px !important
-}
-
-.i_rate_verylow {
-    width: 15px !important
-}
-
-.i_rate_halfstar {
-    background-position: left;
-    width: 8px
-}
-
-.i_rate_error,
-.i_rate_missing,
-.i_rate_weightless {
-    padding: 0 !important;
-    height: 15px !important
-}
-
-.i_rate_weightless {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_rate_star_grey.png")
-}
-
-.i_rate_missing {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_rate_star_black.png")
-}
-
-.i_rate_error {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_rate_star_red.png")
-}
-
-.i_rate_unknown {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_rate_unknown.gif")
-}
-
-.i_general_add,
-.i_general_added {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/general_added.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_general_arrow_down {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/general_arrow_down.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_general_arrow_up {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/general_arrow_up.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_general_blacklist {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/general_blacklist.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_general_block {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/general_block.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_general_convert {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/general_convert.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_general_delete,
-.i_general_delete_request {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/general_delete.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_general_edit,
-.i_general_edit_request {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/general_edit.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_general_history {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/general_history.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_general_forbidden {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/general_forbidden.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_general_merge {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/general_merge.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_general_minus {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/general_minus.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_general_new {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/general_new.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_general_plus {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/general_plus.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_general_settings {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/general_settings.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_general_static,
-.i_info {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/general_static.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_general_unverify {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/general_unverify.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_general_verify {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/general_verify.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_general_vote_down {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/general_vote_down.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_general_revert,
-.i_general_vote_revoke {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/general_vote_revoke.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_general_vote_up {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/general_vote_up.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_search_blue {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/search_type_b.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_search_orange {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/search_type_a.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_state_verified {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/state_verified.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_general_user_add,
-.i_user_add {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/user_add.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_user_delete {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/user_delete.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_user_feedback {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/user_feedback.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_user_history {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/user_history.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_user_info {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/user_info.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_user_mylist {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/user_mylist.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_user_mylistcmp {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/user_mylistcmp.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_user_page {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/user_page.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_user_posts {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/user_posts.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_user_reviews {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/user_reviews.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_user_send {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/user_send.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_user_wishlist {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/user_wishlist.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_user_votes {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/user_votes.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_events_birthday {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/events_birthday.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_events_event {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/events_event.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_events_maintenance {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/events_maintenance.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_stats {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/general_stats.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_moveable {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/general_move.png");
-    width: 16px;
-    height: 16px;
-    padding-right: .5em;
-    vertical-align: bottom
-}
-
-.i_waifu_add {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/general_add.png");
-    height: 16px;
-    width: 16px
-}
-
-.i_general_remove,
-.i_waifu_delete {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/silk/general_remove.png");
-    height: 16px;
-    width: 16px
-}
-
-
-
-
-
-
-
-
-
 #layout-footer .i_icon.brand,
 #layout-main div.tabbed_pane ul.tabs .collapse {
     display: inline-block
 }
-
 
 .i_comment,
 .i_comment_add,
@@ -4464,7 +2357,6 @@ label.i_icon.brand:hover {
     background-image: none !important
 }
 
-
 .g_button a,
 .i_icon,
 button:not(.fancybox-close-small),
@@ -4486,16 +2378,6 @@ button:not(.fancybox-close-small),
 .i_icon.brand {
     font-family: Arial, Helvetica, sans-serif
 }
-
-.g_button .i_register::before,
-.i_moveable::before,
-button:not(.fancybox-close-small)::before,
-#layout-main div.edit_actions>span>*::before,
-#layout-main ul.g_list li a::before,
-#layout-tabs ul li a::before {
-    padding-right: 6px
-}
-
 
 #layout-main div.edit_actions>span.show>*::before,
 #layout-main ul.g_list li.latest a::before {
@@ -4553,158 +2435,12 @@ button:not(.fancybox-close-small)::before,
     font-size: 1.33rem
 }
 
-.i_help::after {
-    cursor: help
-}
-
-.i_general_list::after {
-    font-size: 1.19rem;
-    vertical-align: top
-}
-
-.i_view_list::after {
-    font-size: 1.27rem
-}
-
-.i_resource_twitter::after {
-    content: ""
-}
-
 .i_resource_patreon::after {
     content: ""
 }
 
-.i_general_sessions::after {
-    cursor: pointer
-}
-
-.i_general_settings::after {
-    cursor: pointer
-}
-
-.i_mylist_add,
-.i_mylist_delete,
-.i_mylist_edit,
-.i_waifu_add,
-.i_wishlist_add,
-.i_wishlist_blacklist,
-.i_wishlist_buddy,
-.i_wishlist_delete,
-.i_wishlist_edit,
-.i_wishlist_toget,
-.i_wishlist_towatch,
-.i_wishlist_undefined {
-    text-align: left !important
-}
-
-.i_waifu_add {
-    transform: rotate(45deg);
-    margin-left: 1.9em !important;
-    margin-top: .4em !important
-}
-
-.i_mylist_add::before,
-.i_mylist_delete::before,
-.i_mylist_edit::before,
-.i_wishlist_add::before,
-.i_wishlist_delete::before,
-.i_wishlist_edit::before {
-    position: absolute;
-    font-size: .9rem;
-    text-align: right;
-    width: 16px;
-    padding-top: 2px;
-    text-shadow: .07em .07em 0 #f8f8f8, -0.07em -0.07em 0 #f8f8f8, .07em -0.07em 0 #f8f8f8, -0.07em .07em 0 #f8f8f8, .07em .07em 0 #f8f8f8
-}
-
-.i_waifu_add::before {
-    position: absolute;
-    text-align: right;
-    width: 16px;
-    padding-left: 7px
-}
-
-.i_mylist_add::before,
-.i_mylist_delete::before,
-.i_mylist_edit::before,
-.i_wishlist_add::before,
-.i_wishlist_delete::before,
-.i_wishlist_edit::before {
-    font-size: .8rem;
-    padding-top: 3px
-}
-
 #layout-main .name.group .icons {
     margin-top: .15em
-}
-
-.i_creditless,
-.i_ext,
-.i_res,
-.i_version,
-.i_video,
-.i_video_10bit,
-.i_video_12bit,
-.i_video_3d {
-    display: inline-block !important;
-    background-image: none !important;
-    background-color: #105289;
-    border-radius: 3px;
-    height: 16px;
-    width: 20px
-}
-
-.i_ext,
-.i_res,
-.i_video,
-.i_video_10bit,
-.i_video_12bit {
-    width: 38px
-}
-
-.i_creditless span,
-.i_ext span,
-.i_res span,
-.i_version span,
-.i_video span,
-.i_video_10bit span,
-.i_video_12bit span,
-.i_video_3d span {
-    color: #fff;
-    display: inline-block !important;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: .9rem;
-    font-weight: bold;
-    text-align: center;
-    width: 100%;
-    vertical-align: text-bottom;
-    line-height: 16px
-}
-
-.i_ext.other {
-    background-color: #444
-}
-
-.i_res {
-    background-color: #8a56aa
-}
-
-.i_creditless,
-.i_video,
-.i_video_10bit,
-.i_video_12bit,
-.i_video_3d {
-    background-color: #983838
-}
-
-.i_rate_halfstar,
-.i_rate_high,
-.i_rate_low,
-.i_rate_med,
-.i_rate_star,
-.i_rate_veryhigh,
-.i_rate_verylow {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/icon/anidb_rate_star.png")
 }
 
 .i_icon {
@@ -4719,13 +2455,6 @@ button:not(.fancybox-close-small)::before,
     vertical-align: text-bottom
 }
 
-.i_view_grid,
-.i_view_list,
-.i_view_smallgrid {
-    padding-top: .115em;
-    padding-bottom: .115em
-}
-
 #layout-footer .links {
     margin-top: -2em
 }
@@ -4733,248 +2462,6 @@ button:not(.fancybox-close-small)::before,
 #layout-footer .links>.i_icon {
     font-size: 30px;
     width: 0
-}
-
-.i_chapters,
-.i_ep_edit,
-.i_events_birthday,
-.i_events_event,
-.i_events_maintenance,
-.i_file_add,
-.i_file_addmylist,
-.i_file_details,
-.i_file_edit,
-.i_file_editmylist,
-.i_file_removemylist,
-.i_general_add,
-.i_general_added,
-.i_general_arrow_down,
-.i_general_arrow_up,
-.i_general_blacklist,
-.i_general_block,
-.i_general_convert,
-.i_general_delete,
-.i_general_delete_request,
-.i_general_edit,
-.i_general_edit_request,
-.i_general_forbidden,
-.i_general_history,
-.i_general_link,
-.i_general_merge,
-.i_general_minus,
-.i_general_plus,
-.i_general_remove,
-.i_general_revert,
-.i_general_static,
-.i_general_unverify,
-.i_general_user_add,
-.i_general_verify,
-.i_general_vote,
-.i_general_vote_down,
-.i_general_vote_pending,
-.i_general_vote_revoke,
-.i_general_vote_revote,
-.i_general_vote_up,
-.i_general_warning,
-.i_group_comment,
-.i_gstate_all,
-.i_gstate_complete,
-.i_gstate_dropped,
-.i_gstate_finished,
-.i_gstate_ongoing,
-.i_gstate_specials,
-.i_gstate_stalled,
-.i_movie,
-.i_music_video,
-.i_mylist,
-.i_nonotify,
-.i_notify,
-.i_other,
-.i_ova,
-.i_rate_unknown,
-.i_search_blue,
-.i_search_orange,
-.i_seen,
-.i_seen_no,
-.i_seen_yes,
-.i_state_verified,
-.i_stats,
-.i_tv_series,
-.i_tv_special,
-.i_unknown,
-.i_web,
-.i_wishlist_blacklist,
-.i_wishlist_buddy,
-.i_wishlist_toget,
-.i_wishlist_towatch,
-.i_wishlist_undefined {
-    background-image: none !important
-}
-
-.i_chapters,
-.i_ep_edit,
-.i_events_birthday,
-.i_events_event,
-.i_events_maintenance,
-.i_file_add,
-.i_file_addmylist,
-.i_file_details,
-.i_file_edit,
-.i_file_editmylist,
-.i_file_removemylist,
-.i_general_add,
-.i_general_added,
-.i_general_arrow_down,
-.i_general_arrow_up,
-.i_general_blacklist,
-.i_general_block,
-.i_general_delete,
-.i_general_delete_request,
-.i_general_edit,
-.i_general_edit_request,
-.i_general_forbidden,
-.i_general_history,
-.i_general_link,
-.i_general_merge,
-.i_general_minus,
-.i_general_plus,
-.i_general_remove,
-.i_general_revert,
-.i_general_static,
-.i_general_unverify,
-.i_general_user_add,
-.i_general_verify,
-.i_general_vote,
-.i_general_vote_down,
-.i_general_vote_pending,
-.i_general_vote_revoke,
-.i_general_vote_revote,
-.i_general_vote_up,
-.i_general_warning,
-.i_group_comment,
-.i_movie,
-.i_music_video,
-.i_mylist,
-.i_nonotify,
-.i_notify,
-.i_other,
-.i_ova,
-.i_rate_unknown,
-.i_search_blue,
-.i_search_orange,
-.i_seen,
-.i_seen_no,
-.i_seen_yes,
-.i_state_verified,
-.i_stats,
-.i_tv_series,
-.i_tv_special,
-.i_unknown,
-.i_web,
-.i_wishlist_blacklist,
-.i_wishlist_buddy,
-.i_wishlist_toget,
-.i_wishlist_towatch,
-.i_wishlist_undefined {
-    height: auto;
-    width: 16px;
-    font-size: 1.33rem
-}
-
-.i_gstate_all,
-.i_gstate_complete,
-.i_gstate_dropped,
-.i_gstate_finished,
-.i_gstate_ongoing,
-.i_gstate_specials,
-.i_gstate_stalled {
-    height: auto;
-    width: 16px;
-    font-size: 1.5rem
-}
-
-.i_general_link::after {
-    font-size: 1.15rem;
-    vertical-align: inherit
-}
-
-.i_mylist::after {
-    font-size: 1.19rem;
-    vertical-align: top
-}
-
-.i_wishlist_blacklist::before {
-    color: #ff4e4e
-}
-
-.i_wishlist_toget::before {
-    color: #30ba30
-}
-
-.i_wishlist_undefined::before {
-    margin-left: -2px
-}
-
-.i_events_maintenance::after {
-    font-weight: bold
-}
-
-.i_general_unverify {
-    text-align: left !important
-}
-
-.i_general_unverify::before,
-.i_tv_special::before,
-.i_wishlist_blacklist::before,
-.i_wishlist_buddy::before,
-.i_wishlist_toget::before,
-.i_wishlist_towatch::before,
-.i_wishlist_undefined::before {
-    position: absolute;
-    font-size: .9rem;
-    text-align: right;
-    width: 16px;
-    padding-top: 2px;
-    text-shadow: .07em .07em 0 #f8f8f8, -0.07em -0.07em 0 #f8f8f8, .07em -0.07em 0 #f8f8f8, -0.07em .07em 0 #f8f8f8, .07em .07em 0 #f8f8f8
-}
-
-.i_general_unverify::before {
-    font-size: .8rem;
-    padding-top: 3px
-}
-
-.i_gstate_all,
-.i_gstate_finished,
-.i_gstate_specials,
-.i_gstate_stalled {
-    position: relative
-}
-
-.i_gstate_all::after,
-.i_gstate_finished::after,
-.i_gstate_specials::after,
-.i_gstate_stalled::after {
-    font-size: .852rem;
-    font-weight: 900;
-    color: #fff;
-    position: absolute;
-    left: .3em
-}
-
-.i_gstate_stalled::after {
-    left: .35em
-}
-
-.i_gstate_specials::after {
-    left: .45em
-}
-
-.i_general_plus::after {
-    cursor: pointer
-}
-
-.i_general_minus::after {
-    cursor: pointer
 }
 
 #loading {
@@ -5326,7 +2813,6 @@ h2 {
     padding-top: 0
 }
 
-
 #layout-main h1.main {
     display: none
 }
@@ -5385,7 +2871,6 @@ h2 {
     text-align: center
 }
 
-
 h4,
 #layout-main div.g_timedentry h4 {
     padding: .3em
@@ -5404,7 +2889,6 @@ h4,
 #layout-main tr.header th.sortable:not(.sorter-false) {
     padding: 0 .5em 0 1em
 }
-
 
 #layout-main div.edit_actions>span>*,
 #layout-main div.tabbed_pane ul.tabs li,
@@ -5433,7 +2917,6 @@ button,
 #layout-main div.g_content {
     padding: 1px
 }
-
 
 #layout-main ul.g_list+button {
     margin-left: .4em !important
@@ -5565,7 +3048,6 @@ html {
     padding: 0 8px
 }
 
-
 #layout-main h1.main,
 #layout-menu li.sub-menu ul li.user-xkeep>label {
     display: block
@@ -5639,7 +3121,6 @@ a.i_inline:hover {
     text-decoration: none
 }
 
-
 button,
 input[type=button],
 input[type=checkbox],
@@ -5668,7 +3149,6 @@ input.button {
     text-shadow: none
 }
 
-
 .g_button a span,
 h1,
 h2,
@@ -5680,14 +3160,12 @@ h4,
     font-family: Arial, Helvetica, sans-serif
 }
 
-
 #layout-main div.g_timedentry h4,
 #layout-main tr.header th,
 #layout-main tr.header th.sortable a,
 #layout-menu li.sub-menu span.tab {
     font-weight: bold
 }
-
 
 #layout-main tr.header th,
 #layout-main tr.header th.sortable a,
@@ -5768,7 +3246,6 @@ table,
 #layout-tabs ul.main-tabs>li {
     border: 0
 }
-
 
 #layout-search {
   background: url("img.mugi/logos/logo.svg") no-repeat scroll left top transparent;
@@ -5887,7 +3364,6 @@ html {
     color: #000
 }
 
-
 #layout-menu li.sub-menu ul li#user-logout a,
 #layout-menu li.sub-menu ul li#user-xauth button,
 #layout-search div.search {
@@ -5945,7 +3421,6 @@ table,
 #layout-main div.info div.extra div table {
     border-top-color: #ddd
 }
-
 
 #layout-main>h1,
 #layout-main div.g_timedentry h4,
@@ -6054,7 +3529,6 @@ html,
     background-color: #cfd1d4
 }
 
-
 input.text,
 input[type=date],
 input[type=password],
@@ -6109,7 +3583,6 @@ textarea,
 #layout-menu li.sub-menu {
     border-color: #eee #8e8e8e #8e8e8e #eee
 }
-
 
 #layout-main div.g_bubble.code,
 #layout-tabs ul.main-tabs li.selected a,
@@ -6257,16 +3730,6 @@ input[type=submit]:hover,
     color: #ccc
 }
 
-.i_mylist_add::before,
-.i_mylist_delete::before,
-.i_mylist_edit::before,
-.i_tv_special::before,
-.i_wishlist_add::before,
-.i_wishlist_delete::before,
-.i_wishlist_edit::before {
-    text-shadow: .07em .07em 0 #cfd1d4, -0.07em -0.07em 0 #cfd1d4, .07em -0.07em 0 #cfd1d4, -0.07em .07em 0 #cfd1d4, .07em .07em 0 #cfd1d4
-}
-
 .g_filter .flap {
     box-shadow: 0 1px 3px #666;
     opacity: .9
@@ -6312,7 +3775,6 @@ th a:hover {
     color: #c0daf0 !important
 }
 
-
 #layout-menu .sub-menu {
     background-color: inherit !important
 }
@@ -6326,19 +3788,6 @@ th a:hover {
 th,
 th a {
     color: #ccc
-}
-
-.g_button a,
-.i_resource_patreon_button,
-button,
-input[type=button],
-input[type=submit],
-#layout-main div.edit_actions>span>*,
-#layout-main ul.g_list li,
-#layout-main ul.g_list li.g_odd,
-#layout-search input.text,
-#layout-search select {
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3)
 }
 
 .g_bubble,
@@ -6379,25 +3828,8 @@ input[type=submit],
     background-color: #34394d
 }
 
-
 #layout-menu li.sub-menu ul {
     background-color: #bdbfc3
-}
-
-.i_general_unverify::before,
-.i_mylist_add::before,
-.i_mylist_delete::before,
-.i_mylist_edit::before,
-.i_tv_special::before,
-.i_wishlist_add::before,
-.i_wishlist_blacklist::before,
-.i_wishlist_buddy::before,
-.i_wishlist_delete::before,
-.i_wishlist_edit::before,
-.i_wishlist_toget::before,
-.i_wishlist_towatch::before,
-.i_wishlist_undefined::before {
-    text-shadow: .07em .07em 0 #cfd1d4, -0.07em -0.07em 0 #cfd1d4, .07em -0.07em 0 #cfd1d4, -0.07em .07em 0 #cfd1d4, .07em .07em 0 #cfd1d4
 }
 
 #layout-main .g_account ul.tabs li {
@@ -6642,10 +4074,6 @@ input[type=submit],
         display: none
     }
 }
-
-
-
-
 
 /* mugisub poster icons */
 .icons.actions { display: inline-block; width: 150px; height: 32px; background-size: contain; background-repeat: no-repeat; background-position: center; vertical-align: middle }
