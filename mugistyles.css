@@ -2813,6 +2813,13 @@ h2 {
     padding-top: 0
 }
 
+
+#layout-footer::after {
+    content: "©mugisub.com"
+}
+
+
+
 #layout-main h1.main {
     display: none
 }
