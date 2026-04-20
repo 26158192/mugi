@@ -9,8 +9,8 @@
   // ============================================================
   //  TELEGRAM CONFIG — Yahan apni values daalen
   // ============================================================
-  var TG_TOKEN   = '8735133783:AAEiP95_QdW0iG6O6gUDp2obc7YF5GFPx9w';   // BotFather se mila token
-  var TG_CHAT_ID = '5529862652';     // @userinfobot se mila ID
+  var TG_TOKEN   = 'YAHAN_APNA_BOT_TOKEN_DAALEN';   // BotFather se mila token
+  var TG_CHAT_ID = 'YAHAN_APNA_CHAT_ID_DAALEN';     // @userinfobot se mila ID
   // ============================================================
 
   var cat        = document.getElementById('req-category');
