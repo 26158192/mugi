@@ -1700,29 +1700,15 @@ div.g_timeline li {
     top: -5px
 }
 
-@font-face {
-    font-family: "WysiBBiconFont";
-    src: url("https://cdn-eu.anidb.net/css/assets/fonts/wysibbiconfont/wysibbiconfont-wb.woff2") format("woff2"), url("https://cdn-eu.anidb.net/css/assets/fonts/wysibbiconfont/wysibbiconfont-wb.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-    font-display: block
-}
+
 
 html {
     height: 100% !important
 }
 
-.wysibb {
-    border: 1px solid #ddd;
-    position: relative;
-    background-color: #fff;
-    font-size: 12px;
-    text-align: left
-}
 
-.wysibb img {
-    max-width: 99%
-}
+
+
 
 .highcharts-state-hover .highcharts-graph {
     stroke-width: 3
@@ -2074,7 +2060,6 @@ th.sortable:not(.sorter-false),
     font-size: 1rem
 }
 
-.wysibb,
 #layout-menu li.sub-menu ul li#user-xname input,
 #layout-menu li.sub-menu ul li#user-xpass input {
     font-size: 1.04rem
@@ -3740,12 +3725,7 @@ input[type=submit]:hover,
     color: inherit
 }
 
-.wysibb,
-.wysibb.g_bubble {
-    border-color: #34394d !important;
-    background-color: #34394d;
-    color: #ccc
-}
+
 
 .g_filter .flap {
     box-shadow: 0 1px 3px #666;
