@@ -91,6 +91,16 @@ ul {
     list-style-type: none
 }
 
+
+#layout-search input.text,
+#layout-search select,
+#layout-search .submit {
+    border: 0;
+    outline: none;
+}
+
+
+
 #layout-main table {
     margin: 0 auto 0 auto
 }
