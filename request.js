@@ -21,7 +21,7 @@
 
   if (!cat || !titleLabel || !titleInput || !noteInput || !form) return;
 
-  // ── Category data (original — kuch nahi badla) ──────────────
+  // ── Category data ────────────────────────────────────────────
   var data = {
     anime: {
       label:            'Anime Title',
@@ -43,7 +43,17 @@
   function update() {
     var val = cat.value;
     var d   = data[val] || data.anime;
-    titleLabel.childNodes[0].nodeValue = d.label + ' ';
+
+    /* childNodes[0] ki jagah — pehla text node safely dhundho */
+    var textNode = null;
+    for (var i = 0; i < titleLabel.childNodes.length; i++) {
+      if (titleLabel.childNodes[i].nodeType === 3) { /* 3 = TEXT_NODE */
+        textNode = titleLabel.childNodes[i];
+        break;
+      }
+    }
+    if (textNode) textNode.nodeValue = d.label + ' ';
+
     titleInput.placeholder = d.titlePlaceholder;
     noteInput.placeholder  = d.notePlaceholder;
   }
@@ -85,7 +95,6 @@
     return msg;
   }
 
-  // Markdown v2 special chars escape karna
   function escMd(text) {
     return String(text).replace(/[_*[\]()~`>#+\-=|{}.!\\]/g, '\\$&');
   }
@@ -121,7 +130,6 @@
       return;
     }
 
-    // Button disable — double submit rokne ke liye
     btn.disabled    = true;
     btn.textContent = 'Sending...';
 
@@ -131,11 +139,10 @@
       .then(function (res) { return res.json(); })
       .then(function (json) {
         if (json.ok) {
-          // Success
-          btn.textContent = '✓ Request Sent!';
+          btn.textContent      = '✓ Request Sent!';
           btn.style.background = '#2e7d4f';
           form.reset();
-          update(); // placeholders reset
+          update();
           setTimeout(function () {
             btn.disabled         = false;
             btn.textContent      = 'Submit Request';
