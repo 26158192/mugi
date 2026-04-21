@@ -44,10 +44,6 @@
     noteInput.placeholder  = d.notePlaceholder;
   }
 
-  function escMd(t) {
-    return String(t).replace(/[_*[\]()~`>#+\-=|{}.!\\]/g, '\\$&');
-  }
-
   function getTime() {
     return new Date().toLocaleString('en-PK', {
       timeZone:  'Asia/Karachi',
@@ -57,25 +53,26 @@
   }
 
   function sendToTelegram(category, title, link, note) {
-    var emoji    = { anime: '🎌', movie: '🎬', tv: '📺' };
     var catLabel = { anime: 'Anime', movie: 'Movie', tv: 'TV Show' };
-    var msg = emoji[category] + ' *New ' + catLabel[category] + ' Request*\n';
-    msg += '━━━━━━━━━━━━━━━━━━━━\n';
-    msg += '📌 *Category:* ' + catLabel[category] + '\n';
-    msg += '🎯 *Title:* ' + escMd(title) + '\n';
-    if (link) msg += '🔗 *Link:* ' + escMd(link) + '\n';
-    if (note) msg += '📝 *Note:*\n' + escMd(note) + '\n';
-    msg += '━━━━━━━━━━━━━━━━━━━━\n';
-    msg += '🕐 *Time:* ' + getTime() + '\n';
-    msg += '📡 *Source:* MugiSUB Request Form';
+    var emoji    = { anime: '🎌', movie: '🎬', tv: '📺' };
+
+    /* Plain text — koi formatting nahi, 400 error nahi aayega */
+    var msg = emoji[category] + ' New ' + catLabel[category] + ' Request\n';
+    msg += '------------------------\n';
+    msg += 'Category: ' + catLabel[category] + '\n';
+    msg += 'Title: ' + title + '\n';
+    if (link) msg += 'Link: ' + link + '\n';
+    if (note) msg += 'Note: ' + note + '\n';
+    msg += '------------------------\n';
+    msg += 'Time: ' + getTime() + '\n';
+    msg += 'Source: MugiSUB Request Form';
 
     return fetch('https://api.telegram.org/bot' + TG_TOKEN + '/sendMessage', {
       method:  'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        chat_id:    TG_CHAT_ID,
-        text:       msg,
-        parse_mode: 'MarkdownV2'
+        chat_id: TG_CHAT_ID,
+        text:    msg
       })
     });
   }
@@ -104,7 +101,6 @@
     cat.addEventListener('input',  update);
     update();
 
-    /* form getElementById ki jagah btn se form dhundho */
     var btn = document.querySelector('button.req-submit');
     if (!btn) return;
 
@@ -134,7 +130,6 @@
         .then(function () {
           btn.textContent      = '✓ Sent!';
           btn.style.background = '#2e7d4f';
-          /* Fields clear karo */
           if (titleInput) titleInput.value = '';
           if (linkEl)     linkEl.value     = '';
           if (noteInput)  noteInput.value  = '';
