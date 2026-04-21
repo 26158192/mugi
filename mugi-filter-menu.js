@@ -6,6 +6,7 @@
 (function () {
 
   var resizeTimer;
+  var lastWidth = window.innerWidth; /* sirf width track karo */
 
   function attachFilterMenu() {
     var filter  = document.querySelector('.g_filter');
@@ -44,6 +45,13 @@
     if (closeBtn) closeBtn.addEventListener('click', collapse);
 
     window.addEventListener('resize', function () {
+      var currentWidth = window.innerWidth;
+
+      /* Sirf width change hone pe adjustSize karo */
+      /* Height change (mobile keyboard) ignore karo */
+      if (currentWidth === lastWidth) return;
+      lastWidth = currentWidth;
+
       clearTimeout(resizeTimer);
       resizeTimer = setTimeout(adjustSize, 250);
     });
