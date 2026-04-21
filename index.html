@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MugiSUB - Anime with Subtitles</title>
+    <meta
+      property="og:description"Home
+      name="description"
+      content="Looking for anime subtitles? MugiSUB is the right place for you. MugiSUB is a fansubbing group providing you with accurate, high-quality subtitles for anime — completely free.,,"
+    />
+    <meta name="robots" content="index, follow" />
+    
+    <!--mine-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="mugistyles.css"
+      type="text/css" 
+      title="Style"/>
+    <link rel="stylesheet" href="request.css">
+
+    <!--mine-->
+
+
+
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href=img.mugis/logos//touch/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href=img.mugis/logos/touch/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href=img.mugis/logos/touch/favicon-16x16.png
+    />
+    <link
+      rel="manifest"
+      href=site.webmanifest"
+    />
+    <link
+      rel="mask-icon"
+      href=img.mugis/logos/touch/safari-pinned-tab.svg"
+      color="#e18e3c"
+    />
+    <link
+      rel="shortcut icon"
+      href=img.mugis/logos/touch/favicon.ico"
+    />
+    
+    <link
+      rel="search"
+      type="application/opensearchdescription+xml"
+      href="https://anidb.net/opensearch.xml"
+      title="AniDB"
+    />
+  
+<meta name="apple-mobile-web-app-title" content="MugiSUB"/>
+<meta name="application-name" content="MugiSUB"/>
+<meta name="msapplication-TileColor" content="#34394d"/>
+    <meta
+      name="msapplication-config"
+      content=img.mugis/logos/touch/browserconfig.xml"
+    />
+  <meta name="theme-color" content="#34394d" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@MugiSUB" />
+<meta name="twitter:creator" content="@MugiSUB" />
+<meta property="og:title" content="Anime Subtitles - MugiSUB" />
+    
+     
+    
+
+
+<!-- mine -->
+<script defer src="mugi-filter-menu.js"></script>
+<script defer src="mugi-image-preview.js"></script>
+<script src="request.js"></script>
+<!-- mine -->
+
+  </head>
+  <body id="anidb" class="landing">
+    <!--Hint ON top-->
+    <!--
+    <div id="layout-hint" class="hint">
+      <span class="head">HINT:</span>
+      <span class="msg"
+        >Confused? Take a look at the
+        <a href="https://wiki.anidb.net">AniDB Wiki</a> or visit us on
+        <a href="https://wiki.anidb.net/w/IRC:Anidb">IRC</a>.</span
+      >
+    </div>
+    -->
+
+
+
+
+   <!--side-navbar-start-->
+<div id="layout-nav" class="landing_nav">
+  <ul id="layout-menu" class="landing_menu">
+
+    <!-- HOME -->
+    <li class="sub-menu main" title="Menu">
+      <span class="tab">HOME</span>
+      <ul id="menu-main">
+        <li class="main">
+          <a title="Landing Page" href="/"><span class="text">Main</span></a>
+        </li>
+        <li class="Latest Releases">
+          <a title="Latest Releases" href="/latest"><span class="text">Latest</span></a>
+        </li>
+        <li class="Random">
+          <a title="Random Watch" href="/random"><span class="text">Random</span></a>
+        </li>
+        <li class="Watch2gether">
+          <a title="Watch with friends" href="/Watch2gether"><span class="text">Watch2gether</span></a>
+        </li>
+      </ul>
+      <span></span>
+    </li>
+
+    <!-- Browse -->
+    <li class="sub-menu listings" title="Content">
+      <span class="tab">BROWSE</span>
+      <ul id="menu-lists">
+        <li class="anime">
+          <a title="All Anime" href="/anime"><span class="text">Anime</span></a>
+        </li>
+        <li class="movies">
+          <a title="Movies" href="/anime/movies"><span class="text">Movies</span></a>
+        </li>
+        <li class="tv">
+          <a title="Tv Show" href="/anime/movies"><span class="text">TV Shows</span></a>
+        </li>
+        <li class="ova">
+          <a title="OVA / ONA" href="/anime/ova"><span class="text">OVA / ONA</span></a>
+        </li>
+        <li class="genres">
+          <a title="Browse by Genre" href="/genres"><span class="text">Genres</span></a>
+        </li>
+      </ul>
+      <span></span>
+    </li>
+
+    <!-- SUPPORT -->
+    <li class="sub-menu support" title="Releases">
+      <span class="tab">SUPPORT</span>
+      <ul id="menu-terms">
+        <li class="Donate">
+          <a title="Donate to MugiSUB" href="/donation"><span class="text">Donate</span></a>
+        </li>
+        <li class="Report">
+          <a title="Report an Error" href="/report"><span class="text">Report Error</span></a>
+        </li>
+        <li class="Policies">
+          <a title="Privacy Policy" href="/policy"><span class="text">Policies</span></a>
+        </li>
+        <li class="Staff">
+          <a title="MugiSUB Team" href="/about"><span class="text">Our Team</span></a>
+        </li>
+        <li class="Contact">
+          <a title="Contact Team" href="/about"><span class="text">Contact US</span></a>
+        </li>
+      </ul>
+      <span></span>
+    </li>
+
+
+    <!-- DMCA / LOGIN -->
+    <li class="sub-menu login" title="Register or login">
+      <span class="tab">LOGIN</span>
+      <form action="/api/action" method="post">
+        <div>
+          <fieldset>
+            <input type="hidden" name="show" value="landing" />
+            <input type="hidden" name="do" value="landing" />
+          </fieldset>
+          <ul id="menu-login">
+            <li id="user-login">
+  <a title="Show login page" href="/user/login"
+    ><span class="text">Login</span></a
+  >
+</li>
+<li id="user-signup">
+  <a title="Register now" href="/user/register"
+    ><span class="text">Register</span></a
+  >
+</li>
+            <li id="user-xname" class="user-xname" title="User name">
+              <span
+                ><input
+                  name="xuser"
+                  class="text"
+                  maxlength="16"
+                  type="text"
+                  value=""
+              /></span>
+            </li>
+            <li id="user-xpass" class="user-xpass" title="Password">
+              <span
+                ><input
+                  name="xpass"
+                  class="text"
+                  maxlength="64"
+                  type="password"
+              /></span>
+            </li>
+            <li id="user-xkeep" class="user-xkeep" title="Remember login data">
+              <span
+                ><label
+                  ><input
+                    name="xdoautologin"
+                    type="checkbox"
+                    check="check"
+                  />
+                  <span>stay logged-in</span></label
+                ></span
+              >
+            </li>
+            <li id="user-xauth" class="user-xauth" title="Login">
+              <span
+                ><button
+                  class="login"
+                  name="do.auth"
+                  type="submit"
+                  value="login"
+                >
+                  <span>Login</span>
+                </button></span
+              >
+            </li>
+          </ul>
+          <span></span>
+        </div>
+      </form>
+    </li>
+
+  </ul>
+<!--side-navbar-end-->
+
+
+
+
+<!--Search-bar-full-code-start-->
+      <div class="menu_hr"></div>
+      <div id="layout-search" class="landing_search">
+        <div
+          class="search container"
+          itemscope
+          itemtype="https://schema.org/WebSite"
+        >
+          <span class="hide" itemprop="name">MugiSub</span>
+          <a
+            class="hide"
+            rel="canonical"
+            href="https://anidb.net"
+            itemprop="url"
+          ></a>
+          <form
+            action="/perl-bin/animedb.pl"
+            method="get"
+            itemprop="potentialAction"
+            itemscope
+            itemtype="https://schema.org/SearchAction"
+          >
+            <div
+              itemprop="target"
+              content="https://anidb.net/search/anime/?adb.search={adb.search}&amp;do.search=1"
+            >
+              <input
+                itemprop="query-input"
+                id="layout-searchbox"
+                accesskey="s"
+                type="text"
+                name="adb.search"
+                value=""
+                class="text"
+              />
+              <select name="show" id="layout-searchselect" size="1">
+                <option value="search"selected="selected">All</option>
+                <option value="animelist">Anime</option>
+                <option value="characterlist">Character</option>
+                <option value="clublist">Club</option>
+                <option value="collectionlist">Collections</option>
+                <option value="creatorlist">Creator</option>
+                <option value="eplist">Episodes</option>
+                <option value="grouplist">Group</option>
+                <option value="mylist">List</option>
+                <option value="songlist">Songs</option>
+                <option value="taglist">Tags</option>
+                <option value="userlist">User</option>
+              </select>
+              <button
+                type="submit"
+                name="do.search"
+                value="1"
+                class="submit search">
+              
+                Search
+              </button>
+              <fieldset>
+                <input type="hidden" name="cleanurl" value="1" />
+              </fieldset>
+            </div>
+          </form>
+          <form class="random" action="/perl-bin/animedb.pl" method="get">
+     
+        </div>
+      </div>
+    </div>
+    <!--layout-tabs-->
+   <div id="layout-content">
+	<div id="layout-tabs">
+		<ul class="main-tabs">
+			<li class="g_odd file"><span><a href="/latest/anime/release"><span class="text">Donate</span></a></span></li>
+			<li class="completed"><span><a href="/latest/anime/release/complete"><span class="text">Credits</span></a></span></li>
+			<li class="g_odd hotanime"><span><a href="/latest/anime/popular"><span class="text">Policies</span></a></span></li>
+			<li class="anime"><span><a href="/latest/anime"><span class="text">DMCA</span></a></span></li>
+        <!--HideSome Upper Tabs -->
+    <!--
+      <li class="g_odd sequel"><span><a href="/latest/anime/relation"><span class="text">related anime</span></a></span></li>
+			<li class="recs"><span><a href="/latest/anime/recommendation"><span class="text">recommendations</span></a></span></li>
+			<li class="g_odd reviews"><span><a href="/latest/anime/review"><span class="text">reviews</span></a></span></li>
+			<li class="similaranime"><span><a href="/latest/anime/similar"><span class="text">similar anime</span></a></span></li>
+			<li class="g_odd customise"><span><a href="/latest/customise"><span class="text">customise</span></a></span></li>
+      -->
+		</ul> 
+	</div>
+  
+      <!--layout-tabs-->
+	<div id="layout-main">
+<div class="g_breadcrumbs hide" itemscope itemtype="https://schema.org/BreadcrumbList">
+	<div class="node" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<meta itemprop="position" content="1"/>
+		<a href="https://anidb.net" itemprop="item"><span itemprop="name">Main</span></a>
+	</div>
+	<div class="node" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<meta itemprop="position" content="2"/>
+		<a href="https://anidb.net/anime" itemprop="item"><span itemprop="name">Anime</span></a>
+	</div>
+</div>
+<!--Search-bar-full-code-end-->
+
+
+
+<!--Anime-list-upper-start-->
+<!--Anime-list-upper-end-->
+
+
+
+
+<!--Side-Filter-Start-->
+<div class="g_bubblewrap nowrap g_section">
+  <div class="right g_filter hassettings">
+    <div class="g_bubble flap hide" title="click to show the filter menu">Ask</div>
+    <div class="content">
+      <span title="Hide Filter" class="fancybox-item fancybox-close"></span>
+
+ <div class="g_section filters">
+  <h2><span>Submit a Request</span></h2>
+
+  <form id="request-form">
+
+    <ul class="g_bubblewrap">
+      <li class="g_odd g_bubble">
+
+        <h3>Category</h3>
+        <div class="g_boxwrap">
+          <label>
+            <select id="req-category">
+              <option value="anime" selected="selected">Anime</option>
+              <option value="movie">Movies</option>
+              <option value="tv">TV Shows</option>
+            </select>
+          </label>
+        </div>
+
+        <h3 id="req-title-label">Title <span class="req-star">*</span></h3>
+        <div class="g_boxwrap">
+          <input class="req-input" type="text" required
+            id="req-title"
+            placeholder="e.g. Demon Slayer Season 4" />
+        </div>
+
+        <h3>Link <span class="req-optional">(optional)</span></h3>
+        <div class="g_boxwrap">
+          <input class="req-input" type="url" id="req-link"
+            placeholder="https://myanimelist.net/..." />
+        </div>
+
+        <h3>Note <span class="req-optional">(optional)</span></h3>
+        <div class="g_boxwrap">
+          <textarea class="req-input req-textarea" rows="4"
+            id="req-note"
+            placeholder="Season, episode, ya koi aur detail..."></textarea>
+        </div>
+
+        <div class="g_boxwrap">
+          <button type="submit" class="req-submit">Submit Request</button>
+          <p class="req-hint">
+            Ya phir <a href="https://t.me/MugiSUB">Telegram</a> pe message karo
+          </p>
+        </div>
+
+      </li>
+  <li class="g_odd g_bubble">
+    <div class="g_boxwrap">
+      <h3>Adult Content</h3>
+      <ul class="filter-list">
+        <li><a href="/content/ignore">ignore</a></li>
+        <li><a href="/content/hide-18-plus">hide 18+ Content</a></li>
+        <li><a href="/content/only-18-plus">show only 18+ Content</a></li>
+      </ul>
+    </div>
+  </li>
+
+  <li class="g_bubble">
+    <div class="g_boxwrap">
+      <h3>Airing Status</h3>
+      <ul class="filter-list">
+        <li><a href="/airing/ignore">ignore</a></li>
+        <li><a href="/airing/still-airing">still airing</a></li>
+        <li><a href="/airing/finished">finished</a></li>
+        <li><a href="/airing/unaired">unaired/unknown</a></li>
+      </ul>
+    </div>
+  </li>
+
+  <li class="g_odd g_bubble">
+    <h3>Anime Type</h3>
+    <div class="g_boxwrap">
+      <ul class="filter-list">
+        <li><a href="/type/movie">Movie</a></li>
+        <li><a href="/type/musicvideo">Music Video</a></li>
+        <li><a href="/type/other">Other</a></li>
+        <li><a href="/type/ova">OVA</a></li>
+        <li><a href="/type/tvseries">TV Series</a></li>
+        <li><a href="/type/tvspecial">TV Special</a></li>
+        <li><a href="/type/unknown">unknown</a></li>
+        <li><a href="/type/web">Web</a></li>
+      </ul>
+    </div>
+  </li>
+
+  
+</ul>
+</div>
+</form>
+</div>
+</div>
+  <!--Side-Filte-END-->
+
+               <!--Main-Content-poster-start-->      
+              <div class="container">
+              <div class="g_section">
+                <h2><span>Latest Uploads</span></h2>
+                <div class="g_bubblewrap">
+                   <!--Start Box--->
+
+<!-- Berserk -->
+ <div class="g_odd g_bubble box" id="a357">
+    <div class="thumb image">
+        <a href="anime.html"><picture>
+            <img loading="lazy" alt="Berserk" src="img.mugis/poster_img/berserk_img-thumb.jpg" height="200" width="400" class="g_image g_bubble small"/>
+        </picture></a>
+    </div>
+    <div class="data">
+        <div class="wrap name">
+            <a class="name-colored" href="anime.html">Berserk</a>
+        </div>
+        <div class="icons actions">
+            
+             
+        </div>
+        <div class="date">8th October 1997</div>
+        <div class="general">TV Series, 25 eps</div>
+        <div class="extra"><a href="#">Oriental Light and Magic</a></div>
+        <div class="votes rating">
+            <span class="key">Rating:</span>
+            <span data-label="Rating" class="rating high">
+                <span class="value">8.7</span>
+                <span class="count">(167)</span>
+            </span>
+        </div>
+        <div class="votes average">
+            <span class="key">Average:</span>
+            <span data-label="Rating" class="rating high">
+                <span class="value">8.7</span>
+                <span class="count">(167)</span>
+            </span>
+        </div>
+        <div class="tags">
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">dark fantasy</span><span class="wrapper"><span class="g_bubble text">A genre that incorporates dark, often frightening themes with fantasy elements such as magic, demons, and medieval settings.</span></span></a></span>,
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">seinen</span><span class="wrapper"><span class="g_bubble text">Seinen, literally "young man", is one of the main demographic classifications applied to manga and anime, marketed primarily to young adult males.</span></span></a></span>,
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">medieval</span><span class="wrapper"><span class="g_bubble text">Set in or inspired by the Middle Ages, featuring knights, castles, and sword-based combat.</span></span></a></span>,
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">mercenaries</span><span class="wrapper"><span class="g_bubble text">Characters who fight for payment rather than loyalty or ideology.</span></span></a></span>,
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">tragedy</span><span class="wrapper"><span class="g_bubble text">A narrative involving great suffering and a sorrowful ending, often exploring themes of fate and loss.</span></span></a></span>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Monster -->
+<div class="g_odd g_bubble box" id="a3750">
+    <div class="thumb image">
+        <a href="anime.html"><picture>
+            <img loading="lazy" alt="Monster" src="img.mugis/poster_img/monster_img-thumb.jpg" height="200" width="400" class="g_image g_bubble small"/>
+        </picture></a>
+    </div>
+    <div class="data">
+        <div class="wrap name">
+            <a class="name-colored" href="anime.html">Monster</a>
+        </div>
+        <div class="icons actions">
+            
+        </div>
+        <div class="date">7th April 2004</div>
+        <div class="general">TV Series, 74 eps</div>
+        <div class="extra"><a href="#">Naoki Urasawa's Monster</a></div>
+        <div class="votes rating">
+            <span class="key">Rating:</span>
+            <span data-label="Rating" class="rating high">
+                <span class="value">8.7</span>
+                <span class="count">(69,177)</span>
+            </span>
+        </div>
+        <div class="votes average">
+            <span class="key">Average:</span>
+            <span data-label="Rating" class="rating high">
+                <span class="value">8.7</span>
+                <span class="count">(69,177)</span>
+            </span>
+        </div>
+        <div class="tags">
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">psychological thriller</span><span class="wrapper"><span class="g_bubble text">A genre that focuses on the unstable psychological state of characters, building tension through mind games, moral dilemmas, and suspense.</span></span></a></span>,
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">mystery</span><span class="wrapper"><span class="g_bubble text">A genre centered around solving a crime or uncovering hidden truths, often involving investigators drawn into dangerous situations.</span></span></a></span>,
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">crime</span><span class="wrapper"><span class="g_bubble text">Stories involving criminal acts, investigations, and the moral complexity of justice.</span></span></a></span>,
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">seinen</span><span class="wrapper"><span class="g_bubble text">Seinen is one of the main demographic classifications applied to manga and anime, marketed primarily to young adult males.</span></span></a></span>,
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">drama</span><span class="wrapper"><span class="g_bubble text">Focuses on realistic storytelling and emotional development, exploring serious themes and human relationships.</span></span></a></span>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- Texhnolyze -->
+<div class="g_odd g_bubble box" id="a557">
+    <div class="thumb image">
+        <a href="anime.html"><picture>
+            <img loading="lazy" alt="Texhnolyze" src="img.mugis/poster_img/texhnolyze_img-thumb.jpg" height="200" width="400" class="g_image g_bubble small"/>
+        </picture></a>
+    </div>
+    <div class="data">
+        <div class="wrap name">
+            <a class="name-colored" href="anime.html">Texhnolyze</a>
+        </div>
+        <div class="icons actions">
+            
+        </div>
+        <div class="date">6th April 2003</div>
+        <div class="general">TV Series, 22 eps</div>
+        <div class="extra"><a href="#">Madhouse</a></div>
+        <div class="votes rating">
+            <span class="key">Rating:</span>
+            <span data-label="Rating" class="rating high">
+                <span class="value">8.4</span>
+                <span class="count">(12,843)</span>
+            </span>
+        </div>
+        <div class="votes average">
+            <span class="key">Average:</span>
+            <span data-label="Rating" class="rating high">
+                <span class="value">8.4</span>
+                <span class="count">(12,843)</span>
+            </span>
+        </div>
+        <div class="tags">
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">cyberpunk</span><span class="wrapper"><span class="g_bubble text">A genre set in a dystopian future where advanced technology coexists with societal collapse, often exploring themes of identity, power, and human augmentation.</span></span></a></span>,
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">dystopia</span><span class="wrapper"><span class="g_bubble text">A fictional society characterized by oppression, decay, and the breakdown of human values, often used to critique real-world systems.</span></span></a></span>,
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">psychological</span><span class="wrapper"><span class="g_bubble text">Focuses on the inner workings of characters' minds, exploring themes of identity, existential dread, and the nature of consciousness.</span></span></a></span>,
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">seinen</span><span class="wrapper"><span class="g_bubble text">Seinen is one of the main demographic classifications applied to manga and anime, marketed primarily to young adult males.</span></span></a></span>,
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">dark</span><span class="wrapper"><span class="g_bubble text">Narratives that explore bleak, unsettling, or morally complex themes with an emphasis on despair and the darker aspects of existence.</span></span></a></span>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <!-- Shigurui -->
+
+           <div class="g_odd g_bubble box" id="a4978">
+    <div class="thumb image">
+        <a href="anime.html"><picture>
+            <img loading="lazy" alt="Shigurui" src="img.mugis/poster_img/shigurui_img-thumb.jpg" height="200" width="400" class="g_image g_bubble small"/>
+        </picture></a>
+    </div>
+    <div class="data">
+        <div class="wrap name">
+            <a class="name-colored" href="anime.html">Shigurui: Death Frenzy</a>
+        </div>
+        <div class="icons actions">
+          
+        </div>
+        <div class="date">19th July 2007</div>
+        <div class="general">TV Series, 12 eps</div>
+        <div class="extra"><a href="#">Madhouse</a></div>
+        <div class="votes rating">
+            <span class="key">Rating:</span>
+            <span data-label="Rating" class="rating high">
+                <span class="value">7.8</span>
+                <span class="count">(8,412)</span>
+            </span>
+        </div>
+        <div class="votes average">
+            <span class="key">Average:</span>
+            <span data-label="Rating" class="rating high">
+                <span class="value">7.8</span>
+                <span class="count">(8,412)</span>
+            </span>
+        </div>
+        <div class="tags">
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">samurai</span><span class="wrapper"><span class="g_bubble text">Stories centered around samurai warriors, their code of honor, brutal combat, and the rigid social hierarchy of feudal Japan.</span></span></a></span>,
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">historical</span><span class="wrapper"><span class="g_bubble text">Set in a specific historical period, drawing from real events, settings, or cultural contexts to ground the narrative.</span></span></a></span>,
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">martial arts</span><span class="wrapper"><span class="g_bubble text">Focuses on disciplined combat techniques, rivalries between fighters, and the physical and mental demands of mastering a fighting style.</span></span></a></span>,
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">seinen</span><span class="wrapper"><span class="g_bubble text">Seinen is one of the main demographic classifications applied to manga and anime, marketed primarily to young adult males.</span></span></a></span>,
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">dark</span><span class="wrapper"><span class="g_bubble text">Narratives that explore bleak, unsettling, or morally complex themes with an emphasis on despair and the darker aspects of existence.</span></span></a></span>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- KAIBA -->
+<div class="g_odd g_bubble box" id="a5572">
+    <div class="thumb image">
+        <a href="anime.html"><picture>
+            <img loading="lazy" alt="Kaiba" src="img.mugis/poster_img/kaiba_img-thumb.jpg" height="200" width="400" class="g_image g_bubble small"/>
+        </picture></a>
+    </div>
+    <div class="data">
+        <div class="wrap name">
+            <a class="name-colored" href="anime.html">Kaiba</a>
+        </div>
+        <div class="icons actions">
+          
+        </div>
+        <div class="date">10th April 2008</div>
+        <div class="general">TV Series, 12 eps</div>
+        <div class="extra"><a href="#">Madhouse</a></div>
+        <div class="votes rating">
+            <span class="key">Rating:</span>
+            <span data-label="Rating" class="rating high">
+                <span class="value">8.2</span>
+                <span class="count">(7,294)</span>
+            </span>
+        </div>
+        <div class="votes average">
+            <span class="key">Average:</span>
+            <span data-label="Rating" class="rating high">
+                <span class="value">8.2</span>
+                <span class="count">(7,294)</span>
+            </span>
+        </div>
+        <div class="tags">
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">science fiction</span><span class="wrapper"><span class="g_bubble text">A genre exploring futuristic concepts, advanced technology, and speculative ideas about the nature of humanity and the universe.</span></span></a></span>,
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">memory</span><span class="wrapper"><span class="g_bubble text">Narratives that explore the nature of memory, identity, and what it means to be human when recollections can be altered or erased.</span></span></a></span>,
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">avant-garde</span><span class="wrapper"><span class="g_bubble text">Experimental works that challenge conventional storytelling and visual styles, pushing the boundaries of the medium.</span></span></a></span>,
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">seinen</span><span class="wrapper"><span class="g_bubble text">Seinen is one of the main demographic classifications applied to manga and anime, marketed primarily to young adult males.</span></span></a></span>,
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">dystopia</span><span class="wrapper"><span class="g_bubble text">A fictional society characterized by oppression, decay, and the breakdown of human values, often used to critique real-world systems.</span></span></a></span>
+        </div>
+    </div>
+</div>
+
+
+<!-- ERGO PROXY -->
+<div class="g_odd g_bubble box" id="a4054">
+    <div class="thumb image">
+        <a href="anime.html"><picture>
+            <img loading="lazy" alt="Ergo Proxy" src="img.mugis/poster_img/ergo_proxy_img-thumb.jpg" height="200" width="400" class="g_image g_bubble small"/>
+        </picture></a>
+    </div>
+    <div class="data">
+        <div class="wrap name">
+            <a class="name-colored" href="anime.html">Ergo Proxy</a>
+        </div>
+        <div class="icons actions">
+          
+        </div>
+        <div class="date">25th February 2006</div>
+        <div class="general">TV Series, 23 eps</div>
+        <div class="extra"><a href="#">Manglobe</a></div>
+        <div class="votes rating">
+            <span class="key">Rating:</span>
+            <span data-label="Rating" class="rating high">
+                <span class="value">8.0</span>
+                <span class="count">(31,658)</span>
+            </span>
+        </div>
+        <div class="votes average">
+            <span class="key">Average:</span>
+            <span data-label="Rating" class="rating high">
+                <span class="value">8.0</span>
+                <span class="count">(31,658)</span>
+            </span>
+        </div>
+        <div class="tags">
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">cyberpunk</span><span class="wrapper"><span class="g_bubble text">A genre set in a dystopian future where advanced technology coexists with societal collapse, often exploring themes of identity, power, and human augmentation.</span></span></a></span>,
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">dystopia</span><span class="wrapper"><span class="g_bubble text">A fictional society characterized by oppression, decay, and the breakdown of human values, often used to critique real-world systems.</span></span></a></span>,
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">philosophical</span><span class="wrapper"><span class="g_bubble text">Works that engage deeply with questions of existence, identity, consciousness, and the nature of reality.</span></span></a></span>,
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">seinen</span><span class="wrapper"><span class="g_bubble text">Seinen is one of the main demographic classifications applied to manga and anime, marketed primarily to young adult males.</span></span></a></span>,
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">post-apocalyptic</span><span class="wrapper"><span class="g_bubble text">Set in a world following a catastrophic collapse of civilization, exploring survival, identity, and the remnants of society.</span></span></a></span>
+        </div>
+    </div>
+</div>
+
+
+<!-- CASSHERN SINS -->
+<div class="g_odd g_bubble box" id="a6127">
+    <div class="thumb image">
+        <a href="anime.html"><picture>
+            <img loading="lazy" alt="Casshern Sins" src="img.mugis/poster_img/casshern_img-thumb.jpg" height="200" width="400" class="g_image g_bubble small"/>
+        </picture></a>
+    </div>
+    <div class="data">
+        <div class="wrap name">
+            <a class="name-colored" href="anime.html">Casshern Sins</a>
+        </div>
+        <div class="icons actions">
+            
+        </div>
+        <div class="date">2nd October 2008</div>
+        <div class="general">TV Series, 24 eps</div>
+        <div class="extra"><a href="#">Madhouse</a></div>
+        <div class="votes rating">
+            <span class="key">Rating:</span>
+            <span data-label="Rating" class="rating high">
+                <span class="value">7.7</span>
+                <span class="count">(9,841)</span>
+            </span>
+        </div>
+        <div class="votes average">
+            <span class="key">Average:</span>
+            <span data-label="Rating" class="rating high">
+                <span class="value">7.7</span>
+                <span class="count">(9,841)</span>
+            </span>
+        </div>
+        <div class="tags">
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">post-apocalyptic</span><span class="wrapper"><span class="g_bubble text">Set in a world following a catastrophic collapse of civilization, exploring survival, identity, and the remnants of society.</span></span></a></span>,
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">robots</span><span class="wrapper"><span class="g_bubble text">Features mechanical beings or androids as central characters, often exploring themes of artificial life, consciousness, and the boundary between human and machine.</span></span></a></span>,
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">existential</span><span class="wrapper"><span class="g_bubble text">Narratives grappling with questions of purpose, mortality, and the meaning of existence.</span></span></a></span>,
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">seinen</span><span class="wrapper"><span class="g_bubble text">Seinen is one of the main demographic classifications applied to manga and anime, marketed primarily to young adult males.</span></span></a></span>,
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">dark</span><span class="wrapper"><span class="g_bubble text">Narratives that explore bleak, unsettling, or morally complex themes with an emphasis on despair and the darker aspects of existence.</span></span></a></span>
+        </div>
+    </div>
+</div>
+
+
+<!-- PARANOIA AGENT -->
+<div class="g_odd g_bubble box" id="a3609">
+    <div class="thumb image">
+        <a href="anime.html"><picture>
+            <img loading="lazy" alt="Paranoia Agent" src="img.mugis/poster_img/paranoia_agent_img-thumb.jpg" height="200" width="400" class="g_image g_bubble small"/>
+        </picture></a>
+    </div>
+    <div class="data">
+        <div class="wrap name">
+            <a class="name-colored" href="anime.html">Paranoia Agent</a>
+        </div>
+        <div class="icons actions">
+            
+        </div>
+        <div class="date">2nd February 2004</div>
+        <div class="general">TV Series, 13 eps</div>
+        <div class="extra"><a href="#">Madhouse</a></div>
+        <div class="votes rating">
+            <span class="key">Rating:</span>
+            <span data-label="Rating" class="rating high">
+                <span class="value">8.1</span>
+                <span class="count">(18,337)</span>
+            </span>
+        </div>
+        <div class="votes average">
+            <span class="key">Average:</span>
+            <span data-label="Rating" class="rating high">
+                <span class="value">8.1</span>
+                <span class="count">(18,337)</span>
+            </span>
+        </div>
+        <div class="tags">
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">psychological thriller</span><span class="wrapper"><span class="g_bubble text">A genre that focuses on the unstable psychological state of characters, building tension through mind games, moral dilemmas, and suspense.</span></span></a></span>,
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">mystery</span><span class="wrapper"><span class="g_bubble text">A genre centered around solving a crime or uncovering hidden truths, often involving investigators drawn into dangerous situations.</span></span></a></span>,
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">surreal</span><span class="wrapper"><span class="g_bubble text">Works that blend reality with dreamlike or illogical elements, creating an unsettling atmosphere that challenges perception.</span></span></a></span>,
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">seinen</span><span class="wrapper"><span class="g_bubble text">Seinen is one of the main demographic classifications applied to manga and anime, marketed primarily to young adult males.</span></span></a></span>,
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">social commentary</span><span class="wrapper"><span class="g_bubble text">Works that use narrative and character to critique or reflect on real-world societal issues, pressures, and human behavior.</span></span></a></span>
+        </div>
+    </div>
+</div>
+
+
+<!-- DEVILMAN CRYBABY -->
+<div class="g_odd g_bubble box" id="a11706">
+    <div class="thumb image">
+        <a href="anime.html"><picture>
+            <img loading="lazy" alt="Devilman Crybaby" src="img.mugis/poster_img/devilman_img-thumb.jpg" height="200" width="400" class="g_image g_bubble small"/>
+        </picture></a>
+    </div>
+    <div class="data">
+        <div class="wrap name">
+            <a class="name-colored" href="anime.html">Devilman Crybaby</a>
+        </div>
+        <div class="icons actions">
+           
+        </div>
+        <div class="date">5th January 2018</div>
+        <div class="general">ONA, 10 eps</div>
+        <div class="extra"><a href="#">Science SARU</a></div>
+        <div class="votes rating">
+            <span class="key">Rating:</span>
+            <span data-label="Rating" class="rating high">
+                <span class="value">7.9</span>
+                <span class="count">(24,512)</span>
+            </span>
+        </div>
+        <div class="votes average">
+            <span class="key">Average:</span>
+            <span data-label="Rating" class="rating high">
+                <span class="value">7.9</span>
+                <span class="count">(24,512)</span>
+            </span>
+        </div>
+        <div class="tags">
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">dark fantasy</span><span class="wrapper"><span class="g_bubble text">A genre that incorporates dark, often frightening themes with fantasy elements such as magic, demons, and medieval settings.</span></span></a></span>,
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">demons</span><span class="wrapper"><span class="g_bubble text">Features supernatural demonic entities as central antagonists or characters, often exploring themes of corruption, power, and the struggle between good and evil.</span></span></a></span>,
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">tragedy</span><span class="wrapper"><span class="g_bubble text">A narrative involving great suffering and a sorrowful ending, often exploring themes of fate and loss.</span></span></a></span>,
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">seinen</span><span class="wrapper"><span class="g_bubble text">Seinen is one of the main demographic classifications applied to manga and anime, marketed primarily to young adult males.</span></span></a></span>,
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">action</span><span class="wrapper"><span class="g_bubble text">Emphasizes fast-paced sequences, physical confrontations, and high-stakes conflict as the primary driver of the narrative.</span></span></a></span>
+        </div>
+    </div>
+</div>
+
+
+<!-- SERIAL EXPERIMENTS LAIN -->
+<div class="g_odd g_bubble box" id="a1598">
+    <div class="thumb image">
+        <a href="anime.html"><picture>
+            <img loading="lazy" alt="Serial Experiments Lain" src="img.mugis/poster_img/lain_img-thumb.jpg" height="200" width="400" class="g_image g_bubble small"/>
+        </picture></a>
+    </div>
+    <div class="data">
+        <div class="wrap name">
+            <a class="name-colored" href="anime.html">Serial Experiments Lain</a>
+        </div>
+        <div class="icons actions">
+           
+        </div>
+        <div class="date">6th July 1998</div>
+        <div class="general">TV Series, 13 eps</div>
+        <div class="extra"><a href="#">Triangle Staff</a></div>
+        <div class="votes rating">
+            <span class="key">Rating:</span>
+            <span data-label="Rating" class="rating high">
+                <span class="value">8.1</span>
+                <span class="count">(22,765)</span>
+            </span>
+        </div>
+        <div class="votes average">
+            <span class="key">Average:</span>
+            <span data-label="Rating" class="rating high">
+                <span class="value">8.1</span>
+                <span class="count">(22,765)</span>
+            </span>
+        </div>
+        <div class="tags">
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">psychological</span><span class="wrapper"><span class="g_bubble text">Focuses on the inner workings of characters' minds, exploring themes of identity, existential dread, and the nature of consciousness.</span></span></a></span>,
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">cyberpunk</span><span class="wrapper"><span class="g_bubble text">A genre set in a dystopian future where advanced technology coexists with societal collapse, often exploring themes of identity, power, and human augmentation.</span></span></a></span>,
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">surreal</span><span class="wrapper"><span class="g_bubble text">Works that blend reality with dreamlike or illogical elements, creating an unsettling atmosphere that challenges perception.</span></span></a></span>,
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">seinen</span><span class="wrapper"><span class="g_bubble text">Seinen is one of the main demographic classifications applied to manga and anime, marketed primarily to young adult males.</span></span></a></span>,
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">philosophical</span><span class="wrapper"><span class="g_bubble text">Works that engage deeply with questions of existence, identity, consciousness, and the nature of reality.</span></span></a></span>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- HAIBANE RENMEI -->
+<div class="g_odd g_bubble box" id="a686">
+    <div class="thumb image">
+        <a href="anime.html"><picture>
+            <img loading="lazy" alt="Haibane Renmei" src="img.mugis/poster_img/haibane_img-thumb.jpg" height="200" width="400" class="g_image g_bubble small"/>
+        </picture></a>
+    </div>
+    <div class="data">
+        <div class="wrap name">
+            <a class="name-colored" href="anime.html">Haibane Renmei</a>
+        </div>
+        <div class="icons actions">
+           
+        </div>
+        <div class="date">10th October 2002</div>
+        <div class="general">TV Series, 13 eps</div>
+        <div class="extra"><a href="#">Radix</a></div>
+        <div class="votes rating">
+            <span class="key">Rating:</span>
+            <span data-label="Rating" class="rating high">
+                <span class="value">8.2</span>
+                <span class="count">(14,208)</span>
+            </span>
+        </div>
+        <div class="votes average">
+            <span class="key">Average:</span>
+            <span data-label="Rating" class="rating high">
+                <span class="value">8.2</span>
+                <span class="count">(14,208)</span>
+            </span>
+        </div>
+        <div class="tags">
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">psychological</span><span class="wrapper"><span class="g_bubble text">Focuses on the inner workings of characters' minds, exploring themes of identity, existential dread, and the nature of consciousness.</span></span></a></span>,
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">mystery</span><span class="wrapper"><span class="g_bubble text">A genre centered around solving a crime or uncovering hidden truths, often involving investigators drawn into dangerous situations.</span></span></a></span>,
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">existential</span><span class="wrapper"><span class="g_bubble text">Narratives grappling with questions of purpose, mortality, and the meaning of existence.</span></span></a></span>,
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">seinen</span><span class="wrapper"><span class="g_bubble text">Seinen is one of the main demographic classifications applied to manga and anime, marketed primarily to young adult males.</span></span></a></span>,
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">drama</span><span class="wrapper"><span class="g_bubble text">Focuses on realistic storytelling and emotional development, exploring serious themes and human relationships.</span></span></a></span>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- SHIN SEKAI YORI -->
+<div class="g_odd g_bubble box" id="a8108">
+    <div class="thumb image">
+        <a href="anime.html"><picture>
+            <img loading="lazy" alt="From the New World" src="img.mugis/poster_img/from_the_new_world_img-thumb.jpg" height="200" width="400" class="g_image g_bubble small"/>
+        </picture></a>
+    </div>
+    <div class="data">
+        <div class="wrap name">
+            <a class="name-colored" href="anime.html">From the New World</a>
+        </div>
+        <div class="icons actions">
+           
+        </div>
+        <div class="date">28th September 2012</div>
+        <div class="general">TV Series, 25 eps</div>
+        <div class="extra"><a href="#">A-1 Pictures</a></div>
+        <div class="votes rating">
+            <span class="key">Rating:</span>
+            <span data-label="Rating" class="rating high">
+                <span class="value">8.3</span>
+                <span class="count">(19,874)</span>
+            </span>
+        </div>
+        <div class="votes average">
+            <span class="key">Average:</span>
+            <span data-label="Rating" class="rating high">
+                <span class="value">8.3</span>
+                <span class="count">(19,874)</span>
+            </span>
+        </div>
+        <div class="tags">
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">dystopia</span><span class="wrapper"><span class="g_bubble text">A fictional society characterized by oppression, decay, and the breakdown of human values, often used to critique real-world systems.</span></span></a></span>,
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">psychological</span><span class="wrapper"><span class="g_bubble text">Focuses on the inner workings of characters' minds, exploring themes of identity, existential dread, and the nature of consciousness.</span></span></a></span>,
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">sci-fi</span><span class="wrapper"><span class="g_bubble text">A genre exploring futuristic concepts, advanced technology, and speculative ideas about the nature of humanity and the universe.</span></span></a></span>,
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">seinen</span><span class="wrapper"><span class="g_bubble text">Seinen is one of the main demographic classifications applied to manga and anime, marketed primarily to young adult males.</span></span></a></span>,
+            <span class="g_tag"><a class="tooltip" href="#"><span class="tagname">dark fantasy</span><span class="wrapper"><span class="g_bubble text">A genre that incorporates dark, often frightening themes with fantasy elements such as magic, demons, and medieval settings.</span></span></a></span>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  <!--main-content-poster-end-here-->
+                </div>
+              </div>
+            </div>
+          </div>
+
+<!--Anime-list-down-next-prev-button-start-->
+        
+<!--Anime-list-down-next-prev-button-end-->
+
+
+      <!--g_content-->
+        <div class="g_end"></div>
+      </div>
+      <!--layout-main-->
+    </div>
+    <!--layout-content-->
+
+
+<!--Footer-layout-start-->
+    <div id="layout-footer">
+      <p>
+        <a href="/" property="cc:attributionName">MugiSub</a> does not host any files on its servers. All content is sourced from third-party platforms and is provided solely for viewing purposes.
+        
+      </p>
+      <p>
+        If you are the copyright owner and wish to request the removal of any content, please visit our <a
+        rel="license"
+        href="/dmca"
+        >DMCA</a
+      >. page for more information.
+        
+      </p>
+
+
+
+
+      
+      <div itemscope itemtype="https://schema.org/Organization">
+        <a class="hide" itemprop="url" href="https://mugisub.com">Home</a>
+        <img
+          loading="lazy"
+          class="hide"
+          alt="MugiSUB"
+          itemprop="logo"
+          src=img.mugis/logos/touch/android-chrome-512x512.png"
+        />
+        <span class="hide" itemprop="name">MugiSUB</span>
+   <!-- Footer icon -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
