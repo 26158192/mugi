@@ -1,0 +1,4094 @@
+body,
+div,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+input,
+li,
+p,
+td,
+textarea,
+th,
+ul {
+    margin: 0;
+    padding: 0
+}
+
+table {
+    border-collapse: separate;
+    -border-collapse: collapse;
+    border-spacing: 0
+}
+
+fieldset,
+img {
+    border: 0
+}
+
+code,
+th,
+var {
+    font-style: normal;
+    font-weight: normal
+}
+
+ul {
+    list-style: none
+}
+
+th {
+    text-align: left
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-size: 1rem;
+    font-weight: normal
+}
+
+abbr {
+    border: 0
+}
+
+* {
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit
+}
+
+body,
+div,
+form,
+html,
+table {
+    left: 0
+}
+
+td,
+th {
+    padding: 1px 2px
+}
+
+p,
+textarea {
+    padding: 4px
+}
+
+span {
+    display: inline
+}
+
+fieldset {
+    display: none
+}
+
+ul {
+    list-style-type: none
+}
+
+
+#layout-search input.text,
+#layout-search select,
+#layout-search .submit {
+    border: 0;
+    outline: none;
+}
+
+
+
+#layout-main table {
+    margin: 0 auto 0 auto
+}
+
+#layout-nav #user-xkeep input,
+#layout-nav #user-xkeep2 input {
+    border: 0;
+    width: auto
+}
+
+.hide {
+    display: none !important
+}
+
+#layout-menu li.sub-menu span.tab,
+#layout-tabs {
+    display: none
+}
+
+#layout-menu li.sub-menu span.tab {
+    position: absolute
+}
+
+#layout-main .g_list,
+#layout-main .g_msg,
+#layout-main .g_section,
+#layout-main h1 {
+    margin-bottom: 1em
+}
+
+#layout-main table+.g_list {
+    margin-top: 1em
+}
+
+#layout-main .g_end {
+    padding: 0;
+    margin: 0;
+    clear: right;
+    border: 0
+}
+
+#layout-main .g_list,
+#layout-main .g_section {
+    clear: both
+}
+
+#layout-main .g_list.type {
+    float: left
+}
+
+#layout-main div table td.name .icons,
+#layout-main div table td.title .icons,
+#layout-main div.anime_all div.info tr.official td.value .icons {
+    float: right
+}
+
+#layout-main div table td.title .icons.language {
+    float: left;
+    padding-right: .3em
+}
+
+#layout-main div table td.name .icons.tooltip {
+    vertical-align: bottom;
+    float: none
+}
+
+#layout-main .g_bubble.box .name .icons.tooltip+a,
+#layout-main div table td.name .icons.tooltip+a {
+    line-height: 16px
+}
+
+#layout-main div.anime_all div.info div.extra div td.name a+.icons.tooltip,
+#layout-main div.anime_all table.songlist td.creator>a+.icons.tooltip {
+    padding-top: .2em
+}
+
+#layout-main .icons .i_icon,
+#layout-main div.anime_all div.episodes td.action .i_icon {
+    float: left
+}
+
+#layout-main .icons.right .i_icon {
+    float: right
+}
+
+#layout-hint {
+    position: absolute;
+    top: 0;
+    width: calc(100% - 2.2em);
+    text-align: center;
+    z-index: 110;
+    padding: .25em 1em
+}
+
+table+select {
+    margin-top: 1em
+}
+
+.g_info ul {
+    text-align: center
+}
+
+#layout-footer {
+    text-align: center;
+    padding: .5em 0
+}
+
+#layout-main .g_section>form>h2,
+#layout-main .g_section>h2 {
+    padding: 0;
+    text-align: left;
+    margin-bottom: .4em
+}
+
+.g_section>form>h2>span,
+.g_section>h2>span {
+    display: block;
+    padding: .25em .5em
+}
+
+.g_section>h2+.container+h2,
+.g_section>h2+.edit_actions+.container+h2 {
+    margin-top: 1.2em
+}
+
+h1+.icons {
+    margin-top: -4em;
+    margin-right: 1em
+}
+
+@media screen and (max-width: 600px) {
+
+    #layout-main div table td.name .icons.tooltip,
+    h1+.icons {
+        display: none
+    }
+}
+
+#layout-tabs {
+    margin: 1px;
+    display: block
+}
+
+#layout-tabs ul {
+    display: inline;
+    border: 0
+}
+
+#layout-tabs ul li {
+    display: inline;
+    margin: 0 0 0 3px;
+    padding: 0
+}
+
+#layout-tabs ul li a {
+    padding: 1px 6px 1px 6px;
+    border-bottom: 0
+}
+
+#anidb div.block {
+    width: 100%;
+    margin-top: .5em;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-justify-content: center;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    justify-content: center
+}
+
+#anidb div.block>div.image {
+    text-align: center;
+    margin-right: 1em
+}
+
+#anidb div.block>div.image>div.container {
+    position: relative;
+    display: inline-block
+}
+
+#anidb div.block>div.data {
+    max-width: 65em;
+    width: 100%;
+    z-index: 1
+}
+
+#anidb div.block+div.g_bubble.desc,
+#anidb div.g_section.desc {
+    margin: 1em 0;
+    padding: 1em;
+    overflow-wrap: break-word
+}
+
+#anidb div.block div.data table {
+    width: 100%;
+    margin: 0
+}
+
+#anidb div.block div.data table th {
+    width: 10em
+}
+
+#layout-main div.info div.extra {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex
+}
+
+#layout-main div.info div.extra>div {
+    margin: .5em;
+    padding: 4px;
+    width: 100%;
+    position: relative
+}
+
+#layout-main div.info div.extra div h2 {
+    text-align: left
+}
+
+@media screen and (min-width: 1500px) {
+    #layout-main .g_content:not(.sidebar) div.info div.extra {
+        margin: 0 -0.5em
+    }
+}
+
+@media screen and (min-width: 1200px)and (max-width: 1500px) {
+    #layout-main div.info div.extra {
+        margin: 0 -0.5em
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #layout-main div.info div.extra {
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        -moz-flex-wrap: wrap;
+        flex-wrap: wrap
+    }
+
+    #layout-main div.info div.extra>div {
+        margin: .5em 0
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #layout-main .g_section.info {
+        margin-top: 2em
+    }
+
+    #layout-main .g_section.info>h4 {
+        display: none
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    #layout-main .g_section.info,
+    #layout-main .g_section.info div.block,
+    #layout-main .g_section.info div.block>div.data,
+    #layout-main .g_section.info div.block>div.image {
+        min-width: 0;
+        width: 100%
+    }
+
+    #layout-main .g_section.info div.block {
+        flex-wrap: wrap
+    }
+
+    #layout-main .g_section.info div.block>div.data {
+        margin-top: 1em;
+        margin-right: 0
+    }
+
+    #layout-main .g_section.info div.block>div.image {
+        margin: 0;
+        overflow: hidden
+    }
+
+    #layout-main .g_section.info div.block>div.image img {
+        max-width: 100%
+    }
+
+    #layout-main .g_section.info .tabbed_pane {
+        margin: 0
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #layout-main .g_section.info {
+        margin-top: 0
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #layout-main .g_section.info .g_image {
+        max-width: 100%;
+        height: auto;
+        width: auto
+    }
+}
+
+.g_bubblewrap {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-justify-content: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    justify-content: center
+}
+
+.g_bubblewrap.nowrap {
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    -moz-flex-wrap: nowrap;
+    flex-wrap: nowrap
+}
+
+.g_bubblewrap:not(.nogrow)>* {
+    -ms-flex-grow: 1;
+    -webkit-flex-grow: 1;
+    -moz-flex-grow: 1;
+    flex-grow: 1
+}
+
+.g_bubblewrap>table {
+    height: -moz-min-content;
+    height: min-content
+}
+
+.g_bubblewrap>.g_msg {
+    width: 100%;
+    max-width: 100%
+}
+
+.g_bubblewrap>.g_bubble.box {
+    max-width: 450px
+}
+
+.g_bubble {
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px
+}
+
+.g_bubble.box:not(.small)>div.data div.name {
+    margin-bottom: .5em;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.g_bubble.box:not(.small)>div.data div.name.wrap {
+    white-space: normal
+}
+
+.g_bubble.box>div.data .tooltip.icons {
+    margin-right: .3em
+}
+
+.g_bubble.box .name .icons.tooltip {
+    display: inline-block;
+    vertical-align: bottom;
+    float: none
+}
+
+.g_bubble.box {
+    width: 300px;
+    text-align: left;
+    margin: .5em;
+    overflow-wrap: break-word;
+    padding: .19em
+}
+
+.g_bubble.box>div.image {
+    margin-bottom: .5em;
+    padding: .75em;
+    float: left;
+    max-height: 100%
+}
+
+.g_bubble.box>div.image img {
+    max-width: 150px;
+    max-height: 230px;
+    width: auto
+}
+
+.g_bubble.box>div.data {
+    margin: .8em .5em .5em
+}
+
+.g_bubble.box>div.data .actions.icons .i_icon {
+    float: none !important
+}
+
+.g_bubble.box>div.data .actions.icons .i_icon+.i_icon {
+    margin-left: -0.1em !important
+}
+
+.g_bubble.box>div.data div+div {
+    margin-top: .3em
+}
+
+.g_bubble.box>div.data div.general+div.extra,
+.g_bubble.box>div.data div.rating+div.average {
+    margin-top: 0em
+}
+
+.g_bubble.box>div.data div.desc {
+    clear: left
+}
+
+.g_bubble.box.small {
+    width: 158px;
+    max-width: 180px
+}
+
+.g_bubble.box.small>div.image {
+    float: none;
+    margin: 1em auto .5em auto;
+    overflow: hidden;
+    padding: 0;
+    width: -moz-max-content;
+    width: -webkit-max-content;
+    width: intrinsic;
+    width: fit-content
+}
+
+.g_bubble.box.small>div.image {
+    height: 210px
+}
+
+.g_bubble.box.small>div.image img {
+    width: auto;
+    max-height: 100%
+}
+
+.g_bubble.box.small>div.data {
+    position: relative
+}
+
+.g_bubble.box.small .actions.icons {
+    text-align: center;
+    float: none
+}
+
+.g_bubble.box.small .icons.actions+.name {
+    text-align: center;
+    margin-top: .75em
+}
+
+.g_section>.g_bubble,
+.g_section.tabbed_pane>.g_bubble table {
+    padding: .5em
+}
+
+.g_bubble.box>div.data div.desc {
+    max-height: 15em;
+    overflow: hidden
+}
+
+#layout-main .g_section:not(.tabbed_pane)>.g_bubble>form table,
+#layout-main .g_section:not(.tabbed_pane)>.g_bubble>table {
+    margin: -0.5em;
+    width: calc(100% + 1em)
+}
+
+@media screen and (max-width: 800px) {
+    .g_bubble.box:not(.small) {
+        width: 250px
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .g_bubble.box:not(.small) {
+        width: 100%;
+        max-width: 100%
+    }
+
+    .g_bubble.box .name .icons.tooltip {
+        display: none
+    }
+}
+
+@media screen and (max-width: 355px) {
+    .g_bubble.box.small {
+        width: 100% !important;
+        max-width: 100% !important
+    }
+}
+
+.g_boxwrap {
+    width: 50em
+}
+
+.g_boxwrap label {
+    display: inline-block;
+    width: 33%;
+    min-width: 14em
+}
+
+.g_boxwrap label.ignore {
+    width: 100%
+}
+
+.g_filter .g_boxwrap,
+.g_filter .g_boxwrap label {
+    width: 100%
+}
+
+.g_filter .g_boxwrap input:not([type=radio]):not([type=checkbox]),
+.g_filter .g_boxwrap textarea,
+.g_filter .g_boxwrap select,
+.g_filter .g_boxwrap button {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+#layout-main div.edit_actions {
+    float: right;
+    margin-right: .5em;
+    height: auto
+}
+
+#layout-main div.edit_actions>span>* {
+    vertical-align: top
+}
+
+#layout-main h2+div.edit_actions {
+    margin-top: -3em
+}
+
+#layout-main h4+div.edit_actions {
+    margin-top: -2.5em;
+    margin-bottom: 1em
+}
+
+@media screen and (max-width: 950px) {
+    #layout-main .g_msg~.g_section.info>div.edit_actions {
+        margin-top: -1em
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #layout-main .g_section.info>div.edit_actions {
+        width: 100%;
+        margin-right: 0
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+    #layout-main .g_section.info>div.edit_actions,
+    #layout-main div.edit_actions>span.modify {
+        display: none
+    }
+}
+
+.g_progressbar.g_bubblewrap {
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    -moz-flex-wrap: nowrap;
+    flex-wrap: nowrap
+}
+
+.g_progressbar {
+    width: 100%;
+    padding: 1px
+}
+
+td.thumb {
+    text-align: center;
+    width: 6.5em
+}
+
+td.thumb>a {
+    line-height: normal;
+    display: inline-block;
+    vertical-align: middle
+}
+
+td.thumb>a img {
+    max-width: 6.5em;
+    display: inline-block
+}
+
+.g_image_overlay {
+    border-color: transparent;
+    border-style: solid;
+    border-width: 0 50px 50px;
+    bottom: auto;
+    left: auto;
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+.g_image_overlay>a {
+    margin: .4em 0em 0 2.1em;
+    position: absolute
+}
+
+.g_button {
+    margin-bottom: 2px
+}
+
+.g_button a {
+    display: inline-block;
+    vertical-align: top;
+    padding: 2px 4px
+}
+
+input[size="10"] {
+    width: 8em
+}
+
+input[size="15"] {
+    width: 10em
+}
+
+textarea {
+    width: 48em;
+    height: 8em
+}
+
+input[type=checkbox] {
+    margin-right: .1em;
+    margin-bottom: .3em
+}
+
+button,
+input[type=checkbox],
+input[type=date],
+input[type=number],
+input[type=password],
+input[type=text],
+input[type=url],
+select {
+    vertical-align: middle
+}
+
+@media screen and (max-width: 1000px) {
+
+    
+    textarea {
+        width: 100%
+    }
+}
+
+#layout-main ul.g_list {
+    clear: both;
+    text-align: center;
+    min-height: 1.4em
+}
+
+#layout-main .g_definitionlist th {
+    text-align: left
+}
+
+#layout-main ul.g_list li {
+    display: inline
+}
+
+#layout-main li.g_styledlist {
+    margin-left: 1em
+}
+
+#layout-main ul.g_styledlist {
+    list-style-type: disc;
+    width: auto !important
+}
+
+#layout-main .g_styledlist {
+    margin-left: 2em
+}
+
+#layout-main ul.g_styledlist>li {
+    margin-left: 0
+}
+
+#layout-main ul.g_styledlist>li+li {
+    margin-top: .5em
+}
+
+.g_bubble .g_definitionlist .value {
+    width: 100%
+}
+
+#layout-main .g_account {
+    width: 23em
+}
+
+#layout-main .g_account ul.tabs {
+    margin-bottom: -2px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex
+}
+
+#layout-main .g_account ul.tabs li {
+    width: 50%;
+    padding: .25em .5em;
+    display: block
+}
+
+#layout-main .g_account ul.tabs li+li {
+    margin-left: .5em
+}
+
+#layout-main .g_account ul.tabs li a {
+    display: block
+}
+
+#layout-main .g_account table {
+    margin: 0;
+    padding: .5em 0;
+    width: 100%
+}
+
+#layout-main .g_account table th {
+    display: none
+}
+
+#layout-main .g_account div.login button,
+#layout-main .g_account div.login input[type=password],
+#layout-main .g_account div.login input[type=text] {
+    height: 34px;
+    box-sizing: border-box
+}
+
+#layout-main .g_account div.login input[type=password],
+#layout-main .g_account div.login input[type=text] {
+    width: 100%
+}
+
+#layout-main .g_account div.login button {
+    width: 10em
+}
+
+@media screen and (max-width: 500px) {
+    #layout-main .g_account {
+        width: 100%
+    }
+}
+
+#layout-main div.g_menu {
+    float: right;
+    margin-bottom: 1em
+}
+
+#layout-main div.g_menu ul {
+    margin-top: 2px
+}
+
+#layout-main div.g_menu ul li {
+    padding: 1px 6px 1px 6px
+}
+
+#layout-main div.g_menu ul.state {
+    height: 15px;
+    padding-top: 2px;
+    padding-bottom: 1px
+}
+
+#layout-main div.g_menu ul.state li {
+    float: left;
+    padding: 0px 2px 0px 1px
+}
+
+#layout-main div.g_menu ul.state+ul {
+    clear: left
+}
+
+#layout-nav div.menu_hr,
+#layout-search form.random {
+    display: none
+}
+
+.g_filter+.g_msg {
+    height: 100%
+}
+
+.g_filter {
+    -ms-flex-grow: 0 !important;
+    -webkit-flex-grow: 0 !important;
+    -moz-flex-grow: 0 !important;
+    flex-grow: 0 !important;
+    order: 2;
+    position: relative
+}
+
+.g_filter .content {
+    width: 18em;
+    margin-bottom: 1em
+}
+
+.g_filter.right .content {
+    margin-left: 1.3em
+}
+
+.g_filter .g_section {
+    clear: none
+}
+
+.g_filter .content .g_bubble {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: .5em 0;
+    padding: .5em;
+    width: 100%
+}
+
+.g_filter label,
+.g_filter span.options {
+    display: block;
+    text-align: left
+}
+
+.g_filter .settings input.name {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%
+}
+
+.g_filter .settings select {
+    width: 100%
+}
+
+.g_filter .flap {
+    bottom: 5em;
+    display: block;
+    padding: .2em;
+    position: fixed;
+    text-align: center;
+    transform: rotate(90deg);
+    width: 4em
+}
+
+.g_filter.right .flap {
+    right: -1.3em;
+    left: auto
+}
+
+.g_filter .fancybox-close {
+    top: -1em
+}
+
+.g_filter.hassettings .fancybox-close {
+    top: 1.75em
+}
+
+.g_filter.right .fancybox-close {
+    left: auto;
+    right: -1em
+}
+
+.g_filter:not(.g_overlaymenu):not(.folded)~table {
+    width: calc(100% - 19em)
+}
+
+.g_overlaymenu {
+    position: absolute;
+    top: 2em;
+    z-index: 10000
+}
+
+.g_overlaymenu.right {
+    left: auto;
+    right: 0
+}
+
+.g_overlaymenu.right .fancybox-close {
+    left: -1em;
+    right: auto;
+    top: -1.5em
+}
+
+.g_overlaymenu .content {
+    width: 21em
+}
+
+.g_overlaymenu .content .g_bubble {
+    margin: .5em 0 .5em .5em;
+    width: calc(100% - .5em)
+}
+
+.g_msg {
+    clear: both
+}
+
+.g_msg,
+.g_section>.g_msg.g_bubble {
+    padding: 1em
+}
+
+.g_msg h3 {
+    float: right
+}
+
+.g_msg,
+.g_msg>div.container,
+.g_msg h2 {
+    text-align: left
+}
+
+#anidb:not(.internet_explorer) #layout-search ul.quicksearch .g_bubble.stripe {
+    width: 100%
+}
+
+#layout-search input.text,
+#layout-search select {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 18px
+}
+
+#layout-search select {
+    height: 18px;
+    padding: 3px;
+    margin: 0;
+    width: 94px
+}
+
+#layout-search input,
+#layout-search select {
+    position: relative;
+    z-index: 100
+}
+
+.g_segmentlist table {
+    width: 100%
+}
+
+.g_segmentlist td.desc,
+.g_segmentlist th {
+    min-width: 13em
+}
+
+.g_segmentlist td.value {
+    width: 100%
+}
+
+.g_segmentlist th {
+    vertical-align: top;
+    padding: .5em 1em
+}
+
+.g_segmentlist h4,
+.g_segmentlist td,
+.g_segmentlist td.type,
+.g_segmentlist th {
+    text-align: left
+}
+
+.g_segmentlist td,
+.g_segmentlist th {
+    padding: .25em .5em
+}
+
+@media screen and (min-width: 1500px) {
+    #layout-main .sidebar .g_section.info {
+        float: left;
+        margin-bottom: 2em
+    }
+
+    #layout-main .sidebar .g_section.info>h4 {
+        display: none
+    }
+
+    #layout-main .sidebar.g_content .g_section.info>div.edit_actions {
+        width: 100%;
+        height: auto;
+        margin-right: 0
+    }
+
+    #layout-main .sidebar .g_section.info,
+    #layout-main .sidebar .g_section.info div.block,
+    #layout-main .sidebar .g_section.info div.block>div.data,
+    #layout-main .sidebar .g_section.info div.block>div.image {
+        min-width: 0;
+        width: 40.5em
+    }
+
+    #layout-main .sidebar .g_section.info div.block {
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        -moz-flex-wrap: wrap;
+        flex-wrap: wrap
+    }
+
+    #layout-main .sidebar .g_section.info div.block>div.data {
+        margin-top: 1em;
+        margin-right: 0
+    }
+
+    #layout-main .sidebar .g_section.info div.block>div.image {
+        margin: 0
+    }
+
+    #layout-main .sidebar .g_section.info div.block>div.image img {
+        max-width: 40em;
+        height: auto
+    }
+
+    #layout-main .sidebar .g_section.info .tabbed_pane {
+        margin: 0
+    }
+
+    #layout-main .sidebar .g_section.info {
+        margin-top: 2.5em
+    }
+
+    
+    #layout-main .sidebar>.g_section.resized {
+        width: calc(100% - 42em);
+        clear: none;
+        float: right;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box
+    }
+
+    
+    #layout-main .sidebar>.g_section.resized.tabbed_pane:not(.hidden) {
+        margin: 1em 0 1.5em
+    }
+
+    #layout-main .sidebar .g_section.info+.g_section.resized.tabbed_pane {
+        margin-top: 0
+    }
+
+    #layout-main .sidebar .g_section.info div.data .g_definitionlist th {
+        min-width: 8.8em
+    }
+
+    
+    #layout-main .sidebar .g_section.info div.data .g_definitionlist td.type {
+        width: auto;
+        padding: 2px 8px
+    }
+
+    #layout-main .sidebar .g_section.info div.data .g_definitionlist td {
+        width: 100%;
+        padding-right: 0
+    }
+}
+
+#layout-main div.g_section:not(.info) div.tabbed_pane div.body table,
+#layout-main div.tabbed_pane div.body {
+    padding: .5em
+}
+
+#layout-main div.tabbed_pane div.body {
+    min-height: 2em
+}
+
+#layout-main div.tabbed_pane div.pane.hide {
+    display: none
+}
+
+#layout-main div.tabbed_pane ul.tabs {
+    margin-left: .5em;
+    text-align: left;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap-reverse;
+    -moz-flex-wrap: wrap-reverse;
+    -ms-flex-wrap: wrap-reverse;
+    flex-wrap: wrap-reverse;
+    width: 100%
+}
+
+#layout-main div.tabbed_pane ul.tabs li {
+    display: inline-block;
+    padding: .2em .8em;
+    border-bottom: 0;
+    margin: .21em .3em 0 0;
+    line-height: 16px
+}
+
+#layout-main div.tabbed_pane_main {
+    clear: both
+}
+
+#layout-main div.tabbed_pane_main table {
+    width: 100%
+}
+
+#layout-main div.tabbed_pane_main+ul.links {
+    margin-top: 1em
+}
+
+@media screen and (max-width: 710px) {
+    #layout-tabs ul.main-tabs>li.customise {
+        display: none
+    }
+}
+
+@media screen and (max-width: 450px) {
+
+    
+    #layout-tabs ul.main-tabs>li.reviews {
+        display: none
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #layout-main .g_datatable table td .icons {
+        display: inline-block !important
+    }
+
+    #layout-main .g_datatable table td.name.main .icons,
+    #layout-main .g_datatable table td.name.main .icons.tooltip {
+        vertical-align: top;
+        padding-top: .5em
+    }
+
+    #layout-main .g_datatable table+p,
+    #layout-main .g_datatable table thead,
+    #layout-main .g_datatable table tr td.check,
+    #layout-main .g_datatable table tr td.number {
+        display: none
+    }
+
+    #layout-main .g_datatable table tr {
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        -moz-flex-wrap: wrap;
+        flex-wrap: wrap
+    }
+
+    #layout-main .g_datatable table td {
+        display: block;
+        width: auto !important;
+        padding: .2em .5em;
+        text-align: left !important;
+        width: 19em !important
+    }
+
+    #layout-main .g_datatable table td::before {
+        display: inline-block;
+        width: 10em;
+        vertical-align: top
+    }
+
+    #layout-main .g_datatable table tr {
+        margin-bottom: 1.5em
+    }
+
+    #layout-main .g_datatable table tr td.name.main {
+        order: -1;
+        height: auto;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box
+    }
+
+    #layout-main .g_datatable table tr td.name.main>a {
+        margin-left: .5em;
+        display: inline-block;
+        width: calc(100% - 11em);
+        padding: .5em
+    }
+
+    #layout-main .g_datatable table td.name.main::before,
+    #layout-main .g_datatable table td.thumb::before {
+        width: 0
+    }
+
+    #layout-main .g_datatable table tr td.name.main,
+    #layout-main .g_datatable table tr td.thumb {
+        height: auto;
+        width: 100% !important
+    }
+
+    #layout-main .g_datatable table tr td.thumb {
+        padding-top: .5em;
+        line-height: normal
+    }
+
+    #layout-main .g_datatable table tr td.thumb img {
+        width: auto;
+        max-width: 400px
+    }
+
+    #layout-main .g_datatable table tr td.description,
+    #layout-main .g_datatable table tr td.last.anime.name,
+    #layout-main .g_datatable table tr td.url.site {
+        order: 100;
+        width: 100% !important;
+        height: auto
+    }
+
+    #layout-main .g_datatable table tr td.action .i_icon {
+        float: none !important
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    #layout-main .g_datatable table .icons.tooltip,
+    #layout-main .g_datatable table td.name.main::before {
+        display: none !important
+    }
+
+    #layout-main .g_datatable table tr td.name.main {
+        padding: 0 .5em 0 0
+    }
+
+    #layout-main .g_datatable table tr td.name.main>a {
+        margin-left: 0;
+        width: calc(100% - 4.5em)
+    }
+
+    #layout-main .g_datatable table tr td.thumb img {
+        max-width: calc(100vw - 3.5em)
+    }
+}
+
+#layout-main div.g_timedentry {
+    min-height: 174px;
+    height: auto !important;
+    height: 174px;
+    margin-bottom: 1em
+}
+
+#layout-main div.g_timedentry.g_section {
+    clear: none
+}
+
+#layout-main div.g_timedentry h4 {
+    padding: .1em;
+    margin: 0px;
+    text-align: left
+}
+
+#layout-main div.g_timedentry div.body {
+    padding: .2em;
+    text-align: left;
+    min-height: 174px;
+    overflow-wrap: break-word
+}
+
+#layout-main div.g_timedentry ul {
+    list-style-type: disc;
+    margin-top: .5em;
+    padding-left: 4em
+}
+
+#layout-main div.g_timedentry ul li+br {
+    display: none
+}
+
+div.g_timeline {
+    overflow: auto;
+    height: 750px
+}
+
+div.g_timeline ul {
+    white-space: nowrap
+}
+
+div.g_timeline li {
+    display: inline-block
+}
+
+.tooltip {
+    position: relative
+}
+
+.tooltip .text {
+    display: none;
+    left: -100px;
+    line-height: 16px;
+    margin-top: 50px;
+    padding: 1em;
+    position: absolute;
+    text-align: justify;
+    white-space: normal;
+    width: 240px;
+    word-wrap: normal;
+    z-index: 1000
+}
+
+.tooltip:hover .text {
+    display: inline
+}
+
+.tooltip .text::after,
+.tooltip .text::before {
+    bottom: 100%;
+    height: 0;
+    width: 0;
+    position: absolute;
+    left: 50%;
+    pointer-events: none
+}
+
+.tooltip .text::after {
+    margin-left: -10px
+}
+
+.tooltip .text::before {
+    margin-left: -13px
+}
+
+#layout-main div.anime_all div.info th span.i_icon {
+    float: right
+}
+
+#layout-main div.anime_all div.mylist table td {
+    padding: 1em
+}
+
+#layout-main div.anime_all div.mylist table td span.i_icon {
+    margin-left: 1em
+}
+
+#layout-main div.anime_all>.g_section form table,
+#layout-main div.anime_all>.g_section table {
+    width: 100%
+}
+
+#layout-main div.anime_all>.g_section:not(.info) {
+    margin: 0em 0 1.5em
+}
+
+#layout-main div.anime_all>.g_section.tabbed_pane:not(.hidden) {
+    margin: 2.5em 0 1.5em
+}
+
+#layout-main div.anime_all div.songs table th.credit {
+    min-width: 15em
+}
+
+#layout-main div.anime_all div.recommendations td.action,
+#layout-main div.anime_all div.reviews td.action {
+    text-align: right
+}
+
+#layout-main div.anime_all table.stafflist td.credit,
+#layout-main div.anime_all table.stafflist td.name {
+    width: 30%
+}
+
+#layout-main div.anime_all div.episodes table.eplist th.title {
+    max-width: 50%
+}
+
+#layout-main div.anime_all div.episodes table.eplist th.state {
+    min-width: 7em
+}
+
+#layout-main div.anime_all div.episodes table.eplist td.action.episode {
+    width: 11.5em
+}
+
+#layout-main div.anime_all #tabbed_pane {
+    margin: 0 0 .4em
+}
+
+#layout-main div.anime_all div.data td.value form {
+    text-align: left
+}
+
+#layout-main div.anime_all div.info div.extra div td {
+    padding: .2em .5em
+}
+
+#layout-main div.anime_all div.info div.extra div.staff {
+    order: 1
+}
+
+#layout-main div.anime_all div.info div.extra div.staff td.creator {
+    width: 100%
+}
+
+#layout-main div.anime_all div.info div.extra div.staff td.credit {
+    white-space: nowrap;
+    min-width: 14em
+}
+
+#layout-main div.anime_all div.info div.extra tr.more {
+    height: 19px
+}
+
+#layout-main div.anime_all div.info div.extra tr.more td.action {
+    position: absolute;
+    bottom: 3px;
+    right: 4px
+}
+
+#layout-main div.anime_all div.info div.extra div td.name a,
+#layout-main div.anime_all table.songlist td.creator>a {
+    display: block
+}
+
+#layout-main div.anime_all div.tabbed_pane:not(.resized) .g_section.mylist_status.vote_status {
+    margin: -0.5em 0
+}
+
+#layout-main div.anime_all div.tabbed_pane:not(.resized) .g_section.mylist_status.vote_status>div.g_bubblewrap>div.g_section {
+    margin: .6em .5em
+}
+
+#layout-main div.anime_all .g_section.mylist>.g_bubble>table {
+    margin: 0 auto 0 auto;
+    width: 100%
+}
+
+@media screen and (min-width: 1500px) {
+    #layout-main div.anime_all.sidebar div.info div.extra>div {
+        padding: .5em;
+        margin: 1em 0 0
+    }
+
+    #layout-main div.anime_all.sidebar textarea {
+        width: 20em
+    }
+
+    #layout-main div.anime_all.sidebar .g_section.info div.extra {
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        -moz-flex-wrap: wrap;
+        flex-wrap: wrap
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    #layout-main div.anime_all div.episodes .container,
+    #layout-main div.anime_all div.reviews .container,
+    #layout-main div.anime_all div.songs .container,
+    #layout-main div.anime_all div.staff .container {
+        overflow: auto
+    }
+
+    
+    #layout-main div.anime_all div.episodes table .number.files,
+    #layout-main div.anime_all div.episodes table th.files,
+    #layout-main div.anime_all div.songs table .creator,
+    #layout-main div.anime_all div.songs table .credit,
+    #layout-main div.anime_all div.songs table .rating {
+        display: none
+    }
+
+    #layout-main div.anime_all div.info textarea {
+        width: 100%
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    #layout-main div.anime_all div.episodes table .i_ep_edit,
+    #layout-main div.anime_all div.episodes table .name .icons {
+        display: none
+    }
+}
+
+#layout-main div.g_bubble.code {
+    line-height: 1.4em
+}
+
+#layout-main div.g_bubble.code div.title {
+    margin-bottom: 3px;
+    text-transform: uppercase
+}
+
+#layout-main div.g_bubble.code code {
+    display: block;
+    height: auto;
+    line-height: 1.3em;
+    margin: 2px 0;
+    max-height: 200px;
+    overflow: auto;
+    padding-top: 5px;
+    white-space: pre
+}
+
+#layout-main div.g_bubble.code div.title {
+    border-bottom: 1px solid
+}
+
+#layout-main div.g_bubble.code {
+    margin: .5em;
+    padding: 4px 8px
+}
+
+#layout-main div.g_menu {
+    margin-bottom: 0
+}
+
+#layout-main div.g_menu>div,
+#layout-main div.g_menu>div>div {
+    margin-bottom: 1em
+}
+
+@media screen and (max-width: 800px) {
+
+    
+    #anidb.mylist #layout-tabs li:not(.userdata):not(.mylist):not(.mywishlist):not(.myvotes):not(.mynotifies):not(.guestbook):not(.blog):not(.myrecs) {
+        display: none
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    
+    #anidb.mylist #layout-tabs li:not(.userdata):not(.mylist):not(.mywishlist):not(.myvotes):not(.mynotifies):not(.guestbook):not(.blog) {
+        display: none
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    
+    #anidb.mylist #layout-tabs li:not(.userdata):not(.mylist):not(.mywishlist):not(.myvotes):not(.mynotifies):not(.guestbook) {
+        display: none
+    }
+}
+
+@media screen and (max-width: 515px) {
+
+    
+    #anidb.mylist #layout-tabs li:not(.userdata):not(.mylist):not(.mywishlist):not(.myvotes):not(.mynotifies) {
+        display: none
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+    
+    #anidb.mylist #layout-tabs li:not(.userdata):not(.mylist):not(.mywishlist):not(.myvotes) {
+        display: none
+    }
+}
+
+@media screen and (max-width: 1000px) {
+
+    
+    .g_boxwrap {
+        width: 100%
+    }
+}
+
+.fancybox-active {
+    height: auto
+}
+
+@keyframes fancybox-rotate {
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+@media all and (max-height: 576px) {
+}
+
+.g_sortable .placeholder {
+    position: relative
+}
+
+.g_sortable .placeholder::before {
+    position: absolute;
+    width: 0;
+    height: 0;
+    margin-top: 2px;
+    left: -5px;
+    top: -4px;
+    border: 5px solid transparent;
+    border-left-color: red;
+    border-right: 0
+}
+
+.g_sortable .placeholder::before {
+    margin-top: 0;
+    left: -7px;
+    top: -5px
+}
+
+
+
+html {
+    height: 100% !important
+}
+
+
+
+
+
+.highcharts-state-hover .highcharts-graph {
+    stroke-width: 3
+}
+
+.highcharts-point-inactive {
+    opacity: .2;
+    transition: opacity 50ms
+}
+
+.highcharts-series-inactive {
+    opacity: .2;
+    transition: opacity 50ms
+}
+
+.highcharts-state-hover path {
+    transition: stroke-width 50ms
+}
+
+.highcharts-legend-series-active g.highcharts-series:not(.highcharts-series-hover),
+.highcharts-legend-point-active .highcharts-point:not(.highcharts-point-hover),
+.highcharts-legend-series-active .highcharts-markers:not(.highcharts-series-hover),
+.highcharts-legend-series-active .highcharts-data-labels:not(.highcharts-series-hover) {
+    opacity: .2
+}
+
+.highcharts-focus-border {
+    fill: none;
+    stroke-width: 2px
+}
+
+.highcharts-legend-nav-active {
+    fill: #039;
+    cursor: pointer
+}
+
+.highcharts-legend-nav-inactive {
+    fill: #ccc
+}
+
+.highcharts-button-hover {
+    transition: fill 0ms;
+    fill: #e6e6e6;
+    stroke: #ccc
+}
+
+.highcharts-button-hover text {
+    fill: #333
+}
+
+.highcharts-a11y-proxy-container-before,
+.highcharts-a11y-proxy-container-after {
+    position: absolute;
+    white-space: nowrap
+}
+
+#layout-search input.text.focus,
+#layout-search input.text.focus+select {
+    box-shadow: none
+}
+
+#layout-main div.g_msg.note {
+    border: 1px solid #afaf00;
+    background-color: #ffffdf
+}
+
+#layout-main div.g_msg.note h3 {
+    color: #afaf00
+}
+
+.g_vital a {
+    color: red
+}
+
+#anidb table ul li.g_odd,
+#layout-main table table td.g_odd,
+#layout-main ul.g_list li.g_odd {
+    background-color: transparent
+}
+
+#layout-main .name span.main,
+#layout-main a.filter {
+    color: gray
+}
+
+input.g_error {
+    background-color: #fdd
+}
+
+h1 a.shortlink,
+th a {
+    color: inherit
+}
+
+#layout-main div.tabbed_pane ul.tabs {
+    background-color: transparent;
+    border: 0
+}
+
+#layout-main div.g_timedentry ul {
+    background-color: inherit;
+    border: 0
+}
+
+#layout-tabs ul {
+    background-color: transparent
+}
+
+#layout-hint {
+    border: 1px solid #afaf00;
+    background-color: #ffffdf
+}
+
+.g_image_overlay>a {
+    color: white !important
+}
+
+#layout-main .g_account tr.g_odd {
+    background-color: inherit
+}
+
+#layout-main .g_account ul.tabs li a {
+    color: #fff
+}
+
+#layout-menu li.sub-menu ul li#user-xauth:hover,
+#layout-menu li.sub-menu ul li#user-xkeep2:hover,
+#layout-menu li.sub-menu ul li#user-xkeep:hover,
+#layout-menu li.sub-menu ul li#user-xname:hover,
+#layout-menu li.sub-menu ul li#user-xpass:hover {
+    background-image: none;
+    background-color: inherit;
+    color: inherit !important
+}
+
+#layout-main .g_account table td,
+#layout-main .g_account table th {
+    border: 0
+}
+
+.g_progressbar {
+    border-radius: 5px
+}
+
+.g_progressbar {
+    border: 1px solid
+}
+
+.g_progressbar {
+    border-color: #bbb
+}
+
+html {
+    font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+    font-size: 10px
+}
+
+span.i_icon[title] {
+    cursor: help
+}
+
+.action.icons .i_icon,
+.fancybox-close,
+.g_filter .flap,
+.i_minus,
+.i_plus,
+a.i_icon::after,
+a.i_icon::before,
+button.i_icon::after,
+button.i_icon::before,
+input[type=button],
+span.i_icon.i_general_arrow_down,
+span.i_icon.i_general_arrow_up,
+span.i_icon.i_minus,
+span.i_icon.i_plus {
+    cursor: pointer
+}
+
+a,
+div,
+li,
+p,
+span,
+td,
+th {
+    font-weight: inherit
+}
+
+a {
+    text-decoration: none
+}
+
+h1 {
+    font-size: 1.6rem
+}
+
+h1 a {
+    font-size: inherit
+}
+
+h2,
+h4 {
+    font-size: 1.2rem
+}
+
+h2 {
+    font-size: 1.4rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.tab,
+h2 span,
+h4 span {
+    -cursor: hand;
+    cursor: pointer
+}
+
+span.date,
+span.user,
+td.action,
+td.date,
+td.rating,
+td.year,
+th {
+    white-space: nowrap
+}
+
+span.date,
+span.user a.id,
+td.id,
+td.size {
+    letter-spacing: -1px
+}
+
+a.filter,
+span.time,
+span.user a.id,
+td.rating span {
+    font-size: .85rem;
+    vertical-align: top
+}
+
+td.count,
+td.duration,
+td.id,
+td.number,
+td.size {
+    text-align: right
+}
+
+.body,
+div.desc,
+td,
+td.id a.i_icon,
+td.name,
+td.name,
+td.title,
+td.value,
+th.field,
+ul {
+    text-align: left
+}
+
+.g_info,
+.g_input,
+.g_list,
+.g_section,
+form,
+h1,
+h2,
+h3,
+h4,
+td.action,
+td.check,
+td.date,
+td.icon,
+td.ignore,
+td.name.owner,
+td.name.user,
+td.number.eps,
+td.rating,
+td.state,
+td.type,
+th,
+tr.action td.submit,
+tr.action td.value,
+#layout-footer p {
+    text-align: center
+}
+
+small,
+#layout-main .name span.main {
+    font-size: .95rem
+}
+
+button,
+input[type=button],
+input[type=submit] {
+    padding: 1px
+}
+
+.g_list li,
+.g_list li a,
+.tabbed_pane ul.tabs li,
+h2>span,
+h4>span {
+    padding: 1px 2px;
+    text-transform: capitalize
+}
+
+.g_filter .flap {
+    font-family: Arial, Helvetica, sans-serif
+}
+
+#layout-main div.g_bubble.code div.title {
+    font-family: "Lucida Grande", "Trebuchet MS", Verdana, Helvetica, Arial, sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold
+}
+
+#layout-main div.g_bubble.code code {
+    font-family: Monaco, "Andale Mono", "Courier New", Courier, mono;
+    font-size: 1.2rem
+}
+
+.i_icon.i_info,
+.tooltip .i_icon.i_info,
+button:hover,
+input[type=submit]:hover,
+span.link,
+th.sortable:not(.sorter-false),
+#layout-main div.tabbed_pane ul.tabs li {
+    cursor: pointer
+}
+
+.g_segmentlist td.desc,
+#layout-main div.anime_all div.characters a.primary,
+#layout-main ul.g_list li.selected {
+    font-style: italic
+}
+
+#layout-main .g_account ul.tabs li {
+    font-size: 1.3rem
+}
+
+#layout-main div.g_bubble.code {
+    font-size: 1rem
+}
+
+#layout-menu li.sub-menu ul li#user-xname input,
+#layout-menu li.sub-menu ul li#user-xpass input {
+    font-size: 1.04rem
+}
+
+.g_bubble .name-colored,
+.g_bubble div.name,
+.g_bubble.box>div.data div.date,
+h1,
+h2,
+h3,
+h4,
+#layout-main .g_account ul.tabs li {
+    font-weight: bold
+}
+
+.g_italic {
+    font-style: italic;
+    font-weight: normal
+}
+
+.tooltip:hover {
+    text-decoration: none
+}
+
+.tooltip span.text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem
+}
+
+#layout-footer {
+    font-size: .85rem
+}
+
+.g_list li,
+.g_list li a,
+.tabbed_pane ul.tabs li,
+h2 span,
+h4 span,
+span.link,
+#layout-menu li.sub-menu span.tab,
+#layout-menu li.sub-menu ul li a,
+#layout-tabs ul li a {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.g_filter .flap {
+    font-size: 1.7rem;
+    letter-spacing: 1px
+}
+
+.g_button a span,
+button,
+h2,
+h4,
+#layout-main div.block div.data table th,
+#layout-main div.edit_actions>span,
+#layout-main div.g_definitionlist tr th,
+#layout-main div.g_menu.user ul li,
+#layout-main div.g_timedentry h4,
+#layout-main div.tabbed_pane ul.tabs li,
+#layout-search .submit,
+#layout-tabs ul.main-tabs {
+    text-transform: capitalize
+}
+
+@media screen and (max-width: 800px) {
+
+    #layout-main .g_datatable table td::before,
+    #layout-main .g_datatable table tr td.name.main>a {
+        font-weight: bold
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #layout-main .g_datatable table td::before {
+        content: attr(data-label)
+    }
+}
+
+@media screen and (max-width: 800px) {
+}
+
+#layout-main tr.g_fs_lame {
+    background-color: #d6b8b8
+}
+
+.g_bubble.box.mylist,
+#layout-main div.anime_all div.tabbed_pane_main table tr.mylist,
+#layout-main table.animelist tr.mylist,
+#layout-main table.file.entities tr.good {
+    background-color: #a7dda7
+}
+
+#layout-main div:not(.ed2kdump_all) tr td.mylist {
+    background-color: #a7dda7
+}
+
+#layout-main div.anime_all div.tabbed_pane_main table tr.g_odd.mylist,
+#layout-main table.animelist tr.g_odd.mylist,
+#layout-main table.file.entities tr.g_odd.good {
+    background-color: #9ad09a
+}
+
+#layout-main div:not(.ed2kdump_all) tr.g_odd td.mylist {
+    background-color: #9ad09a
+}
+
+.g_vital a {
+    color: #b32947
+}
+
+a.i_icon:hover,
+a.i_inline:hover {
+    text-decoration: none
+}
+
+.i_icon,
+.i_inline {
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 15px;
+    height: 14px;
+    margin-left: 1px;
+    margin-right: 0;
+    vertical-align: middle;
+    image-rendering: optimizeSpeed;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: optimize-contrast;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    -ms-interpolation-mode: nearest-neighbor
+}
+
+.i_flag {
+    width: 16px;
+    height: 16px
+}
+
+select+.i_icon {
+    margin-left: .5em
+}
+
+.i_button span,
+.i_icon span,
+.i_inline span {
+    display: none
+}
+
+div.icons,
+span.icons {
+    float: right;
+    white-space: nowrap
+}
+
+#layout-footer .links {
+    float: right;
+    margin-top: -3em;
+    margin-right: 4em
+}
+
+#layout-footer .links .i_icon+.i_icon {
+    margin-left: 1em !important
+}
+
+@media screen and (max-width: 800px) {
+    #layout-footer .links {
+        display: none
+    }
+}
+
+#layout-footer .i_resource_patreon,
+#layout-footer .i_resource_twitter {
+    display: none
+}
+
+a.i_icon.brand:hover,
+label.i_icon.brand:hover {
+    opacity: .7
+}
+
+.i_audio_en {
+    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_english.png")
+}
+
+.i_audio_ja {
+    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_japanese.png")
+}
+
+.fancybox-close {
+    background-image: url("img.mugis/buttons/fancybox_sprite.png");
+    position: absolute;
+    top: -18px;
+    right: -18px;
+    width: 36px;
+    height: 36px;
+    z-index: 8040
+}
+
+#layout-footer .i_icon.brand,
+#layout-main div.tabbed_pane ul.tabs .collapse {
+    display: inline-block
+}
+
+.i_comment,
+.i_comment_add,
+.i_comment_creq,
+.i_comment_delete,
+.i_comment_edit,
+.i_comment_info,
+.i_comment_move,
+.i_comment_quote,
+.i_comment_report,
+.i_comment_revisions,
+.i_comment_setactive,
+.i_comment_undelete,
+.i_favourites,
+.i_favourites_no,
+.i_forum_add,
+.i_forum_delete,
+.i_forum_edit,
+.i_forum_group,
+.i_general_filter,
+.i_general_list,
+.i_general_sessions,
+.i_general_settings,
+.i_help,
+.i_info,
+.i_liststate_edit,
+.i_minus,
+.i_moveable,
+.i_mylist_add,
+.i_mylist_delete,
+.i_mylist_edit,
+.i_mylist_no,
+.i_plus,
+.i_pm_delete,
+.i_pm_reply,
+.i_recap,
+.i_register,
+.i_resource_amazon_video,
+.i_resource_facebook,
+.i_resource_imdb,
+.i_resource_instagram,
+.i_resource_linkedin,
+.i_resource_official_blog,
+.i_resource_official_hp,
+.i_resource_official_stream,
+.i_resource_patreon,
+.i_resource_napster,
+.i_resource_twitter,
+.i_resource_wiki,
+.i_resource_youtube,
+.i_review_add,
+.i_summary,
+.i_tab_collapse,
+.i_tab_default,
+.i_tab_expand,
+.i_tab_reset,
+.i_top,
+.i_topic_add,
+.i_topic_delete,
+.i_topic_history,
+.i_topic_lock,
+.i_topic_locked,
+.i_topic_move,
+.i_topic_read,
+.i_topic_split,
+.i_topic_subscribe,
+.i_topic_undelete,
+.i_topic_unlock,
+.i_topic_unsubscribe,
+.i_view_grid,
+.i_view_list,
+.i_view_smallgrid,
+.i_waifu_add,
+.i_waifu_delete,
+.i_wishlist,
+.i_wishlist_add,
+.i_wishlist_delete,
+.i_wishlist_edit {
+    background-image: none !important
+}
+
+.g_button a,
+.i_icon,
+button:not(.fancybox-close-small),
+#layout-main div.edit_actions>span>*,
+#layout-main ul.g_list li a,
+#layout-tabs ul li a {
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 16px;
+    margin: 0
+}
+
+.i_icon.brand {
+    font-family: Arial, Helvetica, sans-serif
+}
+
+#layout-main div.edit_actions>span.show>*::before,
+#layout-main ul.g_list li.latest a::before {
+    font-size: 1.19rem;
+    vertical-align: top
+}
+
+.i_comment,
+.i_favourites,
+.i_favourites_no,
+.i_general_filter,
+.i_general_list,
+.i_general_sessions,
+.i_general_settings,
+.i_help,
+.i_info,
+.i_liststate_edit,
+.i_minus,
+.i_mylist_add,
+.i_mylist_delete,
+.i_mylist_edit,
+.i_mylist_no,
+.i_plus,
+.i_recap,
+.i_resource_amazon_video,
+.i_resource_facebook,
+.i_resource_imdb,
+.i_resource_instagram,
+.i_resource_linkedin,
+.i_resource_official_blog,
+.i_resource_official_hp,
+.i_resource_official_stream,
+.i_resource_patreon,
+.i_resource_napster,
+.i_resource_twitter,
+.i_resource_wiki,
+.i_resource_youtube,
+.i_summary,
+.i_tab_collapse,
+.i_tab_default,
+.i_tab_expand,
+.i_tab_reset,
+.i_top,
+.i_view_grid,
+.i_view_list,
+.i_view_smallgrid,
+.i_waifu_add,
+.i_waifu_delete,
+.i_wishlist,
+.i_wishlist_add,
+.i_wishlist_delete,
+.i_wishlist_edit {
+    height: auto;
+    width: 16px;
+    font-size: 1.33rem
+}
+
+.i_resource_patreon::after {
+    content: ""
+}
+
+#layout-main .name.group .icons {
+    margin-top: .15em
+}
+
+.i_icon {
+    text-align: center;
+    vertical-align: text-bottom
+}
+
+.i_icon.i_tab_collapse,
+.i_icon.i_tab_default,
+.i_icon.i_tab_expand,
+.i_icon.i_tab_reset {
+    vertical-align: text-bottom
+}
+
+#layout-footer .links {
+    margin-top: -2em
+}
+
+#layout-footer .links>.i_icon {
+    font-size: 30px;
+    width: 0
+}
+
+#loading {
+    border-radius: 5px;
+    position: fixed;
+    left: auto;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    z-index: 10000;
+    margin: 1em;
+    opacity: 0;
+    pointer-events: none
+}
+
+#loading.active {
+    opacity: 1;
+    background: #000 url("https://cdn-eu.anidb.net/css/assets/images/libs/jquery.fancybox/fancybox_loading.gif") no-repeat scroll center center
+}
+
+@supports(display: grid) {
+
+    #layout-main *:not(.g_definitionlist):not(.g_segmentlist):not(.disablerowhover)>table:not(.nohover)>tbody>tr:not(.files):not(.episodes)>td {
+        position: relative
+    }
+
+    #layout-main *:not(.g_definitionlist):not(.g_segmentlist):not(.disablerowhover)>table:not(.nohover)>tbody>tr:not(.files):not(.episodes)>td::after {
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+        height: 100%;
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        transition: opacity .6s ease-out;
+        width: 100%;
+        z-index: 2;
+        pointer-events: none
+    }
+
+    #layout-main *:not(.g_definitionlist):not(.g_segmentlist):not(.disablerowhover)>table:not(.nohover)>tbody>tr:not(.files):not(.episodes):hover>td::after {
+        opacity: 1
+    }
+
+    #loading {
+        -webkit-animation: fancybox-rotate .8s infinite linear;
+        animation: fancybox-rotate .8s infinite linear;
+        background: transparent;
+        border: 6px solid rgba(100, 100, 100, 0.6);
+        border-radius: 100%;
+        border-top: 6px solid rgba(255, 255, 255, 0.6);
+        box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.4);
+        height: 4em;
+        width: 4em;
+        transition-duration: .25s;
+        transition-property: opacity;
+        transition-timing-function: cubic-bezier(0.47, 0, 0.74, 0.71)
+    }
+
+    #loading.active {
+        background: transparent;
+        transition-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1)
+    }
+}
+
+table {
+    border-collapse: separate
+}
+
+#layout-tabs ul.main-tabs>li.selected,
+#layout-tabs ul.main-tabs>li:hover {
+    border-bottom: 2px double
+}
+
+.g_bubble,
+.g_button a,
+button,
+input.text,
+input[type=button],
+input[type=date],
+input[type=password],
+input[type=submit],
+input[type=text],
+input[type=url],
+select,
+textarea,
+#layout-main div.edit_actions>span>*,
+#layout-main div.tabbed_pane ul.tabs li,
+#layout-main div.tabbed_pane_cfg div.body,
+#layout-main div.tabbed_pane_cfg ul.tabs li,
+#layout-main ul.g_list li,
+#layout-menu>li ul,
+#layout-tabs ul.main-tabs>li {
+    border: 1px solid
+}
+
+.g_segmentlist tr.g_odd+tr:not(.g_odd) td,
+.g_segmentlist tr:not(.g_odd)+tr.g_odd td,
+li+li.g_odd,
+li.g_odd+li,
+tr+tr td,
+tr+tr th,
+#layout-main>h1,
+#layout-main div.g_definitionlist tr th,
+#layout-main div.g_timedentry h4,
+#layout-main div.info div.extra div table,
+#layout-nav div.menu_hr {
+    border-top: 1px solid
+}
+
+#layout-main .episodes tr.newtype td {
+    border-top: 2px dotted
+}
+
+.tooltip {
+    outline: none
+}
+
+.tooltip span.text::after,
+.tooltip span.text::before {
+    border: 1px solid transparent
+}
+
+.tooltip span.text::after {
+    border-width: 10px
+}
+
+.tooltip span.text::before {
+    border-width: 13px
+}
+
+.g_image,
+.g_segmentlist tr+tr td,
+a,
+img,
+table table,
+#layout-main .block .g_definitionlist table,
+#layout-main div.tabbed_pane div.body div.pane ul li,
+#layout-search div.g_bubble.search {
+    border: 0
+}
+
+#layout-main div.anime_all div.info div.data table,
+#layout-main div.anime_all div.info div.extra div tr.more td,
+#layout-main div.g_definitionlist tr:first-child th,
+#layout-main div.tabbed_pane ul.tabs li.selected,
+#layout-main div.tabbed_pane ul.tabs li:hover,
+#layout-main div.tabbed_pane_cfg ul.tabs li.selected,
+#layout-main div.tabbed_pane_cfg ul.tabs li:hover {
+    border-top: 0
+}
+
+#layout-main .g_section>form>h2,
+#layout-main .g_section>h2 {
+    border-bottom: 1px solid
+}
+
+.g_filter.right .flap {
+    border-radius: 0 0 .5em .5em
+}
+
+#layout-main .g_list button,
+#layout-main .g_list input,
+#layout-main .g_list select {
+    box-shadow: inherit;
+    border: 0
+}
+
+@media screen and (max-width: 800px) {
+
+    #layout-main .g_datatable table td+td,
+    #layout-main .g_datatable table tr+tr td {
+        border: 0 !important
+    }
+}
+
+#layout-content {
+    border-radius: 5px 0 0 5px;
+    border-bottom: 1px solid;
+    border-left: 1px solid
+}
+
+#layout-menu>li ul {
+    border: 0
+}
+
+#layout-menu li.sub-menu {
+    border: 1px solid
+}
+
+#layout-content,
+#layout-menu li.sub-menu li+li {
+    border-top: 1px solid
+}
+
+#layout-menu li.sub-menu,
+#layout-menu li.sub-menu ul {
+    border-radius: 5px
+}
+
+#layout-menu li.sub-menu li:first-child:hover {
+    border-radius: 2px 2px 0px 0px
+}
+
+#layout-menu li.sub-menu li:last-child:hover {
+    border-radius: 0px 0px 2px 2px
+}
+
+td,
+th {
+    padding: 1px .5em;
+    height: 100%;
+    line-height: 1.9em
+}
+
+.g_button a {
+    width: auto
+}
+
+.g_button a,
+button,
+input[type=date],
+input[type=number],
+input[type=password],
+input[type=text],
+input[type=url],
+select:not(.multirow) {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 26px;
+    line-height: 22px
+}
+
+.g_button a,
+a.button,
+button,
+button.button,
+input.button,
+input[type=button],
+input[type=date],
+input[type=number],
+input[type=password],
+input[type=submit],
+input[type=text],
+input[type=url],
+select,
+#layout-main .g_definitionlist table tr td,
+#layout-main div.g_definitionlist tr th,
+#layout-main div.g_menu ul li,
+#layout-main ul.g_list li a,
+#layout-menu li.sub-menu ul li,
+#layout-tabs ul li a {
+    padding: 2px 8px
+}
+
+#layout-main div.edit_actions>span>* {
+    padding: 2px 7.3px
+}
+
+.action .i_icon,
+.icons .i_icon {
+    margin: .075em .125em;
+    min-height: 16px
+}
+
+.icons .i_icon.i_info,
+#layout-main .block .g_definitionlist table {
+    margin: 0
+}
+
+.g_bubble div.actions.icons .i_icon,
+.g_bubble div.name .icons .i_icon {
+    margin-top: -0.1em
+}
+
+h2 {
+    line-height: 1.6em
+}
+
+#layout-nav {
+    display: block;
+    height: 6em
+}
+
+#layout-main {
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 1em
+}
+
+#layout-menu {
+    display: block;
+    left: 0;
+    position: absolute;
+    top: 0;
+    z-index: 105
+}
+
+#layout-search {
+    display: block;
+    height: 56px;
+    left: 0;
+    margin-left: 1em;
+    position: absolute;
+    top: 3em;
+    width: 60em
+}
+
+#layout-search div.search {
+    margin-left: 16em;
+    margin-top: 1.3em;
+    width: 100%
+}
+
+#layout-search div.search form>div {
+    width: auto
+}
+
+#layout-search .text {
+    width: 25em;
+    margin: 0
+}
+
+#layout-search .submit {
+    float: right;
+    width: 7em;
+    margin: 0 0 0 3px;
+    height: 28px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+#layout-search select {
+    margin-left: -4px;
+    min-height: 0
+}
+
+#layout-main>h1 {
+    display: block;
+    text-align: left;
+    padding: .3em .6em
+}
+
+#layout-footer p {
+    margin-bottom: 0
+}
+
+#layout-footer p+p {
+    padding-top: 0
+}
+
+
+#layout-footer::after {
+    content: "©mugisub.com"
+}
+
+
+
+#layout-main h1.main {
+    display: none
+}
+
+#layout-menu>li ul {
+    display: none;
+    position: absolute;
+    z-index: 105;
+    margin-left: -0.7em;
+    padding: 0
+}
+
+#layout-menu li.sub-menu span.tab {
+    display: block;
+    position: relative
+}
+
+#layout-menu>li {
+    display: block;
+    float: left;
+    padding-left: .7em;
+    padding-right: .7em
+}
+
+#layout-nav div.menu_hr {
+    display: block;
+    margin-top: 2.5em
+}
+
+#layout-tabs {
+    margin: -2.45em 1em 1em 0;
+    min-height: 26px
+}
+
+#layout-tabs,
+#layout-tabs ul {
+    display: block;
+    text-align: right
+}
+
+#layout-tabs ul li {
+    display: inline-block;
+    padding: 0;
+    margin: 0
+}
+
+#layout-tabs ul li a {
+    display: inline-block
+}
+
+#layout-menu li.sub-menu span.tab {
+    display: none
+}
+
+#layout-footer {
+    text-align: center
+}
+
+h4,
+#layout-main div.g_timedentry h4 {
+    padding: .3em
+}
+
+#layout-main .g_definitionlist {
+    margin: 2px 0 0;
+    word-break: break-word
+}
+
+#layout-main div.g_timedentry div.body {
+    margin-top: .5em;
+    padding: 8px
+}
+
+#layout-main tr.header th.sortable:not(.sorter-false) {
+    padding: 0 .5em 0 1em
+}
+
+#layout-main div.edit_actions>span>*,
+#layout-main div.tabbed_pane ul.tabs li,
+#layout-main tr.header th.sortable a,
+#layout-main ul.g_list li a,
+#layout-tabs ul li a {
+    line-height: 20px
+}
+
+#layout-main tr.header th.sortable a,
+#layout-menu li.sub-menu ul li a {
+    display: block
+}
+
+button,
+#layout-main ul.g_list li {
+    display: inline-block;
+    vertical-align: top
+}
+
+.g_button a span {
+    display: inline-block;
+    padding-left: 6px
+}
+
+#layout-main div.g_content {
+    padding: 1px
+}
+
+#layout-main ul.g_list+button {
+    margin-left: .4em !important
+}
+
+#layout-main div.block div.data table th {
+    width: 10em
+}
+
+#layout-main ul.g_list li {
+    padding: 0;
+    margin-bottom: .5em
+}
+
+.g_filter .settings input.name {
+    height: 28px
+}
+
+#layout-main h2+div.edit_actions {
+    margin-top: -3.4em
+}
+
+#layout-menu li.sub-menu ul li.user-xname {
+    padding-bottom: .1em
+}
+
+#layout-menu li.sub-menu ul li.user-xauth {
+    padding-bottom: .5em
+}
+
+#layout-menu .user-xauth button,
+#layout-menu .user-xname input,
+#layout-menu .user-xpass input {
+    width: 100%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 28px
+}
+
+#layout-menu li.sub-menu ul li a {
+    box-sizing: border-box;
+    display: block;
+    height: 20px;
+    width: 100%
+}
+
+body,
+html {
+    height: 100%
+}
+
+#layout-content,
+#layout-main {
+    min-height: 100%
+}
+
+#layout-content #layout-main div.g_content {
+    min-height: 96.1em
+}
+
+#layout-content {
+    margin-left: 12.5em;
+    margin-top: -10.5em;
+    padding-left: 1em;
+    padding-top: 1px;
+    padding-bottom: 1em
+}
+
+#layout-main {
+    margin-left: 0
+}
+
+#layout-menu {
+    display: block;
+    margin-left: .9em;
+    position: static;
+    width: 10em;
+    padding-top: .5em
+}
+
+#layout-menu>li {
+    display: block;
+    float: none;
+    padding-left: 0;
+    padding-right: 0
+}
+
+#layout-menu>li ul {
+    display: block;
+    margin-left: 0;
+    padding: 0;
+    position: relative
+}
+
+#layout-menu li.sub-menu {
+    display: block;
+    margin-bottom: .5em
+}
+
+#layout-nav div.menu_hr {
+    display: none
+}
+
+#layout-nav {
+    margin-top: 102px;
+    height: 1px;
+    padding-bottom: 0
+}
+
+#layout-hint+#layout-nav {
+    margin-top: 122px
+}
+
+#layout-hint+#layout-nav #layout-search {
+    margin-top: 2em
+}
+
+#layout-content,
+#layout-menu {
+    margin-top: .5em
+}
+
+#layout-menu li.sub-menu ul li {
+    padding: 0
+}
+
+#layout-menu li.sub-menu ul li>a span,
+#layout-menu li.sub-menu ul li>span {
+    padding: 0 8px
+}
+
+#layout-main h1.main,
+#layout-menu li.sub-menu ul li.user-xkeep>label {
+    display: block
+}
+
+#layout-search {
+    top: 5px;
+    height: 70px;
+    margin-left: 0;
+    width: 100%
+}
+
+#layout-search div.search {
+    margin-left: 0;
+    margin-top: 0;
+    height: 70px
+}
+
+#layout-search div.search form>div {
+    position: absolute;
+    left: auto;
+    right: 1em;
+    top: 2.8em;
+    width: auto
+}
+
+#layout-menu li.sub-menu ul li>a,
+#layout-menu li.sub-menu ul li>label,
+#layout-menu li.sub-menu ul li>span {
+    line-height: 20px;
+    display: block
+}
+
+#layout-search .submit,
+#layout-search input.text,
+#layout-search select {
+    z-index: 105
+}
+
+#layout-menu li.sub-menu ul li.main span {
+    display: none
+}
+
+#layout-menu li.sub-menu ul li.main a {
+    position: absolute;
+    height: 75px;
+    margin-top: -110px;
+    width: calc(100vw - 45em)
+}
+
+#layout-search input.text,
+#layout-search select {
+    padding: 2px 8px;
+    height: 28px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+#layout-search select {
+    width: 8em
+}
+
+html {
+    font-size: .66em;
+    line-height: 1.5
+}
+
+a.i_button:hover,
+a.i_icon:hover,
+a.i_inline:hover {
+    text-decoration: none
+}
+
+button,
+input[type=button],
+input[type=checkbox],
+input[type=date],
+input[type=password],
+input[type=submit],
+input[type=text],
+input[type=url],
+select,
+textarea,
+#layout-main .g_account div.login button,
+#layout-main div.tabbed_pane ul.tabs li,
+#layout-main ul.g_list li,
+#layout-menu li.sub-menu,
+#layout-search .submit,
+#layout-search input.text,
+#layout-search select,
+#layout-tabs,
+#layout-tabs ul.main-tabs>li {
+    font-size: 1.04rem
+}
+
+a.button,
+button.button,
+input.button {
+    text-shadow: none
+}
+
+.g_button a span,
+h1,
+h2,
+h4,
+#layout-main div.edit_actions>span,
+#layout-main tr.header th,
+#layout-main tr.header th.sortable a,
+#layout-menu li.sub-menu span.tab {
+    font-family: Arial, Helvetica, sans-serif
+}
+
+#layout-main div.g_timedentry h4,
+#layout-main tr.header th,
+#layout-main tr.header th.sortable a,
+#layout-menu li.sub-menu span.tab {
+    font-weight: bold
+}
+
+#layout-main tr.header th,
+#layout-main tr.header th.sortable a,
+#layout-menu li.sub-menu span.tab {
+    font-variant: small-caps;
+    font-size: 1.1rem
+}
+
+a.button,
+button.button,
+input.button,
+#layout-main div.edit_actions>span>* {
+    font-weight: normal
+}
+
+.g_button a span {
+    font-size: 1rem
+}
+
+h1 a:not(.i_icon),
+h4 a:not(.i_icon),
+th a:not(.i_icon) {
+    text-decoration: underline;
+    text-decoration-style: dotted
+}
+
+.g_segmentlist th {
+    font-variant: small-caps
+}
+
+#layout-menu li.sub-menu span.tab {
+    text-transform: capitalize
+}
+
+#layout-menu {
+    font-size: 1.04rem
+}
+
+#layout-menu li.sub-menu,
+#layout-tabs {
+    font-size: inherit
+}
+
+#layout-menu li.sub-menu ul li a {
+    text-transform: capitalize
+}
+
+#layout-menu li.sub-menu span.tab {
+    cursor: auto
+}
+
+.g_bubble,
+#layout-content,
+#layout-menu li.sub-menu,
+#layout-menu li.sub-menu ul {
+    border-radius: 0
+}
+
+.g_bubble,
+.g_image,
+.tooltip span.text,
+table li+li {
+    border: 0 !important
+}
+
+table,
+#layout-content,
+#layout-hint,
+#layout-main>h1,
+#layout-main div.g_timedentry h4,
+#layout-main div.info div.extra div table,
+#layout-main div.tabbed_pane ul.tabs li,
+#layout-main div.tabbed_pane_cfg div.body,
+#layout-main div.tabbed_pane_cfg ul.tabs li,
+#layout-menu>li ul,
+#layout-menu li.sub-menu,
+#layout-menu li.sub-menu li+li,
+#layout-tabs ul.main-tabs>li {
+    border: 0
+}
+
+#layout-search {
+  background: url("img.mugis/logos/logo.svg") no-repeat scroll left top transparent;
+}
+@media screen and (max-width: 950px) {
+  #mugi:not(.nodropdownmenu) #layout-search {
+    background: url("img.mugis/logos/logo-wide.svg") no-repeat scroll left top
+      transparent;
+  }
+}
+@media screen and (max-width: 800px) {
+  #mugi:not(.nodropdownmenu) #layout-search {
+    background: url("img.mugis/logos/logo.svg") no-repeat scroll center top transparent;
+  }
+}
+@media screen and (max-width: 510px) {
+  #mugi:not(.nodropdownmenu) #layout-search {
+    background: url("img.mugis/logos/logo-small.svg") no-repeat scroll center top
+      transparent;
+  }
+}
+@media screen and (min-width: 1235px) {
+  #layout-search {
+    background: url("img.mugis/logos/logo-wide.svg") no-repeat scroll left top
+      transparent;
+  }
+}
+@media screen and (min-width: 1575px) {
+  #layout-search {
+    background: url("img.mugis/logos/logo-wider.svg") no-repeat scroll left top
+      transparent;
+  }
+}
+@media screen and (min-width: 1860px) {
+  #layout-search {
+    background: url("img.mugis/logos/logo-widest.svg") no-repeat scroll left top
+      transparent;
+  }
+}
+
+#layout-main ul.g_list {
+    min-height: 2.2em
+}
+
+#layout-menu li.sub-menu span.tab {
+    display: block
+}
+
+#layout-menu {
+    margin-left: 0;
+    width: 11.5em
+}
+
+#layout-menu li.sub-menu {
+    margin-bottom: 0
+}
+
+#layout-menu li.sub-menu span.tab {
+    padding: .3em .6em
+}
+
+#layout-menu li.sub-menu ul {
+    margin-right: .75em;
+    padding-bottom: .25em;
+    padding-top: .25em
+}
+
+#layout-menu li.sub-menu ul li a {
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 16px;
+    margin: 0;
+    font-size: 1.1rem;
+    padding-left: .6em
+}
+
+#layout-menu li.sub-menu ul li.main a {
+    margin-top: -133px
+}
+
+#layout-menu li.sub-menu ul li a::before {
+    text-align: center;
+    display: inline-block;
+    width: 14px;
+    font-size: 1.2rem
+}
+
+#layout-menu li.sub-menu ul li a::before {
+    vertical-align: middle
+}
+
+#layout-menu li.sub-menu ul li a span {
+    vertical-align: text-top
+}
+
+#layout-menu li.sub-menu ul li.main a::before {
+    display: none
+}
+
+#layout-main .g_account ul.tabs li {
+    border-bottom: 2px double
+}
+
+#layout-main div.info div.extra div table {
+    border: 0;
+    border-radius: 0
+}
+
+html {
+    color: #000
+}
+
+#layout-menu li.sub-menu ul li#user-logout a,
+#layout-menu li.sub-menu ul li#user-xauth button,
+#layout-search div.search {
+    background-image: none
+}
+
+.i_icon,
+a,
+a:active,
+a:link,
+a:visited,
+span.link,
+th a,
+#layout-main a.filter,
+#layout-menu li.sub-menu ul li a::before {
+    color: #0c4e86
+}
+
+.g_section>form>h2,
+.g_section>h2,
+input[type=date]:focus,
+input[type=date]:hover,
+input[type=password]:focus,
+input[type=password]:hover,
+input[type=text]:focus,
+input[type=text]:hover,
+input[type=url]:focus,
+input[type=url]:hover,
+select:focus,
+select:hover,
+textarea:focus,
+textarea:hover {
+    border-color: #999 !important
+}
+
+.g_bubble .name-colored,
+.i_icon:hover,
+a:hover,
+span.link:hover,
+#layout-menu li.sub-menu span.tab {
+    color: #800
+}
+
+#layout-main div.tabbed_pane ul.tabs li {
+    background-color: #d3d5d9
+}
+
+#layout-content {
+    border-bottom-color: #7d7d7d;
+    border-left-color: #9a9a9a;
+    border-top-color: #9a9a9a
+}
+
+table,
+#layout-main div.info div.extra div table {
+    border-top-color: #ddd
+}
+
+#layout-main>h1,
+#layout-main div.g_timedentry h4,
+#layout-main div.info div.extra div h2,
+#layout-main tr.header th.sortable:hover:not(.sorter-false),
+#layout-main tr.header th.sortable:hover:not(.sorter-false) a {
+    color: #ddd
+}
+
+input.text,
+input[type=date],
+input[type=password],
+input[type=text],
+input[type=url],
+option,
+select,
+table th,
+textarea,
+#layout-main table tr.header,
+#layout-main table tr.header a,
+#layout-main th>a:active,
+#layout-main th>a:link,
+#layout-main th>a:visited,
+#layout-main th>span.link,
+#layout-main ul.g_list li a,
+#layout-menu a:link,
+#layout-menu a:visited,
+#layout-menu li.sub-menu ul li#user-xname input,
+#layout-menu li.sub-menu ul li#user-xpass input,
+#layout-menu li.sub-menu ul li.user-xkeep label span,
+#layout-search input,
+#layout-search input.text,
+#layout-search select,
+#layout-tabs ul.main-tabs li a {
+    color: #ccc
+}
+
+th .i_icon,
+#layout-main>h1 a,
+#layout-main div.g_timedentry h4 a {
+    color: #a2bfd7
+}
+
+#layout-main>h1 a:hover,
+#layout-main div.g_timedentry h4 a:hover,
+#layout-main table tr th>a:hover,
+#layout-menu li:hover>a {
+    color: #fa5
+}
+
+button:hover,
+input[type=button]:hover,
+input[type=submit]:hover,
+#layout-main div.edit_actions>span>*:hover,
+#layout-main tr.header th.sortable:hover:not(.sorter-false),
+#layout-main tr.header th.sortable:hover:not(.sorter-false) a,
+#layout-main ul.g_list li.g_odd.selected,
+#layout-main ul.g_list li.g_odd:hover,
+#layout-main ul.g_list li.selected,
+#layout-main ul.g_list li.selected .i_icon,
+#layout-main ul.g_list li:hover {
+    background-color: #505862
+}
+
+.g_bubble,
+.g_bubble .g_bubble .g_bubble,
+.g_bubble .g_bubble .g_bubble .g_bubble .g_bubble,
+.g_bubble .g_bubble .g_bubble .g_bubble .g_bubble .g_bubble .g_bubble,
+.g_bubble .g_bubble .g_bubble .g_bubble .g_bubble .g_bubble .g_bubble .g_bubble .g_bubble,
+.tooltip>span.text.g_bubble,
+div.g_odd,
+li.g_odd,
+span.g_odd,
+tr.g_odd,
+#layout-main div.tabbed_pane ul.tabs li.selected,
+#layout-main div.tabbed_pane ul.tabs li:hover {
+    background-color: #bdbfc3
+}
+
+.g_bubble .g_bubble .g_bubble .g_bubble .g_bubble .g_bubble .g_bubble .g_bubble .g_odd,
+.g_bubble .g_bubble .g_bubble .g_bubble .g_bubble .g_bubble .g_odd,
+.g_bubble .g_bubble .g_bubble .g_bubble .g_odd,
+.g_bubble .g_bubble .g_odd,
+.g_definitionlist .g_bubble .g_bubble,
+.g_definitionlist .g_bubble .g_bubble .g_bubble .g_bubble,
+.g_definitionlist .g_odd .g_bubble,
+html,
+#layout-menu {
+    background-color: #b1b3b5
+}
+
+.g_bubble .g_bubble,
+.g_bubble .g_bubble .g_bubble .g_bubble,
+.g_bubble .g_bubble .g_bubble .g_bubble .g_bubble .g_bubble,
+.g_bubble .g_bubble .g_bubble .g_bubble .g_bubble .g_bubble .g_bubble .g_bubble,
+.g_bubble .g_bubble .g_bubble .g_bubble .g_bubble .g_bubble .g_bubble .g_odd,
+.g_bubble .g_bubble .g_bubble .g_bubble .g_bubble .g_odd,
+.g_bubble .g_bubble .g_bubble .g_bubble .g_odd,
+.g_bubble .g_bubble .g_bubble .g_odd,
+.g_bubble .g_odd,
+.g_odd .g_bubble,
+#layout-content,
+#layout-main .g_account ul.tabs li,
+#layout-tabs ul.main-tabs li.selected,
+#layout-tabs ul.main-tabs li:hover {
+    background-color: #cfd1d4
+}
+
+input.text,
+input[type=date],
+input[type=password],
+input[type=text],
+input[type=url],
+select,
+textarea,
+th,
+th a,
+#layout-main>h1,
+#layout-main div.g_timedentry h4,
+#layout-main div.info div.extra div h2,
+#layout-main table tr.header,
+#layout-menu li.sub-menu,
+#layout-menu li.sub-menu ul,
+#layout-search input,
+#layout-search input.text,
+#layout-search select,
+#layout-tabs ul.main-tabs li {
+    background-color: #34394d
+}
+
+input.text,
+input[type=date],
+input[type=password],
+input[type=text],
+input[type=url],
+select,
+textarea,
+#layout-main .g_filter div.settings input[type=text],
+#layout-main .g_filter div.settings select,
+#layout-search input.text,
+#layout-search select {
+    border-color: #34394d
+}
+
+.g_bubble,
+.g_image {
+    border-color: #9a9a9a #7d7d7d #7d7d7d #9a9a9a
+}
+
+.g_bubble.box:not(.small)>div.data div.name,
+#layout-main div.tabbed_pane ul.tabs li,
+#layout-menu li.sub-menu ul li#user-xname input,
+#layout-menu li.sub-menu ul li#user-xpass input,
+#layout-tabs ul.main-tabs li {
+    border-color: #9a9a9a
+}
+
+#layout-main>h1,
+#layout-main div.g_timedentry h4,
+#layout-menu li.sub-menu {
+    border-color: #eee #8e8e8e #8e8e8e #eee
+}
+
+#layout-main div.g_bubble.code,
+#layout-tabs ul.main-tabs li.selected a,
+#layout-tabs ul.main-tabs li:hover a {
+    color: #000
+}
+/* Upper tabs under logo */
+
+#layout-main .g_account ul.tabs li {
+    border-top-color: #9a9a9a;
+    border-left-color: #9a9a9a;
+    border-right-color: #7d7d7d
+}
+
+#layout-main .g_account ul.tabs li {
+    background-color: #cfd1d4;
+    border-bottom-color: #cfd1d4
+}
+
+#layout-tabs ul.main-tabs>li.selected,
+#layout-tabs ul.main-tabs>li:hover {
+    border-bottom-color: #cfd1d4
+}
+
+#layout-tabs ul.main-tabs>li {
+    border-bottom-color: #34394d
+}
+
+.tooltip span.text {
+    background-color: #d3d5d9 !important;
+    color: #000;
+    box-shadow: 0 8px 4px 0 rgba(0, 0, 0, 0.2);
+    opacity: .95
+}
+
+.tooltip span.text::after,
+.tooltip span.text::before {
+    border-color: rgba(211, 213, 217, 0);
+    border-bottom-color: #d3d5d9
+}
+
+.g_segmentlist tr.g_odd+tr:not(.g_odd) td,
+.g_segmentlist tr:not(.g_odd)+tr.g_odd td,
+li+li.g_odd,
+li.g_odd+li,
+tr+tr td,
+tr+tr th,
+#layout-main div.g_definitionlist tr th {
+    border-top-color: #999
+}
+
+#layout-search input.text {
+    box-shadow: 1px 1px 2px #8e8e8e inset
+}
+
+#layout-search select {
+    box-shadow: 0 1px 2px #8e8e8e inset
+}
+
+#layout-menu li.sub-menu li+li {
+    border-top-color: #454959
+}
+
+#layout-main .episodes tr.newtype td {
+    border-top-color: #34394d
+}
+
+#layout-menu li.sub-menu ul li.main a:hover {
+    background-color: transparent;
+    background-image: none
+}
+
+tr,
+#layout-main div.tabbed_pane div.body div.pane ul li:not(.row) .g_odd {
+    background-color: inherit
+}
+
+::-webkit-input-placeholder {
+    color: #aaa;
+    opacity: 1
+}
+
+::-moz-placeholder {
+    color: #aaa;
+    opacity: 1
+}
+
+::-ms-input-placeholder {
+    color: #aaa;
+    opacity: 1
+}
+
+::-moz-placeholder {
+    color: #aaa;
+    opacity: 1
+}
+
+::placeholder {
+    color: #aaa;
+    opacity: 1
+}
+
+.g_button a {
+    background-color: #fa5;
+    color: #000;
+    border-color: #fd0 #ff4d00 #ff4d00 #fd0
+}
+
+.g_button a:hover {
+    background-color: #f90;
+    color: #444 !important
+}
+
+button,
+input[type=button],
+input[type=submit],
+#layout-main div.edit_actions>span>*,
+#layout-main ul.g_list li,
+#layout-main ul.g_list li.g_odd {
+    color: #ccc;
+    background-color: #34394d;
+    border-color: #34394d
+}
+
+button:hover,
+input[type=button]:hover,
+input[type=submit]:hover,
+#layout-main div.edit_actions>span>*:hover,
+#layout-main ul.g_list li.g_odd.selected,
+#layout-main ul.g_list li.g_odd:hover,
+#layout-main ul.g_list li.selected,
+#layout-main ul.g_list li.selected .i_icon,
+#layout-main ul.g_list li:hover {
+    color: #c0daf0 !important
+}
+
+#layout-main ul.g_list li:hover a {
+    color: inherit
+}
+
+
+
+.g_filter .flap {
+    box-shadow: 0 1px 3px #666;
+    opacity: .9
+}
+
+#layout-main *:not(.g_definitionlist)>table>tbody>tr:not(.files):not(.episodes)>td::after {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))
+}
+
+@media screen and (max-width: 800px) {
+    #layout-main .g_datatable table tr {
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4)
+    }
+
+    #layout-main .g_datatable table tr td.name.main {
+        background: #444 !important;
+        color: #fff
+    }
+
+    #layout-main .g_datatable table tr td.name.main .i_info::after,
+    #layout-main .g_datatable table tr td.name.main a {
+        color: #ddd
+    }
+}
+
+#layout-main div.tabbed_pane div.body {
+    margin-top: 1px
+}
+
+.g_button a {
+    padding: 2px 8px
+}
+
+#layout-menu li.sub-menu ul li a,
+#layout-menu li.sub-menu ul li.user-xkeep label span {
+    color: #000
+}
+
+.g_button a:hover,
+h4 a:hover,
+table th.sortable:hover:not(.sorter-false),
+th a:hover {
+    color: #c0daf0 !important
+}
+
+#layout-menu .sub-menu {
+    background-color: inherit !important
+}
+
+.g_button a {
+    background-color: #34394d;
+    border-color: #34394d
+}
+
+.g_button a,
+th,
+th a {
+    color: #ccc
+}
+
+.g_bubble,
+#layout-content,
+#layout-hint,
+#layout-main>h1,
+#layout-main div.g_msg,
+#layout-main div.g_timedentry h4,
+#layout-menu li.sub-menu span.tab,
+#layout-menu li.sub-menu ul {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4)
+}
+
+#layout-main div.tabbed_pane ul.tabs li,
+#layout-tabs ul.main-tabs>li {
+    box-shadow: 2px -2px 2px -1px rgba(0, 0, 0, 0.2)
+}
+
+#layout-main .g_account ul.tabs li {
+    box-shadow: 0 -2px 3px 0 rgba(0, 0, 0, 0.2)
+}
+
+#layout-search input.text.focus,
+#layout-search input.text.focus+select {
+    box-shadow: none
+}
+
+.g_button a:hover,
+#layout-menu li.sub-menu ul li:hover {
+    background-color: #505862
+}
+
+#layout-menu li.sub-menu span.tab,
+#layout-menu li.sub-menu ul li:hover,
+#layout-menu li.sub-menu ul li:hover a,
+#layout-menu li.sub-menu ul li:hover a::before {
+    color: #ddd;
+    background-color: #34394d
+}
+
+#layout-menu li.sub-menu ul {
+    background-color: #bdbfc3
+}
+
+#layout-main .g_account ul.tabs li {
+    border-color: #cfd1d4
+}
+
+#layout-main div.info div.extra div h2 {
+    background-color: inherit
+}
+
+#layout-main div.info div.extra div h2 {
+    color: inherit
+}
+
+#layout-main *:not(.g_definitionlist)>table>tbody>tr:not(.files):not(.episodes)>td::after {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))
+}
+
+@media all and (max-width: 950px) {
+
+    #anidb:not(.nodropdownmenu) #layout-content,
+    #anidb:not(.nodropdownmenu) #layout-main {
+        min-height: 0
+    }
+
+    #anidb:not(.nodropdownmenu) #layout-content {
+        margin-left: 0;
+        margin-top: 7em;
+        padding-left: .5em
+    }
+
+    #anidb:not(.nodropdownmenu) #layout-menu {
+        display: inline-block;
+        height: 31px;
+        margin-left: .8em;
+        width: auto;
+        padding-top: 0
+    }
+
+    #anidb:not(.nodropdownmenu) #layout-menu>li {
+        display: block;
+        float: left;
+        font-weight: 700;
+        line-height: 20px;
+        padding: 0 1.3em
+    }
+
+    #anidb:not(.nodropdownmenu) #layout-menu>li ul {
+        border-top: 0;
+        visibility: hidden;
+        font-weight: 400;
+        line-height: normal;
+        margin-left: -1.3em;
+        margin-top: 31px;
+        padding: 0;
+        position: absolute;
+        width: 144px
+    }
+
+    #anidb:not(.nodropdownmenu) #layout-menu a {
+        display: inline-block;
+        padding: 3px 8px
+    }
+
+    #anidb:not(.nodropdownmenu) #layout-menu a.history {
+        padding: 3px 0
+    }
+
+    #anidb:not(.nodropdownmenu) #layout-menu li.sub-menu span.tab {
+        display: inline;
+        float: right;
+        cursor: pointer;
+        padding: .5em 0
+    }
+
+    #anidb:not(.nodropdownmenu) #layout-menu>li.sub-menu.touched ul,
+    #anidb:not(.nodropdownmenu) #layout-menu>li.sub-menu:active ul,
+    #anidb:not(.nodropdownmenu) #layout-menu>li.sub-menu:focus ul,
+    #anidb:not(.nodropdownmenu) #layout-menu>li.sub-menu:hover ul {
+        visibility: visible
+    }
+
+    #anidb:not(.nodropdownmenu) #layout-menu li.sub-menu ul li a {
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        height: 28px
+    }
+
+    #anidb:not(.nodropdownmenu) #layout-main {
+        margin-left: .5em;
+        margin-top: 1em
+    }
+
+    #anidb:not(.nodropdownmenu) #layout-search,
+    #anidb:not(.nodropdownmenu) #layout-search div.search {
+        height: 70px
+    }
+
+    #anidb:not(.nodropdownmenu) #layout-menu {
+        margin-top: 7.5em
+    }
+
+    #anidb:not(.nodropdownmenu) #layout-menu li.sub-menu ul li.alert {
+        height: 28px
+    }
+
+    #anidb:not(.nodropdownmenu) #layout-menu li.sub-menu {
+        margin-bottom: 0;
+        cursor: pointer
+    }
+
+    #anidb:not(.nodropdownmenu) #layout-menu li.sub-menu ul li.main a {
+        margin-top: -12.7em;
+        visibility: visible;
+        height: 75px;
+        padding: 0
+    }
+
+    #anidb:not(.nodropdownmenu) #layout-nav {
+        margin-top: 0;
+        height: 76px
+    }
+
+    #anidb:not(.nodropdownmenu) #layout-hint+#layout-nav {
+        height: 96px
+    }
+
+    #anidb:not(.nodropdownmenu) #layout-hint+#layout-nav #layout-menu {
+        margin-top: 9.5em
+    }
+
+    #anidb:not(.nodropdownmenu) #layout-menu {
+        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
+        background-color: #34394d
+    }
+
+    #anidb:not(.nodropdownmenu) #layout-menu li.sub-menu span.tab {
+        color: #ddd !important;
+        box-shadow: none
+    }
+
+    #anidb:not(.nodropdownmenu) #layout-menu li.sub-menu+li.sub-menu {
+        border-left: 1px solid #999 !important
+    }
+
+    #anidb:not(.nodropdownmenu) #layout-menu li.sub-menu:hover {
+        background-color: #58636e !important
+    }
+
+    #anidb:not(.nodropdownmenu) #layout-menu li.sub-menu:hover span.tab {
+        color: #c0daf0 !important;
+        background-color: #58636e
+    }
+}
+
+@media screen and (max-width: 950px) {
+    #anidb:not(.nodropdownmenu) #layout-content {
+        margin-top: 9.75em
+    }
+
+    #anidb:not(.nodropdownmenu) #layout-search div.search a.advsearch {
+        display: none
+    }
+
+    #anidb:not(.nodropdownmenu) #layout-search .text {
+        width: calc(100% - 17em);
+        margin-left: 1em
+    }
+
+    #anidb:not(.nodropdownmenu) #layout-search div.search form>div {
+        top: 7.25em;
+        width: calc(100% - .5em);
+        left: -0.5em
+    }
+
+    #anidb:not(.nodropdownmenu) #layout-search ul.quicksearch {
+        margin: .1em 0 0 1.4em !important;
+        width: calc(100% - 1.5em);
+        max-width: none
+    }
+
+    #anidb:not(.nodropdownmenu) #layout-search ul.quicksearch .g_bubble.stripe {
+        max-width: none
+    }
+
+    #anidb:not(.nodropdownmenu) #layout-menu {
+        margin-top: 10.75em
+    }
+
+    #anidb:not(.nodropdownmenu) #layout-menu>li ul {
+        padding-top: .5em
+    }
+
+    #anidb:not(.nodropdownmenu) #layout-menu li.sub-menu ul li.main a {
+        width: calc(100vw - 1.5em)
+    }
+
+    #anidb:not(.nodropdownmenu) #layout-hint+#layout-nav #layout-menu {
+        margin-top: 12.25em
+    }
+
+    #anidb:not(.nodropdownmenu) #layout-content #layout-main div.g_content {
+        min-height: 0
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #anidb:not(.nodropdownmenu) #layout-menu>li ul {
+        width: 10.1em
+    }
+
+    #anidb:not(.nodropdownmenu) #layout-menu>li ul#menu-account {
+        margin-left: -4em
+    }
+
+    #anidb:not(.nodropdownmenu) #layout-menu li.sub-menu ul li>a span,
+    #anidb:not(.nodropdownmenu) #layout-menu li.sub-menu ul li>span {
+        padding: 0 5px
+    }
+
+    #anidb:not(.nodropdownmenu) #layout-menu a {
+        padding: 3px 5px
+    }
+
+    #anidb:not(.nodropdownmenu) #layout-menu li.sub-menu .alert>span a {
+        margin-right: -0.75em
+    }
+
+    #anidb:not(.nodropdownmenu) #layout-menu li.sub-menu.mod {
+        display: none
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #anidb:not(.nodropdownmenu) #layout-menu li.sub-menu.terms {
+        display: none
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #anidb:not(.nodropdownmenu) #layout-menu li.sub-menu.support {
+        display: none
+    }
+}
+
+/* mugisub poster icons */
+.icons.actions { display: inline-block; width: 150px; height: 32px; background-size: contain; background-repeat: no-repeat; background-position: center; vertical-align: middle }
+
+#a357   .icons.actions { background-image: url("img.mugis/poster_icon/berserk_icon.png") }
+#a557   .icons.actions { background-image: url("img.mugis/poster_icon/texhnolyze_icon.png") }
+#a3750  .icons.actions { background-image: url("img.mugis/poster_icon/monster_icon.png") }
+#a4978  .icons.actions { background-image: url("img.mugis/poster_icon/shigurui_icon.png") }
+#a5572  .icons.actions { background-image: url("img.mugis/poster_icon/kaiba_icon.png") }
+#a4054  .icons.actions { background-image: url("img.mugis/poster_icon/ergo_proxy_icon.png") }
+#a6127  .icons.actions { background-image: url("img.mugis/poster_icon/casshern_icon.png") }
+#a3609  .icons.actions { background-image: url("img.mugis/poster_icon/paranoia_agent_icon.png") }
+#a11706 .icons.actions { background-image: url("img.mugis/poster_icon/devilman_icon.png") }
+#a1598  .icons.actions { background-image: url("img.mugis/poster_icon/lain_icon.png") }
+#a686   .icons.actions { background-image: url("img.mugis/poster_icon/haibane_icon.png") }
+#a8108  .icons.actions { background-image: url("img.mugis/poster_icon/from_the_new_world_icon.png") }
+
+
+
+
+
