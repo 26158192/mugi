@@ -26,7 +26,14 @@
     }
   };
 
-  function update(cat, titleLabel, titleInput, noteInput) {
+  function update() {
+    var cat        = document.getElementById('req-category');
+    var titleLabel = document.getElementById('req-title-label');
+    var titleInput = document.getElementById('req-title');
+    var noteInput  = document.getElementById('req-note');
+
+    if (!cat || !titleLabel || !titleInput || !noteInput) return;
+
     var val = cat.value;
     var d   = data[val] || data.anime;
 
@@ -41,18 +48,14 @@
   }
 
   function init() {
-    var cat        = document.getElementById('req-category');
-    var titleLabel = document.getElementById('req-title-label');
-    var titleInput = document.getElementById('req-title');
-    var noteInput  = document.getElementById('req-note');
-    var form       = document.getElementById('request-form');
+    var cat  = document.getElementById('req-category');
+    var form = document.getElementById('request-form');
 
-    if (!cat || !titleLabel || !titleInput || !noteInput || !form) return;
+    if (!cat || !form) return;
 
-    /* change aur input dono pe update karo */
-    cat.addEventListener('change', function () { update(cat, titleLabel, titleInput, noteInput); });
-    cat.addEventListener('input',  function () { update(cat, titleLabel, titleInput, noteInput); });
-    update(cat, titleLabel, titleInput, noteInput);
+    cat.addEventListener('change', update);
+    cat.addEventListener('input',  update);
+    update();
 
     // ── Telegram ─────────────────────────────
     function buildMessage(category, title, link, note) {
@@ -89,14 +92,18 @@
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      var category = cat.value;
-      var title    = titleInput.value.trim();
-      var linkEl   = form.querySelector('input[name="link"]');
-      var link     = linkEl ? linkEl.value : '';
-      var note     = noteInput.value.trim();
-      var btn      = form.querySelector('button[type="submit"]');
+      var cat        = document.getElementById('req-category');
+      var titleInput = document.getElementById('req-title');
+      var noteInput  = document.getElementById('req-note');
+      var linkEl     = form.querySelector('input[name="link"]');
+      var btn        = form.querySelector('button[type="submit"]');
 
-      if (!title) { titleInput.focus(); return; }
+      var category = cat ? cat.value : 'anime';
+      var title    = titleInput ? titleInput.value.trim() : '';
+      var link     = linkEl ? linkEl.value : '';
+      var note     = noteInput ? noteInput.value.trim() : '';
+
+      if (!title) { if (titleInput) titleInput.focus(); return; }
 
       btn.disabled    = true;
       btn.textContent = 'Sending...';
@@ -108,7 +115,7 @@
             btn.textContent      = '✓ Request Sent!';
             btn.style.background = '#2e7d4f';
             form.reset();
-            update(cat, titleLabel, titleInput, noteInput);
+            update();
             setTimeout(function () {
               btn.disabled         = false;
               btn.textContent      = 'Submit Request';
