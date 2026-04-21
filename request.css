@@ -19,9 +19,11 @@
     border-radius: 3px;
     box-sizing: border-box;
     margin-bottom: 0.8em;
-    font-size: inherit;
+    font-size: 16px; /* iOS zoom prevent */
     font-family: inherit;
     vertical-align: middle;
+    -webkit-appearance: none;
+    appearance: none;
 }
 
 .req-input:focus {
@@ -44,10 +46,12 @@
     border: 1px solid #2a4a6f;
     border-radius: 3px;
     cursor: pointer;
-    font-size: inherit;
+    font-size: 16px;
     font-family: inherit;
     margin-bottom: 0.5em;
     vertical-align: middle;
+    -webkit-appearance: none;
+    appearance: none;
 }
 
 .req-submit:hover {
@@ -72,17 +76,23 @@
 }
 
 /* request-form-styles-end */
+
 /* ── Pure CSS Filter Toggle (no JS) ── */
 
-/* Checkbox hidden — sirf label se control hoga */
 .req-filter-checkbox {
     display: none !important;
 }
 
-/* Default state: filter panel hidden, REQ button visible */
 .req-filter-panel {
     display: none;
     position: relative;
+}
+
+/* Filter panel scrollable — mobile keyboard open hone pe bhi kaam kare */
+.g_filter .content {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    max-height: 80vh;
 }
 
 .req-flap {
@@ -96,7 +106,6 @@
     transform: rotate(90deg);
     cursor: pointer;
     z-index: 999;
-    /* g_bubble styling inherit hogi, extra polish: */
     background: #34394D;
     color: #ccc;
     border: 1px solid #2a4a6f;
@@ -111,7 +120,6 @@
     border-color: #e18e3c;
 }
 
-/* Close button andar */
 .req-filter-close {
     display: block;
     position: absolute;
@@ -129,7 +137,6 @@
     color: #fff;
 }
 
-/* Checkbox checked → panel show, REQ button hide */
 .req-filter-checkbox:checked ~ .req-filter-panel {
     display: block;
 }
