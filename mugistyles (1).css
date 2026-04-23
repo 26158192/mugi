@@ -1,135 +1,3 @@
-/* === Pinterest Design System Applied to mugisub.com === */
-
-:root {
-    /* Pinterest Color Tokens */
-    --pin-red:          #e60023;   /* Pinterest Red */
-    --pin-red-hover:    #ad081b;   /* Red Hover */
-    --pin-bg:           #ffffff;   /* White Canvas */
-    --pin-fog:          #f6f6f3;   /* Warm Fog */
-    --pin-sand:         #e5e5e0;   /* Sand Gray */
-    --pin-warm-light:   #e0e0d9;   /* Warm Light */
-    --pin-text:         #211922;   /* Plum Black */
-    --pin-text-2:       #62625b;   /* Olive Gray */
-    --pin-text-3:       #91918c;   /* Warm Silver */
-    --pin-border:       #91918c;   /* Warm Silver Border */
-    --pin-focus:        #435ee5;   /* Focus Blue */
-
-    /* Pinterest Typography */
-    --pin-font: 'Pin Sans', -apple-system, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-
-    /* Pinterest Radius */
-    --pin-radius-sm:    12px;
-    --pin-radius-md:    16px;
-    --pin-radius-lg:    20px;
-    --pin-radius-xl:    40px;
-    --pin-radius-circle: 50%;
-}
-
-/* Base text color: plum black */
-html {
-    background-color: #f6f6f3;
-}
-
-/* Primary links: Pinterest Red */
-a, a:link, a:visited, span.link {
-    color: #e60023;
-}
-
-/* Hover: deeper red */
-a:hover, span.link:hover {
-    color: #ad081b;
-    text-decoration: underline;
-}
-
-/* Focus rings: Pinterest Focus Blue */
-a:focus, button:focus, input:focus, select:focus, textarea:focus {
-    outline: 2px solid #435ee5;
-    outline-offset: 2px;
-}
-
-/* Buttons: Pinterest Red primary */
-button,
-input[type=button],
-input[type=submit] {
-    background-color: #e60023;
-    color: #ffffff;
-    border: 2px solid rgba(255,255,255,0);
-    border-radius: 16px;
-    font-family: var(--pin-font);
-    cursor: pointer;
-    transition: background-color 0.15s ease;
-}
-
-button:hover,
-input[type=button]:hover,
-input[type=submit]:hover {
-    background-color: #ad081b;
-    color: #ffffff !important;
-}
-
-/* Inputs: warm white with silver border */
-input[type=text],
-input[type=password],
-input[type=url],
-input[type=date],
-input[type=number],
-select,
-textarea {
-    background-color: #ffffff;
-    border: 1px solid #91918c;
-    border-radius: 16px;
-    color: #211922;
-    font-family: var(--pin-font);
-}
-
-input[type=text]:focus,
-input[type=password]:focus,
-input[type=url]:focus,
-input[type=date]:focus,
-select:focus,
-textarea:focus {
-    border-color: #435ee5;
-    outline: 2px solid rgba(67,94,229,0.3);
-}
-
-/* Cards/bubbles: warm white with subtle shadow */
-.g_bubble {
-    background-color: #ffffff;
-    border: 1px solid #e5e5e0;
-    border-radius: 16px;
-}
-
-/* Navigation menu: warm white */
-#layout-menu li.sub-menu {
-    background-color: #f6f6f3;
-}
-
-/* Table headers: sand gray */
-th, #layout-main table tr.header {
-    background-color: #e5e5e0;
-    color: #211922;
-}
-
-/* Headings */
-h1, h2, h3, h4 {
-    color: #211922;
-    font-family: var(--pin-font);
-}
-
-/* Tabs */
-#layout-main div.tabbed_pane ul.tabs li {
-    border-radius: 16px 16px 0 0;
-}
-
-/* Scrollbar: warm Pinterest style */
-::-webkit-scrollbar { width: 6px; height: 6px; }
-::-webkit-scrollbar-track { background: #f6f6f3; }
-::-webkit-scrollbar-thumb { background: #e5e5e0; border-radius: 16px; }
-::-webkit-scrollbar-thumb:hover { background: #e60023; }
-
-/* Placeholder */
-::placeholder { color: #91918c; opacity: 1; }
-
 body,
 div,
 fieldset,
@@ -392,7 +260,7 @@ h1+.icons {
     border-bottom: 0
 }
 
-#anidb div.block {
+#mugisub div.block {
     width: 100%;
     margin-top: .5em;
     display: -webkit-box;
@@ -406,35 +274,35 @@ h1+.icons {
     justify-content: center
 }
 
-#anidb div.block>div.image {
+#mugisub div.block>div.image {
     text-align: center;
     margin-right: 1em
 }
 
-#anidb div.block>div.image>div.container {
+#mugisub div.block>div.image>div.container {
     position: relative;
     display: inline-block
 }
 
-#anidb div.block>div.data {
+#mugisub div.block>div.data {
     max-width: 65em;
     width: 100%;
     z-index: 1
 }
 
-#anidb div.block+div.g_bubble.desc,
-#anidb div.g_section.desc {
+#mugisub div.block+div.g_bubble.desc,
+#mugisub div.g_section.desc {
     margin: 1em 0;
     padding: 1em;
     overflow-wrap: break-word
 }
 
-#anidb div.block div.data table {
+#mugisub div.block div.data table {
     width: 100%;
     margin: 0
 }
 
-#anidb div.block div.data table th {
+#mugisub div.block div.data table th {
     width: 10em
 }
 
@@ -584,7 +452,7 @@ h1+.icons {
 }
 
 .g_bubble {
-    border-radius: 16px;
+    border-radius: 5px;
     border-style: solid;
     border-width: 1px
 }
@@ -1155,7 +1023,7 @@ select {
     text-align: left
 }
 
-#anidb:not(.internet_explorer) #layout-search ul.quicksearch .g_bubble.stripe {
+#mugisub:not(.internet_explorer) #layout-search ul.quicksearch .g_bubble.stripe {
     width: 100%
 }
 
@@ -1752,7 +1620,7 @@ div.g_timeline li {
 @media screen and (max-width: 800px) {
 
     
-    #anidb.mylist #layout-tabs li:not(.userdata):not(.mylist):not(.mywishlist):not(.myvotes):not(.mynotifies):not(.guestbook):not(.blog):not(.myrecs) {
+    #mugisub.mylist #layout-tabs li:not(.userdata):not(.mylist):not(.mywishlist):not(.myvotes):not(.mynotifies):not(.guestbook):not(.blog):not(.myrecs) {
         display: none
     }
 }
@@ -1760,7 +1628,7 @@ div.g_timeline li {
 @media screen and (max-width: 700px) {
 
     
-    #anidb.mylist #layout-tabs li:not(.userdata):not(.mylist):not(.mywishlist):not(.myvotes):not(.mynotifies):not(.guestbook):not(.blog) {
+    #mugisub.mylist #layout-tabs li:not(.userdata):not(.mylist):not(.mywishlist):not(.myvotes):not(.mynotifies):not(.guestbook):not(.blog) {
         display: none
     }
 }
@@ -1768,7 +1636,7 @@ div.g_timeline li {
 @media screen and (max-width: 600px) {
 
     
-    #anidb.mylist #layout-tabs li:not(.userdata):not(.mylist):not(.mywishlist):not(.myvotes):not(.mynotifies):not(.guestbook) {
+    #mugisub.mylist #layout-tabs li:not(.userdata):not(.mylist):not(.mywishlist):not(.myvotes):not(.mynotifies):not(.guestbook) {
         display: none
     }
 }
@@ -1776,7 +1644,7 @@ div.g_timeline li {
 @media screen and (max-width: 515px) {
 
     
-    #anidb.mylist #layout-tabs li:not(.userdata):not(.mylist):not(.mywishlist):not(.myvotes):not(.mynotifies) {
+    #mugisub.mylist #layout-tabs li:not(.userdata):not(.mylist):not(.mywishlist):not(.myvotes):not(.mynotifies) {
         display: none
     }
 }
@@ -1784,7 +1652,7 @@ div.g_timeline li {
 @media screen and (max-width: 425px) {
 
     
-    #anidb.mylist #layout-tabs li:not(.userdata):not(.mylist):not(.mywishlist):not(.myvotes) {
+    #mugisub.mylist #layout-tabs li:not(.userdata):not(.mylist):not(.mywishlist):not(.myvotes) {
         display: none
     }
 }
@@ -1822,7 +1690,7 @@ div.g_timeline li {
     left: -5px;
     top: -4px;
     border: 5px solid transparent;
-    border-left-color: #e60023;
+    border-left-color: red;
     border-right: 0
 }
 
@@ -1878,13 +1746,13 @@ html {
 }
 
 .highcharts-legend-nav-inactive {
-    fill: #91918c
+    fill: #ccc
 }
 
 .highcharts-button-hover {
     transition: fill 0ms;
     fill: #e6e6e6;
-    stroke: #91918c
+    stroke: #ccc
 }
 
 .highcharts-button-hover text {
@@ -1903,19 +1771,19 @@ html {
 }
 
 #layout-main div.g_msg.note {
-    border: 1px solid #e5e5e0;
-    background-color: hsla(60, 20%, 98%, 0.5)
+    border: 1px solid #afaf00;
+    background-color: #ffffdf
 }
 
 #layout-main div.g_msg.note h3 {
-    color: #62625b
+    color: #afaf00
 }
 
 .g_vital a {
-    color: #e60023
+    color: red
 }
 
-#anidb table ul li.g_odd,
+#mugisub table ul li.g_odd,
 #layout-main table table td.g_odd,
 #layout-main ul.g_list li.g_odd {
     background-color: transparent
@@ -1923,11 +1791,11 @@ html {
 
 #layout-main .name span.main,
 #layout-main a.filter {
-    color: #91918c
+    color: gray
 }
 
 input.g_error {
-    background-color: rgba(158, 10, 10, 0.08)
+    background-color: #fdd
 }
 
 h1 a.shortlink,
@@ -1950,8 +1818,8 @@ th a {
 }
 
 #layout-hint {
-    border: 1px solid #e5e5e0;
-    background-color: hsla(60, 20%, 98%, 0.5)
+    border: 1px solid #afaf00;
+    background-color: #ffffdf
 }
 
 .g_image_overlay>a {
@@ -1963,7 +1831,7 @@ th a {
 }
 
 #layout-main .g_account ul.tabs li a {
-    color: #ffffff
+    color: #fff
 }
 
 #layout-menu li.sub-menu ul li#user-xauth:hover,
@@ -2154,7 +2022,7 @@ h4>span {
 }
 
 .g_filter .flap {
-    font-family: 'Pin Sans', -apple-system, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif
+    font-family: Arial, Helvetica, sans-serif
 }
 
 #layout-main div.g_bubble.code div.title {
@@ -2282,28 +2150,28 @@ h4,
 }
 
 #layout-main tr.g_fs_lame {
-    background-color: rgba(230, 0, 35, 0.08)
+    background-color: #d6b8b8
 }
 
 .g_bubble.box.mylist,
 #layout-main div.anime_all div.tabbed_pane_main table tr.mylist,
 #layout-main table.animelist tr.mylist,
 #layout-main table.file.entities tr.good {
-    background-color: rgba(16, 60, 37, 0.10)
+    background-color: #a7dda7
 }
 
 #layout-main div:not(.ed2kdump_all) tr td.mylist {
-    background-color: rgba(16, 60, 37, 0.10)
+    background-color: #a7dda7
 }
 
 #layout-main div.anime_all div.tabbed_pane_main table tr.g_odd.mylist,
 #layout-main table.animelist tr.g_odd.mylist,
 #layout-main table.file.entities tr.g_odd.good {
-    background-color: rgba(16, 60, 37, 0.07)
+    background-color: #9ad09a
 }
 
 #layout-main div:not(.ed2kdump_all) tr.g_odd td.mylist {
-    background-color: rgba(16, 60, 37, 0.07)
+    background-color: #9ad09a
 }
 
 .g_vital a {
@@ -2382,11 +2250,11 @@ label.i_icon.brand:hover {
 }
 
 .i_audio_en {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_english.png")
+    background-image: url("img.mugis/flags/audio_english.png")
 }
 
 .i_audio_ja {
-    background-image: url("https://cdn-eu.anidb.net/css/assets/images/flags/audio_japanese.png")
+    background-image: url("img.mugis/flags/audio_japanese.png")
 }
 
 .fancybox-close {
@@ -2491,7 +2359,7 @@ button:not(.fancybox-close-small),
 #layout-main ul.g_list li a,
 #layout-tabs ul li a {
     display: inline-block;
-    font-family: 'Pin Sans', -apple-system, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
@@ -2503,7 +2371,7 @@ button:not(.fancybox-close-small),
 }
 
 .i_icon.brand {
-    font-family: 'Pin Sans', -apple-system, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif
+    font-family: Arial, Helvetica, sans-serif
 }
 
 #layout-main div.edit_actions>span.show>*::before,
@@ -2592,7 +2460,7 @@ button:not(.fancybox-close-small),
 }
 
 #loading {
-    border-radius: 16px;
+    border-radius: 5px;
     position: fixed;
     left: auto;
     right: 0;
@@ -2607,7 +2475,7 @@ button:not(.fancybox-close-small),
 
 #loading.active {
     opacity: 1;
-    background: #000 url("https://cdn-eu.anidb.net/css/assets/images/libs/jquery.fancybox/fancybox_loading.gif") no-repeat scroll center center
+    background: #000 url("img.mugis/libs/fancybox_loading.gif") no-repeat scroll center center
 }
 
 @supports(display: grid) {
@@ -2794,7 +2662,7 @@ table table,
 }
 
 #layout-menu li.sub-menu li:last-child:hover {
-    border-radius: 16px 0px 2px 2px
+    border-radius: 0px 0px 2px 2px
 }
 
 td,
@@ -3291,7 +3159,7 @@ h4,
 #layout-main tr.header th,
 #layout-main tr.header th.sortable a,
 #layout-menu li.sub-menu span.tab {
-    font-family: 'Pin Sans', -apple-system, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif
+    font-family: Arial, Helvetica, sans-serif
 }
 
 #layout-main div.g_timedentry h4,
@@ -3355,7 +3223,7 @@ th a:not(.i_icon) {
 #layout-content,
 #layout-menu li.sub-menu,
 #layout-menu li.sub-menu ul {
-    border-radius: 16px
+    border-radius: 0
 }
 
 .g_bubble,
@@ -3449,7 +3317,7 @@ table,
 
 #layout-menu li.sub-menu ul li a {
     display: inline-block;
-    font-family: 'Pin Sans', -apple-system, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
@@ -3491,11 +3359,11 @@ table,
 
 #layout-main div.info div.extra div table {
     border: 0;
-    border-radius: 16px
+    border-radius: 0
 }
 
 html {
-    color: #211922
+    color: #000
 }
 
 #layout-menu li.sub-menu ul li#user-logout a,
@@ -3513,7 +3381,7 @@ span.link,
 th a,
 #layout-main a.filter,
 #layout-menu li.sub-menu ul li a::before {
-    color: #e60023
+    color: #0c4e86
 }
 
 .g_section>form>h2,
@@ -3530,7 +3398,7 @@ select:focus,
 select:hover,
 textarea:focus,
 textarea:hover {
-    border-color: #91918c !important
+    border-color: #999 !important
 }
 
 .g_bubble .name-colored,
@@ -3538,22 +3406,22 @@ textarea:hover {
 a:hover,
 span.link:hover,
 #layout-menu li.sub-menu span.tab {
-    color: #ad081b
+    color: #800
 }
 
 #layout-main div.tabbed_pane ul.tabs li {
-    background-color: #ffffff
+    background-color: #d3d5d9
 }
 
 #layout-content {
-    border-bottom-color: #bcbcb3;
-    border-left-color: #91918c;
-    border-top-color: #91918c
+    border-bottom-color: #7d7d7d;
+    border-left-color: #9a9a9a;
+    border-top-color: #9a9a9a
 }
 
 table,
 #layout-main div.info div.extra div table {
-    border-top-color: #62625b
+    border-top-color: #ddd
 }
 
 #layout-main>h1,
@@ -3561,7 +3429,7 @@ table,
 #layout-main div.info div.extra div h2,
 #layout-main tr.header th.sortable:hover:not(.sorter-false),
 #layout-main tr.header th.sortable:hover:not(.sorter-false) a {
-    color: #62625b
+    color: #ddd
 }
 
 input.text,
@@ -3589,20 +3457,20 @@ textarea,
 #layout-search input.text,
 #layout-search select,
 #layout-tabs ul.main-tabs li a {
-    color: #91918c
+    color: #ccc
 }
 
 th .i_icon,
 #layout-main>h1 a,
 #layout-main div.g_timedentry h4 a {
-    color: #62625b
+    color: #a2bfd7
 }
 
 #layout-main>h1 a:hover,
 #layout-main div.g_timedentry h4 a:hover,
 #layout-main table tr th>a:hover,
 #layout-menu li:hover>a {
-    color: #e60023
+    color: #fa5
 }
 
 button:hover,
@@ -3616,7 +3484,7 @@ input[type=submit]:hover,
 #layout-main ul.g_list li.selected,
 #layout-main ul.g_list li.selected .i_icon,
 #layout-main ul.g_list li:hover {
-    background-color: #e0e0d9
+    background-color: #505862
 }
 
 .g_bubble,
@@ -3631,7 +3499,7 @@ span.g_odd,
 tr.g_odd,
 #layout-main div.tabbed_pane ul.tabs li.selected,
 #layout-main div.tabbed_pane ul.tabs li:hover {
-    background-color: #f6f6f3
+    background-color: #bdbfc3
 }
 
 .g_bubble .g_bubble .g_bubble .g_bubble .g_bubble .g_bubble .g_bubble .g_bubble .g_odd,
@@ -3643,7 +3511,7 @@ tr.g_odd,
 .g_definitionlist .g_odd .g_bubble,
 html,
 #layout-menu {
-    background-color: #f6f6f3
+    background-color: #b1b3b5
 }
 
 .g_bubble .g_bubble,
@@ -3660,7 +3528,7 @@ html,
 #layout-main .g_account ul.tabs li,
 #layout-tabs ul.main-tabs li.selected,
 #layout-tabs ul.main-tabs li:hover {
-    background-color: #ffffff
+    background-color: #cfd1d4
 }
 
 input.text,
@@ -3682,7 +3550,7 @@ th a,
 #layout-search input.text,
 #layout-search select,
 #layout-tabs ul.main-tabs li {
-    background-color: #e5e5e0
+    background-color: #34394d
 }
 
 input.text,
@@ -3696,12 +3564,12 @@ textarea,
 #layout-main .g_filter div.settings select,
 #layout-search input.text,
 #layout-search select {
-    border-color: #e5e5e0
+    border-color: #34394d
 }
 
 .g_bubble,
 .g_image {
-    border-color: #91918c #bcbcb3 #bcbcb3 #91918c
+    border-color: #9a9a9a #7d7d7d #7d7d7d #9a9a9a
 }
 
 .g_bubble.box:not(.small)>div.data div.name,
@@ -3709,53 +3577,53 @@ textarea,
 #layout-menu li.sub-menu ul li#user-xname input,
 #layout-menu li.sub-menu ul li#user-xpass input,
 #layout-tabs ul.main-tabs li {
-    border-color: #91918c
+    border-color: #9a9a9a
 }
 
 #layout-main>h1,
 #layout-main div.g_timedentry h4,
 #layout-menu li.sub-menu {
-    border-color: #91918c #bcbcb3 #bcbcb3 #91918c
+    border-color: #eee #8e8e8e #8e8e8e #eee
 }
 
 #layout-main div.g_bubble.code,
 #layout-tabs ul.main-tabs li.selected a,
 #layout-tabs ul.main-tabs li:hover a {
-    color: #211922
+    color: #000
 }
 /* Upper tabs under logo */
 
 #layout-main .g_account ul.tabs li {
-    border-top-color: #91918c;
-    border-left-color: #91918c;
-    border-right-color: #bcbcb3
+    border-top-color: #9a9a9a;
+    border-left-color: #9a9a9a;
+    border-right-color: #7d7d7d
 }
 
 #layout-main .g_account ul.tabs li {
-    background-color: #ffffff;
-    border-bottom-color: #ffffff
+    background-color: #cfd1d4;
+    border-bottom-color: #cfd1d4
 }
 
 #layout-tabs ul.main-tabs>li.selected,
 #layout-tabs ul.main-tabs>li:hover {
-    border-bottom-color: #ffffff
+    border-bottom-color: #cfd1d4
 }
 
 #layout-tabs ul.main-tabs>li {
-    border-bottom-color: #e5e5e0
+    border-bottom-color: #34394d
 }
 
 .tooltip span.text {
-    background-color: #ffffff !important;
-    color: #211922;
-    box-shadow: 0 4px 16px rgba(33,25,34,0.12);
+    background-color: #d3d5d9 !important;
+    color: #000;
+    box-shadow: 0 8px 4px 0 rgba(0, 0, 0, 0.2);
     opacity: .95
 }
 
 .tooltip span.text::after,
 .tooltip span.text::before {
     border-color: rgba(211, 213, 217, 0);
-    border-bottom-color: #ffffff
+    border-bottom-color: #d3d5d9
 }
 
 .g_segmentlist tr.g_odd+tr:not(.g_odd) td,
@@ -3765,23 +3633,23 @@ li.g_odd+li,
 tr+tr td,
 tr+tr th,
 #layout-main div.g_definitionlist tr th {
-    border-top-color: #91918c
+    border-top-color: #999
 }
 
 #layout-search input.text {
-    box-shadow: inset 0 1px 3px rgba(33,25,34,0.08)
+    box-shadow: 1px 1px 2px #8e8e8e inset
 }
 
 #layout-search select {
-    box-shadow: inset 0 1px 3px rgba(33,25,34,0.06)
+    box-shadow: 0 1px 2px #8e8e8e inset
 }
 
 #layout-menu li.sub-menu li+li {
-    border-top-color: #c8c8c1
+    border-top-color: #454959
 }
 
 #layout-main .episodes tr.newtype td {
-    border-top-color: #e5e5e0
+    border-top-color: #34394d
 }
 
 #layout-menu li.sub-menu ul li.main a:hover {
@@ -3795,38 +3663,38 @@ tr,
 }
 
 ::-webkit-input-placeholder {
-    color: #91918c;
+    color: #aaa;
     opacity: 1
 }
 
 ::-moz-placeholder {
-    color: #91918c;
+    color: #aaa;
     opacity: 1
 }
 
 ::-ms-input-placeholder {
-    color: #91918c;
+    color: #aaa;
     opacity: 1
 }
 
 ::-moz-placeholder {
-    color: #91918c;
+    color: #aaa;
     opacity: 1
 }
 
 ::placeholder {
-    color: #91918c;
+    color: #aaa;
     opacity: 1
 }
 
 .g_button a {
-    background-color: #e60023;
+    background-color: #fa5;
     color: #000;
-    border-color: #91918c #bcbcb3 #bcbcb3 #91918c
+    border-color: #fd0 #ff4d00 #ff4d00 #fd0
 }
 
 .g_button a:hover {
-    background-color: #ad081b;
+    background-color: #f90;
     color: #444 !important
 }
 
@@ -3836,9 +3704,9 @@ input[type=submit],
 #layout-main div.edit_actions>span>*,
 #layout-main ul.g_list li,
 #layout-main ul.g_list li.g_odd {
-    color: #91918c;
-    background-color: #e5e5e0;
-    border-color: #e5e5e0
+    color: #ccc;
+    background-color: #34394d;
+    border-color: #34394d
 }
 
 button:hover,
@@ -3850,7 +3718,7 @@ input[type=submit]:hover,
 #layout-main ul.g_list li.selected,
 #layout-main ul.g_list li.selected .i_icon,
 #layout-main ul.g_list li:hover {
-    color: #e60023 !important
+    color: #c0daf0 !important
 }
 
 #layout-main ul.g_list li:hover a {
@@ -3860,7 +3728,7 @@ input[type=submit]:hover,
 
 
 .g_filter .flap {
-    box-shadow: 0 1px 4px rgba(33,25,34,0.10);
+    box-shadow: 0 1px 3px #666;
     opacity: .9
 }
 
@@ -3870,17 +3738,17 @@ input[type=submit]:hover,
 
 @media screen and (max-width: 800px) {
     #layout-main .g_datatable table tr {
-        box-shadow: 0 1px 4px rgba(33,25,34,0.12)
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4)
     }
 
     #layout-main .g_datatable table tr td.name.main {
-        background: #211922 !important;
-        color: #ffffff
+        background: #444 !important;
+        color: #fff
     }
 
     #layout-main .g_datatable table tr td.name.main .i_info::after,
     #layout-main .g_datatable table tr td.name.main a {
-        color: #62625b
+        color: #ddd
     }
 }
 
@@ -3894,14 +3762,14 @@ input[type=submit]:hover,
 
 #layout-menu li.sub-menu ul li a,
 #layout-menu li.sub-menu ul li.user-xkeep label span {
-    color: #211922
+    color: #000
 }
 
 .g_button a:hover,
 h4 a:hover,
 table th.sortable:hover:not(.sorter-false),
 th a:hover {
-    color: #e60023 !important
+    color: #c0daf0 !important
 }
 
 #layout-menu .sub-menu {
@@ -3909,14 +3777,14 @@ th a:hover {
 }
 
 .g_button a {
-    background-color: #e5e5e0;
-    border-color: #e5e5e0
+    background-color: #34394d;
+    border-color: #34394d
 }
 
 .g_button a,
 th,
 th a {
-    color: #91918c
+    color: #ccc
 }
 
 .g_bubble,
@@ -3927,16 +3795,16 @@ th a {
 #layout-main div.g_timedentry h4,
 #layout-menu li.sub-menu span.tab,
 #layout-menu li.sub-menu ul {
-    box-shadow: 0 1px 4px rgba(33,25,34,0.12)
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4)
 }
 
 #layout-main div.tabbed_pane ul.tabs li,
 #layout-tabs ul.main-tabs>li {
-    box-shadow: 0 1px 4px rgba(33,25,34,0.08)
+    box-shadow: 2px -2px 2px -1px rgba(0, 0, 0, 0.2)
 }
 
 #layout-main .g_account ul.tabs li {
-    box-shadow: 0 1px 4px rgba(33,25,34,0.08)
+    box-shadow: 0 -2px 3px 0 rgba(0, 0, 0, 0.2)
 }
 
 #layout-search input.text.focus,
@@ -3946,23 +3814,23 @@ th a {
 
 .g_button a:hover,
 #layout-menu li.sub-menu ul li:hover {
-    background-color: #e0e0d9
+    background-color: #505862
 }
 
 #layout-menu li.sub-menu span.tab,
 #layout-menu li.sub-menu ul li:hover,
 #layout-menu li.sub-menu ul li:hover a,
 #layout-menu li.sub-menu ul li:hover a::before {
-    color: #62625b;
-    background-color: #e5e5e0
+    color: #ddd;
+    background-color: #34394d
 }
 
 #layout-menu li.sub-menu ul {
-    background-color: #f6f6f3
+    background-color: #bdbfc3
 }
 
 #layout-main .g_account ul.tabs li {
-    border-color: #ffffff
+    border-color: #cfd1d4
 }
 
 #layout-main div.info div.extra div h2 {
@@ -3979,18 +3847,18 @@ th a {
 
 @media all and (max-width: 950px) {
 
-    #anidb:not(.nodropdownmenu) #layout-content,
-    #anidb:not(.nodropdownmenu) #layout-main {
+    #mugisub:not(.nodropdownmenu) #layout-content,
+    #mugisub:not(.nodropdownmenu) #layout-main {
         min-height: 0
     }
 
-    #anidb:not(.nodropdownmenu) #layout-content {
+    #mugisub:not(.nodropdownmenu) #layout-content {
         margin-left: 0;
         margin-top: 7em;
         padding-left: .5em
     }
 
-    #anidb:not(.nodropdownmenu) #layout-menu {
+    #mugisub:not(.nodropdownmenu) #layout-menu {
         display: inline-block;
         height: 31px;
         margin-left: .8em;
@@ -3998,7 +3866,7 @@ th a {
         padding-top: 0
     }
 
-    #anidb:not(.nodropdownmenu) #layout-menu>li {
+    #mugisub:not(.nodropdownmenu) #layout-menu>li {
         display: block;
         float: left;
         font-weight: 700;
@@ -4006,7 +3874,7 @@ th a {
         padding: 0 1.3em
     }
 
-    #anidb:not(.nodropdownmenu) #layout-menu>li ul {
+    #mugisub:not(.nodropdownmenu) #layout-menu>li ul {
         border-top: 0;
         visibility: hidden;
         font-weight: 400;
@@ -4018,188 +3886,188 @@ th a {
         width: 144px
     }
 
-    #anidb:not(.nodropdownmenu) #layout-menu a {
+    #mugisub:not(.nodropdownmenu) #layout-menu a {
         display: inline-block;
         padding: 3px 8px
     }
 
-    #anidb:not(.nodropdownmenu) #layout-menu a.history {
+    #mugisub:not(.nodropdownmenu) #layout-menu a.history {
         padding: 3px 0
     }
 
-    #anidb:not(.nodropdownmenu) #layout-menu li.sub-menu span.tab {
+    #mugisub:not(.nodropdownmenu) #layout-menu li.sub-menu span.tab {
         display: inline;
         float: right;
         cursor: pointer;
         padding: .5em 0
     }
 
-    #anidb:not(.nodropdownmenu) #layout-menu>li.sub-menu.touched ul,
-    #anidb:not(.nodropdownmenu) #layout-menu>li.sub-menu:active ul,
-    #anidb:not(.nodropdownmenu) #layout-menu>li.sub-menu:focus ul,
-    #anidb:not(.nodropdownmenu) #layout-menu>li.sub-menu:hover ul {
+    #mugisub:not(.nodropdownmenu) #layout-menu>li.sub-menu.touched ul,
+    #mugisub:not(.nodropdownmenu) #layout-menu>li.sub-menu:active ul,
+    #mugisub:not(.nodropdownmenu) #layout-menu>li.sub-menu:focus ul,
+    #mugisub:not(.nodropdownmenu) #layout-menu>li.sub-menu:hover ul {
         visibility: visible
     }
 
-    #anidb:not(.nodropdownmenu) #layout-menu li.sub-menu ul li a {
+    #mugisub:not(.nodropdownmenu) #layout-menu li.sub-menu ul li a {
         -moz-box-sizing: border-box;
         box-sizing: border-box;
         height: 28px
     }
 
-    #anidb:not(.nodropdownmenu) #layout-main {
+    #mugisub:not(.nodropdownmenu) #layout-main {
         margin-left: .5em;
         margin-top: 1em
     }
 
-    #anidb:not(.nodropdownmenu) #layout-search,
-    #anidb:not(.nodropdownmenu) #layout-search div.search {
+    #mugisub:not(.nodropdownmenu) #layout-search,
+    #mugisub:not(.nodropdownmenu) #layout-search div.search {
         height: 70px
     }
 
-    #anidb:not(.nodropdownmenu) #layout-menu {
+    #mugisub:not(.nodropdownmenu) #layout-menu {
         margin-top: 7.5em
     }
 
-    #anidb:not(.nodropdownmenu) #layout-menu li.sub-menu ul li.alert {
+    #mugisub:not(.nodropdownmenu) #layout-menu li.sub-menu ul li.alert {
         height: 28px
     }
 
-    #anidb:not(.nodropdownmenu) #layout-menu li.sub-menu {
+    #mugisub:not(.nodropdownmenu) #layout-menu li.sub-menu {
         margin-bottom: 0;
         cursor: pointer
     }
 
-    #anidb:not(.nodropdownmenu) #layout-menu li.sub-menu ul li.main a {
+    #mugisub:not(.nodropdownmenu) #layout-menu li.sub-menu ul li.main a {
         margin-top: -12.7em;
         visibility: visible;
         height: 75px;
         padding: 0
     }
 
-    #anidb:not(.nodropdownmenu) #layout-nav {
+    #mugisub:not(.nodropdownmenu) #layout-nav {
         margin-top: 0;
         height: 76px
     }
 
-    #anidb:not(.nodropdownmenu) #layout-hint+#layout-nav {
+    #mugisub:not(.nodropdownmenu) #layout-hint+#layout-nav {
         height: 96px
     }
 
-    #anidb:not(.nodropdownmenu) #layout-hint+#layout-nav #layout-menu {
+    #mugisub:not(.nodropdownmenu) #layout-hint+#layout-nav #layout-menu {
         margin-top: 9.5em
     }
 
-    #anidb:not(.nodropdownmenu) #layout-menu {
-        box-shadow: 0 1px 4px rgba(33,25,34,0.08);
-        background-color: #e5e5e0
+    #mugisub:not(.nodropdownmenu) #layout-menu {
+        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
+        background-color: #34394d
     }
 
-    #anidb:not(.nodropdownmenu) #layout-menu li.sub-menu span.tab {
-        color: #62625b !important;
+    #mugisub:not(.nodropdownmenu) #layout-menu li.sub-menu span.tab {
+        color: #ddd !important;
         box-shadow: none
     }
 
-    #anidb:not(.nodropdownmenu) #layout-menu li.sub-menu+li.sub-menu {
-        border-left: 1px solid #91918c !important
+    #mugisub:not(.nodropdownmenu) #layout-menu li.sub-menu+li.sub-menu {
+        border-left: 1px solid #999 !important
     }
 
-    #anidb:not(.nodropdownmenu) #layout-menu li.sub-menu:hover {
-        background-color: #d4d4cd !important
+    #mugisub:not(.nodropdownmenu) #layout-menu li.sub-menu:hover {
+        background-color: #58636e !important
     }
 
-    #anidb:not(.nodropdownmenu) #layout-menu li.sub-menu:hover span.tab {
-        color: #e60023 !important;
-        background-color: #d4d4cd
+    #mugisub:not(.nodropdownmenu) #layout-menu li.sub-menu:hover span.tab {
+        color: #c0daf0 !important;
+        background-color: #58636e
     }
 }
 
 @media screen and (max-width: 950px) {
-    #anidb:not(.nodropdownmenu) #layout-content {
+    #mugisub:not(.nodropdownmenu) #layout-content {
         margin-top: 9.75em
     }
 
-    #anidb:not(.nodropdownmenu) #layout-search div.search a.advsearch {
+    #mugisub:not(.nodropdownmenu) #layout-search div.search a.advsearch {
         display: none
     }
 
-    #anidb:not(.nodropdownmenu) #layout-search .text {
+    #mugisub:not(.nodropdownmenu) #layout-search .text {
         width: calc(100% - 17em);
         margin-left: 1em
     }
 
-    #anidb:not(.nodropdownmenu) #layout-search div.search form>div {
+    #mugisub:not(.nodropdownmenu) #layout-search div.search form>div {
         top: 7.25em;
         width: calc(100% - .5em);
         left: -0.5em
     }
 
-    #anidb:not(.nodropdownmenu) #layout-search ul.quicksearch {
+    #mugisub:not(.nodropdownmenu) #layout-search ul.quicksearch {
         margin: .1em 0 0 1.4em !important;
         width: calc(100% - 1.5em);
         max-width: none
     }
 
-    #anidb:not(.nodropdownmenu) #layout-search ul.quicksearch .g_bubble.stripe {
+    #mugisub:not(.nodropdownmenu) #layout-search ul.quicksearch .g_bubble.stripe {
         max-width: none
     }
 
-    #anidb:not(.nodropdownmenu) #layout-menu {
+    #mugisub:not(.nodropdownmenu) #layout-menu {
         margin-top: 10.75em
     }
 
-    #anidb:not(.nodropdownmenu) #layout-menu>li ul {
+    #mugisub:not(.nodropdownmenu) #layout-menu>li ul {
         padding-top: .5em
     }
 
-    #anidb:not(.nodropdownmenu) #layout-menu li.sub-menu ul li.main a {
+    #mugisub:not(.nodropdownmenu) #layout-menu li.sub-menu ul li.main a {
         width: calc(100vw - 1.5em)
     }
 
-    #anidb:not(.nodropdownmenu) #layout-hint+#layout-nav #layout-menu {
+    #mugisub:not(.nodropdownmenu) #layout-hint+#layout-nav #layout-menu {
         margin-top: 12.25em
     }
 
-    #anidb:not(.nodropdownmenu) #layout-content #layout-main div.g_content {
+    #mugisub:not(.nodropdownmenu) #layout-content #layout-main div.g_content {
         min-height: 0
     }
 }
 
 @media screen and (max-width: 600px) {
-    #anidb:not(.nodropdownmenu) #layout-menu>li ul {
+    #mugisub:not(.nodropdownmenu) #layout-menu>li ul {
         width: 10.1em
     }
 
-    #anidb:not(.nodropdownmenu) #layout-menu>li ul#menu-account {
+    #mugisub:not(.nodropdownmenu) #layout-menu>li ul#menu-account {
         margin-left: -4em
     }
 
-    #anidb:not(.nodropdownmenu) #layout-menu li.sub-menu ul li>a span,
-    #anidb:not(.nodropdownmenu) #layout-menu li.sub-menu ul li>span {
+    #mugisub:not(.nodropdownmenu) #layout-menu li.sub-menu ul li>a span,
+    #mugisub:not(.nodropdownmenu) #layout-menu li.sub-menu ul li>span {
         padding: 0 5px
     }
 
-    #anidb:not(.nodropdownmenu) #layout-menu a {
+    #mugisub:not(.nodropdownmenu) #layout-menu a {
         padding: 3px 5px
     }
 
-    #anidb:not(.nodropdownmenu) #layout-menu li.sub-menu .alert>span a {
+    #mugisub:not(.nodropdownmenu) #layout-menu li.sub-menu .alert>span a {
         margin-right: -0.75em
     }
 
-    #anidb:not(.nodropdownmenu) #layout-menu li.sub-menu.mod {
+    #mugisub:not(.nodropdownmenu) #layout-menu li.sub-menu.mod {
         display: none
     }
 }
 
 @media screen and (max-width: 500px) {
-    #anidb:not(.nodropdownmenu) #layout-menu li.sub-menu.terms {
+    #mugisub:not(.nodropdownmenu) #layout-menu li.sub-menu.terms {
         display: none
     }
 }
 
 @media screen and (max-width: 400px) {
-    #anidb:not(.nodropdownmenu) #layout-menu li.sub-menu.support {
+    #mugisub:not(.nodropdownmenu) #layout-menu li.sub-menu.support {
         display: none
     }
 }
