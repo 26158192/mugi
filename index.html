@@ -250,6 +250,71 @@
 <!--Search-bar-full-code-start-->
       <div class="menu_hr"></div>
       <div id="layout-search" class="landing_search">
+        <div
+          class="search container"
+          itemscope
+          itemtype="https://schema.org/WebSite"
+        >
+          <span class="hide" itemprop="name">MugiSUB</span>
+          <a
+            class="hide"
+            rel="canonical"
+            href="https://mugisub.com"
+            itemprop="url"
+          ></a>
+          <form
+            action="/search"
+            method="get"
+            itemprop="potentialAction"
+            itemscope
+            itemtype="https://schema.org/SearchAction"
+          >
+            <div
+              itemprop="target"
+              content="https://mugisub.com/search/?ms.search={ms.search}&amp;do.search=1"
+            >
+              <input
+                itemprop="query-input"
+                id="layout-searchbox"
+                accesskey="s"
+                type="text"
+                name="ms.search"
+                value=""
+                class="text"
+                placeholder="Search anime..."
+              />
+              <select name="show" id="layout-searchselect" size="1">
+                <option value="search">all</option>
+                <option value="animelist" selected="selected">anime</option>
+                <option value="movielist">movies</option>
+                <option value="tvlist">tv shows</option>
+                <option value="ovalist">ova / ona</option>
+              </select>
+              <button
+                type="submit"
+                name="do.search"
+                value="1"
+                class="submit search"
+              >
+                Search
+              </button>
+              <fieldset>
+                <input type="hidden" name="cleanurl" value="1" />
+              </fieldset>
+            </div>
+          </form>
+          <form class="random" action="/anime/random" method="get">
+            <fieldset>
+              <input type="hidden" name="do.random" value="1" />
+              <input type="hidden" name="show" value="anime" />
+            </fieldset>
+            <button type="submit" value="lucky" class="submit random">
+              I'm Feeling Lucky
+            </button>
+          </form>
+          <a class="advsearch" title="advsearch" href="/search/anime"
+            ><span class="text">advanced search</span></a
+          >
         </div>
       </div>
     </div>
