@@ -95,8 +95,24 @@ ul {
 #layout-search input.text,
 #layout-search select,
 #layout-search .submit {
-    border: 0;
-    outline: none;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none
+}
+
+#layout-search input.text {
+    border-radius: 5px 0 0 5px
+}
+
+#layout-search select {
+    border-radius: 0
+}
+
+#layout-search .submit {
+    border-radius: 0 5px 5px 0
 }
 
 
@@ -892,7 +908,6 @@ select {
 }
 
 #layout-nav div.menu_hr,
-#layout-search a.advsearch,
 #layout-search form.random {
     display: none
 }
@@ -1022,59 +1037,6 @@ select {
 .g_msg>div.container,
 .g_msg h2 {
     text-align: left
-}
-
-#layout-search ul.quicksearch {
-    margin: -2px 0 0;
-    max-height: 40em;
-    padding: 0;
-    overflow-y: auto;
-    position: relative;
-    list-style-type: none;
-    width: 34em;
-    z-index: 10
-}
-
-#layout-search ul.quicksearch li {
-    margin: 0;
-    padding: 2px;
-    cursor: pointer
-}
-
-#layout-search ul.quicksearch li:last-child {
-    text-align: center
-}
-
-#layout-search ul.quicksearch .g_bubble.stripe {
-    display: block;
-    border-left: 0;
-    border-right: 0;
-    border-radius: 0;
-    margin-top: -1px;
-    margin-bottom: 0;
-    min-height: 6.4em;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box
-}
-
-#layout-search ul.quicksearch .g_bubble.stripe > div.data div.name {
-    margin-right: 0
-}
-
-#layout-search ul.quicksearch.songlist .g_bubble.stripe {
-    min-height: 4.4em
-}
-
-#layout-search ul.quicksearch.songlist .g_bubble.stripe div.image {
-    display: none
-}
-
-#layout-search ul.quicksearch.songlist .g_bubble.stripe > div.data {
-    margin: 0.5em
-}
-
-#layout-search ul.quicksearch .g_bubble.stripe.note {
-    min-height: 0 !important
 }
 
 #mugisub:not(.internet_explorer) #layout-search ul.quicksearch .g_bubble.stripe {
@@ -2792,8 +2754,7 @@ h2 {
 
 #layout-nav {
     display: block;
-    height: 6em;
-    position: relative
+    height: 6em
 }
 
 #layout-main {
@@ -3456,6 +3417,17 @@ textarea:hover {
     border-color: #999 !important
 }
 
+#layout-search input.text:focus,
+#layout-search input.text:hover,
+#layout-search select:focus,
+#layout-search select:hover,
+#layout-search .submit:focus,
+#layout-search .submit:hover {
+    border-color: transparent !important;
+    outline: none !important;
+    box-shadow: none !important
+}
+
 .g_bubble .name-colored,
 .i_icon:hover,
 a:hover,
@@ -3616,10 +3588,13 @@ input[type=url],
 select,
 textarea,
 #layout-main .g_filter div.settings input[type=text],
-#layout-main .g_filter div.settings select,
+#layout-main .g_filter div.settings select {
+    border-color: #34394d
+}
+
 #layout-search input.text,
 #layout-search select {
-    border-color: #34394d
+    border-color: transparent !important
 }
 
 .g_bubble,
@@ -3697,15 +3672,6 @@ tr+tr th,
 
 #layout-search select {
     box-shadow: 0 1px 2px #8e8e8e inset
-}
-
-#layout-search ul.quicksearch {
-    border-color: #34394d
-}
-
-#layout-search ul.quicksearch li.focus,
-#layout-search ul.quicksearch li:hover {
-    background-color: #bbb
 }
 
 #layout-menu li.sub-menu li+li {
@@ -3793,7 +3759,10 @@ input[type=submit]:hover,
 
 .g_filter .flap {
     box-shadow: 0 1px 3px #666;
-    opacity: .9
+    opacity: 1;
+    background-color: #34394d !important;
+    color: #ddd !important;
+    border-radius: 0 0 5px 5px
 }
 
 #layout-main *:not(.g_definitionlist)>table>tbody>tr:not(.files):not(.episodes)>td::after {
