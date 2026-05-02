@@ -1,937 +1,517 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns#">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Solo Leveling S2 — MugiSUB</title>
-  <meta name="description" content="Solo Leveling Season 2 anime details, episodes, characters and more on MugiSUB." />
-  <meta name="robots" content="index, follow" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MugiSUB - Anime with Subtitles</title>
+    <meta
+      property="og:description"Home
+      name="description"
+      content="Looking for anime subtitles? MugiSUB is the right place for you. MugiSUB is a fansubbing group providing you with accurate, high-quality subtitles for anime — completely free.,,"
+    />
+    <meta name="robots" content="index, follow" />
+    
+    <!--mine-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="mugistyles.css"
+      type="text/css" 
+      title="Style"/>
+    <link rel="stylesheet" href="request.css">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link rel="stylesheet" href="mugistyles.css" type="text/css" title="Style"/>
+    <!--mine-->
 
-  <style>
-    /* ── AniDB detail vars injected into MugiSUB ── */
-    :root {
-      --ad-bg:      #12141e;
-      --ad-bg2:     #1a1d2e;
-      --ad-bg3:     #20243a;
-      --ad-bg4:     #252944;
-      --ad-card:    #1e2235;
-      --ad-border:  #2e3250;
-      --ad-border2: #3a3f6a;
-      --ad-accent:  #ff6633;
-      --ad-accent2: #ff8855;
-      --ad-blue:    #4a90d9;
-      --ad-blue2:   #6aaff0;
-      --ad-green:   #44bb77;
-      --ad-yellow:  #ffcc44;
-      --ad-red:     #ee4444;
-      --ad-text:    #d0d4e8;
-      --ad-text2:   #9098bc;
-      --ad-radius:  6px;
-      --ad-shadow:  0 4px 20px rgba(0,0,0,0.5);
-      --ad-mono:    "Consolas","Courier New",monospace;
-    }
 
-    /* Override MugiSUB body background for detail page */
-    #layout-main {
-      background: transparent;
-    }
 
-    /* ── ANIME DETAIL WRAP ── */
-    .anime-detail-wrap {
-      display: flex;
-      gap: 22px;
-      align-items: flex-start;
-      margin-top: 10px;
-    }
 
-    /* ── LEFT COLUMN ── */
-    .anime-detail-left {
-      width: 200px;
-      flex-shrink: 0;
-    }
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href=img.mugis/logos//touch/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href=img.mugis/logos/touch/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href=img.mugis/logos/touch/favicon-16x16.png
+    />
+    <link
+      rel="manifest"
+      href=site.webmanifest"
+    />
+    <link
+      rel="mask-icon"
+      href=img.mugis/logos/touch/safari-pinned-tab.svg"
+      color="#e18e3c"
+    />
+    <link
+      rel="shortcut icon"
+      href=img.mugis/logos/touch/favicon.ico"
+    />
+    
+    <link
+      rel="search"
+      type="application/opensearchdescription+xml"
+      href="/opensearch.xml"
+      title="MugiSUB"
+    />
+  
+<meta name="apple-mobile-web-app-title" content="MugiSUB"/>
+<meta name="application-name" content="MugiSUB"/>
+<meta name="msapplication-TileColor" content="#34394d"/>
+    <meta
+      name="msapplication-config"
+      content=img.mugis/logos/touch/browserconfig.xml"
+    />
+  <meta name="theme-color" content="#34394d" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@MugiSUB" />
+<meta name="twitter:creator" content="@MugiSUB" />
+<meta property="og:title" content="Anime Subtitles - MugiSUB" />
+    
+     
+    
 
-    .anime-poster-wrap {
-      position: relative;
-      border-radius: var(--ad-radius);
-      overflow: hidden;
-      margin-bottom: 10px;
-      border: 1px solid var(--ad-border);
-    }
-    .anime-poster {
-      width: 100%;
-      display: block;
-      aspect-ratio: 2/3;
-      object-fit: cover;
-    }
-    .poster-overlay-btns {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      padding: 8px;
-      background: rgba(10,12,24,0.92);
-    }
-    .poster-btn {
-      background: var(--ad-accent);
-      border: none;
-      border-radius: 4px;
-      color: #fff;
-      font-size: 12px;
-      font-weight: 700;
-      padding: 7px 10px;
-      cursor: pointer;
-      width: 100%;
-      transition: background 0.15s;
-    }
-    .poster-btn:hover { background: var(--ad-accent2); }
-    .poster-btn-wish {
-      background: transparent;
-      border: 1px solid var(--ad-border2);
-      color: var(--ad-text);
-    }
-    .poster-btn-wish:hover { border-color: var(--ad-accent); color: #fff; background: transparent; }
 
-    /* Vote widget */
-    .vote-widget {
-      background: var(--ad-card);
-      border: 1px solid var(--ad-border);
-      border-radius: var(--ad-radius);
-      padding: 10px;
-      margin-bottom: 10px;
-      text-align: center;
-    }
-    .vw-title { font-size: 11px; font-weight: 700; color: var(--ad-text2); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
-    .vote-stars { display: flex; justify-content: center; gap: 2px; flex-wrap: wrap; }
-    .vstar { font-size: 16px; color: var(--ad-border2); cursor: pointer; transition: color 0.1s; }
-    .vstar:hover, .vstar.active { color: var(--ad-yellow); }
-    .vote-hint { font-size: 10.5px; color: var(--ad-text2); margin-top: 5px; }
+<!-- mine -->
+<script defer src="mugi-filter-menu.js"></script>
+<script defer src="mugi-image-preview.js"></script>
+<script src="request.js"></script>
+<!-- mine -->
 
-    /* Quick info table */
-    .quick-info-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 12px;
-      background: var(--ad-card);
-      border: 1px solid var(--ad-border);
-      border-radius: var(--ad-radius);
-      overflow: hidden;
-      margin-bottom: 10px;
-    }
-    .quick-info-table tr { border-bottom: 1px solid rgba(255,255,255,0.04); }
-    .quick-info-table tr:last-child { border-bottom: none; }
-    .quick-info-table th {
-      padding: 6px 10px;
-      text-align: left;
-      color: var(--ad-text2);
-      font-weight: 600;
-      font-size: 11px;
-      background: var(--ad-bg4);
-      width: 80px;
-    }
-    .quick-info-table td {
-      padding: 6px 10px;
-      color: var(--ad-text);
-    }
-    .quick-info-table td a { color: var(--ad-blue2); }
-    .status-airing { color: var(--ad-green); font-weight: 700; }
+  </head>
+  <body id="mugisub" class="landing">
+    <!--Hint ON top-->
+    <!--
+    <div id="layout-hint" class="hint">
+      <span class="head">HINT:</span>
+      <span class="msg"
+        >Confused? Take a look at the
+        <a href="https://mugisub.com/wiki">MugiSUB Wiki</a> or visit us on
+        <a href="https://t.me/MugiSUB">Telegram</a>.</span
+      >
+    </div>
+    -->
 
-    /* External links */
-    .external-links { margin-top: 8px; }
-    .ext-title { font-size: 11px; font-weight: 700; color: var(--ad-text2); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
-    .ext-link {
-      display: inline-block;
-      background: var(--ad-bg4);
-      border: 1px solid var(--ad-border2);
-      border-radius: 3px;
-      color: var(--ad-text2) !important;
-      font-size: 11px;
-      font-weight: 700;
-      padding: 3px 9px;
-      margin: 2px 2px 0 0;
-      text-decoration: none !important;
-      transition: all 0.15s;
-    }
-    .ext-link:hover { border-color: var(--ad-blue2); color: var(--ad-blue2) !important; }
 
-    /* ── RIGHT COLUMN ── */
-    .anime-detail-right { flex: 1; min-width: 0; }
 
-    /* Title block */
-    .anime-title-block { margin-bottom: 12px; }
-    .anime-title-main {
-      font-size: 20px;
-      font-weight: 900;
-      color: #e8ecff;
-      line-height: 1.25;
-      margin-bottom: 6px;
-    }
-    .anime-title-alt {
-      font-size: 12px;
-      color: var(--ad-text2);
-      line-height: 1.6;
-    }
-    .alt-label { font-weight: 700; color: var(--ad-text2); margin-right: 4px; }
 
-    /* Rating block */
-    .rating-block {
-      background: var(--ad-card);
-      border: 1px solid var(--ad-border);
-      border-radius: var(--ad-radius);
-      padding: 14px 18px;
-      margin-bottom: 14px;
-      display: flex;
-      gap: 22px;
-      flex-wrap: wrap;
-      align-items: flex-start;
-    }
-    .rating-main { flex-shrink: 0; text-align: center; min-width: 90px; }
-    .rating-score { font-size: 36px; font-weight: 900; color: var(--ad-yellow); font-family: var(--ad-mono); line-height: 1; }
-    .rating-stars-disp { color: var(--ad-yellow); font-size: 14px; margin: 4px 0 2px; }
-    .rating-sub { font-size: 10.5px; color: var(--ad-text2); }
-    .rating-breakdown { flex: 1; min-width: 160px; }
-    .rb-row { display: flex; align-items: center; gap: 8px; margin-bottom: 5px; font-size: 12px; }
-    .rb-label { color: var(--ad-text2); width: 70px; flex-shrink: 0; font-size: 11px; }
-    .rb-bar-wrap { flex: 1; height: 7px; background: var(--ad-bg4); border-radius: 4px; overflow: hidden; }
-    .rb-bar { height: 100%; background: var(--ad-accent); border-radius: 4px; }
-    .rb-val { color: var(--ad-yellow); font-weight: 700; font-family: var(--ad-mono); font-size: 12px; min-width: 32px; }
+   <!--side-navbar-start-->
+<div id="layout-nav" class="landing_nav">
+  <ul id="layout-menu" class="landing_menu">
 
-    /* Tabs */
-    .detail-tabs {
-      display: flex;
-      gap: 4px;
-      flex-wrap: wrap;
-      margin-bottom: 14px;
-      border-bottom: 1px solid var(--ad-border);
-      padding-bottom: 0;
-    }
-    .dtab {
-      background: transparent;
-      border: none;
-      border-bottom: 2px solid transparent;
-      color: var(--ad-text2);
-      font-size: 13px;
-      font-weight: 600;
-      padding: 8px 14px;
-      cursor: pointer;
-      transition: all 0.15s;
-      margin-bottom: -1px;
-    }
-    .dtab:hover { color: var(--ad-text); }
-    .dtab.active { color: #fff; border-bottom-color: var(--ad-accent); }
+    <!-- HOME -->
+    <li class="sub-menu main" title="Menu">
+      <span class="tab">HOME</span>
+      <ul id="menu-main">
+        <li class="main">
+          <a title="Landing Page" href="/"><span class="text">Main</span></a>
+        </li>
+        <li class="Latest Releases">
+          <a title="Latest Releases" href="/latest"><span class="text">Latest</span></a>
+        </li>
+        <li class="Random">
+          <a title="Random Watch" href="/random"><span class="text">Random</span></a>
+        </li>
+        <li class="Watch2gether">
+          <a title="Watch with friends" href="/Watch2gether"><span class="text">Watch2gether</span></a>
+        </li>
+      </ul>
+      <span></span>
+    </li>
 
-    /* Tab panels */
-    .tab-panel { display: none; }
-    .tab-panel.active { display: block; }
+    <!-- Browse -->
+    <li class="sub-menu listings" title="Content">
+      <span class="tab">BROWSE</span>
+      <ul id="menu-lists">
+        <li class="anime">
+          <a title="All Anime" href="/anime"><span class="text">Anime</span></a>
+        </li>
+        <li class="movies">
+          <a title="Movies" href="/anime/movies"><span class="text">Movies</span></a>
+        </li>
+        <li class="tv">
+          <a title="Tv Show" href="/anime/movies"><span class="text">TV Shows</span></a>
+        </li>
+        <li class="ova">
+          <a title="OVA / ONA" href="/anime/ova"><span class="text">OVA / ONA</span></a>
+        </li>
+        <li class="genres">
+          <a title="Browse by Genre" href="/genres"><span class="text">Genres</span></a>
+        </li>
+      </ul>
+      <span></span>
+    </li>
 
-    /* Description */
-    .anime-desc { margin-bottom: 18px; }
-    .anime-desc h4 { font-size: 13px; color: var(--ad-text2); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; padding-bottom: 6px; border-bottom: 1px solid var(--ad-border); }
-    .anime-desc p { font-size: 13px; color: var(--ad-text); line-height: 1.7; margin-bottom: 10px; }
-    .desc-credit { font-size: 11px; color: var(--ad-text2); font-style: italic; }
+    <!-- SUPPORT -->
+    <li class="sub-menu support" title="Releases">
+      <span class="tab">SUPPORT</span>
+      <ul id="menu-terms">
+        <li class="Donate">
+          <a title="Donate to MugiSUB" href="/donation"><span class="text">Donate</span></a>
+        </li>
+        <li class="Report">
+          <a title="Report an Error" href="/report"><span class="text">Report Error</span></a>
+        </li>
+        <li class="Policies">
+          <a title="Privacy Policy" href="/policy"><span class="text">Policies</span></a>
+        </li>
+        <li class="Staff">
+          <a title="MugiSUB Team" href="/about"><span class="text">Our Team</span></a>
+        </li>
+        <li class="Contact">
+          <a title="Contact Team" href="/about"><span class="text">Contact US</span></a>
+        </li>
+      </ul>
+      <span></span>
+    </li>
 
-    /* Related block */
-    .related-block { margin-bottom: 18px; }
-    .related-block h4 { font-size: 13px; color: var(--ad-text2); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; padding-bottom: 6px; border-bottom: 1px solid var(--ad-border); }
-    .related-grid { display: flex; gap: 12px; flex-wrap: wrap; }
-    .related-item {
-      display: flex;
-      gap: 10px;
-      background: var(--ad-card);
-      border: 1px solid var(--ad-border);
-      border-radius: var(--ad-radius);
-      padding: 10px;
-      min-width: 200px;
-      flex: 1;
-      max-width: 280px;
-      transition: border-color 0.2s;
-    }
-    .related-item:hover { border-color: var(--ad-border2); }
-    .related-item img { width: 52px; height: 72px; object-fit: cover; border-radius: 4px; flex-shrink: 0; }
-    .ri-info { flex: 1; }
-    .ri-rel { font-size: 10px; font-weight: 700; color: var(--ad-accent2); text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 3px; }
-    .ri-title { font-size: 12.5px; font-weight: 700; color: var(--ad-blue2); display: block; margin-bottom: 3px; }
-    .ri-type { font-size: 11px; color: var(--ad-text2); }
 
-    /* Tags block */
-    .tags-block { margin-bottom: 18px; }
-    .tags-block h4 { font-size: 13px; color: var(--ad-text2); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; padding-bottom: 6px; border-bottom: 1px solid var(--ad-border); }
-    .tags-list { display: flex; flex-wrap: wrap; gap: 6px; }
-    .tag-item {
-      background: var(--ad-bg4);
-      border: 1px solid var(--ad-border2);
-      border-radius: 4px;
-      padding: 4px 10px;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 12px;
-    }
-    .tag-item a { color: var(--ad-blue2); text-decoration: none; }
-    .tag-item a:hover { color: #fff; }
-    .tag-score { font-size: 10px; color: var(--ad-text2); font-family: var(--ad-mono); }
-    .tag-item.high { border-color: rgba(68,187,119,0.4); }
-    .tag-item.high a { color: var(--ad-green); }
-    .tag-item.mid { border-color: rgba(74,144,217,0.4); }
-    .tag-item.low { border-color: var(--ad-border2); }
+    <!-- DMCA / LOGIN -->
+    <li class="sub-menu login" title="Register or login">
+      <span class="tab">LOGIN</span>
+      <form action="/api/action" method="post">
+        <div>
+          <fieldset>
+            <input type="hidden" name="show" value="landing" />
+            <input type="hidden" name="do" value="landing" />
+          </fieldset>
+          <ul id="menu-login">
+            <li id="user-login">
+  <a title="Show login page" href="/user/login"
+    ><span class="text">Login</span></a
+  >
+</li>
+<li id="user-signup">
+  <a title="Register now" href="/user/register"
+    ><span class="text">Register</span></a
+  >
+</li>
+            <li id="user-xname" class="user-xname" title="User name">
+              <span
+                ><input
+                  name="xuser"
+                  class="text"
+                  maxlength="16"
+                  type="text"
+                  value=""
+              /></span>
+            </li>
+            <li id="user-xpass" class="user-xpass" title="Password">
+              <span
+                ><input
+                  name="xpass"
+                  class="text"
+                  maxlength="64"
+                  type="password"
+              /></span>
+            </li>
+            <li id="user-xkeep" class="user-xkeep" title="Remember login data">
+              <span
+                ><label
+                  ><input
+                    name="xdoautologin"
+                    type="checkbox"
+                    check="check"
+                  />
+                  <span>stay logged-in</span></label
+                ></span
+              >
+            </li>
+            <li id="user-xauth" class="user-xauth" title="Login">
+              <span
+                ><button
+                  class="login"
+                  name="do.auth"
+                  type="submit"
+                  value="login"
+                >
+                  <span>Login</span>
+                </button></span
+              >
+            </li>
+          </ul>
+          <span></span>
+        </div>
+      </form>
+    </li>
 
-    /* Episode table */
-    .episode-table { width: 100%; border-collapse: collapse; font-size: 12.5px; background: var(--ad-card); border: 1px solid var(--ad-border); border-radius: var(--ad-radius); overflow: hidden; }
-    .episode-table thead { background: var(--ad-bg4); }
-    .episode-table th { padding: 9px 10px; text-align: left; font-size: 11.5px; color: var(--ad-text2); font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px; border-bottom: 1px solid var(--ad-border); white-space: nowrap; }
-    .episode-table tbody tr { border-bottom: 1px solid rgba(255,255,255,0.04); transition: background 0.1s; }
-    .episode-table tbody tr:hover { background: rgba(255,255,255,0.03); }
-    .episode-table tbody tr:last-child { border-bottom: none; }
-    .episode-table td { padding: 8px 10px; color: var(--ad-text); }
-    .ep-num-cell { font-family: var(--ad-mono); color: var(--ad-accent2); font-weight: 700; width: 40px; }
-    .ep-title-cell { color: var(--ad-blue2); }
-    .ep-date-cell { color: var(--ad-text2); font-size: 11.5px; white-space: nowrap; }
-    .ep-dur-cell { color: var(--ad-text2); font-size: 11.5px; font-family: var(--ad-mono); }
-    .ep-vote-cell { color: var(--ad-yellow); font-weight: 700; font-size: 12px; font-family: var(--ad-mono); }
-    .ep-watched-btn {
-      background: var(--ad-bg4);
-      border: 1px solid var(--ad-border2);
-      color: var(--ad-text2);
-      border-radius: 4px;
-      padding: 3px 10px;
-      font-size: 11px;
-      cursor: pointer;
-      transition: all 0.15s;
-    }
-    .ep-watched-btn:hover, .ep-watched-btn.watched { background: rgba(68,187,119,0.2); border-color: var(--ad-green); color: var(--ad-green); }
+  </ul>
+<!--side-navbar-end-->
 
-    /* Characters grid */
-    .char-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 12px; }
-    .char-card { background: var(--ad-card); border: 1px solid var(--ad-border); border-radius: var(--ad-radius); overflow: hidden; transition: border-color 0.2s; }
-    .char-card:hover { border-color: var(--ad-border2); }
-    .char-img { width: 100%; aspect-ratio: 3/4; object-fit: cover; }
-    .char-info { padding: 8px; }
-    .char-name { font-size: 12px; font-weight: 700; color: var(--ad-blue2); margin-bottom: 2px; }
-    .char-role { font-size: 10.5px; color: var(--ad-text2); }
 
-    /* Staff */
-    .staff-section { margin-bottom: 18px; }
-    .staff-section h4 { font-size: 13px; color: var(--ad-text2); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; padding-bottom: 6px; border-bottom: 1px solid var(--ad-border); }
-    .staff-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px; }
-    .staff-row { display: flex; gap: 10px; background: var(--ad-card); border: 1px solid var(--ad-border); border-radius: 5px; padding: 8px 12px; align-items: center; }
-    .staff-img { width: 44px; height: 44px; border-radius: 50%; flex-shrink: 0; background: var(--ad-bg4); display: flex; align-items: center; justify-content: center; font-size: 18px; }
-    .staff-name { font-size: 12.5px; font-weight: 700; color: var(--ad-blue2); }
-    .staff-role { font-size: 11px; color: var(--ad-text2); }
-    .cast-list { display: flex; flex-direction: column; gap: 6px; }
-    .cast-row { display: flex; gap: 8px; align-items: center; background: var(--ad-card); border: 1px solid var(--ad-border); border-radius: 5px; padding: 6px 12px; }
 
-    /* Files */
-    .files-note { background: rgba(255,204,68,0.1); border: 1px solid rgba(255,204,68,0.3); color: var(--ad-yellow); font-size: 12px; padding: 10px 14px; border-radius: 4px; margin-bottom: 12px; }
-    .files-table { width: 100%; border-collapse: collapse; font-size: 12px; background: var(--ad-card); border: 1px solid var(--ad-border); border-radius: var(--ad-radius); overflow: hidden; }
-    .files-table th { background: var(--ad-bg4); padding: 8px 10px; text-align: left; color: var(--ad-text2); font-size: 11px; font-weight: 700; text-transform: uppercase; border-bottom: 1px solid var(--ad-border); }
-    .files-table td { padding: 7px 10px; border-bottom: 1px solid rgba(255,255,255,0.04); color: var(--ad-text); }
-    .files-table tr:last-child td { border-bottom: none; }
 
-    /* Reviews */
-    .reviews-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 14px; }
-    .review-card { background: var(--ad-card); border: 1px solid var(--ad-border); border-radius: var(--ad-radius); padding: 14px 16px; }
-    .review-head { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
-    .review-user { font-size: 13px; font-weight: 700; color: var(--ad-blue2); }
-    .review-score { background: var(--ad-yellow); color: #000; font-size: 12px; font-weight: 900; padding: 2px 8px; border-radius: 4px; }
-    .review-date { font-size: 11px; color: var(--ad-text2); margin-left: auto; }
-    .review-text { font-size: 12.5px; color: var(--ad-text); line-height: 1.6; }
-
-    /* Tags full */
-    .tags-full-list { display: flex; flex-wrap: wrap; gap: 6px; }
-    .tfl-tag { background: var(--ad-bg4); border: 1px solid var(--ad-border2); border-radius: 4px; padding: 4px 12px; font-size: 12px; color: var(--ad-text2); display: inline-flex; align-items: center; gap: 6px; transition: all 0.15s; cursor: pointer; }
-    .tfl-tag:hover { border-color: var(--ad-blue2); color: var(--ad-blue2); }
-    .tfl-pct { font-size: 10px; color: var(--ad-text2); font-family: var(--ad-mono); }
-
-    /* Btn primary */
-    .ad-btn-primary { display: inline-block; background: var(--ad-accent); color: #fff !important; padding: 8px 18px; border-radius: 4px; font-size: 12.5px; font-weight: 700; text-decoration: none !important; transition: background 0.15s; border: none; cursor: pointer; }
-    .ad-btn-primary:hover { background: var(--ad-accent2); }
-
-    /* Votes dist */
-    #votesDist { margin-top: 8px; width: 100%; }
-
-    /* Breadcrumb (mugi style override) */
-    .ad-breadcrumb {
-      font-size: 12px;
-      color: var(--ad-text2);
-      padding: 8px 0 14px;
-      margin-bottom: 4px;
-    }
-    .ad-breadcrumb a { color: var(--ad-text2); text-decoration: none; }
-    .ad-breadcrumb a:hover { color: var(--ad-blue2); }
-
-    /* Responsive */
-    @media (max-width: 800px) {
-      .anime-detail-wrap { flex-direction: column; }
-      .anime-detail-left { width: 100%; display: flex; gap: 16px; flex-wrap: wrap; }
-      .anime-poster-wrap { width: 150px; }
-    }
-  </style>
-</head>
-
-<body id="mugisub" class="landing">
-
-  <!--side-navbar-start-->
-  <div id="layout-nav" class="landing_nav">
-    <ul id="layout-menu" class="landing_menu">
-
-      <!-- HOME -->
-      <li class="sub-menu main" title="Menu">
-        <span class="tab">HOME</span>
-        <ul id="menu-main">
-          <li class="main"><a title="Landing Page" href="/"><span class="text">Main</span></a></li>
-          <li class="Latest Releases"><a title="Latest Releases" href="/latest"><span class="text">Latest</span></a></li>
-          <li class="Random"><a title="Random Watch" href="/random"><span class="text">Random</span></a></li>
-          <li class="Watch2gether"><a title="Watch with friends" href="/Watch2gether"><span class="text">Watch2gether</span></a></li>
-        </ul>
-        <span></span>
-      </li>
-
-      <!-- Browse -->
-      <li class="sub-menu listings" title="Content">
-        <span class="tab">BROWSE</span>
-        <ul id="menu-lists">
-          <li class="anime"><a title="All Anime" href="/anime"><span class="text">Anime</span></a></li>
-          <li class="movies"><a title="Movies" href="/anime/movies"><span class="text">Movies</span></a></li>
-          <li class="tv"><a title="Tv Show" href="/anime/movies"><span class="text">TV Shows</span></a></li>
-          <li class="ova"><a title="OVA / ONA" href="/anime/ova"><span class="text">OVA / ONA</span></a></li>
-          <li class="genres"><a title="Browse by Genre" href="/genres"><span class="text">Genres</span></a></li>
-        </ul>
-        <span></span>
-      </li>
-
-      <!-- SUPPORT -->
-      <li class="sub-menu support" title="Releases">
-        <span class="tab">SUPPORT</span>
-        <ul id="menu-terms">
-          <li class="Donate"><a title="Donate to MugiSUB" href="/donation"><span class="text">Donate</span></a></li>
-          <li class="Report"><a title="Report an Error" href="/report"><span class="text">Report Error</span></a></li>
-          <li class="Policies"><a title="Privacy Policy" href="/policy"><span class="text">Policies</span></a></li>
-          <li class="Staff"><a title="MugiSUB Team" href="/about"><span class="text">Our Team</span></a></li>
-          <li class="Contact"><a title="Contact Team" href="/about"><span class="text">Contact US</span></a></li>
-        </ul>
-        <span></span>
-      </li>
-
-      <!-- LOGIN -->
-      <li class="sub-menu login" title="Register or login">
-        <span class="tab">LOGIN</span>
-        <form action="/api/action" method="post">
-          <div>
-            <fieldset>
-              <input type="hidden" name="show" value="landing" />
-              <input type="hidden" name="do" value="landing" />
-            </fieldset>
-            <ul id="menu-login">
-              <li id="user-login"><a title="Show login page" href="/user/login"><span class="text">Login</span></a></li>
-              <li id="user-signup"><a title="Register now" href="/user/register"><span class="text">Register</span></a></li>
-              <li id="user-xname" class="user-xname" title="User name">
-                <span><input name="xuser" class="text" maxlength="16" type="text" value="" /></span>
-              </li>
-              <li id="user-xpass" class="user-xpass" title="Password">
-                <span><input name="xpass" class="text" maxlength="64" type="password" /></span>
-              </li>
-              <li id="user-xkeep" class="user-xkeep" title="Remember login data">
-                <span><label><input name="xdoautologin" type="checkbox" check="check" /><span>stay logged-in</span></label></span>
-              </li>
-              <li id="user-xauth" class="user-xauth" title="Login">
-                <span><button class="login" name="do.auth" type="submit" value="login"><span>Login</span></button></span>
-              </li>
-            </ul>
-            <span></span>
-          </div>
-        </form>
-      </li>
-
-    </ul>
-
-    <!-- Search bar -->
-    <div class="menu_hr"></div>
-    <div id="layout-search" class="landing_search">
-      <div class="search container" itemscope itemtype="https://schema.org/WebSite">
-        <span class="hide" itemprop="name">MugiSUB</span>
-        <form class="search" action="/anime" method="get" itemprop="potentialAction" itemscope itemtype="https://schema.org/SearchAction">
-          <meta itemprop="target" content="https://mugisub.com/anime?ms.search={ms.search}" />
-          <div>
-            <input itemprop="query-input" id="layout-searchbox" accesskey="s" type="text" name="ms.search" value="" class="text" placeholder="Search anime..." />
-            <select name="show" id="layout-searchselect" size="1">
-              <option value="search">all</option>
-              <option value="animelist" selected="selected">anime</option>
-              <option value="movielist">movies</option>
-              <option value="tvlist">tv shows</option>
-              <option value="ovalist">ova / ona</option>
-            </select>
-            <button type="submit" name="do.search" value="1" class="submit search">Search</button>
-          </div>
-        </form>
+<!--Search-bar-full-code-start-->
+      <div class="menu_hr"></div>
+      <div id="layout-search" class="landing_search">
+        <div
+          class="search container"
+          itemscope
+          itemtype="https://schema.org/WebSite"
+        >
+          <span class="hide" itemprop="name">MugiSub</span>
+          <a
+            class="hide"
+            rel="canonical"
+            href="https://mugisub.com"
+            itemprop="url"
+          ></a>
+          <form
+            action="#"
+            method="get"
+            onsubmit="return false;"
+            itemprop="potentialAction"
+            itemscope
+            itemtype="https://schema.org/SearchAction"
+          >
+            <div
+              itemprop="target"
+              content="https://mugisub.com/search/?q={mugi.search}&amp;do.search=1"
+            >
+              <input
+                itemprop="query-input"
+                id="layout-searchbox"
+                accesskey="s"
+                type="text"
+                name="mugi.search"
+                value=""
+                class="text"
+              />
+              <select name="show" id="layout-searchselect" size="1">
+                <option value="search"selected="selected">All</option>
+                <option value="animelist">Anime</option>
+                <option value="characterlist">Character</option>
+                <option value="clublist">Club</option>
+                <option value="collectionlist">Collections</option>
+                <option value="creatorlist">Creator</option>
+                <option value="eplist">Episodes</option>
+                <option value="grouplist">Group</option>
+                <option value="mylist">List</option>
+                <option value="songlist">Songs</option>
+                <option value="taglist">Tags</option>
+                <option value="userlist">User</option>
+              </select>
+              <button
+                type="submit"
+                name="do.search"
+                value="1"
+                class="submit search">
+              
+                Search
+              </button>
+              <fieldset>
+                <input type="hidden" name="cleanurl" value="1" />
+              </fieldset>
+            </div>
+          </form>
+          <form class="random" action="#" method="get" onsubmit="return false;">
+     
+        </div>
       </div>
     </div>
-  </div>
-  <!-- side-navbar-end -->
+    <!--layout-tabs-->
+   <div id="layout-content">
+	<div id="layout-tabs">
+		<ul class="main-tabs">
+			<li class="g_odd file"><span><a href="/latest/anime/release"><span class="text">Donate</span></a></span></li>
+			<li class="completed"><span><a href="/latest/anime/release/complete"><span class="text">Credits</span></a></span></li>
+			<li class="g_odd hotanime"><span><a href="/latest/anime/popular"><span class="text">Policies</span></a></span></li>
+			<li class="anime"><span><a href="/latest/anime"><span class="text">DMCA</span></a></span></li>
+        <!--HideSome Upper Tabs -->
+    <!--
+      <li class="g_odd sequel"><span><a href="/latest/anime/relation"><span class="text">related anime</span></a></span></li>
+			<li class="recs"><span><a href="/latest/anime/recommendation"><span class="text">recommendations</span></a></span></li>
+			<li class="g_odd reviews"><span><a href="/latest/anime/review"><span class="text">reviews</span></a></span></li>
+			<li class="similaranime"><span><a href="/latest/anime/similar"><span class="text">similar anime</span></a></span></li>
+			<li class="g_odd customise"><span><a href="/latest/customise"><span class="text">customise</span></a></span></li>
+      -->
+		</ul> 
+	</div>
+  
+      <!--layout-tabs-->
+	<div id="layout-main">
+<div class="g_breadcrumbs hide" itemscope itemtype="https://schema.org/BreadcrumbList">
+	<div class="node" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<meta itemprop="position" content="1"/>
+		<a href="https://mugisub.com" itemprop="item"><span itemprop="name">Main</span></a>
+	</div>
+	<div class="node" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<meta itemprop="position" content="2"/>
+		<a href="https://mugisub.com/anime" itemprop="item"><span itemprop="name">Anime</span></a>
+	</div>
+</div>
+<!--Search-bar-full-code-end-->
 
 
-  <!-- layout-tabs (top tabs - same as mugi) -->
-  <div id="layout-content">
-    <div id="layout-tabs">
-      <ul class="main-tabs">
-        <li class="g_odd file"><span><a href="/latest/anime/release"><span class="text">Donate</span></a></span></li>
-        <li class="completed"><span><a href="/latest/anime/release/complete"><span class="text">Credits</span></a></span></li>
-        <li class="g_odd hotanime"><span><a href="/latest/anime/popular"><span class="text">Policies</span></a></span></li>
-        <li class="anime"><span><a href="/latest/anime"><span class="text">DMCA</span></a></span></li>
+
+<!--Anime-list-upper-start-->
+<!--Anime-list-upper-end-->
+
+
+
+
+<!--Side-Filter-Start-->
+<div class="g_bubblewrap nowrap g_section">
+  <div class="right g_filter hassettings">
+    <div class="g_bubble flap hide" title="click to show the filter menu">Ask</div>
+    <div class="content">
+      <span title="Hide Filter" class="fancybox-item fancybox-close"></span>
+
+ <div class="g_section filters">
+  <h2><span>Submit a Request</span></h2>
+
+  <form id="request-form">
+
+    <ul class="g_bubblewrap">
+      <li class="g_odd g_bubble">
+
+        <h3>Category</h3>
+        <div class="g_boxwrap">
+          <label>
+            <select id="req-category">
+              <option value="anime" selected="selected">Anime</option>
+              <option value="movie">Movies</option>
+              <option value="tv">TV Shows</option>
+            </select>
+          </label>
+        </div>
+
+        <h3 id="req-title-label">Title <span class="req-star">*</span></h3>
+        <div class="g_boxwrap">
+          <input class="req-input" type="text" required
+            id="req-title"
+            placeholder="e.g. Demon Slayer Season 4" />
+        </div>
+
+        <h3>Link <span class="req-optional">(optional)</span></h3>
+        <div class="g_boxwrap">
+          <input class="req-input" type="url" id="req-link"
+            placeholder="https://myanimelist.net/..." />
+        </div>
+
+        <h3>Note <span class="req-optional">(optional)</span></h3>
+        <div class="g_boxwrap">
+          <textarea class="req-input req-textarea" rows="4"
+            id="req-note"
+            placeholder="Season, episode, ya koi aur detail..."></textarea>
+        </div>
+
+        <div class="g_boxwrap">
+          <button type="submit" class="req-submit">Submit Request</button>
+          <p class="req-hint">
+            Ya phir <a href="https://t.me/MugiSUB">Telegram</a> pe message karo
+          </p>
+        </div>
+
+      </li>
+  <li class="g_odd g_bubble">
+    <div class="g_boxwrap">
+      <h3>Adult Content</h3>
+      <ul class="filter-list">
+        <li><a href="/content/ignore">ignore</a></li>
+        <li><a href="/content/hide-18-plus">hide 18+ Content</a></li>
+        <li><a href="/content/only-18-plus">show only 18+ Content</a></li>
       </ul>
     </div>
+  </li>
 
-    <div id="layout-main">
+  <li class="g_bubble">
+    <div class="g_boxwrap">
+      <h3>Airing Status</h3>
+      <ul class="filter-list">
+        <li><a href="/airing/ignore">ignore</a></li>
+        <li><a href="/airing/still-airing">still airing</a></li>
+        <li><a href="/airing/finished">finished</a></li>
+        <li><a href="/airing/unaired">unaired/unknown</a></li>
+      </ul>
+    </div>
+  </li>
 
-      <!-- BREADCRUMB -->
-      <div class="ad-breadcrumb">
-        <a href="/">Home</a> ›
-        <a href="/anime">Anime</a> ›
-        <a href="/anime?type=tv">TV Series</a> ›
-        Solo Leveling Season 2
-      </div>
+  <li class="g_odd g_bubble">
+    <h3>Anime Type</h3>
+    <div class="g_boxwrap">
+      <ul class="filter-list">
+        <li><a href="/type/movie">Movie</a></li>
+        <li><a href="/type/musicvideo">Music Video</a></li>
+        <li><a href="/type/other">Other</a></li>
+        <li><a href="/type/ova">OVA</a></li>
+        <li><a href="/type/tvseries">TV Series</a></li>
+        <li><a href="/type/tvspecial">TV Special</a></li>
+        <li><a href="/type/unknown">unknown</a></li>
+        <li><a href="/type/web">Web</a></li>
+      </ul>
+    </div>
+  </li>
 
-      <!-- ════════════════════════════════
-           ANIME DETAIL MAIN CONTENT
-           ════════════════════════════════ -->
-      <div class="anime-detail-wrap">
+  
+</ul>
+</div>
+</form>
+</div>
+</div>
+  <!--Side-Filte-END-->
 
-        <!-- LEFT: POSTER + QUICK INFO -->
-        <div class="anime-detail-left">
-          <div class="anime-poster-wrap">
-            <img src="img.mugis/poster_img/monster_img-thumb.jpg" class="anime-poster" alt="Solo Leveling S2 Poster"/>
-            <div class="poster-overlay-btns">
-              <button class="poster-btn" onclick="addToMylist()">+ Add to MyList</button>
-              <button class="poster-btn poster-btn-wish" onclick="addWishlist()">♡ Wishlist</button>
-            </div>
-          </div>
-
-          <!-- VOTE WIDGET -->
-          <div class="vote-widget">
-            <div class="vw-title">My Vote</div>
-            <div class="vote-stars" id="voteStars">
-              <span class="vstar" data-v="1" onclick="setVote(1)">★</span>
-              <span class="vstar" data-v="2" onclick="setVote(2)">★</span>
-              <span class="vstar" data-v="3" onclick="setVote(3)">★</span>
-              <span class="vstar" data-v="4" onclick="setVote(4)">★</span>
-              <span class="vstar" data-v="5" onclick="setVote(5)">★</span>
-              <span class="vstar" data-v="6" onclick="setVote(6)">★</span>
-              <span class="vstar" data-v="7" onclick="setVote(7)">★</span>
-              <span class="vstar" data-v="8" onclick="setVote(8)">★</span>
-              <span class="vstar" data-v="9" onclick="setVote(9)">★</span>
-              <span class="vstar" data-v="10" onclick="setVote(10)">★</span>
-            </div>
-            <div class="vote-hint" id="voteHint">Click to rate</div>
-          </div>
-
-          <!-- QUICK INFO TABLE -->
-          <table class="quick-info-table">
-            <tr><th>Type</th><td>TV Series</td></tr>
-            <tr><th>Year</th><td>2025</td></tr>
-            <tr><th>Season</th><td>Winter 2025</td></tr>
-            <tr><th>Episodes</th><td>13</td></tr>
-            <tr><th>Status</th><td><span class="status-airing">● Airing</span></td></tr>
-            <tr><th>Duration</th><td>~24 min/ep</td></tr>
-            <tr><th>Studio</th><td><a href="/creator/a1-pictures">A-1 Pictures</a></td></tr>
-            <tr><th>Source</th><td>Web Manga</td></tr>
-            <tr><th>Language</th><td>Japanese</td></tr>
-            <tr><th>Country</th><td>🇯🇵 Japan</td></tr>
-            <tr><th>Rating</th><td>PG-13</td></tr>
-            <tr><th>AniDB ID</th><td>17495</td></tr>
-          </table>
-
-          <!-- EXTERNAL LINKS -->
-          <div class="external-links">
-            <div class="ext-title">External Links</div>
-            <a href="#" class="ext-link">MAL</a>
-            <a href="#" class="ext-link">ANN</a>
-            <a href="#" class="ext-link">AP</a>
-            <a href="#" class="ext-link">AniList</a>
-            <a href="#" class="ext-link">Kitsu</a>
-            <a href="#" class="ext-link">TheTVDB</a>
-          </div>
-        </div>
-        <!-- /anime-detail-left -->
-
-        <!-- RIGHT: MAIN INFO -->
-        <div class="anime-detail-right">
-
-          <!-- TITLE BLOCK -->
-          <div class="anime-title-block">
-            <h1 class="anime-title-main">Ore dake Level Up na Ken Season 2: Arise from the Shadow</h1>
-            <div class="anime-title-alt">
-              <span class="alt-label">Also known as:</span>
-              Solo Leveling Season 2 · 俺だけレベルアップな件 Season 2 · 나 혼자만 레벨업 시즌 2
-            </div>
-          </div>
-
-          <!-- RATING BAR -->
-          <div class="rating-block">
-            <div class="rating-main">
-              <div class="rating-score">8.74</div>
-              <div class="rating-stars-disp">★★★★★★★★☆☆</div>
-              <div class="rating-sub">Weighted Rating · 4,821 votes</div>
-            </div>
-            <div class="rating-breakdown">
-              <div class="rb-row">
-                <span class="rb-label">Temporary</span>
-                <div class="rb-bar-wrap"><div class="rb-bar" style="width:87%"></div></div>
-                <span class="rb-val">8.71</span>
-              </div>
-              <div class="rb-row">
-                <span class="rb-label">Permanent</span>
-                <div class="rb-bar-wrap"><div class="rb-bar" style="width:84%"></div></div>
-                <span class="rb-val">8.40</span>
-              </div>
-              <div id="votesDist"></div>
-            </div>
-          </div>
-
-          <!-- TABS -->
-          <div class="detail-tabs">
-            <button class="dtab active" onclick="showTab('overview', this)">Overview</button>
-            <button class="dtab" onclick="showTab('episodes', this)">Episodes (9/13)</button>
-            <button class="dtab" onclick="showTab('characters', this)">Characters</button>
-            <button class="dtab" onclick="showTab('staff', this)">Staff & Cast</button>
-            <button class="dtab" onclick="showTab('files', this)">Files</button>
-            <button class="dtab" onclick="showTab('reviews', this)">Reviews</button>
-            <button class="dtab" onclick="showTab('tags', this)">Tags</button>
-          </div>
-
-          <!-- TAB: OVERVIEW -->
-          <div class="tab-panel active" id="tab-overview">
-            <div class="anime-desc">
-              <h4>Description</h4>
-              <p>Following his defeat of the Monarchs and his emergence as the Shadow Monarch himself, Sung Jin-Woo has become one of the most powerful beings on Earth. However, a new crisis looms as the Rulers' army begins to descend from the heavens, threatening humanity once more.</p>
-              <p>With the fate of two worlds hanging in the balance, Jin-Woo must confront enemies and revelations that shake the very foundation of his existence. The shadows answer to their king — but is he prepared for what lies beyond the gate?</p>
-              <div class="desc-credit">— written by MugiSUB editors</div>
-            </div>
-
-            <div class="related-block">
-              <h4>Related Anime</h4>
-              <div class="related-grid">
-                <div class="related-item">
-                  <img src="https://cdn.myanimelist.net/images/anime/1239/110687.jpg" alt="SL S1"/>
-                  <div class="ri-info">
-                    <div class="ri-rel">Prequel</div>
-                    <a href="/anime/solo-leveling" class="ri-title">Solo Leveling</a>
-                    <div class="ri-type">TV, 12 eps</div>
-                  </div>
-                </div>
-                <div class="related-item">
-                  <img src="https://cdn.myanimelist.net/images/anime/1209/119723.jpg" alt="SL Special"/>
-                  <div class="ri-info">
-                    <div class="ri-rel">Side Story</div>
-                    <a href="/anime/solo-leveling-reawakening" class="ri-title">Solo Leveling: ReAwakening</a>
-                    <div class="ri-type">Special, 1 ep</div>
-                  </div>
+               <!--Main-Content-poster-start-->      
+              <div class="container">
+              <div class="g_section">
+                <h2><span>Latest Uploads</span></h2>
+                <!--main-content-poster-end-here-->
                 </div>
               </div>
             </div>
-
-            <div class="tags-block">
-              <h4>Tags</h4>
-              <div class="tags-list">
-                <span class="tag-item high"><a href="/genres?tag=action">action</a><span class="tag-score">100%</span></span>
-                <span class="tag-item high"><a href="/genres?tag=fantasy">fantasy</a><span class="tag-score">98%</span></span>
-                <span class="tag-item high"><a href="/genres?tag=game-elements">game elements</a><span class="tag-score">95%</span></span>
-                <span class="tag-item high"><a href="/genres?tag=shounen">shounen</a><span class="tag-score">92%</span></span>
-                <span class="tag-item mid"><a href="/genres?tag=magic">magic</a><span class="tag-score">88%</span></span>
-                <span class="tag-item mid"><a href="/genres?tag=overpowered-protagonist">overpowered protagonist</a><span class="tag-score">85%</span></span>
-                <span class="tag-item mid"><a href="/genres?tag=necromancer">necromancer</a><span class="tag-score">82%</span></span>
-                <span class="tag-item mid"><a href="/genres?tag=manhwa">manhwa based</a><span class="tag-score">80%</span></span>
-                <span class="tag-item low"><a href="/genres?tag=dungeons">dungeons</a><span class="tag-score">76%</span></span>
-                <span class="tag-item low"><a href="/genres?tag=violence">violence</a><span class="tag-score">72%</span></span>
-                <span class="tag-item low"><a href="/genres?tag=special-abilities">special abilities</a><span class="tag-score">70%</span></span>
-              </div>
-            </div>
           </div>
 
-          <!-- TAB: EPISODES -->
-          <div class="tab-panel" id="tab-episodes">
-            <table class="episode-table">
-              <thead>
-                <tr>
-                  <th class="ep-num-h">#</th>
-                  <th class="ep-title-h">Title</th>
-                  <th class="ep-date-h">Air Date</th>
-                  <th class="ep-dur-h">Duration</th>
-                  <th class="ep-vote-h">Rating</th>
-                  <th class="ep-act-h">Actions</th>
-                </tr>
-              </thead>
-              <tbody id="episodeTableBody"></tbody>
-            </table>
-          </div>
+<!--Anime-list-down-next-prev-button-start-->
+        
+<!--Anime-list-down-next-prev-button-end-->
 
-          <!-- TAB: CHARACTERS -->
-          <div class="tab-panel" id="tab-characters">
-            <div class="char-grid" id="charGrid"></div>
-          </div>
 
-          <!-- TAB: STAFF -->
-          <div class="tab-panel" id="tab-staff">
-            <div class="staff-section">
-              <h4>Animation Production</h4>
-              <div class="staff-grid" id="staffGrid"></div>
-            </div>
-            <div class="staff-section">
-              <h4>Voice Cast (Main)</h4>
-              <div class="cast-list" id="castList"></div>
-            </div>
-          </div>
-
-          <!-- TAB: FILES -->
-          <div class="tab-panel" id="tab-files">
-            <div class="files-info">
-              <p class="files-note">⚠️ MugiSUB does not host, link, or provide files for download. File metadata is maintained for collection management purposes only.</p>
-              <table class="files-table">
-                <thead><tr><th>Episode</th><th>Group</th><th>Quality</th><th>Codec</th><th>Audio</th><th>Size</th><th>CRC</th></tr></thead>
-                <tbody id="filesTableBody"></tbody>
-              </table>
-            </div>
-          </div>
-
-          <!-- TAB: REVIEWS -->
-          <div class="tab-panel" id="tab-reviews">
-            <div class="reviews-list" id="reviewsList"></div>
-            <button class="ad-btn-primary" onclick="alert('Log in to write a review')">Write a Review</button>
-          </div>
-
-          <!-- TAB: TAGS -->
-          <div class="tab-panel" id="tab-tags">
-            <div class="tags-full-list" id="tagsFullList"></div>
-          </div>
-
-        </div>
-        <!-- /anime-detail-right -->
+      <!--g_content-->
+        <div class="g_end"></div>
       </div>
-      <!-- /anime-detail-wrap -->
-
-      <div class="g_end"></div>
+      <!--layout-main-->
     </div>
-    <!-- /layout-main -->
-  </div>
-  <!-- /layout-content -->
+    <!--layout-content-->
 
 
-  <!-- Footer (same as mugi) -->
-  <div id="layout-footer">
-    <p>
-      <a href="/" property="cc:attributionName">MugiSub</a> does not host any files on its servers. All content is sourced from third-party platforms and is provided solely for viewing purposes.
-    </p>
-    <p>
-      If you are the copyright owner and wish to request the removal of any content, please visit our <a rel="license" href="/dmca">DMCA</a> page for more information.
-    </p>
-    <div itemscope itemtype="https://schema.org/Organization">
-      <a class="hide" itemprop="url" href="https://mugisub.com">Home</a>
-      <span class="hide" itemprop="name">MugiSUB</span>
+<!--Footer-layout-start-->
+    <div id="layout-footer">
+      <p>
+        <a href="/" property="cc:attributionName">MugiSub</a> does not host any files on its servers. All content is sourced from third-party platforms
+        
+      </p>
+      <p>
+        If you are the copyright owner and wish to request the removal of any content, please visit our <a
+        rel="license"
+        href="/dmca"
+        >DMCA</a
+      >. page for more information.
+        
+      </p>
+
+
+
+
+      
+      <div itemscope itemtype="https://schema.org/Organization">
+        <a class="hide" itemprop="url" href="https://mugisub.com">Home</a>
+        <img
+          loading="lazy"
+          class="hide"
+          alt="MugiSUB"
+          itemprop="logo"
+          src=img.mugis/logos/touch/android-chrome-512x512.png"
+        />
+        <span class="hide" itemprop="name">MugiSUB</span>
+   <!-- Footer icon -->
+        </div>
+      </div>
     </div>
-  </div>
-
-  <!-- Scripts from MugiSUB -->
-  <script defer src="mugi-filter-menu.js"></script>
-  <script defer src="mugi-image-preview.js"></script>
-
-  <!-- Inline detail page scripts (from app.js) -->
-  <script>
-    // ═══ DATA ═══
-    const episodesData = [
-      { num: "01", title: "Arise from the Shadow",          air: "2025-01-04", dur: "24 min", vote: "8.91" },
-      { num: "02", title: "The Monarchs",                   air: "2025-01-11", dur: "24 min", vote: "8.74" },
-      { num: "03", title: "Shadow Exchange",                air: "2025-01-18", dur: "24 min", vote: "8.83" },
-      { num: "04", title: "The Rulers' Descent",            air: "2025-01-25", dur: "24 min", vote: "8.78" },
-      { num: "05", title: "Beru's Awakening",               air: "2025-02-01", dur: "24 min", vote: "9.02" },
-      { num: "06", title: "Absolute Domain",                air: "2025-02-08", dur: "24 min", vote: "8.95" },
-      { num: "07", title: "The Shadow Monarch's Army",      air: "2025-02-15", dur: "24 min", vote: "8.88" },
-      { num: "08", title: "Thomas Andre vs. Sung Jin-Woo",  air: "2025-02-22", dur: "28 min", vote: "9.14" },
-      { num: "09", title: "Arise Once More",                air: "2025-03-01", dur: "24 min", vote: "8.97" },
-      { num: "10", title: "TBA", air: "2025-03-08", dur: "—", vote: "—" },
-      { num: "11", title: "TBA", air: "2025-03-15", dur: "—", vote: "—" },
-      { num: "12", title: "TBA", air: "2025-03-22", dur: "—", vote: "—" },
-      { num: "13", title: "TBA", air: "2025-03-29", dur: "—", vote: "—" },
-    ];
-
-    const charData = [
-      { name: "Sung Jin-Woo",   role: "Main Character", img: "https://cdn.myanimelist.net/images/anime/1079/138081.jpg" },
-      { name: "Cha Hae-In",     role: "Main Character", img: "https://cdn.myanimelist.net/images/anime/1015/138006.jpg" },
-      { name: "Go Gun-Hee",     role: "Supporting",     img: "https://cdn.myanimelist.net/images/anime/1286/99889.jpg" },
-      { name: "Beru (Ant King)",role: "Supporting",     img: "https://cdn.myanimelist.net/images/anime/1530/117776.jpg" },
-      { name: "Igris",          role: "Supporting",     img: "https://cdn.myanimelist.net/images/anime/1208/94745.jpg" },
-      { name: "Thomas Andre",   role: "Supporting",     img: "https://cdn.myanimelist.net/images/anime/1870/120219.jpg" },
-    ];
-
-    const staffData = [
-      { name: "Shunsuke Nakashige", role: "Director" },
-      { name: "Noboru Kimura",      role: "Series Composition" },
-      { name: "Tomoko Sudo",        role: "Character Design" },
-      { name: "Hiroyuki Sawano",    role: "Music" },
-      { name: "A-1 Pictures",       role: "Animation Studio" },
-    ];
-
-    const castData = [
-      { char: "Sung Jin-Woo", va: "Taito Ban",   lang: "Japanese" },
-      { char: "Sung Jin-Woo", va: "Aleks Le",    lang: "English" },
-      { char: "Cha Hae-In",   va: "Ai Kakuma",   lang: "Japanese" },
-      { char: "Beru",         va: "Masayuki Katou", lang: "Japanese" },
-    ];
-
-    const reviewsData = [
-      { user: "AnimeFan2025",     score: 9,  date: "2025-03-01", text: "An absolute masterpiece of power fantasy. The animation quality from A-1 Pictures is exceptional — each fight scene is choreographed with stunning precision. Sung Jin-Woo's character development in this season is far superior to the first." },
-      { user: "DarkHunter_X",    score: 8,  date: "2025-02-15", text: "Great continuation from S1. The Ruler arc introduces fascinating lore and the Thomas Andre fight episode is genuinely one of the best anime action sequences I've seen in years. Slight pacing issues in episodes 3-5 keep it from a perfect score." },
-      { user: "KoreanAnimeLover", score: 10, date: "2025-01-20", text: "As a manhwa reader, I was worried about the adaptation. My worries were completely unfounded. They captured the essence of every chapter and the OST by Hiroyuki Sawano elevates every scene to epic proportions." },
-    ];
-
-    // ═══ RENDER FUNCTIONS ═══
-    function renderEpisodes() {
-      const tbody = document.getElementById('episodeTableBody');
-      if (!tbody) return;
-      tbody.innerHTML = episodesData.map(ep => {
-        const aired = ep.air && new Date(ep.air) <= new Date();
-        return `<tr>
-          <td class="ep-num-cell">${ep.num}</td>
-          <td class="ep-title-cell">${ep.title}</td>
-          <td class="ep-date-cell">${ep.air || '—'}</td>
-          <td class="ep-dur-cell">${ep.dur}</td>
-          <td class="ep-vote-cell">${ep.vote !== '—' ? '★ ' + ep.vote : '—'}</td>
-          <td><button class="ep-watched-btn" onclick="toggleWatched(this)">${aired ? 'Mark Watched' : 'Not Aired'}</button></td>
-        </tr>`;
-      }).join('');
-    }
-
-    function toggleWatched(btn) {
-      btn.classList.toggle('watched');
-      btn.textContent = btn.classList.contains('watched') ? '✓ Watched' : 'Mark Watched';
-    }
-
-    function renderCharacters() {
-      const el = document.getElementById('charGrid');
-      if (!el) return;
-      el.innerHTML = charData.map(c => `
-        <div class="char-card">
-          <img src="${c.img}" class="char-img" alt="${c.name}" loading="lazy"/>
-          <div class="char-info">
-            <div class="char-name">${c.name}</div>
-            <div class="char-role">${c.role}</div>
-          </div>
-        </div>`).join('');
-    }
-
-    function renderStaff() {
-      const sg = document.getElementById('staffGrid');
-      const cl = document.getElementById('castList');
-      if (sg) sg.innerHTML = staffData.map(s => `
-        <div class="staff-row">
-          <div class="staff-img">👤</div>
-          <div class="staff-info">
-            <div class="staff-name">${s.name}</div>
-            <div class="staff-role">${s.role}</div>
-          </div>
-        </div>`).join('');
-      if (cl) cl.innerHTML = castData.map(c => `
-        <div class="cast-row">
-          <div style="font-size:22px;">🎙️</div>
-          <div>
-            <div style="font-size:12.5px;color:var(--ad-blue2);font-weight:700">${c.va}</div>
-            <div style="font-size:11.5px;color:var(--ad-text2)">as ${c.char} · ${c.lang}</div>
-          </div>
-        </div>`).join('');
-    }
-
-    function renderFiles() {
-      const tbody = document.getElementById('filesTableBody');
-      if (!tbody) return;
-      const fakeFiles = episodesData.slice(0,9).map((ep, i) => ({
-        ep: `EP ${ep.num}`,
-        group: ["SubsPlease","Erai-raws","HorribleSubs","DKB"][i%4],
-        quality: ["1080p","720p","1080p","4K"][i%4],
-        codec: ["H.265","H.264","H.265","H.265"][i%4],
-        audio: "AAC 2.0",
-        size: `${(800 + i*50).toFixed(0)} MB`,
-        crc: Math.random().toString(16).slice(2,10).toUpperCase()
-      }));
-      tbody.innerHTML = fakeFiles.map(f => `<tr>
-        <td>${f.ep}</td><td>${f.group}</td><td>${f.quality}</td>
-        <td>${f.codec}</td><td>${f.audio}</td><td>${f.size}</td>
-        <td style="font-family:var(--ad-mono);font-size:11px">[${f.crc}]</td>
-      </tr>`).join('');
-    }
-
-    function renderReviews() {
-      const el = document.getElementById('reviewsList');
-      if (!el) return;
-      el.innerHTML = reviewsData.map(r => `
-        <div class="review-card">
-          <div class="review-head">
-            <span class="review-user">${r.user}</span>
-            <span class="review-score">${r.score}/10</span>
-            <span class="review-date">${r.date}</span>
-          </div>
-          <p class="review-text">${r.text}</p>
-        </div>`).join('');
-    }
-
-    function renderTagsFull() {
-      const el = document.getElementById('tagsFullList');
-      if (!el) return;
-      const tags = [
-        {t:"action",p:100},{t:"fantasy",p:98},{t:"game-elements",p:95},{t:"shounen",p:92},
-        {t:"magic",p:88},{t:"overpowered-protagonist",p:85},{t:"necromancer",p:82},{t:"manhwa",p:80},
-        {t:"dungeons",p:76},{t:"violence",p:72},{t:"special-abilities",p:70},{t:"korea",p:65},
-        {t:"based-on-manhwa",p:62},{t:"hunters",p:60},{t:"gates",p:58},{t:"shadows",p:55}
-      ];
-      el.innerHTML = tags.map(t => `
-        <span class="tfl-tag" onclick="location.href='/genres?tag=${t.t}'">
-          ${t.t}<span class="tfl-pct">${t.p}%</span>
-        </span>`).join('');
-    }
-
-    function renderVotesDist() {
-      const el = document.getElementById('votesDist');
-      if (!el) return;
-      const dist = [2, 3, 5, 8, 12, 18, 22, 15, 10, 5];
-      el.innerHTML = `<div style="margin-top:10px;width:100%">
-        ${dist.map((v,i) => `
-          <div style="display:flex;align-items:center;gap:6px;margin-bottom:2px;font-size:10.5px">
-            <span style="width:16px;text-align:right;color:var(--ad-text2)">${10-i}</span>
-            <div style="flex:1;height:8px;background:var(--ad-bg4);border-radius:3px;overflow:hidden">
-              <div style="width:${v*4}%;height:100%;background:${v>15?'var(--ad-yellow)':v>10?'var(--ad-accent2)':'var(--ad-border2)'};border-radius:3px"></div>
-            </div>
-            <span style="color:var(--ad-text2);min-width:30px">${Math.floor(v*48)}</span>
-          </div>`).join('')}
-      </div>`;
-    }
-
-    function showTab(tabId, btn) {
-      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-      document.querySelectorAll('.dtab').forEach(b => b.classList.remove('active'));
-      document.getElementById('tab-' + tabId)?.classList.add('active');
-      btn.classList.add('active');
-    }
-
-    function setVote(v) {
-      document.querySelectorAll('.vstar').forEach((s, i) => {
-        s.classList.toggle('active', i < v);
-      });
-      const labels = ["","Catastrophe","Worst I've ever seen","Bad","Weak","Average","Fine","Good","Very Good","Excellent","Masterpiece"];
-      const hint = document.getElementById('voteHint');
-      if (hint) hint.textContent = `${v}/10 — ${labels[v]}`;
-    }
-
-    function addToMylist() { alert('Added to MyList as "Watching"!'); }
-    function addWishlist()  { alert('Added to Wishlist!'); }
-
-    // Init on load
-    window.addEventListener('DOMContentLoaded', () => {
-      renderEpisodes();
-      renderCharacters();
-      renderStaff();
-      renderFiles();
-      renderReviews();
-      renderTagsFull();
-      renderVotesDist();
-    });
-  </script>
-
-</body>
+  </body>
 </html>
