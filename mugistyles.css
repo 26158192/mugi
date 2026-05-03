@@ -1,84 +1,74 @@
-body,
-div,
-fieldset,
-form,
-h1,
-h2,
-h3,
-h4,
-input,
-li,
-p,
-td,
-textarea,
-th,
-ul {
+/* ================================================================
+   MUGISUB STYLESHEET — mugistyles.css
+   Own class/ID names with ms- prefix
+   Comments explain every section's purpose
+   ================================================================ */
+
+
+/* ────────────────────────────────────────────────────────────────
+   RESET — strips browser default margins/padding from block elements
+   ──────────────────────────────────────────────────────────────── */
+body, div, fieldset, form, h1, h2, h3, h4,
+input, li, p, td, textarea, th, ul {
   margin: 0;
   padding: 0;
 }
+
+/* TABLE reset — consistent border model across browsers */
 table {
   border-collapse: separate;
-  -border-collapse: collapse;
   border-spacing: 0;
 }
-fieldset,
-img {
-  border: 0;
-}
-code,
-th,
-var {
-  font-style: normal;
-  font-weight: normal;
-}
-ul {
-  list-style: none;
-}
-th {
-  text-align: left;
-}
-h1,
-h2,
-h3,
-h4 {
-  font-size: 1rem;
-  font-weight: normal;
-}
-abbr {
-  border: 0;
-}
-* {
-  color: inherit;
-  font-size: inherit;
-  font-family: inherit;
-}
-body,
-div,
-form,
-html,
-table {
-  left: 0;
-}
-td,
-th {
-  padding: 1px 2px;
-}
-p,
-textarea {
-  padding: 4px;
-}
-span {
-  display: inline;
-}
-fieldset {
-  display: none;
-}
-ul {
-  list-style-type: none;
-}
-#layout-search input.text,
-#layout-search select,
-#layout-search .submit {
+
+/* FIELDSET / IMG — remove default borders */
+fieldset, img { border: 0; }
+
+/* CODE / TH / VAR — remove italic/bold browser defaults */
+code, th, var { font-style: normal; font-weight: normal; }
+
+/* UL — remove bullet list style globally */
+ul { list-style: none; }
+
+/* TH — left-align table headers by default */
+th { text-align: left; }
+
+/* HEADINGS — flatten size and weight; override per component */
+h1, h2, h3, h4 { font-size: 1rem; font-weight: normal; }
+
+/* ABBR — remove dotted underline in old browsers */
+abbr { border: 0; }
+
+/* UNIVERSAL — inherit font/color from parent */
+* { color: inherit; font-size: inherit; font-family: inherit; }
+
+/* HTML/BODY/DIV/FORM/TABLE — always start from left edge */
+body, div, form, html, table { left: 0; }
+
+/* TD/TH — minimal padding */
+td, th { padding: 1px 2px; }
+
+/* P / TEXTAREA — small padding */
+p, textarea { padding: 4px; }
+
+/* SPAN — inline by default */
+span { display: inline; }
+
+/* FIELDSET — hidden (used for hidden inputs) */
+fieldset { display: none; }
+
+/* UL — remove list-style-type (redundant but safe) */
+ul { list-style-type: none; }
+
+
+/* ────────────────────────────────────────────────────────────────
+   SEARCH BAR — strip borders/outlines from inputs inside search
+   #ms-searchbar input, select, .ms-btn-search
+   ──────────────────────────────────────────────────────────────── */
+#ms-searchbar input.ms-search-text,
+#ms-searchbar input.text,
+#ms-searchbar select,
+#ms-searchbar .ms-btn-search,
+#ms-searchbar .submit {
   border: none !important;
   outline: none !important;
   box-shadow: none !important;
@@ -86,789 +76,684 @@ ul {
   -moz-appearance: none;
   appearance: none;
 }
-#layout-search input.text {
-  border-radius: 5px 0 0 5px;
-}
-#layout-search select {
-  border-radius: 0;
-}
-#layout-search .submit {
-  border-radius: 0 5px 5px 0;
-}
-#layout-main table {
-  margin: 0 auto 0 auto;
-}
-#layout-nav #user-xkeep input {
-  border: 0;
-  width: auto;
-}
-.hide {
-  display: none !important;
-}
-#layout-menu li.sub-menu span.tab,
-#layout-tabs {
-  display: none;
-}
-#layout-menu li.sub-menu span.tab {
-  position: absolute;
-}
-#layout-main .g_list,
-#layout-main .g_msg,
-#layout-main .g_section,
-#layout-main h1 {
-  margin-bottom: 1em;
-}
-#layout-main table + .g_list {
-  margin-top: 1em;
-}
-#layout-main .g_end {
-  padding: 0;
-  margin: 0;
-  clear: right;
-  border: 0;
-}
-#layout-main .g_list,
-#layout-main .g_section {
-  clear: both;
-}
-#layout-main .g_list.type {
-  float: left;
-}
-#layout-main div table td.name .icons,
-#layout-main div table td.title .icons {
-  float: right;
-}
-#layout-main div table td.name .icons.tooltip {
+
+/* SEARCH INPUT — left pill shape */
+#ms-searchbar input.ms-search-text,
+#ms-searchbar input.text { border-radius: 5px 0 0 5px; }
+
+/* SEARCH SELECT — no radius (middle segment) */
+#ms-searchbar select { border-radius: 0; }
+
+/* SEARCH BUTTON — right pill shape */
+#ms-searchbar .ms-btn-search,
+#ms-searchbar .submit { border-radius: 0 5px 5px 0; }
+
+
+/* ────────────────────────────────────────────────────────────────
+   LAYOUT MAIN TABLE — center tables inside main content
+   ──────────────────────────────────────────────────────────────── */
+#ms-main table { margin: 0 auto; }
+
+/* KEEP-LOGGED CHECKBOX — remove border, auto width */
+#ms-sidenav #ms-field-keep input { border: 0; width: auto; }
+
+/* HIDDEN UTILITY — force hide any element */
+.ms-hidden { display: none !important; }
+
+/* .hide — JS filter open/close ke liye */
+.hide { display: none !important; }
+
+/* NAV TABS + TABBAR — hidden by default, shown via layout rules */
+#ms-navlist li.ms-nav-group span.ms-nav-tab,
+#ms-tabbar { display: none; }
+
+/* NAV TAB — absolute position for dropdown use */
+#ms-navlist li.ms-nav-group span.ms-nav-tab { position: absolute; }
+
+
+/* ────────────────────────────────────────────────────────────────
+   MAIN CONTENT SECTIONS — spacing for lists, sections, headings
+   ──────────────────────────────────────────────────────────────── */
+#ms-main .ms-list,
+#ms-main .ms-msg,
+#ms-main .ms-section,
+#ms-main h1 { margin-bottom: 1em; }
+
+#ms-main table + .ms-list { margin-top: 1em; }
+
+/* END SPACER — clears floats, no visual presence */
+#ms-main .ms-end { padding: 0; margin: 0; clear: right; border: 0; }
+
+/* SECTION — clear floats */
+#ms-main .ms-list,
+#ms-main .ms-section { clear: both; }
+
+/* TYPE LIST — float left layout */
+#ms-main .ms-list.type { float: left; }
+
+/* TABLE ICONS — float icons right in name/title cells */
+#ms-main div table td.name .icons,
+#ms-main div table td.title .icons { float: right; }
+
+#ms-main div table td.name .icons.tooltip {
   vertical-align: bottom;
   float: none;
 }
-#layout-main .g_bubble.box .name .icons.tooltip + a,
-#layout-main div table td.name .icons.tooltip + a {
-  line-height: 16px;
-}
-#layout-main .icons .i_icon {
-  float: left;
-}
-#layout-main .icons.right .i_icon {
-  float: right;
-}
-#layout-hint {
+
+/* BUBBLE NAME ICONS — align icon next to text */
+#ms-main .ms-bubble.box .name .icons.tooltip + a,
+#ms-main div table td.name .icons.tooltip + a { line-height: 16px; }
+
+/* ICON FLOAT — icons float left inside icon containers */
+#ms-main .icons .i_icon { float: left; }
+#ms-main .icons.right .i_icon { float: right; }
+
+
+/* ────────────────────────────────────────────────────────────────
+   TOP HINT BAR — #ms-topbar (disabled but styled for when enabled)
+   Shows hints/announcements at absolute top
+   ──────────────────────────────────────────────────────────────── */
+#ms-topbar {
   position: absolute;
   top: 0;
   width: calc(100% - 2.2em);
   text-align: center;
   z-index: 110;
-  padding: 0.25em 1em;
+  padding: .25em 1em;
 }
-table + select {
-  margin-top: 1em;
-}
-.g_info ul {
-  text-align: center;
-}
-#layout-footer {
-  text-align: center;
-  padding: 0.5em 0;
-}
-#layout-main .g_section > form > h2,
-#layout-main .g_section > h2 {
+
+table + select { margin-top: 1em; }
+
+/* INFO UL — centered info lists */
+.ms-info ul { text-align: center; }
+
+
+/* ────────────────────────────────────────────────────────────────
+   FOOTER — #ms-footer — centered, small padding
+   ──────────────────────────────────────────────────────────────── */
+#ms-footer { text-align: center; padding: .5em 0; }
+
+
+/* ────────────────────────────────────────────────────────────────
+   SECTION HEADINGS — h2 inside sections, left-aligned with margin
+   ──────────────────────────────────────────────────────────────── */
+#ms-main .ms-section > form > h2,
+#ms-main .ms-section > h2 {
   padding: 0;
   text-align: left;
-  margin-bottom: 0.4em;
+  margin-bottom: .4em;
 }
-.g_section > form > h2 > span,
-.g_section > h2 > span {
+
+/* H2/H4 SPAN — block display with small padding */
+.ms-section > form > h2 > span,
+.ms-section > h2 > span {
   display: block;
-  padding: 0.25em 0.5em;
+  padding: .25em .5em;
 }
-.g_section > h2 + .container + h2,
-.g_section > h2 + .edit_actions + .container + h2 {
-  margin-top: 1.2em;
-}
-h1 + .icons {
-  margin-top: -4em;
-  margin-right: 1em;
-}
+
+/* DOUBLE H2 — extra top margin when multiple sections stack */
+.ms-section > h2 + .ms-wrap + h2,
+.ms-section > h2 + .ms-edit + .ms-wrap + h2 { margin-top: 1.2em; }
+
+h1 + .icons { margin-top: -4em; margin-right: 1em; }
+
+/* SMALL SCREENS — hide tooltip icons in name cells */
 @media screen and (max-width: 600px) {
-  #layout-main div table td.name .icons.tooltip,
-  h1 + .icons {
-    display: none;
-  }
+  #ms-main div table td.name .icons.tooltip,
+  h1 + .icons { display: none; }
 }
-#layout-tabs {
-  margin: 1px;
-  display: block;
-}
-#layout-tabs ul {
-  display: inline;
-  border: 0;
-}
-#layout-tabs ul li {
-  display: inline;
-  margin: 0 0 0 3px;
-  padding: 0;
-}
-#layout-tabs ul li a {
-  padding: 1px 6px 1px 6px;
-  border-bottom: 0;
-}
-#mugisub div.block {
+
+
+/* ────────────────────────────────────────────────────────────────
+   TAB BAR — #ms-tabbar — top horizontal tabs row
+   ──────────────────────────────────────────────────────────────── */
+#ms-tabbar { margin: 1px; display: block; }
+#ms-tabbar ul { display: inline; border: 0; }
+#ms-tabbar ul li { display: inline; margin: 0 0 0 3px; padding: 0; }
+#ms-tabbar ul li a { padding: 1px 6px; border-bottom: 0; }
+
+
+/* ────────────────────────────────────────────────────────────────
+   BLOCK LAYOUT — #ms-root div.block — flex row for image+data
+   Used for anime info pages
+   ──────────────────────────────────────────────────────────────── */
+#ms-root div.block {
   width: 100%;
-  margin-top: 0.5em;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
+  margin-top: .5em;
   display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  -ms-justify-content: center;
-  -moz-justify-content: center;
-  -webkit-justify-content: center;
   justify-content: center;
 }
-#mugisub div.block > div.image {
+
+#ms-root div.block > div.image {
   text-align: center;
   margin-right: 1em;
 }
-#mugisub div.block > div.image > div.container {
+
+#ms-root div.block > div.image > div.ms-wrap {
   position: relative;
   display: inline-block;
 }
-#mugisub div.block > div.data {
+
+#ms-root div.block > div.data {
   max-width: 65em;
   width: 100%;
   z-index: 1;
 }
-#mugisub div.block + div.g_bubble.desc,
-#mugisub div.g_section.desc {
+
+/* BLOCK DESC — description bubble below block */
+#ms-root div.block + div.ms-bubble.desc,
+#ms-root div.ms-section.desc {
   margin: 1em 0;
   padding: 1em;
   overflow-wrap: break-word;
 }
-#mugisub div.block div.data table {
-  width: 100%;
-  margin: 0;
-}
-#mugisub div.block div.data table th {
-  width: 10em;
-}
-#layout-main div.info div.extra {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
+
+#ms-root div.block div.data table { width: 100%; margin: 0; }
+#ms-root div.block div.data table th { width: 10em; }
+
+
+/* ────────────────────────────────────────────────────────────────
+   INFO EXTRA — flex row for extra info panels inside detail pages
+   ──────────────────────────────────────────────────────────────── */
+#ms-main div.info div.extra {
   display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
 }
-#layout-main div.info div.extra > div {
-  margin: 0.5em;
+
+#ms-main div.info div.extra > div {
+  margin: .5em;
   padding: 4px;
   width: 100%;
   position: relative;
 }
-#layout-main div.info div.extra div h2 {
-  text-align: left;
-}
+
+#ms-main div.info div.extra div h2 { text-align: left; }
+
+/* WIDE SCREENS — negative margin for content area */
 @media screen and (min-width: 1500px) {
-  #layout-main .g_content:not(.sidebar) div.info div.extra {
-    margin: 0 -0.5em;
-  }
+  #ms-main .ms-content:not(.ms-sidebar) div.info div.extra { margin: 0 -.5em; }
 }
 @media screen and (min-width: 1200px) and (max-width: 1500px) {
-  #layout-main div.info div.extra {
-    margin: 0 -0.5em;
-  }
+  #ms-main div.info div.extra { margin: 0 -.5em; }
 }
+
+/* MEDIUM SCREENS — wrap extra info panels */
 @media screen and (max-width: 1200px) {
-  #layout-main div.info div.extra {
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    -moz-flex-wrap: wrap;
-    flex-wrap: wrap;
-  }
-  #layout-main div.info div.extra > div {
-    margin: 0.5em 0;
-  }
+  #ms-main div.info div.extra { flex-wrap: wrap; }
+  #ms-main div.info div.extra > div { margin: .5em 0; }
 }
+
+/* SMALL SCREENS — info section adjustments */
 @media screen and (max-width: 1000px) {
-  #layout-main .g_section.info {
-    margin-top: 2em;
-  }
-  #layout-main .g_section.info > h4 {
-    display: none;
-  }
+  #ms-main .ms-section.info { margin-top: 2em; }
+  #ms-main .ms-section.info > h4 { display: none; }
 }
+
 @media screen and (max-width: 800px) {
-  #layout-main .g_section.info,
-  #layout-main .g_section.info div.block,
-  #layout-main .g_section.info div.block > div.data,
-  #layout-main .g_section.info div.block > div.image {
-    min-width: 0;
-    width: 100%;
+  #ms-main .ms-section.info,
+  #ms-main .ms-section.info div.block,
+  #ms-main .ms-section.info div.block > div.data,
+  #ms-main .ms-section.info div.block > div.image {
+    min-width: 0; width: 100%;
   }
-  #layout-main .g_section.info div.block {
-    flex-wrap: wrap;
-  }
-  #layout-main .g_section.info div.block > div.data {
-    margin-top: 1em;
-    margin-right: 0;
-  }
-  #layout-main .g_section.info div.block > div.image {
-    margin: 0;
-    overflow: hidden;
-  }
-  #layout-main .g_section.info div.block > div.image img {
-    max-width: 100%;
-  }
-  #layout-main .g_section.info .tabbed_pane {
-    margin: 0;
-  }
+  #ms-main .ms-section.info div.block { flex-wrap: wrap; }
+  #ms-main .ms-section.info div.block > div.data { margin-top: 1em; margin-right: 0; }
+  #ms-main .ms-section.info div.block > div.image { margin: 0; overflow: hidden; }
+  #ms-main .ms-section.info div.block > div.image img { max-width: 100%; }
 }
+
 @media screen and (max-width: 550px) {
-  #layout-main .g_section.info {
-    margin-top: 0;
-  }
+  #ms-main .ms-section.info { margin-top: 0; }
 }
+
 @media screen and (max-width: 450px) {
-  #layout-main .g_section.info .g_image {
-    max-width: 100%;
-    height: auto;
-    width: auto;
-  }
+  #ms-main .ms-section.info .ms-img { max-width: 100%; height: auto; width: auto; }
 }
-.g_bubblewrap {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
+
+
+/* ────────────────────────────────────────────────────────────────
+   FLEX ROW — .ms-flex-row — flexbox wrap container
+   Used for filter+content layout and bubble grids
+   ──────────────────────────────────────────────────────────────── */
+.ms-flex-row {
   display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
   flex-wrap: wrap;
-  -ms-justify-content: center;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
   justify-content: center;
 }
-.g_bubblewrap.nowrap {
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  -moz-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-.g_bubblewrap:not(.nogrow) > * {
-  -ms-flex-grow: 1;
-  -webkit-flex-grow: 1;
-  -moz-flex-grow: 1;
-  flex-grow: 1;
-}
-.g_bubblewrap > table {
-  height: -moz-min-content;
-  height: min-content;
-}
-.g_bubblewrap > .g_msg {
-  width: 100%;
-  max-width: 100%;
-}
-.g_bubblewrap > .g_bubble.box {
-  max-width: 450px;
-}
-.g_bubble {
+
+/* NOWRAP variant — prevents wrapping (used in filter+content row) */
+.ms-flex-row.ms-nowrap { flex-wrap: nowrap; }
+
+/* FLEX GROW — children grow to fill space */
+.ms-flex-row:not(.ms-nogrow) > * { flex-grow: 1; }
+
+/* TABLE inside flex — fit-content height */
+.ms-flex-row > table { height: min-content; }
+
+/* MESSAGE bubble — full width */
+.ms-flex-row > .ms-msg { width: 100%; max-width: 100%; }
+
+/* BOX bubble max width in flex grid */
+.ms-flex-row > .ms-bubble.box { max-width: 450px; }
+
+
+/* ────────────────────────────────────────────────────────────────
+   BUBBLE — .ms-bubble — card/panel component with border+radius
+   ──────────────────────────────────────────────────────────────── */
+.ms-bubble {
   border-radius: 5px;
   border-style: solid;
   border-width: 1px;
 }
-.g_bubble.box:not(.small) > div.data div.name {
-  margin-bottom: 0.5em;
+
+/* BOX BUBBLE NAME — ellipsis, border-bottom separator */
+.ms-bubble.box:not(.small) > div.data div.name {
+  margin-bottom: .5em;
   border-bottom-style: solid;
   border-bottom-width: 1px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.g_bubble.box:not(.small) > div.data div.name.wrap {
-  white-space: normal;
-}
-.g_bubble.box > div.data .tooltip.icons {
-  margin-right: 0.3em;
-}
-.g_bubble.box .name .icons.tooltip {
+
+.ms-bubble.box:not(.small) > div.data div.name.wrap { white-space: normal; }
+
+.ms-bubble.box > div.data .tooltip.icons { margin-right: .3em; }
+
+.ms-bubble.box .name .icons.tooltip {
   display: inline-block;
   vertical-align: bottom;
   float: none;
 }
-.g_bubble.box {
+
+/* BOX BUBBLE — standard card size */
+.ms-bubble.box {
   width: 300px;
   text-align: left;
-  margin: 0.5em;
+  margin: .5em;
   overflow-wrap: break-word;
-  padding: 0.19em;
+  padding: .19em;
 }
-.g_bubble.box > div.image {
-  margin-bottom: 0.5em;
-  padding: 0.75em;
+
+/* BOX IMAGE — left-float thumbnail */
+.ms-bubble.box > div.image {
+  margin-bottom: .5em;
+  padding: .75em;
   float: left;
   max-height: 100%;
 }
-.g_bubble.box > div.image img {
+
+.ms-bubble.box > div.image img {
   max-width: 150px;
   max-height: 230px;
   width: auto;
 }
-.g_bubble.box > div.data {
-  margin: 0.8em 0.5em 0.5em;
-}
-.g_bubble.box > div.data div + div {
-  margin-top: 0.3em;
-}
-.g_bubble.box > div.data div.general + div.extra,
-.g_bubble.box > div.data div.rating + div.average {
-  margin-top: 0em;
-}
-.g_bubble.box > div.data div.desc {
-  clear: left;
-}
-.g_bubble.box.small {
-  width: 158px;
-  max-width: 180px;
-}
-.g_bubble.box.small > div.image {
+
+/* BOX DATA — text content area */
+.ms-bubble.box > div.data { margin: .8em .5em .5em; }
+.ms-bubble.box > div.data div + div { margin-top: .3em; }
+
+.ms-bubble.box > div.data div.general + div.extra,
+.ms-bubble.box > div.data div.rating + div.average { margin-top: 0; }
+
+.ms-bubble.box > div.data div.desc { clear: left; }
+.ms-bubble.box > div.data div.desc { max-height: 15em; overflow: hidden; }
+
+/* SMALL BOX — compact card variant */
+.ms-bubble.box.small { width: 158px; max-width: 180px; }
+
+.ms-bubble.box.small > div.image {
   float: none;
-  margin: 1em auto 0.5em auto;
+  margin: 1em auto .5em auto;
   overflow: hidden;
   padding: 0;
-  width: -moz-max-content;
-  width: -webkit-max-content;
-  width: intrinsic;
   width: fit-content;
-}
-.g_bubble.box.small > div.image {
   height: 210px;
 }
-.g_bubble.box.small > div.image img {
-  width: auto;
-  max-height: 100%;
-}
-.g_bubble.box.small > div.data {
-  position: relative;
-}
-.g_section > .g_bubble,
-.g_section.tabbed_pane > .g_bubble table {
-  padding: 0.5em;
-}
-.g_bubble.box > div.data div.desc {
-  max-height: 15em;
-  overflow: hidden;
-}
-#layout-main .g_section:not(.tabbed_pane) > .g_bubble > form table,
-#layout-main .g_section:not(.tabbed_pane) > .g_bubble > table {
-  margin: -0.5em;
+
+.ms-bubble.box.small > div.image img { width: auto; max-height: 100%; }
+.ms-bubble.box.small > div.data { position: relative; }
+
+/* SECTION BUBBLE padding */
+.ms-section > .ms-bubble,
+.ms-section.tabbed_pane > .ms-bubble table { padding: .5em; }
+
+/* FULL WIDTH TABLE inside bubble */
+#ms-main .ms-section:not(.tabbed_pane) > .ms-bubble > form table,
+#ms-main .ms-section:not(.tabbed_pane) > .ms-bubble > table {
+  margin: -.5em;
   width: calc(100% + 1em);
 }
+
+/* RESPONSIVE BUBBLES */
 @media screen and (max-width: 800px) {
-  .g_bubble.box:not(.small) {
-    width: 250px;
-  }
+  .ms-bubble.box:not(.small) { width: 250px; }
 }
+
 @media screen and (max-width: 600px) {
-  .g_bubble.box:not(.small) {
-    width: 100%;
-    max-width: 100%;
-  }
-  .g_bubble.box .name .icons.tooltip {
-    display: none;
-  }
+  .ms-bubble.box:not(.small) { width: 100%; max-width: 100%; }
+  .ms-bubble.box .name .icons.tooltip { display: none; }
 }
+
 @media screen and (max-width: 355px) {
-  .g_bubble.box.small {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
+  .ms-bubble.box.small { width: 100% !important; max-width: 100% !important; }
 }
-.g_boxwrap {
-  width: 50em;
-}
-.g_boxwrap label {
+
+
+/* ────────────────────────────────────────────────────────────────
+   INPUT WRAP — .ms-input-wrap — wraps form inputs, labels
+   ──────────────────────────────────────────────────────────────── */
+.ms-input-wrap { width: 50em; }
+
+.ms-input-wrap label {
   display: inline-block;
   width: 33%;
   min-width: 14em;
 }
-.g_boxwrap label.ignore {
-  width: 100%;
-}
-.g_filter .g_boxwrap,
-.g_filter .g_boxwrap label {
-  width: 100%;
-}
-.g_filter .g_boxwrap input:not([type="radio"]):not([type="checkbox"]),
-.g_filter .g_boxwrap textarea,
-.g_filter .g_boxwrap select,
-.g_filter .g_boxwrap button {
+
+.ms-input-wrap label.ignore { width: 100%; }
+
+/* FILTER INPUT WRAP — full width inside filter */
+.ms-filter .ms-input-wrap,
+.ms-filter .ms-input-wrap label { width: 100%; }
+
+.ms-filter .ms-input-wrap input:not([type=radio]):not([type=checkbox]),
+.ms-filter .ms-input-wrap textarea,
+.ms-filter .ms-input-wrap select,
+.ms-filter .ms-input-wrap button {
   width: 100% !important;
   max-width: 100% !important;
   box-sizing: border-box !important;
 }
-#layout-main div.edit_actions {
+
+@media screen and (max-width: 1000px) {
+  .ms-input-wrap { width: 100%; }
+}
+
+
+/* ────────────────────────────────────────────────────────────────
+   EDIT ACTIONS — .ms-edit — float-right action buttons above content
+   ──────────────────────────────────────────────────────────────── */
+#ms-main div.ms-edit {
   float: right;
-  margin-right: 0.5em;
+  margin-right: .5em;
   height: auto;
 }
-#layout-main div.edit_actions > span > * {
-  vertical-align: top;
-}
-#layout-main h2 + div.edit_actions {
-  margin-top: -3em;
-}
-#layout-main h4 + div.edit_actions {
-  margin-top: -2.5em;
-  margin-bottom: 1em;
-}
+
+#ms-main div.ms-edit > span > * { vertical-align: top; }
+#ms-main h2 + div.ms-edit { margin-top: -3em; }
+#ms-main h4 + div.ms-edit { margin-top: -2.5em; margin-bottom: 1em; }
+
 @media screen and (max-width: 950px) {
-  #layout-main .g_msg ~ .g_section.info > div.edit_actions {
-    margin-top: -1em;
-  }
+  #ms-main .ms-msg ~ .ms-section.info > div.ms-edit { margin-top: -1em; }
 }
+
 @media screen and (max-width: 800px) {
-  #layout-main .g_section.info > div.edit_actions {
-    width: 100%;
-    margin-right: 0;
-  }
+  #ms-main .ms-section.info > div.ms-edit { width: 100%; margin-right: 0; }
 }
+
 @media screen and (max-width: 550px) {
-  #layout-main .g_section.info > div.edit_actions,
-  #layout-main div.edit_actions > span.modify {
-    display: none;
-  }
+  #ms-main .ms-section.info > div.ms-edit,
+  #ms-main div.ms-edit > span.modify { display: none; }
 }
-.g_image_overlay {
+
+
+/* ────────────────────────────────────────────────────────────────
+   IMAGE OVERLAY — .ms-img-overlay — triangle badge on image corner
+   ──────────────────────────────────────────────────────────────── */
+.ms-img-overlay {
   border-color: transparent;
   border-style: solid;
   border-width: 0 50px 50px;
-  bottom: auto;
-  left: auto;
+  bottom: auto; left: auto;
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 0; top: 0;
 }
-.g_image_overlay > a {
-  margin: 0.4em 0em 0 2.1em;
+
+.ms-img-overlay > a {
+  margin: .4em 0 0 2.1em;
   position: absolute;
 }
-.g_button {
-  margin-bottom: 2px;
-}
-.g_button a {
-  display: inline-block;
-  vertical-align: top;
-  padding: 2px 4px;
-}
-input[size="10"] {
-  width: 8em;
-}
-input[size="15"] {
-  width: 10em;
-}
-textarea {
-  width: 48em;
-  height: 8em;
-}
-input[type="checkbox"] {
-  margin-right: 0.1em;
-  margin-bottom: 0.3em;
-}
+
+
+/* ────────────────────────────────────────────────────────────────
+   G_BUTTON / .ms-btn-wrap — action link styled as button
+   ──────────────────────────────────────────────────────────────── */
+.ms-btn-wrap { margin-bottom: 2px; }
+.ms-btn-wrap a { display: inline-block; vertical-align: top; padding: 2px 4px; }
+
+
+/* ────────────────────────────────────────────────────────────────
+   FORM INPUTS — sizes and base styles
+   ──────────────────────────────────────────────────────────────── */
+input[size="10"] { width: 8em; }
+input[size="15"] { width: 10em; }
+textarea { width: 48em; height: 8em; }
+input[type=checkbox] { margin-right: .1em; margin-bottom: .3em; }
+
 button,
-input[type="checkbox"],
-input[type="date"],
-input[type="number"],
-input[type="password"],
-input[type="text"],
-input[type="url"],
-select {
-  vertical-align: middle;
-}
+input[type=checkbox], input[type=date], input[type=number],
+input[type=password], input[type=text], input[type=url],
+select { vertical-align: middle; }
+
 @media screen and (max-width: 1000px) {
-  textarea {
-    width: 100%;
-  }
+  textarea { width: 100%; }
 }
-#layout-main ul.g_list {
-  clear: both;
-  text-align: center;
-  min-height: 1.4em;
-}
-#layout-main .g_definitionlist th {
-  text-align: left;
-}
-#layout-main ul.g_list li {
-  display: inline;
-}
-#layout-main li.g_styledlist {
-  margin-left: 1em;
-}
-#layout-main ul.g_styledlist {
-  list-style-type: disc;
-  width: auto !important;
-}
-#layout-main .g_styledlist {
-  margin-left: 2em;
-}
-#layout-main ul.g_styledlist > li {
-  margin-left: 0;
-}
-#layout-main ul.g_styledlist > li + li {
-  margin-top: 0.5em;
-}
-.g_bubble .g_definitionlist .value {
-  width: 100%;
-}
-#layout-nav div.menu_hr,
-#layout-search form.random {
-  display: none;
-}
-.g_filter + .g_msg {
-  height: 100%;
-}
-.g_filter {
-  -ms-flex-grow: 0 !important;
-  -webkit-flex-grow: 0 !important;
-  -moz-flex-grow: 0 !important;
+
+
+/* ────────────────────────────────────────────────────────────────
+   LISTS — .ms-list — inline paginated list (page numbers etc.)
+   ──────────────────────────────────────────────────────────────── */
+#ms-main ul.ms-list { clear: both; text-align: center; min-height: 1.4em; }
+#ms-main ul.ms-list li { display: inline; }
+#ms-main li.ms-styled-item { margin-left: 1em; }
+#ms-main ul.ms-styled-list { list-style-type: disc; width: auto !important; }
+#ms-main .ms-styled-list { margin-left: 2em; }
+#ms-main ul.ms-styled-list > li { margin-left: 0; }
+#ms-main ul.ms-styled-list > li + li { margin-top: .5em; }
+
+/* DEFINITION LIST — inside bubbles, value takes full width */
+.ms-bubble .ms-deflist .value { width: 100%; }
+
+/* DEFINITION LIST table header */
+#ms-main .ms-deflist th { text-align: left; }
+
+
+/* ────────────────────────────────────────────────────────────────
+   NAV DIVIDER + RANDOM FORM — hidden elements in nav area
+   ──────────────────────────────────────────────────────────────── */
+#ms-sidenav div.ms-nav-divider,
+#ms-searchbar form.ms-form-random { display: none; }
+
+
+/* ────────────────────────────────────────────────────────────────
+   SIDE FILTER PANEL — .ms-filter
+   Collapsible right sidebar for filters and request form
+   ──────────────────────────────────────────────────────────────── */
+.ms-filter {
   flex-grow: 0 !important;
   order: 2;
   position: relative;
 }
-.g_filter .content {
-  width: 18em;
-  margin-bottom: 1em;
-}
-.g_filter.right .content {
-  margin-left: 1.3em;
-}
-.g_filter .g_section {
-  clear: none;
-}
-.g_filter .content .g_bubble {
-  -moz-box-sizing: border-box;
+
+/* FILTER CONTENT area */
+.ms-filter .ms-filter-body { width: 18em; margin-bottom: 1em; }
+
+/* RIGHT FILTER — left margin to separate from content */
+.ms-filter.ms-filter-right .ms-filter-body { margin-left: 1.3em; }
+
+/* SECTION inside filter — no clear needed */
+.ms-filter .ms-section { clear: none; }
+
+/* BUBBLE inside filter */
+.ms-filter .ms-filter-body .ms-bubble {
   box-sizing: border-box;
-  margin: 0.5em 0;
-  padding: 0.5em;
+  margin: .5em 0;
+  padding: .5em;
   width: 100%;
 }
-.g_filter label,
-.g_filter span.options {
-  display: block;
-  text-align: left;
-}
-.g_filter .settings input.name {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 100%;
-}
-.g_filter .settings select {
-  width: 100%;
-}
-.g_filter .flap {
+
+/* FILTER LABELS */
+.ms-filter label,
+.ms-filter span.options { display: block; text-align: left; }
+
+/* FILTER SETTINGS input */
+.ms-filter .settings input.name { box-sizing: border-box; width: 100%; }
+.ms-filter .settings select { width: 100%; }
+
+/* FILTER FLAP — rotated tab to open filter when closed */
+.ms-filter .ms-filter-tab {
   bottom: 5em;
   display: block;
-  padding: 0.2em;
+  padding: .2em;
   position: fixed;
   text-align: center;
   transform: rotate(90deg);
   width: 4em;
 }
-.g_filter.right .flap {
-  right: -1.3em;
-  left: auto;
-}
-.g_filter .fancybox-close {
-  top: -1em;
-}
-.g_filter.hassettings .fancybox-close {
-  top: 1.75em;
-}
-.g_filter.right .fancybox-close {
-  left: auto;
-  right: -1em;
-}
-.g_filter:not(.g_overlaymenu):not(.folded) ~ table {
-  width: calc(100% - 19em);
-}
-.g_overlaymenu {
+
+.ms-filter.ms-filter-right .ms-filter-tab { right: -1.3em; left: auto; }
+
+/* CLOSE BUTTON — X icon at top of filter */
+.ms-filter .ms-close-icon { top: -1em; }
+.ms-filter.ms-has-settings .ms-close-icon { top: 1.75em; }
+.ms-filter.ms-filter-right .ms-close-icon { left: auto; right: -1em; }
+
+/* CONTENT WIDTH — shrink main table when filter is open */
+.ms-filter:not(.ms-overlay):not(.ms-folded) ~ table { width: calc(100% - 19em); }
+
+/* OVERLAY FILTER — absolute position for mobile overlay */
+.ms-overlay {
   position: absolute;
   top: 2em;
   z-index: 10000;
 }
-.g_overlaymenu.right {
-  left: auto;
-  right: 0;
-}
-.g_overlaymenu.right .fancybox-close {
-  left: -1em;
-  right: auto;
-  top: -1.5em;
-}
-.g_overlaymenu .content {
-  width: 21em;
-}
-.g_overlaymenu .content .g_bubble {
-  margin: 0.5em 0 0.5em 0.5em;
-  width: calc(100% - 0.5em);
-}
-.g_msg {
-  clear: both;
-}
-.g_msg,
-.g_section > .g_msg.g_bubble {
-  padding: 1em;
-}
-.g_msg h3 {
-  float: right;
-}
-.g_msg,
-.g_msg > div.container,
-.g_msg h2 {
-  text-align: left;
-}
-#mugisub:not(.internet_explorer)
-  #layout-search
-  ul.quicksearch
-  .g_bubble.stripe {
-  width: 100%;
-}
-#layout-search input.text,
-#layout-search select {
+
+.ms-overlay.right { left: auto; right: 0; }
+.ms-overlay.right .ms-close-icon { left: -1em; right: auto; top: -1.5em; }
+.ms-overlay .ms-filter-body { width: 21em; }
+.ms-overlay .ms-filter-body .ms-bubble { margin: .5em 0 .5em .5em; width: calc(100% - .5em); }
+
+/* FILTER + MSG gap */
+.ms-filter + .ms-msg { height: 100%; }
+
+
+/* ────────────────────────────────────────────────────────────────
+   MESSAGE BOX — .ms-msg — info/error message panel
+   ──────────────────────────────────────────────────────────────── */
+.ms-msg { clear: both; }
+.ms-msg, .ms-section > .ms-msg.ms-bubble { padding: 1em; }
+.ms-msg h3 { float: right; }
+.ms-msg, .ms-msg > div.ms-wrap, .ms-msg h2 { text-align: left; }
+
+
+/* ────────────────────────────────────────────────────────────────
+   SEARCH BAR SIZE — inputs in search bar
+   ──────────────────────────────────────────────────────────────── */
+#ms-searchbar input.ms-search-text,
+#ms-searchbar input.text,
+#ms-searchbar select {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 18px;
 }
-#layout-search select {
-  height: 18px;
-  padding: 3px;
-  margin: 0;
-  width: 94px;
-}
-#layout-search input,
-#layout-search select {
-  position: relative;
-  z-index: 100;
-}
+
+#ms-searchbar select { height: 18px; padding: 3px; margin: 0; width: 94px; }
+
+#ms-searchbar input,
+#ms-searchbar select { position: relative; z-index: 100; }
+
+/* QUICKSEARCH BUBBLE full width */
+#ms-root:not(.ms-ie) #ms-searchbar ul.quicksearch .ms-bubble.stripe { width: 100%; }
+
+
+/* ────────────────────────────────────────────────────────────────
+   SIDEBAR LAYOUT — wide screen layout with sidebar
+   ──────────────────────────────────────────────────────────────── */
 @media screen and (min-width: 1500px) {
-  #layout-main .sidebar .g_section.info {
-    float: left;
-    margin-bottom: 2em;
+  #ms-main .ms-sidebar .ms-section.info { float: left; margin-bottom: 2em; }
+  #ms-main .ms-sidebar .ms-section.info > h4 { display: none; }
+  #ms-main .ms-sidebar.ms-content .ms-section.info > div.ms-edit {
+    width: 100%; height: auto; margin-right: 0;
   }
-  #layout-main .sidebar .g_section.info > h4 {
-    display: none;
+  #ms-main .ms-sidebar .ms-section.info,
+  #ms-main .ms-sidebar .ms-section.info div.block,
+  #ms-main .ms-sidebar .ms-section.info div.block > div.data,
+  #ms-main .ms-sidebar .ms-section.info div.block > div.image {
+    min-width: 0; width: 40.5em;
   }
-  #layout-main .sidebar.g_content .g_section.info > div.edit_actions {
-    width: 100%;
-    height: auto;
-    margin-right: 0;
-  }
-  #layout-main .sidebar .g_section.info,
-  #layout-main .sidebar .g_section.info div.block,
-  #layout-main .sidebar .g_section.info div.block > div.data,
-  #layout-main .sidebar .g_section.info div.block > div.image {
-    min-width: 0;
-    width: 40.5em;
-  }
-  #layout-main .sidebar .g_section.info div.block {
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    -moz-flex-wrap: wrap;
-    flex-wrap: wrap;
-  }
-  #layout-main .sidebar .g_section.info div.block > div.data {
-    margin-top: 1em;
-    margin-right: 0;
-  }
-  #layout-main .sidebar .g_section.info div.block > div.image {
-    margin: 0;
-  }
-  #layout-main .sidebar .g_section.info div.block > div.image img {
-    max-width: 40em;
-    height: auto;
-  }
-  #layout-main .sidebar .g_section.info .tabbed_pane {
-    margin: 0;
-  }
-  #layout-main .sidebar .g_section.info {
-    margin-top: 2.5em;
-  }
-  #layout-main .sidebar > .g_section.resized {
+  #ms-main .ms-sidebar .ms-section.info div.block { flex-wrap: wrap; }
+  #ms-main .ms-sidebar .ms-section.info div.block > div.data { margin-top: 1em; margin-right: 0; }
+  #ms-main .ms-sidebar .ms-section.info div.block > div.image { margin: 0; }
+  #ms-main .ms-sidebar .ms-section.info div.block > div.image img { max-width: 40em; height: auto; }
+  #ms-main .ms-sidebar > .ms-section.resized {
     width: calc(100% - 42em);
     clear: none;
     float: right;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
-  #layout-main .sidebar .g_section.info + .g_section.resized.tabbed_pane {
-    margin-top: 0;
-  }
-  #layout-main .sidebar .g_section.info div.data .g_definitionlist th {
-    min-width: 8.8em;
-  }
-  #layout-main .sidebar .g_section.info div.data .g_definitionlist td.type {
-    width: auto;
-    padding: 2px 8px;
-  }
-  #layout-main .sidebar .g_section.info div.data .g_definitionlist td {
-    width: 100%;
-    padding-right: 0;
-  }
+  #ms-main .ms-sidebar .ms-section.info { margin-top: 2.5em; }
+  #ms-main .ms-sidebar .ms-section.info div.data .ms-deflist th { min-width: 8.8em; }
+  #ms-main .ms-sidebar .ms-section.info div.data .ms-deflist td.type { width: auto; padding: 2px 8px; }
+  #ms-main .ms-sidebar .ms-section.info div.data .ms-deflist td { width: 100%; padding-right: 0; }
 }
-#layout-main div.g_section:not(.info) div.tabbed_pane div.body table,
-#layout-main div.tabbed_pane div.body {
-  padding: 0.5em;
-}
-#layout-main div.tabbed_pane div.body {
-  min-height: 2em;
-}
-#layout-main div.tabbed_pane div.pane.hide {
-  display: none;
-}
-#layout-main div.tabbed_pane ul.tabs {
-  margin-left: 0.5em;
+
+
+/* ────────────────────────────────────────────────────────────────
+   TABBED PANE — tab content panels inside detail pages
+   ──────────────────────────────────────────────────────────────── */
+#ms-main div.tabbed_pane div.body table,
+#ms-main div.tabbed_pane div.body { padding: .5em; }
+#ms-main div.tabbed_pane div.body { min-height: 2em; }
+#ms-main div.tabbed_pane div.pane.ms-hidden { display: none; }
+
+/* TABS ROW — flex wrap-reverse for tab strip */
+#ms-main div.tabbed_pane ul.tabs {
+  margin-left: .5em;
   text-align: left;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  -webkit-flex-wrap: wrap-reverse;
-  -moz-flex-wrap: wrap-reverse;
-  -ms-flex-wrap: wrap-reverse;
   flex-wrap: wrap-reverse;
   width: 100%;
 }
-#layout-main div.tabbed_pane ul.tabs li {
+
+/* INDIVIDUAL TAB */
+#ms-main div.tabbed_pane ul.tabs li {
   display: inline-block;
-  padding: 0.2em 0.8em;
+  padding: .2em .8em;
   border-bottom: 0;
-  margin: 0.21em 0.3em 0 0;
+  margin: .21em .3em 0 0;
   line-height: 16px;
 }
-#layout-main div.tabbed_pane_main {
-  clear: both;
-}
-#layout-main div.tabbed_pane_main table {
-  width: 100%;
-}
-#layout-main div.tabbed_pane_main + ul.links {
-  margin-top: 1em;
-}
+
+#ms-main div.tabbed_pane_main { clear: both; }
+#ms-main div.tabbed_pane_main table { width: 100%; }
+#ms-main div.tabbed_pane_main + ul.links { margin-top: 1em; }
+
+
+/* ────────────────────────────────────────────────────────────────
+   TOP TABS RESPONSIVE — hide certain tabs on small screens
+   ──────────────────────────────────────────────────────────────── */
 @media screen and (max-width: 710px) {
-  #layout-tabs ul.main-tabs > li.customise {
-    display: none;
-  }
+  #ms-tabbar ul.ms-tabs > li.ms-tab-custom { display: none; }
 }
+
 @media screen and (max-width: 450px) {
-  #layout-tabs ul.main-tabs > li.reviews {
-    display: none;
-  }
+  #ms-tabbar ul.ms-tabs > li.ms-tab-reviews { display: none; }
 }
-.tooltip {
-  position: relative;
-}
-.tooltip .text {
+
+
+/* ────────────────────────────────────────────────────────────────
+   TOOLTIP — hover tooltip component
+   ──────────────────────────────────────────────────────────────── */
+.tooltip { position: relative; }
+
+.tooltip .ms-link-text {
   display: none;
   left: -100px;
   line-height: 16px;
@@ -881,32 +766,30 @@ select {
   word-wrap: normal;
   z-index: 1000;
 }
-.tooltip:hover .text {
-  display: inline;
-}
-.tooltip .text::after,
-.tooltip .text::before {
-  bottom: 100%;
-  height: 0;
-  width: 0;
-  position: absolute;
-  left: 50%;
+
+.tooltip:hover .ms-link-text { display: inline; }
+
+.tooltip .ms-link-text::after,
+.tooltip .ms-link-text::before {
+  bottom: 100%; height: 0; width: 0;
+  position: absolute; left: 50%;
   pointer-events: none;
 }
-.tooltip .text::after {
-  margin-left: -10px;
-}
-.tooltip .text::before {
-  margin-left: -13px;
-}
-#layout-main div.g_bubble.code {
-  line-height: 1.4em;
-}
-#layout-main div.g_bubble.code div.title {
+
+.tooltip .ms-link-text::after { margin-left: -10px; }
+.tooltip .ms-link-text::before { margin-left: -13px; }
+
+
+/* ────────────────────────────────────────────────────────────────
+   CODE BUBBLE — monospace code display panel
+   ──────────────────────────────────────────────────────────────── */
+#ms-main div.ms-bubble.code { line-height: 1.4em; }
+#ms-main div.ms-bubble.code div.title {
   margin-bottom: 3px;
   text-transform: uppercase;
+  border-bottom: 1px solid;
 }
-#layout-main div.g_bubble.code code {
+#ms-main div.ms-bubble.code code {
   display: block;
   height: auto;
   line-height: 1.3em;
@@ -916,404 +799,305 @@ select {
   padding-top: 5px;
   white-space: pre;
 }
-#layout-main div.g_bubble.code div.title {
-  border-bottom: 1px solid;
-}
-#layout-main div.g_bubble.code {
-  margin: 0.5em;
-  padding: 4px 8px;
-}
-@media screen and (max-width: 1000px) {
-  .g_boxwrap {
-    width: 100%;
-  }
-}
-.fancybox-active {
-  height: auto;
-}
+#ms-main div.ms-bubble.code { margin: .5em; padding: 4px 8px; }
+
+
+/* ────────────────────────────────────────────────────────────────
+   FANCYBOX ACTIVE — loading spinner trigger
+   ──────────────────────────────────────────────────────────────── */
+.ms-active { height: auto; }
+
+/* FANCYBOX ROTATE keyframe — used by loading spinner */
 @keyframes fancybox-rotate {
-  100% {
-    transform: rotate(360deg);
-  }
+  100% { transform: rotate(360deg); }
 }
-html {
-  height: 100% !important;
-}
-#layout-search input.text.focus,
-#layout-search input.text.focus + select {
-  box-shadow: none;
-}
-#layout-main div.g_msg.note {
+
+html { height: 100% !important; }
+
+/* SEARCH FOCUS — remove shadow on focused search input */
+#ms-searchbar input.ms-search-text.focus,
+#ms-searchbar input.text.focus,
+#ms-searchbar input.ms-search-text.focus + select,
+#ms-searchbar input.text.focus + select { box-shadow: none; }
+
+
+/* ────────────────────────────────────────────────────────────────
+   COLOR — NOTE BOX — yellow info box in main content
+   ──────────────────────────────────────────────────────────────── */
+#ms-main div.ms-msg.note {
   border: 1px solid #afaf00;
   background-color: #ffffdf;
 }
-#layout-main div.g_msg.note h3 {
-  color: #afaf00;
-}
-.g_vital a {
-  color: red;
-}
-#mugisub table ul li.g_odd,
-#layout-main table table td.g_odd,
-#layout-main ul.g_list li.g_odd {
-  background-color: transparent;
-}
-#layout-main .name span.main {
-  color: gray;
-}
-input.g_error {
-  background-color: #fdd;
-}
-h1 a.shortlink,
-th a {
-  color: inherit;
-}
-#layout-main div.tabbed_pane ul.tabs {
-  background-color: transparent;
-  border: 0;
-}
-#layout-tabs ul {
-  background-color: transparent;
-}
-#layout-hint {
-  border: 1px solid #afaf00;
-  background-color: #ffffdf;
-}
-.g_image_overlay > a {
-  color: white !important;
-}
-#layout-menu li.sub-menu ul li#user-xauth:hover,
-#layout-menu li.sub-menu ul li#user-xkeep:hover,
-#layout-menu li.sub-menu ul li#user-xname:hover,
-#layout-menu li.sub-menu ul li#user-xpass:hover {
+#ms-main div.ms-msg.note h3 { color: #afaf00; }
+
+/* VITAL LINK — red for important links */
+.ms-vital a { color: red; }
+
+/* ODD ROW — transparent odd rows in tables/lists */
+#ms-root table ul li.ms-row-odd,
+#ms-main table table td.ms-row-odd,
+#ms-main ul.ms-list li.ms-row-odd { background-color: transparent; }
+
+/* SECONDARY NAME — gray sub-label */
+#ms-main .name span.main { color: gray; }
+
+/* ERROR INPUT — pink background for validation error */
+input.ms-error { background-color: #fdd; }
+
+/* SHORTLINK / TH LINK — inherit color */
+h1 a.shortlink, th a { color: inherit; }
+
+/* TABS BACKGROUND — transparent for tabbed pane tab strip */
+#ms-main div.tabbed_pane ul.tabs { background-color: transparent; border: 0; }
+#ms-tabbar ul { background-color: transparent; }
+
+/* HINT BAR color */
+#ms-topbar { border: 1px solid #afaf00; background-color: #ffffdf; }
+
+/* OVERLAY ICON — white */
+.ms-img-overlay > a { color: white !important; }
+
+/* LOGIN INPUT HOVER — no background change on hover */
+#ms-navlist li.ms-nav-group ul li#ms-field-auth:hover,
+#ms-navlist li.ms-nav-group ul li#ms-field-keep:hover,
+#ms-navlist li.ms-nav-group ul li#ms-field-user:hover,
+#ms-navlist li.ms-nav-group ul li#ms-field-pass:hover {
   background-image: none;
   background-color: inherit;
   color: inherit !important;
 }
+
+
+/* ────────────────────────────────────────────────────────────────
+   TYPOGRAPHY — BASE FONTS
+   ──────────────────────────────────────────────────────────────── */
 html {
   font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
   font-size: 10px;
 }
-span.i_icon[title] {
-  cursor: help;
-}
+
+span.i_icon[title] { cursor: help; }
+
+/* POINTER CURSOR — clickable elements */
 .action.icons .i_icon,
-.fancybox-close,
-.g_filter .flap,
-.i_minus,
-.i_plus,
-a.i_icon::after,
-a.i_icon::before,
-button.i_icon::after,
-button.i_icon::before,
-input[type="button"],
+.ms-close-icon,
+.ms-filter .ms-filter-tab,
+.i_minus, .i_plus,
+a.i_icon::after, a.i_icon::before,
+button.i_icon::after, button.i_icon::before,
+input[type=button],
 span.i_icon.i_minus,
-span.i_icon.i_plus {
-  cursor: pointer;
-}
-a,
-div,
-li,
-p,
-span,
-td,
-th {
-  font-weight: inherit;
-}
-a {
-  text-decoration: none;
-}
-h1 {
-  font-size: 1.6rem;
-}
-h1 a {
-  font-size: inherit;
-}
-h2,
-h4 {
-  font-size: 1.2rem;
-}
+span.i_icon.i_plus { cursor: pointer; }
+
+/* FONT WEIGHT — inherit for common inline elements */
+a, div, li, p, span, td, th { font-weight: inherit; }
+
+a { text-decoration: none; }
+h1 { font-size: 1.6rem; }
+h1 a { font-size: inherit; }
+h2, h4 { font-size: 1.2rem; }
 h2 {
   font-size: 1.4rem;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.tab,
-h2 span,
-h4 span {
-  -cursor: hand;
-  cursor: pointer;
-}
-span.date,
-span.user,
-td.action,
-td.date,
-td.rating,
-th {
-  white-space: nowrap;
-}
-span.date,
-span.user a.id,
-td.id,
-td.size {
-  letter-spacing: -1px;
-}
-span.time,
-span.user a.id,
-td.rating span {
-  font-size: 0.85rem;
+
+/* TAB / H2 SPAN — pointer cursor, no text select */
+.ms-nav-tab, h2 span, h4 span { cursor: pointer; }
+
+/* DATE / USER / ACTION — no wrap */
+span.date, span.user, td.action, td.date, td.rating, th { white-space: nowrap; }
+
+/* TIGHT LETTER SPACING for IDs and sizes */
+span.date, span.user a.id, td.id, td.size { letter-spacing: -1px; }
+
+/* SMALL TEXT for time, rating span */
+span.time, span.user a.id, td.rating span {
+  font-size: .85rem;
   vertical-align: top;
 }
-td.count,
-td.duration,
-td.id,
-td.number,
-td.size {
-  text-align: right;
-}
-.body,
-div.desc,
-td,
-td.id a.i_icon,
-td.name,
-td.name,
-td.title,
-td.value,
-th.field,
-ul {
-  text-align: left;
-}
-.g_info,
-.g_input,
-.g_list,
-.g_section,
-form,
-h1,
-h2,
-h3,
-h4,
-td.action,
-td.check,
-td.date,
-td.icon,
-td.ignore,
-td.name.owner,
-td.name.user,
-td.number.eps,
-td.rating,
-td.state,
-td.type,
-th,
-tr.action td.submit,
-tr.action td.value,
-#layout-footer p {
-  text-align: center;
-}
-small,
-#layout-main .name span.main {
-  font-size: 0.95rem;
-}
-button,
-input[type="button"],
-input[type="submit"] {
-  padding: 1px;
-}
-.g_list li,
-.g_list li a,
+
+/* RIGHT ALIGN numeric cells */
+td.count, td.duration, td.id, td.number, td.size { text-align: right; }
+
+/* LEFT ALIGN text cells */
+.body, div.desc, td, td.id a.i_icon, td.name, td.title, td.value, th.field, ul { text-align: left; }
+
+/* CENTER ALIGN for action/check/date/icons etc. */
+.ms-info, .ms-input, .ms-list, .ms-section,
+form, h1, h2, h3, h4,
+td.action, td.check, td.date, td.icon, td.ignore,
+td.name.owner, td.name.user, td.number.eps,
+td.rating, td.state, td.type, th,
+tr.action td.submit, tr.action td.value,
+#ms-footer p { text-align: center; }
+
+small, #ms-main .name span.main { font-size: .95rem; }
+
+/* BUTTON PADDING */
+button, input[type=button], input[type=submit] { padding: 1px; }
+
+/* LIST / TAB / HEADING — small padding, capitalize */
+.ms-list li, .ms-list li a,
 .tabbed_pane ul.tabs li,
-h2 > span,
-h4 > span {
-  padding: 1px 2px;
-  text-transform: capitalize;
-}
-.g_filter .flap {
-  font-family: Arial, Helvetica, sans-serif;
-}
-#layout-main div.g_bubble.code div.title {
-  font-family:
-    "Lucida Grande", "Trebuchet MS", Verdana, Helvetica, Arial, sans-serif;
+h2 > span, h4 > span { padding: 1px 2px; text-transform: capitalize; }
+
+/* FILTER FLAP font */
+.ms-filter .ms-filter-tab { font-family: Arial, Helvetica, sans-serif; }
+
+/* CODE TITLE font */
+#ms-main div.ms-bubble.code div.title {
+  font-family: "Lucida Grande", "Trebuchet MS", Verdana, Helvetica, Arial, sans-serif;
   font-size: 1.2rem;
   font-weight: bold;
 }
-#layout-main div.g_bubble.code code {
+
+/* CODE MONO font */
+#ms-main div.ms-bubble.code code {
   font-family: Monaco, "Andale Mono", "Courier New", Courier, mono;
   font-size: 1.2rem;
 }
-.i_icon.i_info,
-.tooltip .i_icon.i_info,
-button:hover,
-input[type="submit"]:hover,
-span.link,
-th.sortable:not(.sorter-false),
-#layout-main div.tabbed_pane ul.tabs li {
-  cursor: pointer;
-}
-#layout-main ul.g_list li.selected {
-  font-style: italic;
-}
-#layout-main div.g_bubble.code {
-  font-size: 1rem;
-}
-#layout-menu li.sub-menu ul li#user-xname input,
-#layout-menu li.sub-menu ul li#user-xpass input {
-  font-size: 1.04rem;
-}
-.g_bubble .name-colored,
-.g_bubble div.name,
-.g_bubble.box > div.data div.date,
-h1,
-h2,
-h3,
-h4 {
-  font-weight: bold;
-}
-.g_italic {
-  font-style: italic;
-  font-weight: normal;
-}
-.tooltip:hover {
-  text-decoration: none;
-}
-.tooltip span.text {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1rem;
-}
-#layout-footer {
-  font-size: 0.85rem;
-}
-.g_list li,
-.g_list li a,
+
+/* POINTER on interactive elements */
+.i_icon.i_info, .tooltip .i_icon.i_info,
+button:hover, input[type=submit]:hover,
+span.link, th.sortable:not(.sorter-false),
+#ms-main div.tabbed_pane ul.tabs li { cursor: pointer; }
+
+/* SELECTED LIST ITEM — italic */
+#ms-main ul.ms-list li.selected { font-style: italic; }
+#ms-main div.ms-bubble.code { font-size: 1rem; }
+
+/* LOGIN INPUTS size */
+#ms-navlist li.ms-nav-group ul li#ms-field-user input,
+#ms-navlist li.ms-nav-group ul li#ms-field-pass input { font-size: 1.04rem; }
+
+/* BOLD — bubble names, dates, headings */
+.ms-bubble .name-colored,
+.ms-bubble div.name,
+.ms-bubble.box > div.data div.date,
+h1, h2, h3, h4 { font-weight: bold; }
+
+.ms-italic { font-style: italic; font-weight: normal; }
+
+.tooltip:hover { text-decoration: none; }
+.tooltip span.ms-link-text { font-style: normal; font-weight: normal; font-size: 1rem; }
+
+#ms-footer { font-size: .85rem; }
+
+/* USER-SELECT NONE — nav tabs, links, tabs */
+.ms-list li, .ms-list li a,
 .tabbed_pane ul.tabs li,
-h2 span,
-h4 span,
-span.link,
-#layout-menu li.sub-menu span.tab,
-#layout-menu li.sub-menu ul li a,
-#layout-tabs ul li a {
-  -webkit-touch-callout: none;
+h2 span, h4 span, span.link,
+#ms-navlist li.ms-nav-group span.ms-nav-tab,
+#ms-navlist li.ms-nav-group ul li a,
+#ms-tabbar ul li a {
   -webkit-user-select: none;
-  -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
 }
-.g_filter .flap {
-  font-size: 1.7rem;
-  letter-spacing: 1px;
-}
-.g_button a span,
-button,
-h2,
-h4,
-#layout-main div.block div.data table th,
-#layout-main div.edit_actions > span,
-#layout-main div.g_definitionlist tr th,
-#layout-main div.tabbed_pane ul.tabs li,
-#layout-search .submit,
-#layout-tabs ul.main-tabs {
-  text-transform: capitalize;
-}
-.g_bubble.box.mylist {
-  background-color: #a7dda7;
-}
-.g_vital a {
-  color: #b32947;
-}
-a.i_icon:hover,
-a.i_inline:hover {
-  text-decoration: none;
-}
-.i_icon,
-.i_inline {
+
+/* FILTER FLAP size */
+.ms-filter .ms-filter-tab { font-size: 1.7rem; letter-spacing: 1px; }
+
+/* CAPITALIZE — buttons and headers */
+.ms-btn-wrap a span, button,
+h2, h4,
+#ms-main div.block div.data table th,
+#ms-main div.ms-edit > span,
+#ms-main div.ms-deflist tr th,
+#ms-main div.tabbed_pane ul.tabs li,
+#ms-searchbar .ms-btn-search,
+#ms-tabbar ul.ms-tabs { text-transform: capitalize; }
+
+/* MYLIST HIGHLIGHT */
+.ms-bubble.box.mylist { background-color: #a7dda7; }
+
+/* VITAL RED */
+.ms-vital a { color: #b32947; }
+
+a.i_icon:hover, a.i_inline:hover { text-decoration: none; }
+
+
+/* ────────────────────────────────────────────────────────────────
+   ICON SPRITES — .i_icon .i_inline — sprite-based icon display
+   ──────────────────────────────────────────────────────────────── */
+.i_icon, .i_inline {
   background-repeat: no-repeat;
   display: inline-block;
-  width: 15px;
-  height: 14px;
-  margin-left: 1px;
-  margin-right: 0;
+  width: 15px; height: 14px;
+  margin-left: 1px; margin-right: 0;
   vertical-align: middle;
-  image-rendering: optimizeSpeed;
-  image-rendering: -moz-crisp-edges;
-  image-rendering: -o-crisp-edges;
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: optimize-contrast;
   image-rendering: crisp-edges;
   image-rendering: pixelated;
   -ms-interpolation-mode: nearest-neighbor;
 }
-.i_flag {
-  width: 16px;
-  height: 16px;
-}
-select + .i_icon {
-  margin-left: 0.5em;
-}
-.i_button span,
-.i_icon span,
-.i_inline span {
-  display: none;
-}
-div.icons,
-span.icons {
-  float: right;
-  white-space: nowrap;
-}
-#layout-footer .links {
-  float: right;
-  margin-top: -3em;
-  margin-right: 4em;
-}
-#layout-footer .links .i_icon + .i_icon {
-  margin-left: 1em !important;
-}
+
+/* FLAG ICONS — slightly larger */
+.i_flag { width: 16px; height: 16px; }
+
+select + .i_icon { margin-left: .5em; }
+
+/* ICON SPAN — hide text inside icons */
+.i_button span, .i_icon span, .i_inline span { display: none; }
+
+/* ICONS CONTAINER — float right */
+div.icons, span.icons { float: right; white-space: nowrap; }
+
+
+/* ────────────────────────────────────────────────────────────────
+   FOOTER LINKS — social icons row in footer
+   ──────────────────────────────────────────────────────────────── */
+#ms-footer .links { float: right; margin-top: -3em; margin-right: 4em; }
+#ms-footer .links .i_icon + .i_icon { margin-left: 1em !important; }
+
 @media screen and (max-width: 800px) {
-  #layout-footer .links {
-    display: none;
-  }
+  #ms-footer .links { display: none; }
 }
-a.i_icon.brand:hover,
-label.i_icon.brand:hover {
-  opacity: 0.7;
-}
-.i_audio_en {
-  background-image: url("img.mugis/flags/audio_english.png");
-}
-.i_audio_ja {
-  background-image: url("img.mugis/flags/audio_japanese.png");
-}
+
+a.i_icon.brand:hover, label.i_icon.brand:hover { opacity: .7; }
+
+
+/* ────────────────────────────────────────────────────────────────
+   AUDIO FLAGS — Japanese / English audio indicator icons
+   ──────────────────────────────────────────────────────────────── */
+.i_audio_en { background-image: url("img.mugis/flags/audio_english.png"); }
+.i_audio_ja { background-image: url("img.mugis/flags/audio_japanese.png"); }
+
+
+/* ────────────────────────────────────────────────────────────────
+   CLOSE BUTTON — .ms-close-icon — X dismiss button (filter panel etc.)
+   ──────────────────────────────────────────────────────────────── */
+.ms-close-icon,
 .fancybox-close {
   background-image: url("img.mugis/buttons/fancybox_sprite.png");
   position: absolute;
-  top: -18px;
-  right: -18px;
-  width: 36px;
-  height: 36px;
+  top: -18px; right: -18px;
+  width: 36px; height: 36px;
   z-index: 8040;
 }
-#layout-footer .i_icon.brand,
-#layout-main div.tabbed_pane ul.tabs .collapse {
-  display: inline-block;
-}
-.i_info,
-.i_minus,
-.i_plus,
-.i_tab_collapse,
-.i_tab_default,
-.i_tab_expand,
-.i_tab_reset,
-.i_view_grid,
-.i_view_list,
-.i_view_smallgrid {
-  background-image: none !important;
-}
-.g_button a,
+
+/* FOOTER ICON / TAB COLLAPSE — inline-block display */
+#ms-footer .i_icon.brand,
+#ms-main div.tabbed_pane ul.tabs .collapse { display: inline-block; }
+
+/* ICON STATES — font icons (no background image) */
+.i_info, .i_minus, .i_plus,
+.i_tab_collapse, .i_tab_default, .i_tab_expand, .i_tab_reset,
+.i_view_grid, .i_view_list, .i_view_smallgrid { background-image: none !important; }
+
+
+/* ────────────────────────────────────────────────────────────────
+   FONT ICONS — button/list icon font rendering
+   ──────────────────────────────────────────────────────────────── */
+.ms-btn-wrap a,
 .i_icon,
-button:not(.fancybox-close-small),
-#layout-main div.edit_actions > span > *,
-#layout-main ul.g_list li a,
-#layout-tabs ul li a {
+button:not(.ms-close-icon):not(.fancybox-close),
+#ms-main div.ms-edit > span > *,
+#ms-main ul.ms-list li a,
+#ms-tabbar ul li a {
   display: inline-block;
   font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
@@ -1325,265 +1109,223 @@ button:not(.fancybox-close-small),
   line-height: 16px;
   margin: 0;
 }
-.i_icon.brand {
-  font-family: Arial, Helvetica, sans-serif;
-}
-#layout-main div.edit_actions > span.show > *::before,
-#layout-main ul.g_list li.latest a::before {
+
+.i_icon.brand { font-family: Arial, Helvetica, sans-serif; }
+
+/* BEFORE pseudo — larger icon before text */
+#ms-main div.ms-edit > span.show > *::before,
+#ms-main ul.ms-list li.latest a::before {
   font-size: 1.19rem;
   vertical-align: top;
 }
-.i_info,
-.i_minus,
-.i_plus,
-.i_tab_collapse,
-.i_tab_default,
-.i_tab_expand,
-.i_tab_reset,
-.i_view_grid,
-.i_view_list,
-.i_view_smallgrid {
-  height: auto;
-  width: 16px;
-  font-size: 1.33rem;
+
+/* FONT ICON SIZES */
+.i_info, .i_minus, .i_plus,
+.i_tab_collapse, .i_tab_default, .i_tab_expand, .i_tab_reset,
+.i_view_grid, .i_view_list, .i_view_smallgrid {
+  height: auto; width: 16px; font-size: 1.33rem;
 }
-.i_icon {
-  text-align: center;
-  vertical-align: text-bottom;
-}
-.i_icon.i_tab_collapse,
-.i_icon.i_tab_default,
-.i_icon.i_tab_expand,
-.i_icon.i_tab_reset {
-  vertical-align: text-bottom;
-}
-#layout-footer .links {
-  margin-top: -2em;
-}
-#layout-footer .links > .i_icon {
-  font-size: 30px;
-  width: 0;
-}
+
+.i_icon { text-align: center; vertical-align: text-bottom; }
+
+.i_icon.i_tab_collapse, .i_icon.i_tab_default,
+.i_icon.i_tab_expand, .i_icon.i_tab_reset { vertical-align: text-bottom; }
+
+
+/* FOOTER LINKS — social icon sizes */
+#ms-footer .links { margin-top: -2em; }
+#ms-footer .links > .i_icon { font-size: 30px; width: 0; }
+
+
+/* ────────────────────────────────────────────────────────────────
+   LOADING SPINNER — #loading — fixed corner spinner
+   ──────────────────────────────────────────────────────────────── */
 #loading {
   border-radius: 5px;
   position: fixed;
-  left: auto;
-  right: 0;
-  top: 0;
-  width: 50px;
-  height: 50px;
+  right: 0; top: 0;
+  width: 50px; height: 50px;
   z-index: 10000;
   margin: 1em;
   opacity: 0;
   pointer-events: none;
 }
+
 #loading.active {
   opacity: 1;
-  background: #000 url("img.mugis/libs/fancybox_loading.gif") no-repeat scroll
-    center center;
+  background: #000 url("img.mugis/libs/fancybox_loading.gif") no-repeat scroll center center;
 }
+
+/* MODERN SPINNER — CSS animation spinner (replaces GIF when grid supported) */
 @supports (display: grid) {
   #loading {
-    -webkit-animation: fancybox-rotate 0.8s infinite linear;
-    animation: fancybox-rotate 0.8s infinite linear;
+    -webkit-animation: fancybox-rotate .8s infinite linear;
+    animation: fancybox-rotate .8s infinite linear;
     background: transparent;
-    border: 6px solid rgba(100, 100, 100, 0.6);
+    border: 6px solid rgba(100,100,100,.6);
     border-radius: 100%;
-    border-top: 6px solid rgba(255, 255, 255, 0.6);
-    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.4);
-    height: 4em;
-    width: 4em;
-    transition-duration: 0.25s;
-    transition-property: opacity;
-    transition-timing-function: cubic-bezier(0.47, 0, 0.74, 0.71);
+    border-top: 6px solid rgba(255,255,255,.6);
+    box-shadow: 0 0 5px 2px rgba(0,0,0,.4);
+    height: 4em; width: 4em;
+    transition: opacity .25s cubic-bezier(.47,0,.74,.71);
   }
   #loading.active {
     background: transparent;
-    transition-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+    transition-timing-function: cubic-bezier(.22,.61,.36,1);
   }
 }
-table {
-  border-collapse: separate;
-}
-#layout-tabs ul.main-tabs > li.selected,
-#layout-tabs ul.main-tabs > li:hover {
-  border-bottom: 2px double;
-}
-.g_bubble,
-.g_button a,
+
+table { border-collapse: separate; }
+
+
+/* ────────────────────────────────────────────────────────────────
+   TAB HOVER/SELECTED — bottom border indicator
+   ──────────────────────────────────────────────────────────────── */
+#ms-tabbar ul.ms-tabs > li.selected,
+#ms-tabbar ul.ms-tabs > li:hover { border-bottom: 2px double; }
+
+
+/* ────────────────────────────────────────────────────────────────
+   BORDERS — 1px solid on UI components
+   ──────────────────────────────────────────────────────────────── */
+.ms-bubble, .ms-btn-wrap a,
 button,
-input.text,
-input[type="button"],
-input[type="date"],
-input[type="password"],
-input[type="submit"],
-input[type="text"],
-input[type="url"],
-select,
-textarea,
-#layout-main div.edit_actions > span > *,
-#layout-main div.tabbed_pane ul.tabs li,
-#layout-main div.tabbed_pane_cfg div.body,
-#layout-main div.tabbed_pane_cfg ul.tabs li,
-#layout-main ul.g_list li,
-#layout-menu > li ul,
-#layout-tabs ul.main-tabs > li {
-  border: 1px solid;
-}
-li + li.g_odd,
-li.g_odd + li,
-tr + tr td,
-tr + tr th,
-#layout-main > h1,
-#layout-main div.g_definitionlist tr th,
-#layout-main div.info div.extra div table,
-#layout-nav div.menu_hr {
-  border-top: 1px solid;
-}
-.tooltip {
-  outline: none;
-}
-.tooltip span.text::after,
-.tooltip span.text::before {
-  border: 1px solid transparent;
-}
-.tooltip span.text::after {
-  border-width: 10px;
-}
-.tooltip span.text::before {
-  border-width: 13px;
-}
-.g_image,
-a,
-img,
+input.ms-link-text,
+input.ms-search-text, input[type=button], input[type=date],
+input[type=password], input[type=submit], input[type=text], input[type=url],
+select, textarea,
+#ms-main div.ms-edit > span > *,
+#ms-main div.tabbed_pane ul.tabs li,
+#ms-main div.tabbed_pane_cfg div.body,
+#ms-main div.tabbed_pane_cfg ul.tabs li,
+#ms-main ul.ms-list li,
+#ms-navlist > li ul,
+#ms-tabbar ul.ms-tabs > li { border: 1px solid; }
+
+/* TOP BORDER only — row separators */
+li + li.ms-row-odd,
+li.ms-row-odd + li,
+tr + tr td, tr + tr th,
+#ms-main > h1,
+#ms-main div.ms-deflist tr th,
+#ms-main div.info div.extra div table,
+#ms-sidenav div.ms-nav-divider { border-top: 1px solid; }
+
+.tooltip { outline: none; }
+
+/* TOOLTIP BORDER arrows */
+.tooltip span.ms-link-text::after,
+.tooltip span.ms-link-text::before { border: 1px solid transparent; }
+.tooltip span.ms-link-text::after { border-width: 10px; }
+.tooltip span.ms-link-text::before { border-width: 13px; }
+
+/* NO BORDER — images, links, nested tables */
+.ms-img, a, img,
 table table,
-#layout-main .block .g_definitionlist table,
-#layout-main div.tabbed_pane div.body div.pane ul li,
-#layout-search div.g_bubble.search {
-  border: 0;
-}
-#layout-main div.g_definitionlist tr:first-child th,
-#layout-main div.tabbed_pane ul.tabs li.selected,
-#layout-main div.tabbed_pane ul.tabs li:hover,
-#layout-main div.tabbed_pane_cfg ul.tabs li.selected,
-#layout-main div.tabbed_pane_cfg ul.tabs li:hover {
-  border-top: 0;
-}
-#layout-main .g_section > form > h2,
-#layout-main .g_section > h2 {
-  border-bottom: 1px solid;
-}
-.g_filter.right .flap {
-  border-radius: 0 0 0.5em 0.5em;
-}
-#layout-main .g_list button,
-#layout-main .g_list input,
-#layout-main .g_list select {
-  box-shadow: inherit;
-  border: 0;
-}
-#layout-content {
+#ms-main .block .ms-deflist table,
+#ms-main div.tabbed_pane div.body div.pane ul li,
+#ms-searchbar div.ms-bubble.search { border: 0; }
+
+/* REMOVE TOP BORDER from first row */
+#ms-main div.ms-deflist tr:first-child th,
+#ms-main div.tabbed_pane ul.tabs li.selected,
+#ms-main div.tabbed_pane ul.tabs li:hover,
+#ms-main div.tabbed_pane_cfg ul.tabs li.selected,
+#ms-main div.tabbed_pane_cfg ul.tabs li:hover { border-top: 0; }
+
+/* SECTION HEADING UNDERLINE */
+#ms-main .ms-section > form > h2,
+#ms-main .ms-section > h2 { border-bottom: 1px solid; }
+
+/* FILTER FLAP corner radius */
+.ms-filter.ms-filter-right .ms-filter-tab { border-radius: 0 0 .5em .5em; }
+
+/* LIST FORM INPUTS — no border */
+#ms-main .ms-list button,
+#ms-main .ms-list input,
+#ms-main .ms-list select { box-shadow: inherit; border: 0; }
+
+/* CONTENT AREA — left+bottom border, radius top-left */
+#ms-content {
   border-radius: 5px 0 0 5px;
   border-bottom: 1px solid;
   border-left: 1px solid;
 }
-#layout-menu > li ul {
-  border: 0;
-}
-#layout-menu li.sub-menu {
-  border: 1px solid;
-}
-#layout-content,
-#layout-menu li.sub-menu li + li {
-  border-top: 1px solid;
-}
-#layout-menu li.sub-menu,
-#layout-menu li.sub-menu ul {
-  border-radius: 5px;
-}
-#layout-menu li.sub-menu li:first-child:hover {
-  border-radius: 2px 2px 0px 0px;
-}
-#layout-menu li.sub-menu li:last-child:hover {
-  border-radius: 0px 0px 2px 2px;
-}
-td,
-th {
-  padding: 1px 0.5em;
-  height: 100%;
-  line-height: 1.9em;
-}
-.g_button a {
-  width: auto;
-}
-.g_button a,
+
+/* NAV SUB-MENU — border, radius */
+#ms-navlist > li ul { border: 0; }
+#ms-navlist li.ms-nav-group { border: 1px solid; }
+#ms-content, #ms-navlist li.ms-nav-group li + li { border-top: 1px solid; }
+#ms-navlist li.ms-nav-group, #ms-navlist li.ms-nav-group ul { border-radius: 5px; }
+#ms-navlist li.ms-nav-group li:first-child:hover { border-radius: 2px 2px 0 0; }
+#ms-navlist li.ms-nav-group li:last-child:hover { border-radius: 0 0 2px 2px; }
+
+
+/* ────────────────────────────────────────────────────────────────
+   TD/TH SPACING — consistent cell padding and height
+   ──────────────────────────────────────────────────────────────── */
+td, th { padding: 1px .5em; height: 100%; line-height: 1.9em; }
+
+
+/* ────────────────────────────────────────────────────────────────
+   BUTTON / INPUT HEIGHT — consistent 26px height
+   ──────────────────────────────────────────────────────────────── */
+.ms-btn-wrap a { width: auto; }
+
+.ms-btn-wrap a,
 button,
-input[type="date"],
-input[type="number"],
-input[type="password"],
-input[type="text"],
-input[type="url"],
+input[type=date], input[type=number], input[type=password],
+input[type=text], input[type=url],
 select:not(.multirow) {
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   height: 26px;
   line-height: 22px;
 }
-.g_button a,
-a.button,
-button,
-button.button,
-input.button,
-input[type="button"],
-input[type="date"],
-input[type="number"],
-input[type="password"],
-input[type="submit"],
-input[type="text"],
-input[type="url"],
-select,
-#layout-main .g_definitionlist table tr td,
-#layout-main div.g_definitionlist tr th,
-#layout-main ul.g_list li a,
-#layout-menu li.sub-menu ul li,
-#layout-tabs ul li a {
-  padding: 2px 8px;
-}
-#layout-main div.edit_actions > span > * {
-  padding: 2px 7.3px;
-}
-.action .i_icon,
-.icons .i_icon {
-  margin: 0.075em 0.125em;
-  min-height: 16px;
-}
-.icons .i_icon.i_info,
-#layout-main .block .g_definitionlist table {
-  margin: 0;
-}
-.g_bubble div.name .icons .i_icon {
-  margin-top: -0.1em;
-}
-h2 {
-  line-height: 1.6em;
-}
-#layout-nav {
+
+/* PADDING 2px 8px — standard padding for all clickable elements */
+.ms-btn-wrap a, a.button,
+button, button.button, input.button,
+input[type=button], input[type=date], input[type=number],
+input[type=password], input[type=submit], input[type=text],
+input[type=url], select,
+#ms-main .ms-deflist table tr td,
+#ms-main div.ms-deflist tr th,
+#ms-main ul.ms-list li a,
+#ms-navlist li.ms-nav-group ul li,
+#ms-tabbar ul li a { padding: 2px 8px; }
+
+#ms-main div.ms-edit > span > * { padding: 2px 7.3px; }
+
+
+/* ────────────────────────────────────────────────────────────────
+   ICON MARGINS — spacing around icons in action/icon containers
+   ──────────────────────────────────────────────────────────────── */
+.action .i_icon, .icons .i_icon { margin: .075em .125em; min-height: 16px; }
+.icons .i_icon.i_info, #ms-main .block .ms-deflist table { margin: 0; }
+.ms-bubble div.name .icons .i_icon { margin-top: -.1em; }
+
+h2 { line-height: 1.6em; }
+
+
+/* ────────────────────────────────────────────────────────────────
+   LAYOUT DIMENSIONS — nav, content, search dimensions
+   ──────────────────────────────────────────────────────────────── */
+
+/* SIDENAV height */
+#ms-sidenav { display: block; height: 6em; }
+
+/* MAIN content margins */
+#ms-main { margin-left: 1em; margin-right: 1em; margin-top: 1em; }
+
+/* NAVLIST position */
+#ms-navlist {
   display: block;
-  height: 6em;
+  left: 0; position: absolute;
+  top: 0; z-index: 105;
 }
-#layout-main {
-  margin-left: 1em;
-  margin-right: 1em;
-  margin-top: 1em;
-}
-#layout-menu {
-  display: block;
-  left: 0;
-  position: absolute;
-  top: 0;
-  z-index: 105;
-}
-#layout-search {
+
+/* SEARCH BAR position and size */
+#ms-searchbar {
   display: block;
   height: 56px;
   left: 0;
@@ -1592,891 +1334,821 @@ h2 {
   top: 3em;
   width: 60em;
 }
-#layout-search div.search {
+
+/* SEARCH INNER position */
+#ms-searchbar .ms-search-inner {
   margin-left: 16em;
   margin-top: 1.3em;
   width: 100%;
 }
-#layout-search div.search form > div {
-  width: auto;
-}
-#layout-search .text {
-  width: 25em;
-  margin: 0;
-}
-#layout-search .submit {
+
+#ms-searchbar .ms-search-inner form > div { width: auto; }
+
+/* SEARCH TEXT INPUT width */
+#ms-searchbar .ms-search-text,
+#ms-searchbar .text { width: 25em; margin: 0; }
+
+/* SEARCH BUTTON */
+#ms-searchbar .ms-btn-search {
   float: right;
   width: 7em;
   margin: 0 0 0 3px;
   height: 28px;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-#layout-search select {
-  margin-left: -4px;
-  min-height: 0;
-}
-#layout-main > h1 {
+
+/* SEARCH SELECT adjust */
+#ms-searchbar select { margin-left: -4px; min-height: 0; }
+
+/* H1 inside main */
+#ms-main > h1 {
   display: block;
   text-align: left;
-  padding: 0.3em 0.6em;
+  padding: .3em .6em;
 }
-#layout-footer p {
-  margin-bottom: 0;
-}
-#layout-footer p + p {
-  padding-top: 0;
-}
-#layout-footer::after {
-  content: "©mugisub.com";
-}
-#layout-main h1.main {
-  display: none;
-}
-#layout-menu > li ul {
+
+/* FOOTER PARAGRAPH spacing */
+#ms-footer p { margin-bottom: 0; }
+#ms-footer p + p { padding-top: 0; }
+
+/* FOOTER COPYRIGHT via CSS content */
+#ms-footer::after { content: "©mugisub.com"; }
+
+/* H1.MAIN — hidden (main logo text) */
+#ms-main h1.main { display: none; }
+
+/* DROPDOWN SUBMENU — hidden by default, absolute positioned */
+#ms-navlist > li ul {
   display: none;
   position: absolute;
   z-index: 105;
-  margin-left: -0.7em;
+  margin-left: -.7em;
   padding: 0;
 }
-#layout-menu li.sub-menu span.tab {
+
+/* NAV TAB — visible block in sidebar mode */
+#ms-navlist li.ms-nav-group span.ms-nav-tab {
   display: block;
   position: relative;
 }
-#layout-menu > li {
+
+/* NAV GROUP LI — float left in horizontal mode */
+#ms-navlist > li {
   display: block;
   float: left;
-  padding-left: 0.7em;
-  padding-right: 0.7em;
+  padding-left: .7em;
+  padding-right: .7em;
 }
-#layout-nav div.menu_hr {
-  display: block;
-  margin-top: 2.5em;
-}
-#layout-tabs {
-  margin: -2.45em 1em 1em 0;
-  min-height: 26px;
-}
-#layout-tabs,
-#layout-tabs ul {
-  display: block;
-  text-align: right;
-}
-#layout-tabs ul li {
-  display: inline-block;
-  padding: 0;
-  margin: 0;
-}
-#layout-tabs ul li a {
-  display: inline-block;
-}
-#layout-menu li.sub-menu span.tab {
-  display: none;
-}
-#layout-footer {
-  text-align: center;
-}
-h4 {
-  padding: 0.3em;
-}
-#layout-main .g_definitionlist {
-  margin: 2px 0 0;
-  word-break: break-word;
-}
-#layout-main tr.header th.sortable:not(.sorter-false) {
-  padding: 0 0.5em 0 1em;
-}
-#layout-main div.edit_actions > span > *,
-#layout-main div.tabbed_pane ul.tabs li,
-#layout-main tr.header th.sortable a,
-#layout-main ul.g_list li a,
-#layout-tabs ul li a {
-  line-height: 20px;
-}
-#layout-main tr.header th.sortable a,
-#layout-menu li.sub-menu ul li a {
-  display: block;
-}
-button,
-#layout-main ul.g_list li {
-  display: inline-block;
-  vertical-align: top;
-}
-.g_button a span {
-  display: inline-block;
-  padding-left: 6px;
-}
-#layout-main div.g_content {
-  padding: 1px;
-}
-#layout-main ul.g_list + button {
-  margin-left: 0.4em !important;
-}
-#layout-main div.block div.data table th {
-  width: 10em;
-}
-#layout-main ul.g_list li {
-  padding: 0;
-  margin-bottom: 0.5em;
-}
-.g_filter .settings input.name {
-  height: 28px;
-}
-#layout-main h2 + div.edit_actions {
-  margin-top: -3.4em;
-}
-#layout-menu li.sub-menu ul li.user-xname {
-  padding-bottom: 0.1em;
-}
-#layout-menu li.sub-menu ul li.user-xauth {
-  padding-bottom: 0.5em;
-}
-#layout-menu .user-xauth button,
-#layout-menu .user-xname input,
-#layout-menu .user-xpass input {
+
+/* NAV DIVIDER — visible below nav */
+#ms-sidenav div.ms-nav-divider { display: block; margin-top: 2.5em; }
+
+/* TABBAR margin */
+#ms-tabbar { margin: -2.45em 1em 1em 0; min-height: 26px; }
+#ms-tabbar, #ms-tabbar ul { display: block; text-align: right; }
+#ms-tabbar ul li { display: inline-block; padding: 0; margin: 0; }
+#ms-tabbar ul li a { display: inline-block; }
+
+/* SIDEBAR MODE: NAV TAB hidden */
+#ms-navlist li.ms-nav-group span.ms-nav-tab { display: none; }
+
+#ms-footer { text-align: center; }
+
+h4 { padding: .3em; }
+
+/* DEFLIST spacing */
+#ms-main .ms-deflist { margin: 2px 0 0; word-break: break-word; }
+
+/* SORTABLE TH padding */
+#ms-main tr.header th.sortable:not(.sorter-false) { padding: 0 .5em 0 1em; }
+
+/* LINE HEIGHT 20px for action elements */
+#ms-main div.ms-edit > span > *,
+#ms-main div.tabbed_pane ul.tabs li,
+#ms-main tr.header th.sortable a,
+#ms-main ul.ms-list li a,
+#ms-tabbar ul li a { line-height: 20px; }
+
+/* DISPLAY BLOCK for sortable header links */
+#ms-main tr.header th.sortable a,
+#ms-navlist li.ms-nav-group ul li a { display: block; }
+
+/* INLINE-BLOCK buttons and list items */
+button, #ms-main ul.ms-list li { display: inline-block; vertical-align: top; }
+
+/* BTN-WRAP SPAN */
+.ms-btn-wrap a span { display: inline-block; padding-left: 6px; }
+
+/* G_CONTENT PADDING */
+#ms-main div.ms-content { padding: 1px; }
+
+/* LIST + BUTTON margin */
+#ms-main ul.ms-list + button { margin-left: .4em !important; }
+
+/* DATA TABLE TH width */
+#ms-main div.block div.data table th { width: 10em; }
+
+/* LIST ITEM margin */
+#ms-main ul.ms-list li { padding: 0; margin-bottom: .5em; }
+
+/* FILTER NAME INPUT height */
+.ms-filter .settings input.name { height: 28px; }
+
+/* EDIT MARGIN adjust */
+#ms-main h2 + div.ms-edit { margin-top: -3.4em; }
+
+/* LOGIN FIELD PADDING */
+#ms-navlist li.ms-nav-group ul li.ms-field-user { padding-bottom: .1em; }
+#ms-navlist li.ms-nav-group ul li.ms-field-auth { padding-bottom: .5em; }
+
+/* LOGIN INPUTS — full width */
+#ms-navlist .ms-field-auth button,
+#ms-navlist .ms-field-user input,
+#ms-navlist .ms-field-pass input {
   width: 100%;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   height: 28px;
 }
-#layout-menu li.sub-menu ul li a {
+
+/* NAV LINK full width */
+#ms-navlist li.ms-nav-group ul li a {
   box-sizing: border-box;
   display: block;
   height: 20px;
   width: 100%;
 }
-body,
-html {
-  height: 100%;
-}
-#layout-content,
-#layout-main {
-  min-height: 100%;
-}
-#layout-content #layout-main div.g_content {
-  min-height: 96.1em;
-}
-#layout-content {
+
+/* HTML/BODY full height */
+body, html { height: 100%; }
+
+/* CONTENT + MAIN min-height */
+#ms-content, #ms-main { min-height: 100%; }
+#ms-content #ms-main div.ms-content { min-height: 96.1em; }
+
+/* CONTENT OFFSET from sidebar */
+#ms-content {
   margin-left: 12.5em;
   margin-top: -10.5em;
   padding-left: 1em;
   padding-top: 1px;
   padding-bottom: 1em;
 }
-#layout-main {
-  margin-left: 0;
-}
-#layout-menu {
+
+#ms-main { margin-left: 0; }
+
+/* NAVLIST sidebar mode */
+#ms-navlist {
   display: block;
-  margin-left: 0.9em;
+  margin-left: .9em;
   position: static;
   width: 10em;
-  padding-top: 0.5em;
+  padding-top: .5em;
 }
-#layout-menu > li {
+
+#ms-navlist > li {
   display: block;
   float: none;
   padding-left: 0;
   padding-right: 0;
 }
-#layout-menu > li ul {
+
+#ms-navlist > li ul {
   display: block;
   margin-left: 0;
   padding: 0;
   position: relative;
 }
-#layout-menu li.sub-menu {
-  display: block;
-  margin-bottom: 0.5em;
-}
-#layout-nav div.menu_hr {
-  display: none;
-}
-#layout-nav {
-  margin-top: 102px;
-  height: 1px;
-  padding-bottom: 0;
-}
-#layout-hint + #layout-nav {
-  margin-top: 122px;
-}
-#layout-hint + #layout-nav #layout-search {
-  margin-top: 2em;
-}
-#layout-content,
-#layout-menu {
-  margin-top: 0.5em;
-}
-#layout-menu li.sub-menu ul li {
-  padding: 0;
-}
-#layout-menu li.sub-menu ul li > a span,
-#layout-menu li.sub-menu ul li > span {
-  padding: 0 8px;
-}
-#layout-main h1.main,
-#layout-menu li.sub-menu ul li.user-xkeep > label {
-  display: block;
-}
-#layout-search {
-  top: 5px;
-  height: 70px;
-  margin-left: 0;
-  width: 100%;
-}
-#layout-search div.search {
-  margin-left: 0;
-  margin-top: 0;
-  height: 70px;
-}
-#layout-search div.search form > div {
+
+#ms-navlist li.ms-nav-group { display: block; margin-bottom: .5em; }
+
+/* NAV DIVIDER hidden in sidebar */
+#ms-sidenav div.ms-nav-divider { display: none; }
+
+/* SIDENAV margin */
+#ms-sidenav { margin-top: 102px; height: 1px; padding-bottom: 0; }
+
+/* HINT + NAV — extra margin when hint bar is active */
+#ms-topbar + #ms-sidenav { margin-top: 122px; }
+#ms-topbar + #ms-sidenav #ms-searchbar { margin-top: 2em; }
+
+/* CONTENT + MENU margin-top */
+#ms-content, #ms-navlist { margin-top: .5em; }
+
+/* SUB-MENU ITEM padding */
+#ms-navlist li.ms-nav-group ul li { padding: 0; }
+#ms-navlist li.ms-nav-group ul li > a span,
+#ms-navlist li.ms-nav-group ul li > span { padding: 0 8px; }
+
+/* H1.MAIN + keep-logged label — display block in sidebar */
+#ms-main h1.main,
+#ms-navlist li.ms-nav-group ul li.ms-field-keep > label { display: block; }
+
+/* SEARCH BAR sidebar position */
+#ms-searchbar { top: 5px; height: 70px; margin-left: 0; width: 100%; }
+#ms-searchbar .ms-search-inner { margin-left: 0; margin-top: 0; height: 70px; }
+#ms-searchbar .ms-search-inner form > div {
   position: absolute;
-  left: auto;
-  right: 1em;
-  top: 2.8em;
+  right: 1em; top: 2.8em;
   width: auto;
 }
-#layout-menu li.sub-menu ul li > a,
-#layout-menu li.sub-menu ul li > label,
-#layout-menu li.sub-menu ul li > span {
-  line-height: 20px;
-  display: block;
-}
-#layout-search .submit,
-#layout-search input.text,
-#layout-search select {
-  z-index: 105;
-}
-#layout-menu li.sub-menu ul li.main span {
-  display: none;
-}
-#layout-menu li.sub-menu ul li.main a {
+
+/* NAV LINK line-height and display */
+#ms-navlist li.ms-nav-group ul li > a,
+#ms-navlist li.ms-nav-group ul li > label,
+#ms-navlist li.ms-nav-group ul li > span { line-height: 20px; display: block; }
+
+/* SEARCH Z-INDEX — above menu */
+#ms-searchbar .ms-btn-search,
+#ms-searchbar .submit,
+#ms-searchbar input.ms-search-text,
+#ms-searchbar input.text,
+#ms-searchbar select { z-index: 105; }
+
+/* MAIN SPAN hidden in nav */
+#ms-navlist li.ms-nav-group ul li.ms-grp-home span { display: none; }
+
+/* MAIN LINK — large invisible hit area for logo click */
+#ms-navlist li.ms-nav-group ul li.ms-grp-home a {
   position: absolute;
   height: 75px;
   margin-top: -110px;
   width: calc(100vw - 45em);
 }
-#layout-search input.text,
-#layout-search select {
+
+/* SEARCH INPUTS — precise sizing */
+#ms-searchbar input.ms-search-text,
+#ms-searchbar input.text,
+#ms-searchbar select {
   padding: 2px 8px;
   height: 28px;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-#layout-search select {
-  width: 8em;
-}
-html {
-  font-size: 0.66em;
-  line-height: 1.5;
-}
-a.i_button:hover,
-a.i_icon:hover,
-a.i_inline:hover {
-  text-decoration: none;
-}
-button,
-input[type="button"],
-input[type="checkbox"],
-input[type="date"],
-input[type="password"],
-input[type="submit"],
-input[type="text"],
-input[type="url"],
-select,
-textarea,
-#layout-main div.tabbed_pane ul.tabs li,
-#layout-main ul.g_list li,
-#layout-menu li.sub-menu,
-#layout-search .submit,
-#layout-search input.text,
-#layout-search select,
-#layout-tabs,
-#layout-tabs ul.main-tabs > li {
-  font-size: 1.04rem;
-}
-a.button,
-button.button,
-input.button {
-  text-shadow: none;
-}
-.g_button a span,
-h1,
-h2,
-h4,
-#layout-main div.edit_actions > span,
-#layout-main tr.header th,
-#layout-main tr.header th.sortable a,
-#layout-menu li.sub-menu span.tab {
-  font-family: Arial, Helvetica, sans-serif;
-}
-#layout-main tr.header th,
-#layout-main tr.header th.sortable a,
-#layout-menu li.sub-menu span.tab {
-  font-weight: bold;
-}
-#layout-main tr.header th,
-#layout-main tr.header th.sortable a,
-#layout-menu li.sub-menu span.tab {
+
+#ms-searchbar select { width: 8em; }
+
+/* BASE FONT SIZE + LINE HEIGHT */
+html { font-size: .66em; line-height: 1.5; }
+
+a.i_button:hover, a.i_icon:hover, a.i_inline:hover { text-decoration: none; }
+
+/* GLOBAL FONT SIZE for interactive elements */
+button, input[type=button], input[type=checkbox],
+input[type=date], input[type=password], input[type=submit],
+input[type=text], input[type=url],
+select, textarea,
+#ms-main div.tabbed_pane ul.tabs li,
+#ms-main ul.ms-list li,
+#ms-navlist li.ms-nav-group,
+#ms-searchbar .ms-btn-search,
+#ms-searchbar .submit,
+#ms-searchbar input.ms-search-text,
+#ms-searchbar input.text,
+#ms-searchbar select,
+#ms-tabbar,
+#ms-tabbar ul.ms-tabs > li { font-size: 1.04rem; }
+
+a.button, button.button, input.button { text-shadow: none; }
+
+/* ARIAL HEADINGS — nav, edit, headers */
+.ms-btn-wrap a span,
+h1, h2, h4,
+#ms-main div.ms-edit > span,
+#ms-main tr.header th,
+#ms-main tr.header th.sortable a,
+#ms-navlist li.ms-nav-group span.ms-nav-tab { font-family: Arial, Helvetica, sans-serif; }
+
+/* BOLD HEADERS */
+#ms-main tr.header th,
+#ms-main tr.header th.sortable a,
+#ms-navlist li.ms-nav-group span.ms-nav-tab { font-weight: bold; }
+
+/* SMALL-CAPS HEADERS */
+#ms-main tr.header th,
+#ms-main tr.header th.sortable a,
+#ms-navlist li.ms-nav-group span.ms-nav-tab {
   font-variant: small-caps;
   font-size: 1.1rem;
 }
-a.button,
-button.button,
-input.button,
-#layout-main div.edit_actions > span > * {
-  font-weight: normal;
-}
-.g_button a span {
-  font-size: 1rem;
-}
-h1 a:not(.i_icon),
-h4 a:not(.i_icon),
-th a:not(.i_icon) {
+
+/* NORMAL WEIGHT for button/edit */
+a.button, button.button, input.button,
+#ms-main div.ms-edit > span > * { font-weight: normal; }
+
+.ms-btn-wrap a span { font-size: 1rem; }
+
+/* DOTTED UNDERLINE on headings links */
+h1 a:not(.i_icon), h4 a:not(.i_icon), th a:not(.i_icon) {
   text-decoration: underline;
   text-decoration-style: dotted;
 }
-#layout-menu li.sub-menu span.tab {
-  text-transform: capitalize;
-}
-#layout-menu {
-  font-size: 1.04rem;
-}
-#layout-menu li.sub-menu,
-#layout-tabs {
-  font-size: inherit;
-}
-#layout-menu li.sub-menu ul li a {
-  text-transform: capitalize;
-}
-#layout-menu li.sub-menu span.tab {
-  cursor: auto;
-}
-.g_bubble,
-#layout-content,
-#layout-menu li.sub-menu,
-#layout-menu li.sub-menu ul {
-  border-radius: 0;
-}
-.g_bubble,
-.g_image,
-.tooltip span.text,
-table li + li {
-  border: 0 !important;
-}
+
+/* NAV TAB capitalize */
+#ms-navlist li.ms-nav-group span.ms-nav-tab { text-transform: capitalize; }
+
+/* NAV FONT */
+#ms-navlist { font-size: 1.04rem; }
+#ms-navlist li.ms-nav-group, #ms-tabbar { font-size: inherit; }
+
+/* SUB-MENU LINKS capitalize */
+#ms-navlist li.ms-nav-group ul li a { text-transform: capitalize; }
+
+/* NAV TAB — auto cursor in sidebar (not clickable) */
+#ms-navlist li.ms-nav-group span.ms-nav-tab { cursor: auto; }
+
+/* NO BORDER RADIUS in this skin */
+.ms-bubble,
+#ms-content,
+#ms-navlist li.ms-nav-group,
+#ms-navlist li.ms-nav-group ul { border-radius: 0; }
+
+/* FORCE NO BORDER on bubbles and images in this skin */
+.ms-bubble, .ms-img,
+.tooltip span.ms-link-text,
+table li + li { border: 0 !important; }
+
+/* REMOVE ALL BORDERS in sidebar mode */
 table,
-#layout-content,
-#layout-hint,
-#layout-main > h1,
-#layout-main div.info div.extra div table,
-#layout-main div.tabbed_pane ul.tabs li,
-#layout-main div.tabbed_pane_cfg div.body,
-#layout-main div.tabbed_pane_cfg ul.tabs li,
-#layout-menu > li ul,
-#layout-menu li.sub-menu,
-#layout-menu li.sub-menu li + li,
-#layout-tabs ul.main-tabs > li {
-  border: 0;
+#ms-content, #ms-topbar,
+#ms-main > h1,
+#ms-main div.info div.extra div table,
+#ms-main div.tabbed_pane ul.tabs li,
+#ms-main div.tabbed_pane_cfg div.body,
+#ms-main div.tabbed_pane_cfg ul.tabs li,
+#ms-navlist > li ul,
+#ms-navlist li.ms-nav-group,
+#ms-navlist li.ms-nav-group li + li,
+#ms-tabbar ul.ms-tabs > li { border: 0; }
+
+
+/* ────────────────────────────────────────────────────────────────
+   LOGO — #ms-searchbar background — responsive logo images
+   Different logo SVG for different viewport widths
+   ──────────────────────────────────────────────────────────────── */
+
+/* DEFAULT logo (sidebar/desktop) */
+#ms-searchbar {
+  background: url("img.mugis/logos/logo.svg") no-repeat scroll left top transparent;
 }
-#layout-search {
-  background: url("img.mugis/logos/logo.svg") no-repeat scroll left top
-    transparent;
+
+/* MOBILE — centered logo under 950px */
+@media screen and (max-width: 950px) {
+  #ms-root:not(.ms-nodrop) #ms-searchbar {
+    background: url("img.mugis/logos/logo-wide.svg") no-repeat scroll left top transparent;
+  }
 }
+
+@media screen and (max-width: 800px) {
+  #ms-root:not(.ms-nodrop) #ms-searchbar {
+    background: url("img.mugis/logos/logo.svg") no-repeat scroll center top transparent;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  #ms-root:not(.ms-nodrop) #ms-searchbar {
+    background: url("img.mugis/logos/logo-small.svg") no-repeat scroll center top transparent;
+  }
+}
+
+/* WIDE SCREENS — progressively wider logos */
 @media screen and (min-width: 1235px) {
-  #layout-search {
-    background: url("img.mugis/logos/logo-wide.svg") no-repeat scroll left top
-      transparent;
+  #ms-searchbar {
+    background: url("img.mugis/logos/logo-wide.svg") no-repeat scroll left top transparent;
   }
 }
+
 @media screen and (min-width: 1575px) {
-  #layout-search {
-    background: url("img.mugis/logos/logo-wider.svg") no-repeat scroll left top
-      transparent;
+  #ms-searchbar {
+    background: url("img.mugis/logos/logo-wider.svg") no-repeat scroll left top transparent;
   }
 }
+
 @media screen and (min-width: 1860px) {
-  #layout-search {
-    background: url("img.mugis/logos/logo-widest.svg") no-repeat scroll left top
-      transparent;
+  #ms-searchbar {
+    background: url("img.mugis/logos/logo-widest.svg") no-repeat scroll left top transparent;
   }
 }
-#layout-main ul.g_list {
-  min-height: 2.2em;
+
+
+/* ────────────────────────────────────────────────────────────────
+   SIDEBAR LAYOUT ADJUSTMENTS — sidebar-specific layout rules
+   ──────────────────────────────────────────────────────────────── */
+#ms-main ul.ms-list { min-height: 2.2em; }
+
+/* NAV TAB visible in sidebar */
+#ms-navlist li.ms-nav-group span.ms-nav-tab { display: block; }
+
+/* NAVLIST width in sidebar */
+#ms-navlist { margin-left: 0; width: 11.5em; }
+
+/* NAV GROUP spacing */
+#ms-navlist li.ms-nav-group { margin-bottom: 0; }
+#ms-navlist li.ms-nav-group span.ms-nav-tab { padding: .3em .6em; }
+
+/* SUB-MENU PADDING */
+#ms-navlist li.ms-nav-group ul {
+  margin-right: .75em;
+  padding-bottom: .25em;
+  padding-top: .25em;
 }
-#layout-menu li.sub-menu span.tab {
-  display: block;
-}
-#layout-menu {
-  margin-left: 0;
-  width: 11.5em;
-}
-#layout-menu li.sub-menu {
-  margin-bottom: 0;
-}
-#layout-menu li.sub-menu span.tab {
-  padding: 0.3em 0.6em;
-}
-#layout-menu li.sub-menu ul {
-  margin-right: 0.75em;
-  padding-bottom: 0.25em;
-  padding-top: 0.25em;
-}
-#layout-menu li.sub-menu ul li a {
+
+/* NAV LINK FONT — sidebar link styling with icon before */
+#ms-navlist li.ms-nav-group ul li a {
   display: inline-block;
   font-family: Arial, Helvetica, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
+  font-style: normal; font-weight: normal; font-variant: normal;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 16px;
   margin: 0;
   font-size: 1.1rem;
-  padding-left: 0.6em;
+  padding-left: .6em;
 }
-#layout-menu li.sub-menu ul li.main a {
-  margin-top: -133px;
-}
-#layout-menu li.sub-menu ul li a::before {
+
+/* MAIN LINK margin in sidebar mode */
+#ms-navlist li.ms-nav-group ul li.ms-grp-home a { margin-top: -133px; }
+
+/* ICON ::before — centered icon glyph before link text */
+#ms-navlist li.ms-nav-group ul li a::before {
   text-align: center;
   display: inline-block;
   width: 14px;
   font-size: 1.2rem;
-}
-#layout-menu li.sub-menu ul li a::before {
   vertical-align: middle;
 }
-#layout-menu li.sub-menu ul li a span {
-  vertical-align: text-top;
-}
-#layout-menu li.sub-menu ul li.main a::before {
-  display: none;
-}
-#layout-main div.info div.extra div table {
-  border: 0;
-  border-radius: 0;
-}
-html {
-  color: #000;
-}
-#layout-menu li.sub-menu ul li#user-xauth button,
-#layout-search div.search {
-  background-image: none;
-}
-.i_icon,
-a,
-a:active,
-a:link,
-a:visited,
-span.link,
-th a,
-#layout-menu li.sub-menu ul li a::before {
-  color: #0c4e86;
-}
-.g_section > form > h2,
-.g_section > h2,
-input[type="date"]:focus,
-input[type="date"]:hover,
-input[type="password"]:focus,
-input[type="password"]:hover,
-input[type="text"]:focus,
-input[type="text"]:hover,
-input[type="url"]:focus,
-input[type="url"]:hover,
-select:focus,
-select:hover,
-textarea:focus,
-textarea:hover {
-  border-color: #999 !important;
-}
-#layout-search input.text:focus,
-#layout-search input.text:hover,
-#layout-search select:focus,
-#layout-search select:hover,
-#layout-search .submit:focus,
-#layout-search .submit:hover {
+
+#ms-navlist li.ms-nav-group ul li a span { vertical-align: text-top; }
+
+/* MAIN LINK — hide ::before icon */
+#ms-navlist li.ms-nav-group ul li.ms-grp-home a::before { display: none; }
+
+/* EXTRA INFO TABLE — no border */
+#ms-main div.info div.extra div table { border: 0; border-radius: 0; }
+
+
+/* ────────────────────────────────────────────────────────────────
+   COLOR THEME — full color definitions for the dark/gray UI
+   ──────────────────────────────────────────────────────────────── */
+html { color: #000; }
+
+/* AUTH BUTTON background reset */
+#ms-navlist li.ms-nav-group ul li#ms-field-auth button,
+#ms-searchbar .ms-search-inner { background-image: none; }
+
+/* LINK COLORS */
+.i_icon, a, a:active, a:link, a:visited,
+span.link, th a,
+#ms-navlist li.ms-nav-group ul li a::before { color: #0c4e86; }
+
+/* HEADING/SECTION borders on focus/hover */
+.ms-section > form > h2,
+.ms-section > h2,
+input[type=date]:focus, input[type=date]:hover,
+input[type=password]:focus, input[type=password]:hover,
+input[type=text]:focus, input[type=text]:hover,
+input[type=url]:focus, input[type=url]:hover,
+select:focus, select:hover,
+textarea:focus, textarea:hover { border-color: #999 !important; }
+
+/* SEARCH INPUT — no visible border on focus */
+#ms-searchbar input.ms-search-text:focus,
+#ms-searchbar input.text:focus,
+#ms-searchbar input.ms-search-text:hover,
+#ms-searchbar input.text:hover,
+#ms-searchbar select:focus,
+#ms-searchbar select:hover,
+#ms-searchbar .ms-btn-search:focus,
+#ms-searchbar .ms-btn-search:hover {
   border-color: transparent !important;
   outline: none !important;
   box-shadow: none !important;
 }
-.g_bubble .name-colored,
-.i_icon:hover,
-a:hover,
-span.link:hover,
-#layout-menu li.sub-menu span.tab {
-  color: #800;
-}
-#layout-main div.tabbed_pane ul.tabs li {
-  background-color: #d3d5d9;
-}
-#layout-content {
+
+/* HOVER COLOR — red for nav, links, bubble names */
+.ms-bubble .name-colored,
+.i_icon:hover, a:hover, span.link:hover,
+#ms-navlist li.ms-nav-group span.ms-nav-tab { color: #800; }
+
+/* TAB BACKGROUND */
+#ms-main div.tabbed_pane ul.tabs li { background-color: #d3d5d9; }
+
+/* CONTENT AREA borders */
+#ms-content {
   border-bottom-color: #7d7d7d;
   border-left-color: #9a9a9a;
   border-top-color: #9a9a9a;
 }
+
+/* TABLE TOP BORDER color */
 table,
-#layout-main div.info div.extra div table {
-  border-top-color: #ddd;
-}
-#layout-main > h1,
-#layout-main div.info div.extra div h2,
-#layout-main tr.header th.sortable:hover:not(.sorter-false),
-#layout-main tr.header th.sortable:hover:not(.sorter-false) a {
-  color: #ddd;
-}
-input.text,
-input[type="date"],
-input[type="password"],
-input[type="text"],
-input[type="url"],
-option,
-select,
-table th,
-textarea,
-#layout-main table tr.header,
-#layout-main table tr.header a,
-#layout-main th > a:active,
-#layout-main th > a:link,
-#layout-main th > a:visited,
-#layout-main th > span.link,
-#layout-main ul.g_list li a,
-#layout-menu a:link,
-#layout-menu a:visited,
-#layout-menu li.sub-menu ul li#user-xname input,
-#layout-menu li.sub-menu ul li#user-xpass input,
-#layout-menu li.sub-menu ul li.user-xkeep label span,
-#layout-search input,
-#layout-search input.text,
-#layout-search select,
-#layout-tabs ul.main-tabs li a {
-  color: #ccc;
-}
-th .i_icon,
-#layout-main > h1 a {
-  color: #a2bfd7;
-}
-#layout-main > h1 a:hover,
-#layout-main table tr th > a:hover,
-#layout-menu li:hover > a {
-  color: #fa5;
-}
-button:hover,
-input[type="button"]:hover,
-input[type="submit"]:hover,
-#layout-main div.edit_actions > span > *:hover,
-#layout-main tr.header th.sortable:hover:not(.sorter-false),
-#layout-main tr.header th.sortable:hover:not(.sorter-false) a,
-#layout-main ul.g_list li.g_odd.selected,
-#layout-main ul.g_list li.g_odd:hover,
-#layout-main ul.g_list li.selected,
-#layout-main ul.g_list li.selected .i_icon,
-#layout-main ul.g_list li:hover {
-  background-color: #505862;
-}
-.g_bubble,
-.g_bubble .g_bubble .g_bubble,
-.g_bubble .g_bubble .g_bubble .g_bubble .g_bubble,
-.g_bubble .g_bubble .g_bubble .g_bubble .g_bubble .g_bubble .g_bubble,
-.g_bubble
-  .g_bubble
-  .g_bubble
-  .g_bubble
-  .g_bubble
-  .g_bubble
-  .g_bubble
-  .g_bubble
-  .g_bubble,
-.tooltip > span.text.g_bubble,
-div.g_odd,
-li.g_odd,
-span.g_odd,
-tr.g_odd,
-#layout-main div.tabbed_pane ul.tabs li.selected,
-#layout-main div.tabbed_pane ul.tabs li:hover {
-  background-color: #bdbfc3;
-}
-.g_bubble
-  .g_bubble
-  .g_bubble
-  .g_bubble
-  .g_bubble
-  .g_bubble
-  .g_bubble
-  .g_bubble
-  .g_odd,
-.g_bubble .g_bubble .g_bubble .g_bubble .g_bubble .g_bubble .g_odd,
-.g_bubble .g_bubble .g_bubble .g_bubble .g_odd,
-.g_bubble .g_bubble .g_odd,
-.g_definitionlist .g_bubble .g_bubble,
-.g_definitionlist .g_bubble .g_bubble .g_bubble .g_bubble,
-.g_definitionlist .g_odd .g_bubble,
-html,
-#layout-menu {
-  background-color: #b1b3b5;
-}
-.g_bubble .g_bubble,
-.g_bubble .g_bubble .g_bubble .g_bubble,
-.g_bubble .g_bubble .g_bubble .g_bubble .g_bubble .g_bubble,
-.g_bubble .g_bubble .g_bubble .g_bubble .g_bubble .g_bubble .g_bubble .g_bubble,
-.g_bubble .g_bubble .g_bubble .g_bubble .g_bubble .g_bubble .g_bubble .g_odd,
-.g_bubble .g_bubble .g_bubble .g_bubble .g_bubble .g_odd,
-.g_bubble .g_bubble .g_bubble .g_bubble .g_odd,
-.g_bubble .g_bubble .g_bubble .g_odd,
-.g_bubble .g_odd,
-.g_odd .g_bubble,
-#layout-content,
-#layout-tabs ul.main-tabs li.selected,
-#layout-tabs ul.main-tabs li:hover {
-  background-color: #cfd1d4;
-}
-input.text,
-input[type="date"],
-input[type="password"],
-input[type="text"],
-input[type="url"],
-select,
-textarea,
-th,
-th a,
-#layout-main > h1,
-#layout-main div.info div.extra div h2,
-#layout-main table tr.header,
-#layout-menu li.sub-menu,
-#layout-menu li.sub-menu ul,
-#layout-search input,
-#layout-search input.text,
-#layout-search select,
-#layout-tabs ul.main-tabs li {
-  background-color: #34394d;
-}
-input.text,
-input[type="date"],
-input[type="password"],
-input[type="text"],
-input[type="url"],
-select,
-textarea,
-#layout-main .g_filter div.settings input[type="text"],
-#layout-main .g_filter div.settings select {
-  border-color: #34394d;
-}
-#layout-search input.text,
-#layout-search select {
-  border-color: transparent !important;
-}
-.g_bubble,
-.g_image {
-  border-color: #9a9a9a #7d7d7d #7d7d7d #9a9a9a;
-}
-.g_bubble.box:not(.small) > div.data div.name,
-#layout-main div.tabbed_pane ul.tabs li,
-#layout-menu li.sub-menu ul li#user-xname input,
-#layout-menu li.sub-menu ul li#user-xpass input,
-#layout-tabs ul.main-tabs li {
-  border-color: #9a9a9a;
-}
-#layout-main > h1,
-#layout-menu li.sub-menu {
-  border-color: #eee #8e8e8e #8e8e8e #eee;
-}
-#layout-main div.g_bubble.code,
-#layout-tabs ul.main-tabs li.selected a,
-#layout-tabs ul.main-tabs li:hover a {
-  color: #000;
-}
-#layout-tabs ul.main-tabs > li.selected,
-#layout-tabs ul.main-tabs > li:hover {
-  border-bottom-color: #cfd1d4;
-}
-#layout-tabs ul.main-tabs > li {
-  border-bottom-color: #34394d;
-}
-.tooltip span.text {
+#ms-main div.info div.extra div table { border-top-color: #ddd; }
+
+/* H1 + EXTRA H2 color */
+#ms-main > h1,
+#ms-main div.info div.extra div h2,
+#ms-main tr.header th.sortable:hover:not(.sorter-false),
+#ms-main tr.header th.sortable:hover:not(.sorter-false) a { color: #ddd; }
+
+/* DARK BACKGROUND inputs, select, headers */
+input.ms-link-text,
+input.ms-search-text,
+input[type=date], input[type=password],
+input[type=text], input[type=url],
+option, select, table th, textarea,
+#ms-main table tr.header,
+#ms-main table tr.header a,
+#ms-main th > a:active,
+#ms-main th > a:link,
+#ms-main th > a:visited,
+#ms-main th > span.link,
+#ms-main ul.ms-list li a,
+#ms-navlist a:link, #ms-navlist a:visited,
+#ms-navlist li.ms-nav-group ul li#ms-field-user input,
+#ms-navlist li.ms-nav-group ul li#ms-field-pass input,
+#ms-navlist li.ms-nav-group ul li.ms-field-keep label span,
+#ms-searchbar input, #ms-searchbar input.ms-search-text,
+#ms-searchbar select,
+#ms-tabbar ul.ms-tabs li a { color: #ccc; }
+
+/* TH ICON + H1 LINK color */
+th .i_icon, #ms-main > h1 a { color: #a2bfd7; }
+
+/* HEADER HOVER color */
+#ms-main > h1 a:hover,
+#ms-main table tr th > a:hover,
+#ms-navlist li:hover > a { color: #fa5; }
+
+/* HOVER BACKGROUND — buttons, selected items */
+button:hover, input[type=button]:hover, input[type=submit]:hover,
+#ms-main div.ms-edit > span > *:hover,
+#ms-main tr.header th.sortable:hover:not(.sorter-false),
+#ms-main tr.header th.sortable:hover:not(.sorter-false) a,
+#ms-main ul.ms-list li.ms-row-odd.selected,
+#ms-main ul.ms-list li.ms-row-odd:hover,
+#ms-main ul.ms-list li.selected,
+#ms-main ul.ms-list li.selected .i_icon,
+#ms-main ul.ms-list li:hover { background-color: #505862; }
+
+/* BUBBLE BACKGROUNDS — nested alternating grays */
+.ms-bubble,
+.ms-bubble .ms-bubble .ms-bubble,
+.ms-bubble .ms-bubble .ms-bubble .ms-bubble .ms-bubble,
+.ms-bubble .ms-bubble .ms-bubble .ms-bubble .ms-bubble .ms-bubble .ms-bubble,
+.ms-bubble .ms-bubble .ms-bubble .ms-bubble .ms-bubble .ms-bubble .ms-bubble .ms-bubble .ms-bubble,
+.tooltip > span.ms-link-text.ms-bubble,
+div.ms-row-odd, li.ms-row-odd, span.ms-row-odd, tr.ms-row-odd,
+#ms-main div.tabbed_pane ul.tabs li.selected,
+#ms-main div.tabbed_pane ul.tabs li:hover { background-color: #bdbfc3; }
+
+/* ODD BUBBLE nesting backgrounds */
+.ms-bubble .ms-bubble .ms-bubble .ms-bubble .ms-bubble .ms-bubble .ms-bubble .ms-bubble .ms-row-odd,
+.ms-bubble .ms-bubble .ms-bubble .ms-bubble .ms-bubble .ms-bubble .ms-row-odd,
+.ms-bubble .ms-bubble .ms-bubble .ms-bubble .ms-row-odd,
+.ms-bubble .ms-bubble .ms-row-odd,
+.ms-deflist .ms-bubble .ms-bubble,
+.ms-deflist .ms-bubble .ms-bubble .ms-bubble .ms-bubble,
+.ms-deflist .ms-row-odd .ms-bubble,
+html, #ms-navlist { background-color: #b1b3b5; }
+
+/* EVEN BUBBLE nesting backgrounds */
+.ms-bubble .ms-bubble,
+.ms-bubble .ms-bubble .ms-bubble .ms-bubble,
+.ms-bubble .ms-bubble .ms-bubble .ms-bubble .ms-bubble .ms-bubble,
+.ms-bubble .ms-bubble .ms-bubble .ms-bubble .ms-bubble .ms-bubble .ms-bubble .ms-bubble,
+.ms-bubble .ms-bubble .ms-bubble .ms-bubble .ms-bubble .ms-bubble .ms-bubble .ms-row-odd,
+.ms-bubble .ms-bubble .ms-bubble .ms-bubble .ms-bubble .ms-row-odd,
+.ms-bubble .ms-bubble .ms-bubble .ms-bubble .ms-row-odd,
+.ms-bubble .ms-bubble .ms-bubble .ms-row-odd,
+.ms-bubble .ms-row-odd,
+.ms-row-odd .ms-bubble,
+#ms-content,
+#ms-tabbar ul.ms-tabs li.selected,
+#ms-tabbar ul.ms-tabs li:hover { background-color: #cfd1d4; }
+
+/* DARK — inputs and headers */
+input.ms-link-text,
+input.ms-search-text,
+input[type=date], input[type=password],
+input[type=text], input[type=url],
+select, textarea, th, th a,
+#ms-main > h1,
+#ms-main div.info div.extra div h2,
+#ms-main table tr.header,
+#ms-navlist li.ms-nav-group,
+#ms-navlist li.ms-nav-group ul,
+#ms-searchbar input, #ms-searchbar input.ms-search-text,
+#ms-searchbar select,
+#ms-tabbar ul.ms-tabs li { background-color: #34394d; }
+
+/* INPUT BORDER COLOR */
+input.ms-link-text,
+input.ms-search-text,
+input[type=date], input[type=password],
+input[type=text], input[type=url],
+select, textarea,
+#ms-main .ms-filter div.settings input[type=text],
+#ms-main .ms-filter div.settings select { border-color: #34394d; }
+
+/* SEARCH — transparent borders */
+#ms-searchbar input.ms-search-text,
+#ms-searchbar input.text,
+#ms-searchbar select { border-color: transparent !important; }
+
+/* BUBBLE BORDER COLOR */
+.ms-bubble, .ms-img { border-color: #9a9a9a #7d7d7d #7d7d7d #9a9a9a; }
+
+/* BUBBLE NAME + TAB borders */
+.ms-bubble.box:not(.small) > div.data div.name,
+#ms-main div.tabbed_pane ul.tabs li,
+#ms-navlist li.ms-nav-group ul li#ms-field-user input,
+#ms-navlist li.ms-nav-group ul li#ms-field-pass input,
+#ms-tabbar ul.ms-tabs li { border-color: #9a9a9a; }
+
+/* H1 + NAV GROUP border */
+#ms-main > h1,
+#ms-navlist li.ms-nav-group { border-color: #eee #8e8e8e #8e8e8e #eee; }
+
+/* CODE + SELECTED TAB colors */
+#ms-main div.ms-bubble.code,
+#ms-tabbar ul.ms-tabs li.selected a,
+#ms-tabbar ul.ms-tabs li:hover a { color: #000; }
+
+/* SELECTED TAB BORDER */
+#ms-tabbar ul.ms-tabs > li.selected,
+#ms-tabbar ul.ms-tabs > li:hover { border-bottom-color: #cfd1d4; }
+
+#ms-tabbar ul.ms-tabs > li { border-bottom-color: #34394d; }
+
+/* TOOLTIP COLORS */
+.tooltip span.ms-link-text {
   background-color: #d3d5d9 !important;
   color: #000;
-  box-shadow: 0 8px 4px 0 rgba(0, 0, 0, 0.2);
-  opacity: 0.95;
+  box-shadow: 0 8px 4px 0 rgba(0,0,0,.2);
+  opacity: .95;
 }
-.tooltip span.text::after,
-.tooltip span.text::before {
-  border-color: rgba(211, 213, 217, 0);
+
+.tooltip span.ms-link-text::after,
+.tooltip span.ms-link-text::before {
+  border-color: rgba(211,213,217,0);
   border-bottom-color: #d3d5d9;
 }
-li + li.g_odd,
-li.g_odd + li,
-tr + tr td,
-tr + tr th,
-#layout-main div.g_definitionlist tr th {
-  border-top-color: #999;
-}
-#layout-search input.text {
-  box-shadow: 1px 1px 2px #8e8e8e inset;
-}
-#layout-search select {
-  box-shadow: 0 1px 2px #8e8e8e inset;
-}
-#layout-menu li.sub-menu li + li {
-  border-top-color: #454959;
-}
-#layout-menu li.sub-menu ul li.main a:hover {
+
+/* ROW SEPARATOR border */
+li + li.ms-row-odd,
+li.ms-row-odd + li,
+tr + tr td, tr + tr th,
+#ms-main div.ms-deflist tr th { border-top-color: #999; }
+
+/* SEARCH INPUT SHADOWS */
+#ms-searchbar input.ms-search-text,
+#ms-searchbar input.text { box-shadow: 1px 1px 2px #8e8e8e inset; }
+#ms-searchbar select { box-shadow: 0 1px 2px #8e8e8e inset; }
+
+/* NAV GROUP DIVIDER */
+#ms-navlist li.ms-nav-group li + li { border-top-color: #454959; }
+
+/* MAIN LINK HOVER — no background */
+#ms-navlist li.ms-nav-group ul li.ms-grp-home a:hover {
   background-color: transparent;
   background-image: none;
 }
-tr {
-  background-color: inherit;
-}
-::-webkit-input-placeholder {
-  color: #aaa;
-  opacity: 1;
-}
-::-moz-placeholder {
-  color: #aaa;
-  opacity: 1;
-}
-::-ms-input-placeholder {
-  color: #aaa;
-  opacity: 1;
-}
-::-moz-placeholder {
-  color: #aaa;
-  opacity: 1;
-}
-::placeholder {
-  color: #aaa;
-  opacity: 1;
-}
-.g_button a {
-  background-color: #fa5;
-  color: #000;
-  border-color: #fd0 #ff4d00 #ff4d00 #fd0;
-}
-.g_button a:hover {
-  background-color: #f90;
-  color: #444 !important;
-}
-button,
-input[type="button"],
-input[type="submit"],
-#layout-main div.edit_actions > span > *,
-#layout-main ul.g_list li,
-#layout-main ul.g_list li.g_odd {
+
+tr { background-color: inherit; }
+
+/* PLACEHOLDER COLORS */
+::-webkit-input-placeholder { color: #aaa; opacity: 1; }
+::-moz-placeholder { color: #aaa; opacity: 1; }
+::-ms-input-placeholder { color: #aaa; opacity: 1; }
+::placeholder { color: #aaa; opacity: 1; }
+
+/* BTN-WRAP LINK COLORS */
+.ms-btn-wrap a { background-color: #fa5; color: #000; border-color: #fd0 #ff4d00 #ff4d00 #fd0; }
+.ms-btn-wrap a:hover { background-color: #f90; color: #444 !important; }
+
+/* BUTTON / LIST ITEM colors */
+button, input[type=button], input[type=submit],
+#ms-main div.ms-edit > span > *,
+#ms-main ul.ms-list li,
+#ms-main ul.ms-list li.ms-row-odd {
   color: #ccc;
   background-color: #34394d;
   border-color: #34394d;
 }
-button:hover,
-input[type="button"]:hover,
-input[type="submit"]:hover,
-#layout-main div.edit_actions > span > *:hover,
-#layout-main ul.g_list li.g_odd.selected,
-#layout-main ul.g_list li.g_odd:hover,
-#layout-main ul.g_list li.selected,
-#layout-main ul.g_list li.selected .i_icon,
-#layout-main ul.g_list li:hover {
-  color: #c0daf0 !important;
-}
-#layout-main ul.g_list li:hover a {
-  color: inherit;
-}
-.g_filter .flap {
+
+/* BUTTON HOVER */
+button:hover, input[type=button]:hover, input[type=submit]:hover,
+#ms-main div.ms-edit > span > *:hover,
+#ms-main ul.ms-list li.ms-row-odd.selected,
+#ms-main ul.ms-list li.ms-row-odd:hover,
+#ms-main ul.ms-list li.selected,
+#ms-main ul.ms-list li.selected .i_icon,
+#ms-main ul.ms-list li:hover { color: #c0daf0 !important; }
+
+#ms-main ul.ms-list li:hover a { color: inherit; }
+
+/* FILTER FLAP appearance */
+.ms-filter .ms-filter-tab {
   box-shadow: 0 1px 3px #666;
   opacity: 1;
   background-color: #34394d !important;
   color: #ddd !important;
   border-radius: 0 0 5px 5px;
 }
-#layout-main div.tabbed_pane div.body {
-  margin-top: 1px;
-}
-.g_button a {
-  padding: 2px 8px;
-}
-#layout-menu li.sub-menu ul li a,
-#layout-menu li.sub-menu ul li.user-xkeep label span {
-  color: #000;
-}
-.g_button a:hover,
+
+#ms-main div.tabbed_pane div.body { margin-top: 1px; }
+
+.ms-btn-wrap a { padding: 2px 8px; }
+
+/* NAV LINK + KEEP LABEL color */
+#ms-navlist li.ms-nav-group ul li a,
+#ms-navlist li.ms-nav-group ul li.ms-field-keep label span { color: #000; }
+
+/* BTN + TABLE HOVER colors */
+.ms-btn-wrap a:hover,
 h4 a:hover,
 table th.sortable:hover:not(.sorter-false),
-th a:hover {
-  color: #c0daf0 !important;
-}
-#layout-menu .sub-menu {
-  background-color: inherit !important;
-}
-.g_button a {
-  background-color: #34394d;
-  border-color: #34394d;
-}
-.g_button a,
-th,
-th a {
-  color: #ccc;
-}
-.g_bubble,
-#layout-content,
-#layout-hint,
-#layout-main > h1,
-#layout-main div.g_msg,
-#layout-menu li.sub-menu span.tab,
-#layout-menu li.sub-menu ul {
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4);
-}
-#layout-main div.tabbed_pane ul.tabs li,
-#layout-tabs ul.main-tabs > li {
-  box-shadow: 2px -2px 2px -1px rgba(0, 0, 0, 0.2);
-}
-#layout-search input.text.focus,
-#layout-search input.text.focus + select {
-  box-shadow: none;
-}
-.g_button a:hover,
-#layout-menu li.sub-menu ul li:hover {
-  background-color: #505862;
-}
-#layout-menu li.sub-menu span.tab,
-#layout-menu li.sub-menu ul li:hover,
-#layout-menu li.sub-menu ul li:hover a,
-#layout-menu li.sub-menu ul li:hover a::before {
+th a:hover { color: #c0daf0 !important; }
+
+/* NAV GROUP inherited background */
+#ms-navlist .ms-nav-group { background-color: inherit !important; }
+
+/* BTN-WRAP dark */
+.ms-btn-wrap a { background-color: #34394d; border-color: #34394d; }
+.ms-btn-wrap a, th, th a { color: #ccc; }
+
+/* BOX SHADOWS on bubbles, content, nav */
+.ms-bubble,
+#ms-content, #ms-topbar,
+#ms-main > h1, #ms-main div.ms-msg,
+#ms-navlist li.ms-nav-group span.ms-nav-tab,
+#ms-navlist li.ms-nav-group ul { box-shadow: 0 1px 3px 0 rgba(0,0,0,.4); }
+
+/* TAB BOX SHADOW */
+#ms-main div.tabbed_pane ul.tabs li,
+#ms-tabbar ul.ms-tabs > li { box-shadow: 2px -2px 2px -1px rgba(0,0,0,.2); }
+
+/* SEARCH FOCUS shadow reset */
+#ms-searchbar input.ms-search-text.focus,
+#ms-searchbar input.text.focus,
+#ms-searchbar input.ms-search-text.focus + select,
+#ms-searchbar input.text.focus + select { box-shadow: none; }
+
+/* BTN HOVER + NAV ITEM HOVER */
+.ms-btn-wrap a:hover,
+#ms-navlist li.ms-nav-group ul li:hover { background-color: #505862; }
+
+/* NAV TAB + HOVER states */
+#ms-navlist li.ms-nav-group span.ms-nav-tab,
+#ms-navlist li.ms-nav-group ul li:hover,
+#ms-navlist li.ms-nav-group ul li:hover a,
+#ms-navlist li.ms-nav-group ul li:hover a::before {
   color: #ddd;
   background-color: #34394d;
 }
-#layout-menu li.sub-menu ul {
-  background-color: #bdbfc3;
-}
-#layout-main div.info div.extra div h2 {
-  background-color: inherit;
-}
-#layout-main div.info div.extra div h2 {
-  color: inherit;
-}
+
+/* NAV SUB BACKGROUND */
+#ms-navlist li.ms-nav-group ul { background-color: #bdbfc3; }
+
+/* EXTRA INFO DIV inherit */
+#ms-main div.info div.extra div h2 { background-color: inherit; color: inherit; }
+
+
+/* ════════════════════════════════════════════════════════════════
+   RESPONSIVE — SMALL SCREEN DROPDOWN NAV
+   max-width: 950px — switches from sidebar nav to dropdown bar
+   ════════════════════════════════════════════════════════════════ */
 @media all and (max-width: 950px) {
-  #mugisub:not(.nodropdownmenu) #layout-content,
-  #mugisub:not(.nodropdownmenu) #layout-main {
-    min-height: 0;
-  }
-  #mugisub:not(.nodropdownmenu) #layout-content {
+  /* Remove min-height in dropdown mode */
+  #ms-root:not(.ms-nodrop) #ms-content,
+  #ms-root:not(.ms-nodrop) #ms-main { min-height: 0; }
+
+  /* CONTENT full width, top margin for nav bar */
+  #ms-root:not(.ms-nodrop) #ms-content {
     margin-left: 0;
     margin-top: 7em;
-    padding-left: 0.5em;
+    padding-left: .5em;
   }
-  #mugisub:not(.nodropdownmenu) #layout-menu {
+
+  /* NAV becomes horizontal bar */
+  #ms-root:not(.ms-nodrop) #ms-navlist {
     display: inline-block;
     height: 31px;
-    margin-left: 0.8em;
+    margin-left: .8em;
     width: auto;
     padding-top: 0;
   }
-  #mugisub:not(.nodropdownmenu) #layout-menu > li {
+
+  /* NAV ITEMS — float left in bar */
+  #ms-root:not(.ms-nodrop) #ms-navlist > li {
     display: block;
     float: left;
     font-weight: 700;
     line-height: 20px;
     padding: 0 1.3em;
   }
-  #mugisub:not(.nodropdownmenu) #layout-menu > li ul {
+
+  /* DROPDOWN — hidden by default */
+  #ms-root:not(.ms-nodrop) #ms-navlist > li ul {
     border-top: 0;
     visibility: hidden;
     font-weight: 400;
@@ -2487,148 +2159,161 @@ th a {
     position: absolute;
     width: 144px;
   }
-  #mugisub:not(.nodropdownmenu) #layout-menu a {
+
+  /* NAV LINKS in bar */
+  #ms-root:not(.ms-nodrop) #ms-navlist a {
     display: inline-block;
     padding: 3px 8px;
   }
-  #mugisub:not(.nodropdownmenu) #layout-menu a.history {
-    padding: 3px 0;
-  }
-  #mugisub:not(.nodropdownmenu) #layout-menu li.sub-menu span.tab {
+
+  #ms-root:not(.ms-nodrop) #ms-navlist a.history { padding: 3px 0; }
+
+  /* NAV TAB — inline float right in bar */
+  #ms-root:not(.ms-nodrop) #ms-navlist li.ms-nav-group span.ms-nav-tab {
     display: inline;
     float: right;
     cursor: pointer;
-    padding: 0.5em 0;
+    padding: .5em 0;
   }
-  #mugisub:not(.nodropdownmenu) #layout-menu > li.sub-menu.touched ul,
-  #mugisub:not(.nodropdownmenu) #layout-menu > li.sub-menu:active ul,
-  #mugisub:not(.nodropdownmenu) #layout-menu > li.sub-menu:focus ul,
-  #mugisub:not(.nodropdownmenu) #layout-menu > li.sub-menu:hover ul {
-    visibility: visible;
-  }
-  #mugisub:not(.nodropdownmenu) #layout-menu li.sub-menu ul li a {
-    -moz-box-sizing: border-box;
+
+  /* SHOW DROPDOWN — on hover/touch/focus */
+  #ms-root:not(.ms-nodrop) #ms-navlist > li.ms-nav-group.ms-touched ul,
+  #ms-root:not(.ms-nodrop) #ms-navlist > li.ms-nav-group:active ul,
+  #ms-root:not(.ms-nodrop) #ms-navlist > li.ms-nav-group:focus ul,
+  #ms-root:not(.ms-nodrop) #ms-navlist > li.ms-nav-group:hover ul { visibility: visible; }
+
+  /* DROPDOWN LINK height */
+  #ms-root:not(.ms-nodrop) #ms-navlist li.ms-nav-group ul li a {
     box-sizing: border-box;
     height: 28px;
   }
-  #mugisub:not(.nodropdownmenu) #layout-main {
-    margin-left: 0.5em;
+
+  /* MAIN margin */
+  #ms-root:not(.ms-nodrop) #ms-main {
+    margin-left: .5em;
     margin-top: 1em;
   }
-  #mugisub:not(.nodropdownmenu) #layout-search,
-  #mugisub:not(.nodropdownmenu) #layout-search div.search {
-    height: 70px;
-  }
-  #mugisub:not(.nodropdownmenu) #layout-menu {
-    margin-top: 7.5em;
-  }
-  #mugisub:not(.nodropdownmenu) #layout-menu li.sub-menu ul li.alert {
-    height: 28px;
-  }
-  #mugisub:not(.nodropdownmenu) #layout-menu li.sub-menu {
-    margin-bottom: 0;
-    cursor: pointer;
-  }
-  #mugisub:not(.nodropdownmenu) #layout-menu li.sub-menu ul li.main a {
+
+  /* SEARCH HEIGHT */
+  #ms-root:not(.ms-nodrop) #ms-searchbar,
+  #ms-root:not(.ms-nodrop) #ms-searchbar .ms-search-inner { height: 70px; }
+
+  /* NAV TOP MARGIN */
+  #ms-root:not(.ms-nodrop) #ms-navlist { margin-top: 7.5em; }
+
+  /* ALERT ITEM height */
+  #ms-root:not(.ms-nodrop) #ms-navlist li.ms-nav-group ul li.alert { height: 28px; }
+
+  /* NAV GROUP cursor */
+  #ms-root:not(.ms-nodrop) #ms-navlist li.ms-nav-group { margin-bottom: 0; cursor: pointer; }
+
+  /* MAIN HOME LINK — full-height invisible area */
+  #ms-root:not(.ms-nodrop) #ms-navlist li.ms-nav-group ul li.ms-grp-home a {
     margin-top: -12.7em;
     visibility: visible;
     height: 75px;
     padding: 0;
   }
-  #mugisub:not(.nodropdownmenu) #layout-nav {
-    margin-top: 0;
-    height: 76px;
-  }
-  #mugisub:not(.nodropdownmenu) #layout-hint + #layout-nav {
-    height: 96px;
-  }
-  #mugisub:not(.nodropdownmenu) #layout-hint + #layout-nav #layout-menu {
-    margin-top: 9.5em;
-  }
-  #mugisub:not(.nodropdownmenu) #layout-menu {
-    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
+
+  /* SIDENAV height */
+  #ms-root:not(.ms-nodrop) #ms-sidenav { margin-top: 0; height: 76px; }
+  #ms-root:not(.ms-nodrop) #ms-topbar + #ms-sidenav { height: 96px; }
+  #ms-root:not(.ms-nodrop) #ms-topbar + #ms-sidenav #ms-navlist { margin-top: 9.5em; }
+
+  /* DROPDOWN NAV BACKGROUND */
+  #ms-root:not(.ms-nodrop) #ms-navlist {
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
     background-color: #34394d;
   }
-  #mugisub:not(.nodropdownmenu) #layout-menu li.sub-menu span.tab {
+
+  /* DROPDOWN NAV TAB color */
+  #ms-root:not(.ms-nodrop) #ms-navlist li.ms-nav-group span.ms-nav-tab {
     color: #ddd !important;
     box-shadow: none;
   }
-  #mugisub:not(.nodropdownmenu) #layout-menu li.sub-menu + li.sub-menu {
+
+  /* NAV GROUP DIVIDER */
+  #ms-root:not(.ms-nodrop) #ms-navlist li.ms-nav-group + li.ms-nav-group {
     border-left: 1px solid #999 !important;
   }
-  #mugisub:not(.nodropdownmenu) #layout-menu li.sub-menu:hover {
+
+  /* NAV GROUP HOVER */
+  #ms-root:not(.ms-nodrop) #ms-navlist li.ms-nav-group:hover {
     background-color: #58636e !important;
   }
-  #mugisub:not(.nodropdownmenu) #layout-menu li.sub-menu:hover span.tab {
+
+  #ms-root:not(.ms-nodrop) #ms-navlist li.ms-nav-group:hover span.ms-nav-tab {
     color: #c0daf0 !important;
     background-color: #58636e;
   }
 }
+
+/* SCREEN 950px — content top margin, search adjustments */
 @media screen and (max-width: 950px) {
-  #mugisub:not(.nodropdownmenu) #layout-content {
-    margin-top: 9.75em;
-  }
-  #mugisub:not(.nodropdownmenu) #layout-search div.search a.advsearch {
-    display: none;
-  }
-  #mugisub:not(.nodropdownmenu) #layout-search .text {
+  #ms-root:not(.ms-nodrop) #ms-content { margin-top: 9.75em; }
+  #ms-root:not(.ms-nodrop) #ms-searchbar .ms-search-inner a.ms-advsearch { display: none; }
+
+  /* SEARCH TEXT width */
+  #ms-root:not(.ms-nodrop) #ms-searchbar .ms-search-text {
     width: calc(100% - 17em);
     margin-left: 1em;
   }
-  #mugisub:not(.nodropdownmenu) #layout-search div.search form > div {
+
+  /* SEARCH FORM repositioned */
+  #ms-root:not(.ms-nodrop) #ms-searchbar .ms-search-inner form > div {
     top: 7.25em;
-    width: calc(100% - 0.5em);
-    left: -0.5em;
+    width: calc(100% - .5em);
+    left: -.5em;
   }
-  #mugisub:not(.nodropdownmenu) #layout-search ul.quicksearch {
-    margin: 0.1em 0 0 1.4em !important;
+
+  /* QUICKSEARCH width */
+  #ms-root:not(.ms-nodrop) #ms-searchbar ul.quicksearch {
+    margin: .1em 0 0 1.4em !important;
     width: calc(100% - 1.5em);
     max-width: none;
   }
-  #mugisub:not(.nodropdownmenu) #layout-search ul.quicksearch .g_bubble.stripe {
-    max-width: none;
-  }
-  #mugisub:not(.nodropdownmenu) #layout-menu {
-    margin-top: 10.75em;
-  }
-  #mugisub:not(.nodropdownmenu) #layout-menu > li ul {
-    padding-top: 0.5em;
-  }
-  #mugisub:not(.nodropdownmenu) #layout-menu li.sub-menu ul li.main a {
+
+  #ms-root:not(.ms-nodrop) #ms-searchbar ul.quicksearch .ms-bubble.stripe { max-width: none; }
+
+  /* NAV margin-top */
+  #ms-root:not(.ms-nodrop) #ms-navlist { margin-top: 10.75em; }
+
+  /* DROPDOWN PADDING top */
+  #ms-root:not(.ms-nodrop) #ms-navlist > li ul { padding-top: .5em; }
+
+  /* MAIN HOME LINK full width */
+  #ms-root:not(.ms-nodrop) #ms-navlist li.ms-nav-group ul li.ms-grp-home a {
     width: calc(100vw - 1.5em);
   }
-  #mugisub:not(.nodropdownmenu) #layout-hint + #layout-nav #layout-menu {
-    margin-top: 12.25em;
-  }
-  #mugisub:not(.nodropdownmenu) #layout-content #layout-main div.g_content {
-    min-height: 0;
-  }
+
+  /* HINT NAV margin */
+  #ms-root:not(.ms-nodrop) #ms-topbar + #ms-sidenav #ms-navlist { margin-top: 12.25em; }
+
+  /* CONTENT min-height off */
+  #ms-root:not(.ms-nodrop) #ms-content #ms-main div.ms-content { min-height: 0; }
 }
+
+/* SCREEN 600px — narrower dropdown */
 @media screen and (max-width: 600px) {
-  #mugisub:not(.nodropdownmenu) #layout-menu > li ul {
-    width: 10.1em;
-  }
-  #mugisub:not(.nodropdownmenu) #layout-menu li.sub-menu ul li > a span,
-  #mugisub:not(.nodropdownmenu) #layout-menu li.sub-menu ul li > span {
-    padding: 0 5px;
-  }
-  #mugisub:not(.nodropdownmenu) #layout-menu a {
-    padding: 3px 5px;
-  }
-  #mugisub:not(.nodropdownmenu) #layout-menu li.sub-menu .alert > span a {
-    margin-right: -0.75em;
-  }
-  #mugisub:not(.nodropdownmenu) #layout-menu li.sub-menu.mod {
-    display: none;
-  }
+  #ms-root:not(.ms-nodrop) #ms-navlist > li ul { width: 10.1em; }
+
+  #ms-root:not(.ms-nodrop) #ms-navlist li.ms-nav-group ul li > a span,
+  #ms-root:not(.ms-nodrop) #ms-navlist li.ms-nav-group ul li > span { padding: 0 5px; }
+
+  #ms-root:not(.ms-nodrop) #ms-navlist a { padding: 3px 5px; }
+
+  #ms-root:not(.ms-nodrop) #ms-navlist li.ms-nav-group .alert > span a { margin-right: -.75em; }
+
+  /* HIDE MOD GROUP on mobile */
+  #ms-root:not(.ms-nodrop) #ms-navlist li.ms-nav-group.mod { display: none; }
 }
+
+/* SCREEN 500px — hide terms group */
 @media screen and (max-width: 500px) {
-  #mugisub:not(.nodropdownmenu) #layout-menu li.sub-menu.terms {
-    display: none;
-  }
+  #ms-root:not(.ms-nodrop) #ms-navlist li.ms-nav-group.terms { display: none; }
 }
+
+/* SCREEN 400px — hide support group */
 @media screen and (max-width: 400px) {
-  #mugisub:not(.nodropdownmenu) #layout-menu li.sub-menu.support {
-    display: none;
-  }
+  #ms-root:not(.ms-nodrop) #ms-navlist li.ms-nav-group.ms-grp-support { display: none; }
 }
