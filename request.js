@@ -134,6 +134,11 @@
           if (linkEl)     linkEl.value     = '';
           if (noteInput)  noteInput.value  = '';
           update();
+
+          /* Filter panel band karo */
+          var form = document.getElementById('request-form');
+          if (form) form.dispatchEvent(new Event('mugi:submitted'));
+
           setTimeout(function () {
             btn.disabled         = false;
             btn.textContent      = 'Submit Request';

@@ -1,15 +1,21 @@
 /*
  * MugiSUB - Side Filter Menu
- * Pure Vanilla JS — jQuery bilkul nahi chahiye
+ * Pure Vanilla JS — no jQuery
  */
 
 (function () {
 
   var resizeTimer;
-  var lastWidth = window.innerWidth; /* sirf width track karo */
+  var lastWidth = window.innerWidth;
+
+  /* Global — request.js bhi use kar sake */
+  window.mugiFilter = {
+    collapse: function () {},
+    expand:   function () {}
+  };
 
   function attachFilterMenu() {
-    var filter  = document.querySelector('.g_filter');
+    var filter   = document.querySelector('.g_filter');
     if (!filter) return;
 
     var flap     = filter.querySelector('.flap');
@@ -44,21 +50,33 @@
     if (flap)     flap.addEventListener('click', expand);
     if (closeBtn) closeBtn.addEventListener('click', collapse);
 
+    /* Submit Request ke baad bhi collapse karo */
+    var form = document.getElementById('request-form');
+    if (form) {
+      form.addEventListener('mugi:submitted', function () {
+        if (window.innerWidth < 1270) collapse();
+      });
+    }
+
     window.addEventListener('resize', function () {
       var currentWidth = window.innerWidth;
-
-      /* Sirf width change hone pe adjustSize karo */
-      /* Height change (mobile keyboard) ignore karo */
       if (currentWidth === lastWidth) return;
       lastWidth = currentWidth;
-
       clearTimeout(resizeTimer);
       resizeTimer = setTimeout(adjustSize, 250);
     });
 
+    /* Global reference expose karo */
+    window.mugiFilter.collapse = collapse;
+    window.mugiFilter.expand   = expand;
+
     adjustSize();
   }
 
-  document.addEventListener('DOMContentLoaded', attachFilterMenu);
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', attachFilterMenu);
+  } else {
+    attachFilterMenu();
+  }
 
 }());
