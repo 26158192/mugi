@@ -3,121 +3,240 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>MugiSUB - Anime with Subtitles</title>
-    <meta property="og:description" name="description"
-      content="Looking for anime subtitles? MugiSUB is the right place for you." />
+    <title>Zooqle — Verified Torrents</title>
     <meta name="robots" content="index, follow" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="mugistyles.css" type="text/css" title="Style"/>
-    <link rel="apple-touch-icon" sizes="180x180" href="img.mugis/logos/touch/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="img.mugis/logos/touch/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="img.mugis/logos/touch/favicon-16x16.png" />
-    <link rel="manifest" href="site.webmanifest" />
-    <link rel="mask-icon" href="img.mugis/logos/touch/safari-pinned-tab.svg" color="#e18e3c" />
+    <link rel="stylesheet" href="fonts.css" type="text/css"/>
     <link rel="shortcut icon" href="img.mugis/logos/touch/favicon.ico" />
-    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="MugiSUB" />
-    <meta name="apple-mobile-web-app-title" content="MugiSUB"/>
-    <meta name="application-name" content="MugiSUB"/>
-    <meta name="msapplication-TileColor" content="#34394e"/>
-    <meta name="msapplication-config" content="img.mugis/logos/touch/browserconfig.xml" />
     <meta name="theme-color" content="#34394e" />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@MugiSUB" />
-    <meta name="twitter:creator" content="@MugiSUB" />
-    <meta property="og:title" content="Anime Subtitles - MugiSUB" />
     <script defer src="mugi-filter-menu.js"></script>
     <script defer src="mugi-image-preview.js"></script>
     <script src="request.js"></script>
+    <style>
+      /* ── ZOOQLE CONTENT STYLES (mugi bg/colors same hain) ── */
+
+      /* CATEGORY GRID */
+      .zq-grid { display:flex; flex-flow:row wrap; gap:5px; }
+      .zq-cell {
+        flex:1 0 210px; min-width:210px; padding:6px;
+        background:#cfd1d5; box-shadow:0 1px 3px rgba(0,0,0,.3);
+        display:flex; align-items:center; gap:8px;
+        cursor:pointer; text-decoration:none;
+        transition:background .12s;
+      }
+      .zq-cell:hover { background:#bdbfc4; }
+      .zq-cell-icon {
+        width:46px; height:56px; flex-shrink:0;
+        background:#34394e;
+        display:flex; align-items:center; justify-content:center;
+        position:relative; overflow:hidden;
+      }
+      .zq-cell-icon .zqf { font-size:22px!important; color:#7a9bbf; width:auto!important; min-width:0!important; }
+      .zq-new-strip {
+        position:absolute; background:orangered; color:#fff;
+        right:-13px; top:5px; height:9px; width:46px;
+        line-height:9px; font-size:7px; font-weight:bold;
+        text-align:center; text-transform:uppercase;
+        transform:rotate(45deg); opacity:.85; z-index:5;
+      }
+      .zq-cell-title {
+        display:block; color:#0c4e86; font-size:1.1rem;
+        font-weight:bold; line-height:1.6;
+        white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+      }
+      .zq-cell-title:hover { color:#800; }
+      .zq-cell-meta { font-size:.88rem; color:#666; }
+
+      /* POSTER CARDS */
+      .zq-poster-grid { display:flex; flex-wrap:wrap; gap:7px; margin-top:8px; }
+      .zq-poster-card {
+        width:152px; background:#cfd1d5;
+        box-shadow:0 1px 3px rgba(0,0,0,.35);
+        overflow:hidden; cursor:pointer;
+        text-decoration:none; display:block;
+        transition:background .12s;
+      }
+      .zq-poster-card:hover { background:#bdbfc4; }
+      .zq-poster-img {
+        width:152px; height:216px; background:#2a2f3e;
+        display:flex; align-items:center; justify-content:center;
+        overflow:hidden; position:relative;
+      }
+      .zq-poster-img img { width:100%; height:100%; object-fit:cover; }
+      .zq-poster-img .zqf { font-size:36px!important; color:#505863; width:auto!important; min-width:0!important; }
+      .zq-poster-img .zq-ribbon {
+        position:absolute; top:8px; right:-10px;
+        background:orangered; color:#fff;
+        font-size:7px; font-weight:bold; text-transform:uppercase;
+        padding:2px 16px; transform:rotate(45deg); white-space:nowrap;
+      }
+      .zq-poster-info { padding:5px 6px 6px; }
+      .zq-poster-name {
+        display:block; font-size:1rem; color:#0c4e86;
+        font-weight:bold; white-space:nowrap;
+        overflow:hidden; text-overflow:ellipsis;
+        line-height:1.5; text-decoration:none;
+      }
+      .zq-poster-name:hover { color:#800; }
+      .zq-poster-meta { display:flex; gap:4px; flex-wrap:wrap; margin-top:3px; }
+
+      /* BADGES */
+      .zq-badge {
+        display:inline-block; font-size:.78rem;
+        padding:0 4px 1px; border-radius:2px;
+        background:#34394e; color:#bbb;
+        white-space:nowrap; line-height:1.5;
+      }
+      .zq-badge.hd    { background:#1a3a5a; color:#7db8f0; }
+      .zq-badge.seed  { background:#1d421d; color:#6dcc6d; }
+      .zq-badge.leech { background:#4a1a1a; color:#d07070; }
+      .zq-badge.yr    { background:#3a3010; color:#c8b060; }
+      .zq-badge.new   { background:#c03000; color:#fff; }
+
+      /* TORRENT TABLE */
+      .zq-tbl { width:100%; border-collapse:collapse; font-size:1.05rem; }
+      .zq-tbl thead th {
+        background:#34394e; color:#ccc;
+        padding:5px 8px; text-align:left;
+        white-space:nowrap; font-variant:small-caps;
+        border-bottom:2px solid #505863; cursor:pointer;
+      }
+      .zq-tbl thead th:hover { color:#fa5; }
+      .zq-tbl tbody td {
+        padding:5px 8px; vertical-align:middle;
+        background:#cfd1d5; border-bottom:1px dashed #9a9a9b;
+      }
+      .zq-tbl tbody tr:nth-child(even) td { background:#bdbfc4; }
+      .zq-tbl tbody tr:hover td { background:#adb0b6!important; }
+      .zq-tt-name a { color:#0c4e86; font-weight:bold; text-decoration:none; }
+      .zq-tt-name a:hover { color:#800; }
+      .zq-tt-seed  { color:#2a7a2a; font-weight:bold; text-align:right; }
+      .zq-tt-leech { color:#8a1a1a; font-weight:bold; text-align:right; }
+      .zq-tt-size  { white-space:nowrap; font-size:.9rem; color:#555; text-align:right; }
+      .zq-tt-date  { white-space:nowrap; font-size:.85rem; color:#666; }
+
+      /* DOWNLOAD BUTTONS */
+      .zq-btn {
+        display:inline-flex; align-items:center; gap:4px;
+        padding:3px 8px; border:1px solid #505863; border-radius:2px;
+        background:#34394e; color:#ccc!important;
+        font-size:.95rem; text-decoration:none;
+        cursor:pointer; white-space:nowrap; line-height:1.4;
+      }
+      .zq-btn:hover { background:#505863; color:#c0daf0!important; }
+      .zq-btn.magnet { background:#1e3450; border-color:#2a4a70; color:#7db8f0!important; }
+      .zq-btn.magnet:hover { background:#2a4a70; color:#fff!important; border-color:#e18e3d; }
+      .zq-btn .zqf, .zq-btn .glyphicon { font-size:12px!important; color:inherit; width:auto!important; min-width:0!important; }
+
+      /* PANEL */
+      .zq-panel { background:#cfd1d5; box-shadow:0 1px 3px rgba(0,0,0,.35); margin-bottom:12px; }
+      .zq-panel-head {
+        background:#34394e; color:#ccc;
+        padding:5px 10px; font-size:1.1rem; font-weight:bold;
+        font-family:Arial,Helvetica,sans-serif;
+        display:flex; align-items:center; justify-content:space-between;
+      }
+      .zq-panel-head .zqf { color:#7a9bbf; margin-right:5px; font-size:15px!important; width:auto!important; min-width:0!important; }
+      .zq-panel-head a { color:#7aabe8; font-size:.9rem; font-weight:normal; text-decoration:none; }
+      .zq-panel-head a:hover { color:#fa5; }
+      .zq-panel-body { padding:10px; }
+
+      /* SECTION HEADING */
+      .zq-section-head {
+        font-size:1.25rem; font-weight:bold;
+        font-family:Arial,Helvetica,sans-serif;
+        color:#34394e; border-bottom:1px solid #9a9a9b;
+        padding:2px 4px 4px; margin-bottom:8px;
+        display:flex; align-items:center; justify-content:space-between;
+      }
+      .zq-section-head .zqf { color:#506070; margin-right:5px; font-size:15px!important; width:auto!important; min-width:0!important; }
+      .zq-section-head a { font-size:.9rem; color:#0c4e86; font-weight:normal; text-decoration:none; }
+      .zq-section-head a:hover { color:#800; }
+
+      /* CATEGORY TABS */
+      .zq-cat-tabs { display:flex; flex-wrap:wrap; gap:4px; margin:6px 0 10px; }
+      .zq-cat-tab {
+        display:inline-flex; align-items:center; gap:4px;
+        padding:3px 10px; background:#34394e; color:#ccc;
+        border:1px solid #505863; border-radius:3px;
+        font-size:1rem; text-decoration:none; cursor:pointer;
+      }
+      .zq-cat-tab .zqf { font-size:13px!important; color:#7a9bbf; width:auto!important; min-width:0!important; }
+      .zq-cat-tab.active, .zq-cat-tab:hover { background:#2a4a70; color:#c0daf0; border-color:#e18e3d; }
+      .zq-cat-tab.active .zqf, .zq-cat-tab:hover .zqf { color:inherit; }
+
+      /* PAGINATION */
+      .zq-pager { display:flex; gap:3px; align-items:center; flex-wrap:wrap; margin:10px 0; }
+      .zq-pager a, .zq-pager span {
+        display:inline-block; padding:3px 9px;
+        background:#34394e; color:#bbb;
+        border:1px solid #505863; border-radius:2px;
+        font-size:1rem; text-decoration:none; line-height:1.5;
+      }
+      .zq-pager a:hover { background:#505863; color:#c0daf0; }
+      .zq-pager .active { background:#2a4a70; color:#c0daf0; border-color:#e18e3d; }
+
+      /* HEALTH BAR */
+      .zq-health-wrap { display:flex; align-items:center; gap:5px; }
+      .zq-health-bar { display:flex; height:5px; width:80px; border-radius:2px; overflow:hidden; background:#505863; }
+      .zq-health-bar .fill { background:linear-gradient(to right,#2d7d2d,#5cba5c); }
+
+      /* RESPONSIVE */
+      @media (max-width:950px) {
+        .zq-poster-card { width:130px; }
+        .zq-poster-img  { width:130px; height:185px; }
+        .zq-cell { flex:1 0 180px; min-width:180px; }
+      }
+      @media (max-width:600px) {
+        .hide-sm { display:none!important; }
+        .zq-poster-card { width:110px; }
+        .zq-poster-img  { width:110px; height:156px; }
+      }
+    </style>
   </head>
 
-  <!-- ROOT BODY: id=ms-root, class=ms-pg-home (landing page identifier) -->
   <body id="ms-root" class="ms-pg-home">
 
-    <!-- TOP HINT BAR (disabled) — shows site announcements above navbar -->
-    <!--
-    <div id="ms-topbar" class="ms-alert">
-      <span class="ms-alert-head">HINT:</span>
-      <span class="ms-alert-msg">Confused? Visit <a href="https://mugisub.com/wiki">Wiki</a></span>
-    </div>
-    -->
-
-    <!-- ═══════════════════════════════════════════
-         SIDE NAVIGATION + SEARCH BAR WRAPPER
-         id=ms-sidenav — contains navlist, divider, searchbar
-    ════════════════════════════════════════════ -->
+    <!-- ═══════════════ SIDE NAV ═══════════════ -->
     <div id="ms-sidenav" class="ms-nav-wrap">
-
-      <!-- MAIN NAV UL: id=ms-navlist — all top-level nav groups sit here -->
       <ul id="ms-navlist" class="ms-nav-menu">
 
-        <!-- NAV GROUP: HOME — main, latest, random, watch2gether links -->
         <li class="ms-nav-group ms-grp-home" title="Menu">
           <span class="ms-nav-tab">HOME</span>
           <ul id="ms-home-links">
-            <li class="ms-grp-home">
-              <a title="Landing Page" href="/"><span class="ms-link-text">Main</span></a>
-            </li>
-            <li class="ms-grp-latest">
-              <a title="Latest Releases" href="/latest"><span class="ms-link-text">Latest</span></a>
-            </li>
-            <li class="ms-grp-random">
-              <a title="Random Watch" href="/random"><span class="ms-link-text">Random</span></a>
-            </li>
-            <li class="ms-grp-w2g">
-              <a title="Watch with friends" href="/Watch2gether"><span class="ms-link-text">Watch2gether</span></a>
-            </li>
+            <li class="ms-grp-home"><a title="Landing Page" href="/"><span class="ms-link-text">Main</span></a></li>
+            <li class="ms-grp-latest"><a title="Latest Torrents" href="/latest"><span class="ms-link-text">Latest</span></a></li>
+            <li class="ms-grp-random"><a title="Top Torrents" href="/top"><span class="ms-link-text">Top</span></a></li>
+            <li class="ms-grp-w2g"><a title="RSS Feed" href="/rss"><span class="ms-link-text">RSS Feed</span></a></li>
           </ul>
           <span></span>
         </li>
 
-        <!-- NAV GROUP: BROWSE — anime, movies, tv, ova, genres -->
-        <li class="ms-nav-group ms-grp-browse" title="Content">
+        <li class="ms-nav-group ms-grp-browse" title="Browse">
           <span class="ms-nav-tab">BROWSE</span>
           <ul id="ms-browse-links">
-            <li class="ms-grp-anime">
-              <a title="All Anime" href="/anime"><span class="ms-link-text">Anime</span></a>
-            </li>
-            <li class="ms-grp-movies">
-              <a title="Movies" href="/anime/movies"><span class="ms-link-text">Movies</span></a>
-            </li>
-            <li class="ms-grp-tv">
-              <a title="Tv Show" href="/anime/movies"><span class="ms-link-text">TV Shows</span></a>
-            </li>
-            <li class="ms-grp-ova">
-              <a title="OVA / ONA" href="/anime/ova"><span class="ms-link-text">OVA / ONA</span></a>
-            </li>
-            <li class="ms-grp-genres">
-              <a title="Browse by Genre" href="/genres"><span class="ms-link-text">Genres</span></a>
-            </li>
+            <li class="ms-grp-anime"><a href="/movies"><span class="ms-link-text">Movies</span></a></li>
+            <li class="ms-grp-movies"><a href="/tv"><span class="ms-link-text">TV Shows</span></a></li>
+            <li class="ms-grp-tv"><a href="/games"><span class="ms-link-text">Games</span></a></li>
+            <li class="ms-grp-ova"><a href="/music"><span class="ms-link-text">Music</span></a></li>
+            <li class="ms-grp-genres"><a href="/software"><span class="ms-link-text">Software</span></a></li>
           </ul>
           <span></span>
         </li>
 
-        <!-- NAV GROUP: SUPPORT — donate, report, policies, staff, contact -->
-        <li class="ms-nav-group ms-grp-support" title="Releases">
-          <span class="ms-nav-tab">SUPPORT</span>
+        <li class="ms-nav-group ms-grp-support" title="Info">
+          <span class="ms-nav-tab">INFO</span>
           <ul id="ms-support-links">
-            <li class="ms-grp-donate">
-              <a title="Donate to MugiSUB" href="/donation"><span class="ms-link-text">Donate</span></a>
-            </li>
-            <li class="ms-grp-report">
-              <a title="Report an Error" href="/report"><span class="ms-link-text">Report Error</span></a>
-            </li>
-            <li class="ms-grp-policy">
-              <a title="Privacy Policy" href="/policy"><span class="ms-link-text">Policies</span></a>
-            </li>
-            <li class="ms-grp-staff">
-              <a title="MugiSUB Team" href="/about"><span class="ms-link-text">Our Team</span></a>
-            </li>
-            <li class="ms-grp-contact">
-              <a title="Contact Team" href="/about"><span class="ms-link-text">Contact US</span></a>
-            </li>
+            <li class="ms-grp-donate"><a href="/about"><span class="ms-link-text">About</span></a></li>
+            <li class="ms-grp-report"><a href="/dmca"><span class="ms-link-text">DMCA</span></a></li>
+            <li class="ms-grp-policy"><a href="/policy"><span class="ms-link-text">Policy</span></a></li>
+            <li class="ms-grp-staff"><a href="/faq"><span class="ms-link-text">FAQ</span></a></li>
+            <li class="ms-grp-contact"><a href="/contact"><span class="ms-link-text">Contact</span></a></li>
           </ul>
           <span></span>
         </li>
 
-        <!-- NAV GROUP: LOGIN — username, password, keep-logged, auth button -->
-        <li class="ms-nav-group ms-grp-login" title="Register or login">
+        <li class="ms-nav-group ms-grp-login" title="Login">
           <span class="ms-nav-tab">LOGIN</span>
           <form action="/api/action" method="post">
             <div>
@@ -126,41 +245,19 @@
                 <input type="hidden" name="do" value="landing" />
               </fieldset>
               <ul id="ms-login-links">
-                <!-- Login / Register links (shown when logged out) -->
-                <li id="ms-btn-login">
-                  <a title="Show login page" href="/user/login"><span class="ms-link-text">Login</span></a>
+                <li id="ms-btn-login"><a href="/user/login"><span class="ms-link-text">Login</span></a></li>
+                <li id="ms-btn-signup"><a href="/user/register"><span class="ms-link-text">Register</span></a></li>
+                <li id="ms-field-user" class="ms-field-user" title="Username">
+                  <span><input name="xuser" class="ms-link-text" maxlength="64" type="text" placeholder="Username" /></span>
                 </li>
-                <li id="ms-btn-signup">
-                  <a title="Register now" href="/user/register"><span class="ms-link-text">Register</span></a>
-                </li>
-                <!-- Username input field -->
-                <li id="ms-field-user" class="ms-field-user" title="User name">
-                  <span>
-                    <input name="xuser" class="ms-link-text" maxlength="16" type="text" value="" />
-                  </span>
-                </li>
-                <!-- Password input field -->
                 <li id="ms-field-pass" class="ms-field-pass" title="Password">
-                  <span>
-                    <input name="xpass" class="ms-link-text" maxlength="64" type="password" />
-                  </span>
+                  <span><input name="xpass" class="ms-link-text" maxlength="64" type="password" placeholder="Password" /></span>
                 </li>
-                <!-- Stay logged-in checkbox -->
-                <li id="ms-field-keep" class="ms-field-keep" title="Remember login data">
-                  <span>
-                    <label>
-                      <input name="xdoautologin" type="checkbox" check="check" />
-                      <span>stay logged-in</span>
-                    </label>
-                  </span>
+                <li id="ms-field-keep" class="ms-field-keep">
+                  <span><label><input name="xdoautologin" type="checkbox" /><span>stay logged-in</span></label></span>
                 </li>
-                <!-- Submit / login button -->
-                <li id="ms-field-auth" class="ms-field-auth" title="Login">
-                  <span>
-                    <button class="ms-btn-login" name="do.auth" type="submit" value="login">
-                      <span>Login</span>
-                    </button>
-                  </span>
+                <li id="ms-field-auth" class="ms-field-auth">
+                  <span><button class="ms-btn-login" name="do.auth" type="submit" value="login"><span>Login</span></button></span>
                 </li>
               </ul>
               <span></span>
@@ -169,210 +266,133 @@
         </li>
 
       </ul>
-      <!-- /ms-navlist -->
 
-      <!-- NAV DIVIDER: horizontal rule between nav and search -->
       <div class="ms-nav-divider"></div>
 
-      <!-- ═══════════════════════════════════════════
-           SEARCH BAR: id=ms-searchbar
-           Contains logo (via CSS background), search input,
-           category select, and search button
-      ════════════════════════════════════════════ -->
+      <!-- SEARCH BAR -->
       <div id="ms-searchbar" class="ms-search-wrap landing_search">
-        <div class="ms-search-inner search container" itemscope itemtype="https://schema.org/WebSite">
-          <span class="ms-hidden" itemprop="name">MugiSub</span>
-          <a class="ms-hidden" rel="canonical" href="https://mugisub.com" itemprop="url"></a>
-          <form action="#" method="get" onsubmit="return false;"
-            itemprop="potentialAction" itemscope itemtype="https://schema.org/SearchAction">
-            <div itemprop="target" content="https://mugisub.com/search/?q={mugi.search}&amp;do.search=1">
-              <!-- Search text input -->
-              <input
-                itemprop="query-input"
-                id="ms-search-input"
-                accesskey="s"
-                type="text"
-                name="mugi.search"
-                value=""
-                class="ms-search-text text"
-              />
-              <!-- Category dropdown -->
-              <select name="show" id="ms-search-select" size="1">
-                <option value="search" selected="selected">All</option>
-                <option value="animelist">Anime</option>
-                <option value="characterlist">Character</option>
-                <option value="clublist">Club</option>
-                <option value="collectionlist">Collections</option>
-                <option value="creatorlist">Creator</option>
-                <option value="eplist">Episodes</option>
-                <option value="grouplist">Group</option>
-                <option value="mylist">List</option>
-                <option value="songlist">Songs</option>
-                <option value="taglist">Tags</option>
-                <option value="userlist">User</option>
+        <div class="ms-search-inner search container">
+          <form action="/search" method="get" onsubmit="return false;">
+            <div>
+              <input id="ms-search-input" type="text" name="q"
+                placeholder="Search torrents..."
+                class="ms-search-text text" />
+              <select name="cat" id="ms-search-select" size="1">
+                <option value="">All</option>
+                <option value="movies">Movies</option>
+                <option value="tv">TV Shows</option>
+                <option value="games">Games</option>
+                <option value="music">Music</option>
+                <option value="software">Software</option>
+                <option value="books">Books</option>
               </select>
-              <!-- Search submit button -->
-              <button type="submit" name="do.search" value="1" class="ms-btn-search submit search">
-                Search
-              </button>
-              <fieldset>
-                <input type="hidden" name="cleanurl" value="1" />
-              </fieldset>
+              <button type="submit" class="ms-btn-search submit">Search</button>
             </div>
           </form>
-          <form class="ms-form-random" action="#" method="get" onsubmit="return false;"></form>
         </div>
       </div>
-      <!-- /ms-searchbar -->
 
-    </div>
-    <!-- /ms-sidenav -->
+    </div><!-- /ms-sidenav -->
 
-    <!-- ═══════════════════════════════════════════
-         MAIN CONTENT AREA: id=ms-content
-         Wraps tabbar + main column
-    ════════════════════════════════════════════ -->
+
+    <!-- ═══════════════ MAIN CONTENT ═══════════════ -->
     <div id="ms-content">
 
-      <!-- TOP TABS: id=ms-tabbar — horizontal page tabs (Donate, Credits, etc.) -->
+      <!-- TAB BAR -->
       <div id="ms-tabbar">
         <ul class="ms-tabs">
-          <li class="ms-tab-odd ms-tab-file">
-            <span><a href="/latest/anime/release"><span class="ms-link-text">Donate</span></a></span>
-          </li>
-          <li class="ms-tab-completed">
-            <span><a href="/latest/anime/release/complete"><span class="ms-link-text">Credits</span></a></span>
-          </li>
-          <li class="ms-tab-odd ms-tab-hot">
-            <span><a href="/latest/anime/popular"><span class="ms-link-text">Policies</span></a></span>
-          </li>
-          <li class="ms-tab-anime">
-            <span><a href="/latest/anime"><span class="ms-link-text">DMCA</span></a></span>
-          </li>
+          <li class="ms-tab-odd ms-tab-file"><span><a href="/latest"><span class="ms-link-text">Latest</span></a></span></li>
+          <li class="ms-tab-completed"><span><a href="/top"><span class="ms-link-text">Top</span></a></span></li>
+          <li class="ms-tab-odd ms-tab-hot"><span><a href="/policy"><span class="ms-link-text">Policy</span></a></span></li>
+          <li class="ms-tab-anime"><span><a href="/dmca"><span class="ms-link-text">DMCA</span></a></span></li>
         </ul>
       </div>
-      <!-- /ms-tabbar -->
 
-      <!-- PRIMARY CONTENT: id=ms-main -->
       <div id="ms-main">
 
-        <!-- BREADCRUMB: ms-breadcrumb — schema.org breadcrumb, hidden on home -->
-        <div class="ms-breadcrumb ms-hidden" itemscope itemtype="https://schema.org/BreadcrumbList">
-          <div class="ms-bc-node" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-            <meta itemprop="position" content="1"/>
-            <a href="https://mugisub.com" itemprop="item"><span itemprop="name">Main</span></a>
-          </div>
-          <div class="ms-bc-node" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-            <meta itemprop="position" content="2"/>
-            <a href="https://mugisub.com/anime" itemprop="item"><span itemprop="name">Anime</span></a>
-          </div>
-        </div>
+        <div class="ms-breadcrumb ms-hidden"></div>
 
-        <!-- ═══════════════════════════════════════════
-             FILTER + CONTENT ROW
-             ms-flex-row ms-nowrap ms-section —
-             side filter on right, content on left
-        ════════════════════════════════════════════ -->
         <div class="ms-flex-row ms-nowrap ms-section">
 
-          <!-- SIDE FILTER PANEL: ms-filter ms-filter-right ms-has-settings
-               Collapsible filter with request form + content filters -->
+          <!-- ═══ FILTER PANEL (mugi original) ═══ -->
           <div class="ms-filter ms-filter-right ms-has-settings g_filter right hassettings">
-
-            <!-- Filter toggle flap (shown when filter is closed) -->
-            <div class="ms-filter-tab g_bubble flap hide" title="click to show the filter menu">Ask</div>
-
-            <!-- Filter body (all filter content inside) -->
+            <div class="ms-filter-tab g_bubble flap hide" title="click to show filter">Ask</div>
             <div class="ms-filter-body content">
-
-              <!-- Close button (X) for filter panel -->
               <span title="Hide Filter" class="ms-close-icon fancybox-item fancybox-close"></span>
-
-              <!-- FILTER CONTENT: ms-section ms-filters -->
               <div class="ms-section ms-filters">
-                <h2><span>Submit a Request</span></h2>
-
-                <!-- REQUEST FORM: id=ms-req-form -->
+                <h2><span>Filter / Request</span></h2>
                 <form id="ms-req-form">
                   <ul class="ms-flex-row">
 
-                    <!-- REQUEST FIELDS: category, title, link, note, submit -->
                     <li class="ms-row-odd ms-bubble">
                       <h3>Category</h3>
                       <div class="ms-input-wrap">
                         <label>
-                          <select id="ms-req-cat">
-                            <option value="anime" selected="selected">Anime</option>
-                            <option value="movie">Movies</option>
+                          <select id="ms-req-cat" class="req-input">
+                            <option value="movies">Movies</option>
                             <option value="tv">TV Shows</option>
+                            <option value="games">Games</option>
+                            <option value="music">Music</option>
+                            <option value="software">Software</option>
+                            <option value="books">Books</option>
                           </select>
                         </label>
                       </div>
-
-                      <h3 id="ms-req-title-lbl">Title <span class="ms-req-star">*</span></h3>
+                      <h3>Title <span class="req-star">*</span></h3>
                       <div class="ms-input-wrap">
-                        <input class="ms-req-input" type="text" required
-                          id="ms-req-title" placeholder="e.g. Demon Slayer Season 4" />
+                        <input class="req-input" type="text" id="ms-req-title"
+                          placeholder="e.g. The Dark Knight" required />
                       </div>
-
-                      <h3>Link <span class="ms-req-optional">(optional)</span></h3>
+                      <h3>Link <span class="req-optional">(optional)</span></h3>
                       <div class="ms-input-wrap">
-                        <input class="ms-req-input" type="url" id="ms-req-link"
-                          placeholder="https://myanimelist.net/..." />
+                        <input class="req-input" type="url" id="ms-req-link"
+                          placeholder="https://imdb.com/..." />
                       </div>
-
-                      <h3>Note <span class="ms-req-optional">(optional)</span></h3>
+                      <h3>Note <span class="req-optional">(optional)</span></h3>
                       <div class="ms-input-wrap">
-                        <textarea class="ms-req-input ms-req-area" rows="4"
-                          id="ms-req-note" placeholder="Season, episode, ya koi aur detail..."></textarea>
+                        <textarea class="req-input req-textarea" rows="3"
+                          id="ms-req-note" placeholder="Quality, year, etc..."></textarea>
                       </div>
-
                       <div class="ms-input-wrap">
-                        <button type="submit" class="ms-req-submit">Submit Request</button>
-                        <p class="ms-req-hint">
-                          Ya phir <a href="https://t.me/MugiSUB">Telegram</a> pe message karo
-                        </p>
+                        <button type="submit" class="req-submit">Submit Request</button>
+                        <p class="req-hint">Ya phir <a href="https://t.me/">Telegram</a> pe message karo</p>
                       </div>
                     </li>
 
-                    <!-- FILTER: Adult content -->
-                    <li class="ms-row-odd ms-bubble">
+                    <li class="ms-bubble">
                       <div class="ms-input-wrap">
-                        <h3>Adult Content</h3>
+                        <h3>Quality</h3>
                         <ul class="ms-filter-list">
-                          <li><a href="/content/ignore">ignore</a></li>
-                          <li><a href="/content/hide-18-plus">hide 18+ Content</a></li>
-                          <li><a href="/content/only-18-plus">show only 18+ Content</a></li>
+                          <li><a href="?q=1080p">1080p</a></li>
+                          <li><a href="?q=720p">720p</a></li>
+                          <li><a href="?q=4K">4K HDR</a></li>
+                          <li><a href="?q=BluRay">BluRay</a></li>
+                          <li><a href="?q=WEBRip">WEBRip</a></li>
                         </ul>
                       </div>
                     </li>
 
-                    <!-- FILTER: Airing status -->
-                    <li class="ms-bubble">
+                    <li class="ms-row-odd ms-bubble">
                       <div class="ms-input-wrap">
                         <h3>Airing Status</h3>
                         <ul class="ms-filter-list">
-                          <li><a href="/airing/ignore">ignore</a></li>
-                          <li><a href="/airing/still-airing">still airing</a></li>
-                          <li><a href="/airing/finished">finished</a></li>
-                          <li><a href="/airing/unaired">unaired/unknown</a></li>
+                          <li><a href="/airing/all">All</a></li>
+                          <li><a href="/airing/new">New Releases</a></li>
+                          <li><a href="/airing/hd">HD Only</a></li>
+                          <li><a href="/airing/verified">Verified</a></li>
                         </ul>
                       </div>
                     </li>
 
-                    <!-- FILTER: Anime type -->
-                    <li class="ms-row-odd ms-bubble">
-                      <h3>Anime Type</h3>
+                    <li class="ms-bubble">
                       <div class="ms-input-wrap">
+                        <h3>Type</h3>
                         <ul class="ms-filter-list">
                           <li><a href="/type/movie">Movie</a></li>
-                          <li><a href="/type/musicvideo">Music Video</a></li>
-                          <li><a href="/type/other">Other</a></li>
-                          <li><a href="/type/ova">OVA</a></li>
                           <li><a href="/type/tvseries">TV Series</a></li>
-                          <li><a href="/type/tvspecial">TV Special</a></li>
-                          <li><a href="/type/unknown">unknown</a></li>
-                          <li><a href="/type/web">Web</a></li>
+                          <li><a href="/type/documentary">Documentary</a></li>
+                          <li><a href="/type/software">Software</a></li>
+                          <li><a href="/type/game">Game</a></li>
                         </ul>
                       </div>
                     </li>
@@ -380,54 +400,461 @@
                   </ul>
                 </form>
               </div>
-              <!-- /ms-filters -->
-
             </div>
-            <!-- /ms-filter-body -->
-
           </div>
-          <!-- /ms-filter -->
+          <!-- /filter panel -->
 
-          <!-- POSTER AREA: latest anime uploads grid placeholder -->
+
+          <!-- ═══ MAIN WRAP (Zooqle content) ═══ -->
           <div class="ms-wrap">
-            <div class="ms-section">
-              <h2><span>Latest Uploads</span></h2>
+
+            <!-- CATEGORY TABS -->
+            <div class="zq-cat-tabs">
+              <a href="/" class="zq-cat-tab active"><i class="zqf zqf-home"></i> All</a>
+              <a href="/movies" class="zq-cat-tab"><i class="zqf zqf-movies"></i> Movies</a>
+              <a href="/tv" class="zq-cat-tab"><i class="zqf zqf-tv"></i> TV</a>
+              <a href="/games" class="zq-cat-tab"><i class="zqf zqf-game"></i> Games</a>
+              <a href="/music" class="zq-cat-tab"><i class="zqf zqf-music"></i> Music</a>
+              <a href="/software" class="zq-cat-tab"><i class="zqf zqf-app"></i> Software</a>
+              <a href="/books" class="zq-cat-tab"><i class="zqf zqf-book"></i> Books</a>
             </div>
-          </div>
 
-        </div>
-        <!-- /ms-flex-row -->
 
-        <!-- END SPACER: clears floats -->
+            <!-- ══ SECTION 1: CATEGORY GRID ══ -->
+            <div class="ms-section">
+              <div class="zq-section-head">
+                <span><i class="zqf zqf-list"></i> Browse by Category</span>
+                <a href="/all"><i class="zqf zqf-right"></i> View All</a>
+              </div>
+              <div class="zq-grid">
+                <a class="zq-cell" href="/movies">
+                  <div class="zq-cell-icon"><i class="zqf zqf-movies"></i></div>
+                  <div><span class="zq-cell-title">Movies</span><span class="zq-cell-meta">124,580 torrents</span></div>
+                </a>
+                <a class="zq-cell" href="/tv">
+                  <div class="zq-cell-icon"><i class="zqf zqf-tv"></i></div>
+                  <div><span class="zq-cell-title">TV Shows</span><span class="zq-cell-meta">89,320 torrents</span></div>
+                </a>
+                <a class="zq-cell" href="/games">
+                  <div class="zq-cell-icon"><i class="zqf zqf-game"></i></div>
+                  <div><span class="zq-cell-title">Games</span><span class="zq-cell-meta">45,210 torrents</span></div>
+                </a>
+                <a class="zq-cell" href="/music">
+                  <div class="zq-cell-icon"><i class="zqf zqf-music"></i></div>
+                  <div><span class="zq-cell-title">Music</span><span class="zq-cell-meta">210,440 torrents</span></div>
+                </a>
+                <a class="zq-cell" href="/software">
+                  <div class="zq-cell-icon"><i class="zqf zqf-app"></i><span class="zq-new-strip">new</span></div>
+                  <div><span class="zq-cell-title">Software</span><span class="zq-cell-meta">33,870 torrents</span></div>
+                </a>
+                <a class="zq-cell" href="/books">
+                  <div class="zq-cell-icon"><i class="zqf zqf-book"></i></div>
+                  <div><span class="zq-cell-title">Books</span><span class="zq-cell-meta">98,760 torrents</span></div>
+                </a>
+                <a class="zq-cell" href="/anime">
+                  <div class="zq-cell-icon"><i class="zqf zqf-anime"></i></div>
+                  <div><span class="zq-cell-title">Anime</span><span class="zq-cell-meta">67,100 torrents</span></div>
+                </a>
+                <a class="zq-cell" href="/other">
+                  <div class="zq-cell-icon"><i class="zqf zqf-files"></i></div>
+                  <div><span class="zq-cell-title">Other</span><span class="zq-cell-meta">22,450 torrents</span></div>
+                </a>
+              </div>
+            </div>
+
+
+            <!-- ══ SECTION 2: LATEST MOVIES POSTER CARDS ══ -->
+            <div class="ms-section">
+              <div class="zq-section-head">
+                <span><i class="zqf zqf-movies"></i> Latest Movies</span>
+                <a href="/movies"><i class="zqf zqf-right"></i> More</a>
+              </div>
+              <div class="zq-poster-grid">
+
+                <a class="zq-poster-card" href="/torrent/1">
+                  <div class="zq-poster-img">
+                    <i class="zqf zqf-movies"></i>
+                    <span class="zq-ribbon">NEW</span>
+                  </div>
+                  <div class="zq-poster-info">
+                    <span class="zq-poster-name">Oppenheimer</span>
+                    <div class="zq-poster-meta">
+                      <span class="zq-badge hd">1080p</span>
+                      <span class="zq-badge yr">2023</span>
+                    </div>
+                    <div class="zq-poster-meta" style="margin-top:3px">
+                      <span class="zq-badge seed"><i class="zqf zqf-up"></i> 4521</span>
+                      <span class="zq-badge leech"><i class="zqf zqf-down"></i> 312</span>
+                    </div>
+                  </div>
+                </a>
+
+                <a class="zq-poster-card" href="/torrent/2">
+                  <div class="zq-poster-img"><i class="zqf zqf-movies"></i></div>
+                  <div class="zq-poster-info">
+                    <span class="zq-poster-name">Barbie (2023)</span>
+                    <div class="zq-poster-meta">
+                      <span class="zq-badge hd">4K</span>
+                      <span class="zq-badge yr">2023</span>
+                    </div>
+                    <div class="zq-poster-meta" style="margin-top:3px">
+                      <span class="zq-badge seed"><i class="zqf zqf-up"></i> 3890</span>
+                      <span class="zq-badge leech"><i class="zqf zqf-down"></i> 198</span>
+                    </div>
+                  </div>
+                </a>
+
+                <a class="zq-poster-card" href="/torrent/3">
+                  <div class="zq-poster-img"><i class="zqf zqf-movies"></i></div>
+                  <div class="zq-poster-info">
+                    <span class="zq-poster-name">Mission Impossible 7</span>
+                    <div class="zq-poster-meta">
+                      <span class="zq-badge hd">720p</span>
+                      <span class="zq-badge yr">2023</span>
+                    </div>
+                    <div class="zq-poster-meta" style="margin-top:3px">
+                      <span class="zq-badge seed"><i class="zqf zqf-up"></i> 2100</span>
+                      <span class="zq-badge leech"><i class="zqf zqf-down"></i> 445</span>
+                    </div>
+                  </div>
+                </a>
+
+                <a class="zq-poster-card" href="/torrent/4">
+                  <div class="zq-poster-img">
+                    <i class="zqf zqf-movies2"></i>
+                    <span class="zq-ribbon">HD</span>
+                  </div>
+                  <div class="zq-poster-info">
+                    <span class="zq-poster-name">Indiana Jones 5</span>
+                    <div class="zq-poster-meta">
+                      <span class="zq-badge hd">BluRay</span>
+                      <span class="zq-badge yr">2023</span>
+                    </div>
+                    <div class="zq-poster-meta" style="margin-top:3px">
+                      <span class="zq-badge seed"><i class="zqf zqf-up"></i> 1870</span>
+                      <span class="zq-badge leech"><i class="zqf zqf-down"></i> 89</span>
+                    </div>
+                  </div>
+                </a>
+
+                <a class="zq-poster-card" href="/torrent/5">
+                  <div class="zq-poster-img"><i class="zqf zqf-movies"></i></div>
+                  <div class="zq-poster-info">
+                    <span class="zq-poster-name">Aquaman 2</span>
+                    <div class="zq-poster-meta">
+                      <span class="zq-badge hd">1080p</span>
+                      <span class="zq-badge new">NEW</span>
+                    </div>
+                    <div class="zq-poster-meta" style="margin-top:3px">
+                      <span class="zq-badge seed"><i class="zqf zqf-up"></i> 980</span>
+                      <span class="zq-badge leech"><i class="zqf zqf-down"></i> 210</span>
+                    </div>
+                  </div>
+                </a>
+
+                <a class="zq-poster-card" href="/torrent/6">
+                  <div class="zq-poster-img"><i class="zqf zqf-movies"></i></div>
+                  <div class="zq-poster-info">
+                    <span class="zq-poster-name">Wonka</span>
+                    <div class="zq-poster-meta">
+                      <span class="zq-badge hd">WEBRip</span>
+                      <span class="zq-badge new">NEW</span>
+                    </div>
+                    <div class="zq-poster-meta" style="margin-top:3px">
+                      <span class="zq-badge seed"><i class="zqf zqf-up"></i> 654</span>
+                      <span class="zq-badge leech"><i class="zqf zqf-down"></i> 301</span>
+                    </div>
+                  </div>
+                </a>
+
+              </div>
+            </div>
+
+
+            <!-- ══ SECTION 3: TV SHOWS POSTER CARDS ══ -->
+            <div class="ms-section">
+              <div class="zq-section-head">
+                <span><i class="zqf zqf-tv"></i> Latest TV Shows</span>
+                <a href="/tv"><i class="zqf zqf-right"></i> More</a>
+              </div>
+              <div class="zq-poster-grid">
+
+                <a class="zq-poster-card" href="/torrent/tv1">
+                  <div class="zq-poster-img">
+                    <i class="zqf zqf-tv"></i>
+                    <span class="zq-ribbon">NEW</span>
+                  </div>
+                  <div class="zq-poster-info">
+                    <span class="zq-poster-name">The Last of Us S02</span>
+                    <div class="zq-poster-meta">
+                      <span class="zq-badge hd">1080p</span>
+                      <span class="zq-badge yr">2024</span>
+                    </div>
+                    <div class="zq-poster-meta" style="margin-top:3px">
+                      <span class="zq-badge seed"><i class="zqf zqf-up"></i> 8120</span>
+                      <span class="zq-badge leech"><i class="zqf zqf-down"></i> 520</span>
+                    </div>
+                  </div>
+                </a>
+
+                <a class="zq-poster-card" href="/torrent/tv2">
+                  <div class="zq-poster-img"><i class="zqf zqf-onair"></i></div>
+                  <div class="zq-poster-info">
+                    <span class="zq-poster-name">House of Dragon S02</span>
+                    <div class="zq-poster-meta">
+                      <span class="zq-badge hd">4K</span>
+                      <span class="zq-badge yr">2024</span>
+                    </div>
+                    <div class="zq-poster-meta" style="margin-top:3px">
+                      <span class="zq-badge seed"><i class="zqf zqf-up"></i> 6540</span>
+                      <span class="zq-badge leech"><i class="zqf zqf-down"></i> 410</span>
+                    </div>
+                  </div>
+                </a>
+
+                <a class="zq-poster-card" href="/torrent/tv3">
+                  <div class="zq-poster-img"><i class="zqf zqf-tv"></i></div>
+                  <div class="zq-poster-info">
+                    <span class="zq-poster-name">Severance S02</span>
+                    <div class="zq-poster-meta">
+                      <span class="zq-badge hd">1080p</span>
+                      <span class="zq-badge yr">2024</span>
+                    </div>
+                    <div class="zq-poster-meta" style="margin-top:3px">
+                      <span class="zq-badge seed"><i class="zqf zqf-up"></i> 3890</span>
+                      <span class="zq-badge leech"><i class="zqf zqf-down"></i> 280</span>
+                    </div>
+                  </div>
+                </a>
+
+                <a class="zq-poster-card" href="/torrent/tv4">
+                  <div class="zq-poster-img"><i class="zqf zqf-tv"></i></div>
+                  <div class="zq-poster-info">
+                    <span class="zq-poster-name">Shogun</span>
+                    <div class="zq-poster-meta">
+                      <span class="zq-badge hd">BluRay</span>
+                      <span class="zq-badge yr">2024</span>
+                    </div>
+                    <div class="zq-poster-meta" style="margin-top:3px">
+                      <span class="zq-badge seed"><i class="zqf zqf-up"></i> 2100</span>
+                      <span class="zq-badge leech"><i class="zqf zqf-down"></i> 130</span>
+                    </div>
+                  </div>
+                </a>
+
+              </div>
+            </div>
+
+
+            <!-- ══ SECTION 4: TORRENT LIST TABLE ══ -->
+            <div class="ms-section">
+              <div class="zq-section-head">
+                <span><i class="zqf zqf-new"></i> Latest Uploads</span>
+                <a href="/latest"><i class="zqf zqf-right"></i> All Latest</a>
+              </div>
+              <table class="zq-tbl">
+                <thead>
+                  <tr>
+                    <th class="hide-sm"><span class="iconochive-tiles"></span></th>
+                    <th><i class="zqf zqf-search-files"></i> Name</th>
+                    <th class="hide-sm"><i class="zqf zqf-mi-size"></i> Size</th>
+                    <th><i class="zqf zqf-up"></i></th>
+                    <th><i class="zqf zqf-down"></i></th>
+                    <th class="hide-sm"><i class="zqf zqf-clock"></i> Added</th>
+                    <th><i class="zqf zqf-download"></i></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="hide-sm"><span class="iconochive-movies"></span></td>
+                    <td class="zq-tt-name"><a href="#">Oppenheimer (2023) 1080p BluRay x264</a> <span class="zq-badge hd">HD</span></td>
+                    <td class="zq-tt-size hide-sm">8.4 GB</td>
+                    <td class="zq-tt-seed">4521</td>
+                    <td class="zq-tt-leech">312</td>
+                    <td class="zq-tt-date hide-sm"><i class="zqf zqf-clock"></i> 2h ago</td>
+                    <td>
+                      <a href="#" class="zq-btn magnet" title="Magnet"><span class="glyphicon glyphicon-magnet"></span></a>
+                      <a href="#" class="zq-btn" title="Download"><i class="zqf zqf-download"></i></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="hide-sm"><span class="iconochive-movies"></span></td>
+                    <td class="zq-tt-name"><a href="#">Barbie (2023) 4K HDR WEB-DL</a> <span class="zq-badge hd">4K</span> <span class="zq-badge new">NEW</span></td>
+                    <td class="zq-tt-size hide-sm">22.1 GB</td>
+                    <td class="zq-tt-seed">3890</td>
+                    <td class="zq-tt-leech">198</td>
+                    <td class="zq-tt-date hide-sm"><i class="zqf zqf-clock"></i> 4h ago</td>
+                    <td>
+                      <a href="#" class="zq-btn magnet"><span class="glyphicon glyphicon-magnet"></span></a>
+                      <a href="#" class="zq-btn"><i class="zqf zqf-download"></i></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="hide-sm"><span class="iconochive-tv"></span></td>
+                    <td class="zq-tt-name"><a href="#">The Last of Us S02E01 1080p WEBRip</a> <span class="zq-badge hd">HD</span></td>
+                    <td class="zq-tt-size hide-sm">3.1 GB</td>
+                    <td class="zq-tt-seed">8120</td>
+                    <td class="zq-tt-leech">520</td>
+                    <td class="zq-tt-date hide-sm"><i class="zqf zqf-clock"></i> 6h ago</td>
+                    <td>
+                      <a href="#" class="zq-btn magnet"><span class="glyphicon glyphicon-magnet"></span></a>
+                      <a href="#" class="zq-btn"><i class="zqf zqf-download"></i></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="hide-sm"><span class="iconochive-software"></span></td>
+                    <td class="zq-tt-name"><a href="#">Adobe Photoshop 2024 v25.0 x64</a></td>
+                    <td class="zq-tt-size hide-sm">4.8 GB</td>
+                    <td class="zq-tt-seed">1240</td>
+                    <td class="zq-tt-leech">88</td>
+                    <td class="zq-tt-date hide-sm"><i class="zqf zqf-clock"></i> 8h ago</td>
+                    <td>
+                      <a href="#" class="zq-btn magnet"><span class="glyphicon glyphicon-magnet"></span></a>
+                      <a href="#" class="zq-btn"><i class="zqf zqf-download"></i></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="hide-sm"><span class="iconochive-audio"></span></td>
+                    <td class="zq-tt-name"><a href="#">Taylor Swift — Tortured Poets Dept FLAC</a></td>
+                    <td class="zq-tt-size hide-sm">1.2 GB</td>
+                    <td class="zq-tt-seed">5670</td>
+                    <td class="zq-tt-leech">240</td>
+                    <td class="zq-tt-date hide-sm"><i class="zqf zqf-clock"></i> 10h ago</td>
+                    <td>
+                      <a href="#" class="zq-btn magnet"><span class="glyphicon glyphicon-magnet"></span></a>
+                      <a href="#" class="zq-btn"><i class="zqf zqf-download"></i></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="hide-sm"><span class="iconochive-software"></span></td>
+                    <td class="zq-tt-name"><a href="#">Windows 11 Pro 23H2 x64 ISO</a> <span class="zq-badge hd">ISO</span></td>
+                    <td class="zq-tt-size hide-sm">6.2 GB</td>
+                    <td class="zq-tt-seed">2340</td>
+                    <td class="zq-tt-leech">190</td>
+                    <td class="zq-tt-date hide-sm"><i class="zqf zqf-clock"></i> 1d ago</td>
+                    <td>
+                      <a href="#" class="zq-btn magnet"><span class="glyphicon glyphicon-magnet"></span></a>
+                      <a href="#" class="zq-btn"><i class="zqf zqf-download"></i></a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <!-- PAGINATION -->
+              <div class="zq-pager">
+                <span class="glyphicon glyphicon-fast-backward"></span>
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="active">1</span>
+                <a href="?p=2">2</a>
+                <a href="?p=3">3</a>
+                <a href="?p=4">4</a>
+                <a href="?p=5">5</a>
+                <span>…</span>
+                <a href="?p=99">99</a>
+                <a href="?p=2"><span class="glyphicon glyphicon-chevron-right"></span></a>
+                <a href="?p=99"><span class="glyphicon glyphicon-fast-forward"></span></a>
+              </div>
+            </div>
+
+
+            <!-- ══ SECTION 5: TRENDING PANEL ══ -->
+            <div class="zq-panel">
+              <div class="zq-panel-head">
+                <span><i class="zqf zqf-hot"></i> Trending Now</span>
+                <a href="/trending"><i class="zqf zqf-stats"></i> View Stats</a>
+              </div>
+              <div class="zq-panel-body">
+                <div class="zq-cat-tabs">
+                  <a href="#" class="zq-cat-tab active"><i class="zqf zqf-movies"></i> Movies</a>
+                  <a href="#" class="zq-cat-tab"><i class="zqf zqf-tv"></i> TV</a>
+                  <a href="#" class="zq-cat-tab"><i class="zqf zqf-game"></i> Games</a>
+                  <a href="#" class="zq-cat-tab"><i class="zqf zqf-music"></i> Music</a>
+                </div>
+                <table class="zq-tbl">
+                  <tbody>
+                    <tr>
+                      <td style="width:20px;color:#e18e3c;font-weight:bold">1</td>
+                      <td class="zq-tt-name"><a href="#">Oppenheimer (2023)</a></td>
+                      <td><span class="zq-badge seed">S: 4521</span></td>
+                      <td class="hide-sm">
+                        <div class="zq-health-wrap">
+                          <div class="zq-health-bar"><div class="fill" style="width:90%"></div></div>
+                          <small>90%</small>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="color:#e18e3c;font-weight:bold">2</td>
+                      <td class="zq-tt-name"><a href="#">Barbie (2023)</a></td>
+                      <td><span class="zq-badge seed">S: 3890</span></td>
+                      <td class="hide-sm">
+                        <div class="zq-health-wrap">
+                          <div class="zq-health-bar"><div class="fill" style="width:78%"></div></div>
+                          <small>78%</small>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="color:#e18e3c;font-weight:bold">3</td>
+                      <td class="zq-tt-name"><a href="#">Mission: Impossible 7</a></td>
+                      <td><span class="zq-badge seed">S: 2100</span></td>
+                      <td class="hide-sm">
+                        <div class="zq-health-wrap">
+                          <div class="zq-health-bar"><div class="fill" style="width:55%"></div></div>
+                          <small>55%</small>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="color:#aaa;font-weight:bold">4</td>
+                      <td class="zq-tt-name"><a href="#">Indiana Jones 5</a></td>
+                      <td><span class="zq-badge seed">S: 1870</span></td>
+                      <td class="hide-sm">
+                        <div class="zq-health-wrap">
+                          <div class="zq-health-bar"><div class="fill" style="width:40%"></div></div>
+                          <small>40%</small>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="color:#aaa;font-weight:bold">5</td>
+                      <td class="zq-tt-name"><a href="#">Aquaman 2</a></td>
+                      <td><span class="zq-badge seed">S: 980</span></td>
+                      <td class="hide-sm">
+                        <div class="zq-health-wrap">
+                          <div class="zq-health-bar"><div class="fill" style="width:22%"></div></div>
+                          <small>22%</small>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+          </div><!-- /ms-wrap -->
+
+        </div><!-- /ms-flex-row -->
+
         <div class="ms-end"></div>
+      </div><!-- /ms-main -->
 
-      </div>
-      <!-- /ms-main -->
+    </div><!-- /ms-content -->
 
-    </div>
-    <!-- /ms-content -->
 
-    <!-- ═══════════════════════════════════════════
-         FOOTER: id=ms-footer
-         Copyright, DMCA notice, schema.org org markup
-    ════════════════════════════════════════════ -->
+    <!-- FOOTER (mugi original) -->
     <div id="ms-footer">
       <p>
-        <a href="/" property="cc:attributionName">MugiSub</a>
-        does not host any files on its servers. All content is sourced from third-party platforms
+        <a href="/" property="cc:attributionName">Zooqle</a>
+        does not host any files on its servers. All torrents are provided by third-party trackers.
       </p>
       <p>
-        If you are the copyright owner and wish to request the removal of any content, please visit our
-        <a rel="license" href="/dmca">DMCA</a> page for more information.
+        <a href="/dmca">DMCA</a> &nbsp;|&nbsp;
+        <a href="/policy">Privacy</a> &nbsp;|&nbsp;
+        <a href="/contact">Contact</a> &nbsp;|&nbsp;
+        <a href="/rss">RSS</a>
       </p>
-      <div itemscope itemtype="https://schema.org/Organization">
-        <a class="ms-hidden" itemprop="url" href="https://mugisub.com">Home</a>
-        <img loading="lazy" class="ms-hidden" alt="MugiSUB" itemprop="logo"
-          src="img.mugis/logos/touch/android-chrome-512x512.png" />
-        <span class="ms-hidden" itemprop="name">MugiSUB</span>
-      </div>
     </div>
-    <!-- /ms-footer -->
 
   </body>
 </html>
