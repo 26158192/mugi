@@ -617,7 +617,13 @@ select { vertical-align: middle; }
   width: 4em;
 }
 
-.ms-filter.ms-filter-right .ms-filter-tab { right: -1.3em; left: auto; }
+.ms-filter.ms-filter-right .ms-filter-tab { right: 0; left: auto; }
+
+/* Small screens: flap fully visible */
+@media screen and (max-width: 1270px) {
+  .ms-filter.ms-filter-right .ms-filter-tab,
+  .g_filter.right .flap { right: 0 !important; }
+}
 
 /* CLOSE BUTTON — X icon at top of filter */
 .ms-filter .ms-close-icon { top: -1em; }
@@ -1325,28 +1331,34 @@ h2 { line-height: 1.6em; }
 }
 
 /* SEARCH BAR position and size */
+/* SEARCH BAR — sidebar layout */
 #ms-searchbar {
   display: block;
-  height: 56px;
-  left: 0;
-  margin-left: 1em;
   position: absolute;
-  top: 3em;
-  width: 60em;
+  top: 5px;
+  left: 0;
+  width: 100%;
+  height: 70px;
 }
 
-/* SEARCH INNER position */
 #ms-searchbar .ms-search-inner {
-  margin-left: 16em;
-  margin-top: 1.3em;
+  height: 70px;
   width: 100%;
 }
 
-#ms-searchbar .ms-search-inner form > div { width: auto; }
+#ms-searchbar .ms-search-inner form > div {
+  position: absolute;
+  left: auto;
+  right: 1em;
+  top: 2.8em;
+  width: auto;
+  display: flex;
+  align-items: center;
+}
 
 /* SEARCH TEXT INPUT width */
 #ms-searchbar .ms-search-text,
-#ms-searchbar .text { width: 25em; margin: 0; }
+#ms-searchbar input.text { width: 25em; margin: 0; }
 
 /* SEARCH BUTTON */
 #ms-searchbar .ms-btn-search {
@@ -1543,14 +1555,7 @@ body, html { height: 100%; }
 #ms-main h1.main,
 #ms-navlist li.ms-nav-group ul li.ms-field-keep > label { display: block; }
 
-/* SEARCH BAR sidebar position */
-#ms-searchbar { top: 5px; height: 70px; margin-left: 0; width: 100%; }
-#ms-searchbar .ms-search-inner { margin-left: 0; margin-top: 0; height: 70px; }
-#ms-searchbar .ms-search-inner form > div {
-  position: absolute;
-  right: 1em; top: 2.8em;
-  width: auto;
-}
+/* SEARCH BAR sidebar position — handled above */
 
 /* NAV LINK line-height and display */
 #ms-navlist li.ms-nav-group ul li > a,
@@ -2254,16 +2259,20 @@ th a:hover { color: #c0daf0 !important; }
   #ms-root:not(.ms-nodrop) #ms-searchbar .ms-search-inner a.ms-advsearch { display: none; }
 
   /* SEARCH TEXT width */
-  #ms-root:not(.ms-nodrop) #ms-searchbar .ms-search-text {
+  #ms-root:not(.ms-nodrop) #ms-searchbar .ms-search-text,
+  #ms-root:not(.ms-nodrop) #ms-searchbar input.text {
     width: calc(100% - 17em);
     margin-left: 1em;
   }
 
-  /* SEARCH FORM repositioned */
+  /* SEARCH FORM — dropdown mode */
   #ms-root:not(.ms-nodrop) #ms-searchbar .ms-search-inner form > div {
+    position: absolute;
     top: 7.25em;
     width: calc(100% - .5em);
     left: -.5em;
+    display: flex;
+    align-items: center;
   }
 
   /* QUICKSEARCH width */
