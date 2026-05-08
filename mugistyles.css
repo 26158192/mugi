@@ -606,15 +606,17 @@ select { vertical-align: middle; }
 .ms-filter .settings input.name { box-sizing: border-box; width: 100%; }
 .ms-filter .settings select { width: 100%; }
 
-/* FILTER FLAP — rotated tab to open filter when closed */
+/* FILTER FLAP — side tab pinned flush to right edge */
 .ms-filter .ms-filter-tab {
+  position: fixed;
+  right: 0;
   bottom: 5em;
   display: block;
+  writing-mode: vertical-rl;
   padding: .2em;
-  position: fixed;
-  text-align: center;
-  transform: rotate(90deg);
-  width: 4em;
+  width: auto;
+  cursor: pointer;
+  z-index: 9999;
 }
 
 .ms-filter.ms-filter-right .ms-filter-tab { right: 0; left: auto; }
@@ -2057,7 +2059,7 @@ button:hover, input[type=button]:hover, input[type=submit]:hover,
   opacity: 1;
   background-color: #34394d !important;
   color: #ddd !important;
-  border-radius: 0 0 5px 5px;
+  border-radius: 5px 0 0 5px;
 }
 
 #ms-main div.tabbed_pane div.body { margin-top: 1px; }
