@@ -37,7 +37,7 @@
 
     function adjustSize() {
       var w = window.innerWidth;
-      if (w < 1270) {
+      if (w < 1024) {
         filter.classList.add('g_overlaymenu');
         if (content) content.classList.add('g_bubble');
         collapse();
@@ -55,7 +55,7 @@
     var form = document.getElementById('request-form');
     if (form) {
       form.addEventListener('mugi:submitted', function () {
-        if (window.innerWidth < 1270) collapse();
+        if (window.innerWidth < 1024) collapse();
       });
     }
 

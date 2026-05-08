@@ -623,7 +623,7 @@ select { vertical-align: middle; }
 .ms-filter.ms-filter-right .ms-filter-tab { right: 0; left: auto; }
 
 /* Small screens: flap fully visible */
-@media screen and (max-width: 1270px) {
+@media screen and (max-width: 1024px) {
   .ms-filter.ms-filter-right .ms-filter-tab,
   .g_filter.right .flap { right: 0 !important; }
 }
