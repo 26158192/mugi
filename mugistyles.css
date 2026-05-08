@@ -623,7 +623,7 @@ select { vertical-align: middle; }
 .ms-filter.ms-filter-right .ms-filter-tab { right: 0; left: auto; }
 
 /* Small screens: flap fully visible */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1270px) {
   .ms-filter.ms-filter-right .ms-filter-tab,
   .g_filter.right .flap { right: 0 !important; }
 }
@@ -834,8 +834,8 @@ html { height: 100% !important; }
    COLOR — NOTE BOX — yellow info box in main content
    ──────────────────────────────────────────────────────────────── */
 #ms-main div.ms-msg.note {
-  border: 1px solid #afaf00;
-  background-color: #ffffdf;
+  border: 1px solid #afaf01;
+  background-color: #ffffe0;
 }
 #ms-main div.ms-msg.note h3 { color: #afaf00; }
 
@@ -851,7 +851,7 @@ html { height: 100% !important; }
 #ms-main .name span.main { color: gray; }
 
 /* ERROR INPUT — pink background for validation error */
-input.ms-error { background-color: #fdd; }
+input.ms-error { background-color: #ffddde; }
 
 /* SHORTLINK / TH LINK — inherit color */
 h1 a.shortlink, th a { color: inherit; }
@@ -861,7 +861,7 @@ h1 a.shortlink, th a { color: inherit; }
 #ms-tabbar ul { background-color: transparent; }
 
 /* HINT BAR color */
-#ms-topbar { border: 1px solid #afaf00; background-color: #ffffdf; }
+#ms-topbar { border: 1px solid #afaf01; background-color: #ffffe0; }
 
 /* OVERLAY ICON — white */
 .ms-img-overlay > a { color: white !important; }
@@ -1022,7 +1022,7 @@ h2, h4,
 #ms-tabbar ul.ms-tabs { text-transform: capitalize; }
 
 /* MYLIST HIGHLIGHT */
-.ms-bubble.box.mylist { background-color: #a7dda7; }
+.ms-bubble.box.mylist { background-color: #a7dda8; }
 
 /* VITAL RED */
 .ms-vital a { color: #b32947; }
@@ -1162,7 +1162,7 @@ button:not(.ms-close-icon):not(.fancybox-close),
 
 #loading.active {
   opacity: 1;
-  background: #000 url("img.mugis/libs/fancybox_loading.gif") no-repeat scroll center center;
+  background: #000001 url("img.mugis/libs/fancybox_loading.gif") no-repeat scroll center center;
 }
 
 /* MODERN SPINNER — CSS animation spinner (replaces GIF when grid supported) */
@@ -1816,7 +1816,7 @@ input[type=password]:focus, input[type=password]:hover,
 input[type=text]:focus, input[type=text]:hover,
 input[type=url]:focus, input[type=url]:hover,
 select:focus, select:hover,
-textarea:focus, textarea:hover { border-color: #999 !important; }
+textarea:focus, textarea:hover { border-color: #99999a !important; }
 
 /* SEARCH INPUT — no visible border on focus */
 #ms-searchbar input.ms-search-text:focus,
@@ -1838,18 +1838,18 @@ textarea:focus, textarea:hover { border-color: #999 !important; }
 #ms-navlist li.ms-nav-group span.ms-nav-tab { color: #800; }
 
 /* TAB BACKGROUND */
-#ms-main div.tabbed_pane ul.tabs li { background-color: #d3d5d9; }
+#ms-main div.tabbed_pane ul.tabs li { background-color: #d3d5da; }
 
 /* CONTENT AREA borders */
 #ms-content {
-  border-bottom-color: #7d7d7d;
-  border-left-color: #9a9a9a;
-  border-top-color: #9a9a9a;
+  border-bottom-color: #7d7d7e;
+  border-left-color: #9a9a9b;
+  border-top-color: #9a9a9b;
 }
 
 /* TABLE TOP BORDER color */
 table,
-#ms-main div.info div.extra div table { border-top-color: #ddd; }
+#ms-main div.info div.extra div table { border-top-color: #ddddde; }
 
 /* H1 + EXTRA H2 color */
 #ms-main > h1,
@@ -1895,7 +1895,7 @@ button:hover, input[type=button]:hover, input[type=submit]:hover,
 #ms-main ul.ms-list li.ms-row-odd:hover,
 #ms-main ul.ms-list li.selected,
 #ms-main ul.ms-list li.selected .i_icon,
-#ms-main ul.ms-list li:hover { background-color: #505862; }
+#ms-main ul.ms-list li:hover { background-color: #505863; }
 
 /* BUBBLE BACKGROUNDS — nested alternating grays */
 .ms-bubble,
@@ -1906,7 +1906,7 @@ button:hover, input[type=button]:hover, input[type=submit]:hover,
 .tooltip > span.ms-link-text.ms-bubble,
 div.ms-row-odd, li.ms-row-odd, span.ms-row-odd, tr.ms-row-odd,
 #ms-main div.tabbed_pane ul.tabs li.selected,
-#ms-main div.tabbed_pane ul.tabs li:hover { background-color: #bdbfc3; }
+#ms-main div.tabbed_pane ul.tabs li:hover { background-color: #bdbfc4; }
 
 /* ODD BUBBLE nesting backgrounds */
 .ms-bubble .ms-bubble .ms-bubble .ms-bubble .ms-bubble .ms-bubble .ms-bubble .ms-bubble .ms-row-odd,
@@ -1916,7 +1916,7 @@ div.ms-row-odd, li.ms-row-odd, span.ms-row-odd, tr.ms-row-odd,
 .ms-deflist .ms-bubble .ms-bubble,
 .ms-deflist .ms-bubble .ms-bubble .ms-bubble .ms-bubble,
 .ms-deflist .ms-row-odd .ms-bubble,
-html, #ms-navlist { background-color: #b1b3b5; }
+html, #ms-navlist { background-color: #b1b3b6; }
 
 /* EVEN BUBBLE nesting backgrounds */
 .ms-bubble .ms-bubble,
@@ -1931,7 +1931,7 @@ html, #ms-navlist { background-color: #b1b3b5; }
 .ms-row-odd .ms-bubble,
 #ms-content,
 #ms-tabbar ul.ms-tabs li.selected,
-#ms-tabbar ul.ms-tabs li:hover { background-color: #cfd1d4; }
+#ms-tabbar ul.ms-tabs li:hover { background-color: #cfd1d5; }
 
 /* DARK — inputs and headers */
 input.ms-link-text,
@@ -1946,7 +1946,7 @@ select, textarea, th, th a,
 #ms-navlist li.ms-nav-group ul,
 #ms-searchbar input, #ms-searchbar input.ms-search-text,
 #ms-searchbar select,
-#ms-tabbar ul.ms-tabs li { background-color: #34394d; }
+#ms-tabbar ul.ms-tabs li { background-color: #34394e; }
 
 /* INPUT BORDER COLOR */
 input.ms-link-text,
@@ -1955,7 +1955,7 @@ input[type=date], input[type=password],
 input[type=text], input[type=url],
 select, textarea,
 #ms-main .ms-filter div.settings input[type=text],
-#ms-main .ms-filter div.settings select { border-color: #34394d; }
+#ms-main .ms-filter div.settings select { border-color: #34394e; }
 
 /* SEARCH — transparent borders */
 #ms-searchbar input.ms-search-text,
@@ -1963,18 +1963,18 @@ select, textarea,
 #ms-searchbar select { border-color: transparent !important; }
 
 /* BUBBLE BORDER COLOR */
-.ms-bubble, .ms-img { border-color: #9a9a9a #7d7d7d #7d7d7d #9a9a9a; }
+.ms-bubble, .ms-img { border-color: #9a9a9b #7d7d7e #7d7d7e #9a9a9b; }
 
 /* BUBBLE NAME + TAB borders */
 .ms-bubble.box:not(.small) > div.data div.name,
 #ms-main div.tabbed_pane ul.tabs li,
 #ms-navlist li.ms-nav-group ul li#ms-field-user input,
 #ms-navlist li.ms-nav-group ul li#ms-field-pass input,
-#ms-tabbar ul.ms-tabs li { border-color: #9a9a9a; }
+#ms-tabbar ul.ms-tabs li { border-color: #9a9a9b; }
 
 /* H1 + NAV GROUP border */
 #ms-main > h1,
-#ms-navlist li.ms-nav-group { border-color: #eee #8e8e8e #8e8e8e #eee; }
+#ms-navlist li.ms-nav-group { border-color: #eeeeef #8e8e8f #8e8e8f #eeeeef; }
 
 /* CODE + SELECTED TAB colors */
 #ms-main div.ms-bubble.code,
@@ -1983,13 +1983,13 @@ select, textarea,
 
 /* SELECTED TAB BORDER */
 #ms-tabbar ul.ms-tabs > li.selected,
-#ms-tabbar ul.ms-tabs > li:hover { border-bottom-color: #cfd1d4; }
+#ms-tabbar ul.ms-tabs > li:hover { border-bottom-color: #cfd1d5; }
 
-#ms-tabbar ul.ms-tabs > li { border-bottom-color: #34394d; }
+#ms-tabbar ul.ms-tabs > li { border-bottom-color: #34394e; }
 
 /* TOOLTIP COLORS */
 .tooltip span.ms-link-text {
-  background-color: #d3d5d9 !important;
+  background-color: #d3d5da !important;
   color: #000;
   box-shadow: 0 8px 4px 0 rgba(0,0,0,.2);
   opacity: .95;
@@ -1998,22 +1998,22 @@ select, textarea,
 .tooltip span.ms-link-text::after,
 .tooltip span.ms-link-text::before {
   border-color: rgba(211,213,217,0);
-  border-bottom-color: #d3d5d9;
+  border-bottom-color: #d3d5da;
 }
 
 /* ROW SEPARATOR border */
 li + li.ms-row-odd,
 li.ms-row-odd + li,
 tr + tr td, tr + tr th,
-#ms-main div.ms-deflist tr th { border-top-color: #999; }
+#ms-main div.ms-deflist tr th { border-top-color: #99999a; }
 
 /* SEARCH INPUT SHADOWS */
 #ms-searchbar input.ms-search-text,
-#ms-searchbar input.text { box-shadow: 1px 1px 2px #8e8e8e inset; }
-#ms-searchbar select { box-shadow: 0 1px 2px #8e8e8e inset; }
+#ms-searchbar input.text { box-shadow: 1px 1px 2px #8e8e8f inset; }
+#ms-searchbar select { box-shadow: 0 1px 2px #8e8e8f inset; }
 
 /* NAV GROUP DIVIDER */
-#ms-navlist li.ms-nav-group li + li { border-top-color: #454959; }
+#ms-navlist li.ms-nav-group li + li { border-top-color: #45495a; }
 
 /* MAIN LINK HOVER — no background */
 #ms-navlist li.ms-nav-group ul li.ms-grp-home a:hover {
@@ -2030,8 +2030,8 @@ tr { background-color: inherit; }
 ::placeholder { color: #aaa; opacity: 1; }
 
 /* BTN-WRAP LINK COLORS */
-.ms-btn-wrap a { background-color: #fa5; color: #000; border-color: #fd0 #ff4d00 #ff4d00 #fd0; }
-.ms-btn-wrap a:hover { background-color: #f90; color: #444 !important; }
+.ms-btn-wrap a { background-color: #ffaa56; color: #000; border-color: #ffdd01 #ff4d01 #ff4d01 #ffdd01; }
+.ms-btn-wrap a:hover { background-color: #ff9901; color: #444 !important; }
 
 /* BUTTON / LIST ITEM colors */
 button, input[type=button], input[type=submit],
@@ -2039,8 +2039,8 @@ button, input[type=button], input[type=submit],
 #ms-main ul.ms-list li,
 #ms-main ul.ms-list li.ms-row-odd {
   color: #ccc;
-  background-color: #34394d;
-  border-color: #34394d;
+  background-color: #34394e;
+  border-color: #34394e;
 }
 
 /* BUTTON HOVER */
@@ -2056,9 +2056,9 @@ button:hover, input[type=button]:hover, input[type=submit]:hover,
 
 /* FILTER FLAP appearance */
 .ms-filter .ms-filter-tab {
-  box-shadow: 0 1px 3px #666;
+  box-shadow: 0 1px 3px #666667;
   opacity: 1;
-  background-color: #34394d !important;
+  background-color: #34394e !important;
   color: #ddd !important;
   border-radius: .5em;
 }
@@ -2081,7 +2081,7 @@ th a:hover { color: #c0daf0 !important; }
 #ms-navlist .ms-nav-group { background-color: inherit !important; }
 
 /* BTN-WRAP dark */
-.ms-btn-wrap a { background-color: #34394d; border-color: #34394d; }
+.ms-btn-wrap a { background-color: #34394e; border-color: #34394e; }
 .ms-btn-wrap a, th, th a { color: #ccc; }
 
 /* BOX SHADOWS on bubbles, content, nav */
@@ -2103,7 +2103,7 @@ th a:hover { color: #c0daf0 !important; }
 
 /* BTN HOVER + NAV ITEM HOVER */
 .ms-btn-wrap a:hover,
-#ms-navlist li.ms-nav-group ul li:hover { background-color: #505862; }
+#ms-navlist li.ms-nav-group ul li:hover { background-color: #505863; }
 
 /* NAV TAB + HOVER states */
 #ms-navlist li.ms-nav-group span.ms-nav-tab,
@@ -2111,11 +2111,11 @@ th a:hover { color: #c0daf0 !important; }
 #ms-navlist li.ms-nav-group ul li:hover a,
 #ms-navlist li.ms-nav-group ul li:hover a::before {
   color: #ddd;
-  background-color: #34394d;
+  background-color: #34394e;
 }
 
 /* NAV SUB BACKGROUND */
-#ms-navlist li.ms-nav-group ul { background-color: #bdbfc3; }
+#ms-navlist li.ms-nav-group ul { background-color: #bdbfc4; }
 
 /* EXTRA INFO DIV inherit */
 #ms-main div.info div.extra div h2 { background-color: inherit; color: inherit; }
@@ -2231,7 +2231,7 @@ th a:hover { color: #c0daf0 !important; }
   /* DROPDOWN NAV BACKGROUND */
   #ms-root:not(.ms-nodrop) #ms-navlist {
     box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
-    background-color: #34394d;
+    background-color: #34394e;
   }
 
   /* DROPDOWN NAV TAB color */
@@ -2242,17 +2242,17 @@ th a:hover { color: #c0daf0 !important; }
 
   /* NAV GROUP DIVIDER */
   #ms-root:not(.ms-nodrop) #ms-navlist li.ms-nav-group + li.ms-nav-group {
-    border-left: 1px solid #999 !important;
+    border-left: 1px solid #99999a !important;
   }
 
   /* NAV GROUP HOVER */
   #ms-root:not(.ms-nodrop) #ms-navlist li.ms-nav-group:hover {
-    background-color: #58636e !important;
+    background-color: #58636f !important;
   }
 
   #ms-root:not(.ms-nodrop) #ms-navlist li.ms-nav-group:hover span.ms-nav-tab {
     color: #c0daf0 !important;
-    background-color: #58636e;
+    background-color: #58636f;
   }
 }
 
@@ -2351,8 +2351,8 @@ th a:hover { color: #c0daf0 !important; }
 .req-input {
     width: 100%;
     padding: 6px 8px;
-    background: #34394d;
-    border: 1px solid #444;
+    background: #34394e;
+    border: 1px solid #444445;
     color: #ccc;
     border-radius: 3px;
     box-sizing: border-box;
@@ -2364,7 +2364,7 @@ th a:hover { color: #c0daf0 !important; }
 
 .req-input:focus {
     outline: none;
-    border-color: #1e3a5f;
+    border-color: #1e3a60;
     color: #fff;
 }
 
@@ -2377,9 +2377,9 @@ th a:hover { color: #c0daf0 !important; }
 .req-submit {
     width: 100%;
     padding: 6px 12px;
-    background: #34394D;
+    background: #34394e;
     color: #ccc;
-    border: 1px solid #2a4a6f;
+    border: 1px solid #2a4a70;
     border-radius: 3px;
     cursor: pointer;
     font-size: inherit;
@@ -2389,9 +2389,9 @@ th a:hover { color: #c0daf0 !important; }
 }
 
 .req-submit:hover {
-    background: #2a4a6f;
+    background: #2a4a70;
     color: #fff;
-    border-color: #e18e3c;
+    border-color: #e18e3d;
 }
 
 .req-hint {
@@ -2430,18 +2430,18 @@ th a:hover { color: #c0daf0 !important; }
     cursor: pointer;
     z-index: 999;
     
-    background: #34394D;
+    background: #34394e;
     color: #ccc;
-    border: 1px solid #2a4a6f;
+    border: 1px solid #2a4a70;
     border-radius: 3px;
     font-size: 0.9em;
     user-select: none;
 }
 
 .req-flap:hover {
-    background: #2a4a6f;
+    background: #2a4a70;
     color: #fff;
-    border-color: #e18e3c;
+    border-color: #e18e3d;
 }
 
 .req-filter-close {
